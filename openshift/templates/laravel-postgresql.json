@@ -5,12 +5,12 @@
     "name": "laravel-pgsql-persistent",
     "annotations": {
       "openshift.io/display-name": "Laravel + PostgreSQL (Persistent)",
-      "description": "An example Laravel application with a PostgreSQL database. For more information about using this template, including OpenShift considerations, see https://github.com/luciddreamz/laravel-ex/blob/master/readme.md.",
+      "description": "An example Laravel application with a PostgreSQL database. For more information about using this template, including OpenShift considerations, see https://github.com/matriphe/laravel-openshift/blob/master/readme.md.",
       "tags": "quickstart,php,laravel",
       "iconClass": "icon-laravel"
     }
   },
-  "message": "The following service(s) have been created in your project: ${NAME}, ${DATABASE_SERVICE_NAME}.\n\nFor more information about using this template, including OpenShift considerations, see https://github.com/luciddreamz/laravel-ex/blob/master/readme.md.",
+  "message": "The following service(s) have been created in your project: ${NAME}, ${DATABASE_SERVICE_NAME}.\n\nFor more information about using this template, including OpenShift considerations, see https://github.com/matriphe/laravel-openshift/blob/master/readme.md.",
   "labels": {
     "template": "laravel-pgsql-persistent"
   },
