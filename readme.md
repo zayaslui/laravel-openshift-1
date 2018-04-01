@@ -4,11 +4,13 @@ Laravel 5.6 Quickstart on OpenShift
 
 This quickstart was created to make it easy to get started with Laravel 5.6 on OpenShift v3.
 
-The simplest way to install this application is to use the OpenShift quickstart template. To install the quickstart, follow [these directions](#installation).
+The simplest way to install this application is to use the OpenShift quickstart template. 
+
+To install the quickstart, read [my blog on Medium](https://medium.com/@matriphe/laravel-5-6-template-for-openshift-b8dacd53c152).
 
 ## Installation ##
 
-1. Create an account at [http://www.openshift.com/devpreview/register.html](http://www.openshift.com/devpreview/register.html)
+1. Create an OpenShif account
 
 2. [Install the OpenShift CLI tools](https://docs.openshift.com/online/getting_started/beyond_the_basics.html#btb-installing-the-openshift-cli)
 
@@ -30,13 +32,15 @@ The simplest way to install this application is to use the OpenShift quickstart 
 
 4. Fork this GitHub repo
 
-5. From the [web console](https://console.preview.openshift.com/console/), select your project, click *Add to Project*, and select the Laravel template under the PHP heading
+5. From the your OpenShift image catalog, select Laravel + MySQL (persistent) image
 
-6. Replace the user name in the Git Repository URL parameter with your GitHub user name to point the template to your fork
+6. Replace the Git Repository URL using this repository or your forked repository
 
 7. Scroll to the bottom of the page and click *[ Create ]* to deploy your application
 
 8. Follow [these instructions](https://docs.openshift.com/online/getting_started/basic_walkthrough.html#bw-configuring-automated-builds) to configure automated builds, allowing you to push your code to your GitHub repo and automatically trigger a new deployment
+
+9. Since Laravel 5.6 required PHP 7.1, the default PHP image used in the image was 7.0, so you have to change the base image from the `Builds` page on the `Builds` image and use `openshift/php:7.1` or `openshift/php:latest` image
 
 ## OpenShift Considerations ##
 These are some special considerations you may need to keep in mind when running your application on OpenShift.
@@ -55,10 +59,10 @@ The `php artisan migrate --force` command is automatically executed during deplo
 ### Composer ###
 During the build process, `composer install` is automatically executed over the root directory. See the [PHP 5.6 builder image](https://github.com/sclorg/s2i-php-container/tree/master/5.6) for more details, or more specifically see [here](https://github.com/sclorg/s2i-php-container/blob/master/5.6/s2i/bin/assemble#L9-L26).
 
-### 'Development' Mode ###
-By default, this Quickstart is configured in 'development' mode to make debugging your application easier.
+### `Development` Mode ###
+By default, this Quickstart is configured in *development* mode to make debugging your application easier.
 
-When you develop your Laravel application in OpenShift, you can also enable the 'production' environment by setting environment variables, using the `oc` client, like:
+When you develop your Laravel application in OpenShift, you can also enable the *production* environment by setting environment variables, using the `oc` client, like:
 
 ```
 $ oc get services
@@ -69,9 +73,9 @@ $ oc set env dc/laravel-mysql-example LARAVEL_APP_ENV=production LARAVEL_APP_DEB
 
 Next, run `oc status` to confirm that an updated deployment has been kicked off.
 
-For more information on environment variables impacting PHP behavior on OpenShift, see the [PHP 5.6 builder image](https://github.com/sclorg/s2i-php-container/tree/master/5.6#environment-variables).
+For more information on environment variables impacting PHP behavior on OpenShift, see the [PHP 7.1 builder image](https://github.com/sclorg/s2i-php-container/tree/master/7.1#environment-variables).
 
-For more information on Laravel environment variables, see the [Laravel environment configuration documentation](https://laravel.com/docs/5.2/configuration#environment-configuration).
+For more information on Laravel environment variables, see the [Laravel environment configuration documentation](https://laravel.com/docs/5.6/configuration#environment-configuration).
 
 ### Log Files ###
 Your application is configured to use the OpenShift log directory. You can use the `oc logs` command to stream the latest log file entries from your running pod:
