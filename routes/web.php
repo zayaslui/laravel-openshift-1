@@ -11,9 +11,13 @@
 |
 */
 
-Route::get('/', function () {
-    return 'hola mundo';
-});
+Route::get('/','FrontController@index');
+Route::get('plans','FrontController@plans');
+Route::get('services','FrontController@services');
+Route::get('about','FrontController@about');
+Route::get('contact','FrontController@contact');
+Route::get('admin','FrontController@admin');
+
 
 /*
 |--------------------------------------------------------------------------
