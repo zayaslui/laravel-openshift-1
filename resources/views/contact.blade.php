@@ -21,7 +21,7 @@
 					   		</div>
       				</div>
       			<div class="company_address">
-				     	<h3>Company Information :</h3>
+				     	<h3>Información :</h3>
 						<p>Luis Alberto de Herrera 1424 entre Pai Perez y Adva Perú</p>
 				   		<p>Tel : (021) 214-368</p>
 				   		<p>Celular : (0981) 000 000</p>
