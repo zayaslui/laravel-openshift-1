@@ -18,6 +18,11 @@ Route::get('about','FrontController@about');
 Route::get('contact','FrontController@contact');
 Route::get('admin','FrontController@admin');
 
+Route::get('/services/hormigon','FrontController@servicios_hormigon');
+Route::get('/services/prefabricacion','FrontController@servicios_prefabricacion');
+Route::get('/services/mineria','FrontController@servicios_mineria');
+Route::get('/services/concreto','FrontController@servicios_concreto');
+
 // ajax
 Route::post('listarObras','ObrasController@listar');
 Route::post('little','ObrasController@little_obras');

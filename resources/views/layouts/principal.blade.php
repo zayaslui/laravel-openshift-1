@@ -16,8 +16,10 @@
 <script src="{{asset('js/layerslider.kreaturamedia.jquery.js')}}"></script>
 <script src="{{asset('js/responsiveslides.min.js')}}"></script>
 <script src="{{asset('js/greensock.js')}}" type="text/javascript"></script>
+<script src="{{asset('js/jquery.swipebox.js')}}" type="text/javascript"></script>
 
 <link href="{{asset('css/style.css')}}" rel="stylesheet" type="text/css"  media="all" />	
+<link href="{{asset('css/swipebox.css')}}" rel="stylesheet" type="text/css"  media="all" />	
 <!-- BEGIN JIVOSITE CODE {literal} -->
 <script type='text/javascript'>
 (function(){ var widget_id = 'BC1lbLnA4G';var d=document;var w=window;function l(){
@@ -30,15 +32,15 @@ var s = document.createElement('script'); s.type = 'text/javascript'; s.async = 
 			<div class="header" id="menu">
 					<div class='wrap'>
 							<div class='logo'>
-								<a href='/'><img src='images/logo.png' title='logo' /></a>
+								<a href='/'><img src='/images/logo.png' title='logo' /></a>
 							</div>
 							<div class='top-nav'>
 								<ul>
 									<li class="{{ Request::path() == '/' ? 'active' : '' }} social-links principal-icon"><a href="/">Principal</a></li>
-									<li class="{{ Request::path() == 'about' ? 'active' : '' }} social-links nosotros-icon"><a href="about">Acerca de</a></li>
-									<li class="{{ Request::path() == 'services' ? 'active' : '' }} social-links servicios-icon"><a href="services">Servicios</a></li>
-									<li class="{{ Request::path() == 'plans' ? 'active' : '' }} social-links planes-icon"><a href="plans">Planes</a></li>
-									<li class="{{ Request::path() == 'contact' ? 'active' : '' }}  social-links contactos-icon"><a href="contact">Contactos</a></li>
+									<li class="{{ Request::path() == 'about' ? 'active' : '' }} social-links nosotros-icon"><a href="/about">Acerca de</a></li>
+									<li class="{{ Request::is('services/*')  || Request::path() == 'services' ? 'active' : '' }} social-links servicios-icon"><a href="/services">Servicios</a></li>
+									<li class="{{ Request::path() == 'plans' ? 'active' : '' }} social-links planes-icon"><a href="/plans">Planes</a></li>
+									<li class="{{ Request::path() == 'contact' ? 'active' : '' }}  social-links contactos-icon"><a href="/contact">Contactos</a></li>
 								</ul>
 							</div>
 							<div class='clear'> </div>
@@ -62,7 +64,7 @@ var s = document.createElement('script'); s.type = 'text/javascript'; s.async = 
 						<div class='footer-grids'>
 							<div class='footer-grid'>
 									<div class='logo-footer'>
-										<a href=''><img src='images/logo.png' alt=''></a>
+										<a href=''><img src='/images/logo.png' alt=''></a>
 									</div>
 							</div>
 							<div class='footer-grid'>

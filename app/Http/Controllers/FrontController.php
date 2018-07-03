@@ -32,5 +32,20 @@ class FrontController extends Controller
     return View('about');
    }
 
+   public function servicios_hormigon(){
+      return view('services.hormigon');
+   }
+
+      public function servicios_prefabricacion(){
+      return view('services.prefabricacion');
+   }
+
+   public function servicios_concreto(){
+      return view('services.concreto');
+   }
+
+   public function servicios_mineria(){
+      return view('services.mineria');
+   }
 
 }

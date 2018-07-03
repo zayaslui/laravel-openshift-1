@@ -235,6 +235,29 @@ font-style : normal;
     font-weight: 600;
 }
 
+.galeria1{
+	text-align: center;
+	padding: 5%;
+}
+.box{
+	list-style-type: none;
+    float: left;
+    margin-bottom: 1rem;
+    margin-left: 3%;
+    margin-right: 1%;
+    width: 20%;
+	-webkit-box-shadow: 4px 8px 53px -2px rgba(6,46,85,0.56);
+	-moz-box-shadow: 4px 8px 53px -2px rgba(6,46,85,0.56);
+	box-shadow: 4px 8px 53px -2px rgba(6,46,85,0.56);
+}
+/*.box:nth-child(2n+1) {
+    clear: both;
+    margin-left: 0;
+}
+.box:nth-child(2n+0) {
+    margin-right: 0;
+}*/
+
 .more-icon a:after{
     content: '\f08e';
 }
@@ -1010,15 +1033,21 @@ height: 40px;
 
 .blog-card.spring-fever.img1 {
   background: url(../images/hormigon_elaborado.jpg) no-repeat;
+  /*background: url(../images/servicios/1.jpg) no-repeat;  */
 }
 
 .blog-card.spring-fever.img2 {
   background: url(../images/mineria_.jpg) no-repeat;
 }
-.blog-card.spring-fever.img1 {
-  background: url(../images/hormigon_elaborado.jpg) no-repeat;
-}
 
+.blog-card.spring-fever.img3 {
+  /*background: url(../images/mineria_.jpg) no-repeat;*/
+    background: url(../images/servicios/3.jpg) no-repeat;
+}
+.blog-card.spring-fever.img4 {
+  /*background: url(../images/mineria_.jpg) no-repeat;*/
+    background: url(../images/servicios/4.jpg) no-repeat;  
+}
 .blog-card .color-overlay {
   background: rgba(84, 104, 110, 0.4);
   width: 350px;
