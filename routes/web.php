@@ -18,6 +18,10 @@ Route::get('about','FrontController@about');
 Route::get('contact','FrontController@contact');
 Route::get('admin','FrontController@admin');
 
+// ajax
+Route::post('listarObras','ObrasController@listar');
+Route::post('little','ObrasController@little_obras');
+
 
 /*
 |--------------------------------------------------------------------------
