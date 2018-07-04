@@ -12,7 +12,7 @@
 */
 
 Route::get('/','FrontController@index');
-Route::get('plans','FrontController@plans');
+Route::get('obras','FrontController@obras');
 Route::get('services','FrontController@services');
 Route::get('about','FrontController@about');
 Route::get('contact','FrontController@contact');
@@ -26,9 +26,10 @@ Route::get('/services/concreto','FrontController@servicios_concreto');
 // ajax
 Route::post('listarObras','ObrasController@listar');
 Route::post('little','ObrasController@little_obras');
+Route::get('obras_det/{imagen}','FrontController@obras_det');
 
 
-// erroes
+// errores
 Route::get ('404', ['as' => '404', 'uses' => 'ErrorHandlerController@errorCode404']);
 Route::get ('405', ['as' => '405', 'uses' => 'ErrorHandlerController@errorCode405']);
 /*

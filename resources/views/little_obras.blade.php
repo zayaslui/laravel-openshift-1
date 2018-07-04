@@ -38,7 +38,7 @@
 							});
 
 							$('#little_obras').append(tabla);
-							tabla="	<div class='special-grid spe-grid spe-more'><div class='more_obras more_obras-icon'><a href='plans'></a></div></div><div class='clear'> </div>";
+							tabla="	<div class='special-grid spe-grid spe-more'><div class='more_obras more_obras-icon'><a href='obras'></a></div></div><div class='clear'> </div>";
 							$('#little_obras').append(tabla);
 	                },
 	                error:function(jqXHR, textStatus, errorThrown ){

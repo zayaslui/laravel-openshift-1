@@ -19,13 +19,13 @@ class FrontController extends Controller
         return View('services');
     }
 
-    public function obras(){
-        return "hola obras";
-      // return View('obras');
+    /*procesa la obra individual*/
+    public function obras_det($id){
+        return view('obras_det');
     }
     
-    public function plans(){
-      return View('plans');
+    public function obras(){
+      return view('obras');
     }
 
    public function about(){

@@ -11,5 +11,8 @@ class Obras extends Model
     protected $fillable = [
         'descripcion'
     ];
-        
+     
+     public function obras_det(){
+     	return $this->hasMany('App\Obras_det')
+     }
 }

@@ -1,0 +1,14 @@
+Relación Uno a Uno
+
+Un usuario tiene un teléfono -> $this->hasOne('App\Phone')
+Un teléfono le pertenece a un usuario -> $this->belongsTo('App\User')
+Relación Uno a Muchos
+
+Un post tiene muchos comentarios -> $this->hasMany('App\Comment')
+Un comentario pertenece a un post -> $this->belongsTo('App\Post')
+Relación Muchos a Muchos (En la migración se debe crear una tabla Pivote que es la unión de las dos tablas. La Tabla Pivote no necesita una Entidad modelo así que las relaciones las creas en las Entidades de cada tabla que interviene)
+
+Un usuario puede tener muchos roles -> $this->belongsToMany('App\Role')
+Un rol lo puede tener muchos usuario -> $this->belongsToMany('App\User')
+El orden lo impones tu mismo, ya que al crear las tablas en tu BD, también debes ir añadiendo los métodos "relaciones" en las entidades.
+

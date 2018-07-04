@@ -1,30 +1,5 @@
-@extends('layouts.principal')
-@section('content')
-		<!---End-wrap---->
-		<div class="clear"> </div>
-		<!---start-content---->
-		<div class="content">
-			<div class="wrap">
-				<div class="about-us">
-					 <div class="about-header">
-					    <h3>Nuestras Obras</h3>
-					 </div>
-					<div class="about-info">
-						<a href="/">EDB CONSTRUCCIONES</a>
-						<p>Introduccion sobre las obras en general</p>
-					</div>
-				</div>
-			</div>
 
-			<div class="specials">
-				<div class="wrap" id="specials-grids">
-					<div class="specials-heading">
-						<h3>Todas las obras</h3>
-					</div>
-			    </div>
-			</div>	
-			<div class="clear"> </div>
-		</div>
+{{-- script listar obras --}}
 		<script>
 			$(document).ready(function(){
 				$.ajax({
@@ -36,10 +11,11 @@
 				                cache: false,
 				                contentType: false,
 				                processData: false,
+
 				                success:function(response) {
 				                    //crear listado de obras
-
 				                    var data = JSON.parse(response);
+
 									var tabla ="";
 									var i=0;
 									//abrimos specials-grids
@@ -60,7 +36,7 @@
 												tabla+= "<a href='#'>"+obj.titulo_obra+"</a>";
 												tabla+= obj.introduccion;
 												tabla+= "<div class='special-grid-background'></div>";
-												tabla+= "<a href='#' class='ver-obras'>Ver obra</a>";
+												tabla+= "<a href='/obras_det/"+obj.id+"' class='ver-obras'>Ver obra</a>";
 												tabla+= "</div>";
 					                     }
 								});
@@ -75,36 +51,21 @@
 				                },
 				                error:function(jqXHR, textStatus, errorThrown ){
 									if (jqXHR.status === 0) {
-
 									    console.log('Not connect: Verify Network.');
-
 									  } else if (jqXHR.status == 404) {
-
 									    console.log('Requested page not found [404]');
-
 									  } else if (jqXHR.status == 500) {
-
-									    console.log('Internal Server Error [500].');
-
+									    console.log('Internal Server Error [500]. '+errorThrown);
 									  } else if (textStatus === 'parsererror') {
-
 									    console.log('Requested JSON parse failed.');
-
 									  } else if (textStatus === 'timeout') {
-
 									    console.log('Time out error.');
-
 									  } else if (textStatus === 'abort') {
-
 									    console.log('Ajax request aborted.');
-
 									  } else {
-
 									    console.log('Uncaught Error: ' + jqXHR.responseText);
-
 									  }
 				                }
 				});
 			})
 		</script>
-@stop
