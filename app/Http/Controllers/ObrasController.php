@@ -11,13 +11,11 @@ class ObrasController extends Controller
 {
     
     public function listar(Request $request) {
-            return json_encode(Obras::find(1));
-        //return   json_encode(Obras::All());
-        //var_dump(Obras::All());
-        // if($request->ajax()){
-        //     $dato = Obras::All();
-        //     return json_encode($dato);
-        // }
+
+        if($request->ajax()){
+            $dato = Obras::All();
+            return json_encode($dato);
+        }
 
     }
 

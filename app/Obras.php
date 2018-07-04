@@ -13,6 +13,6 @@ class Obras extends Model
     ];
      
      public function obras_det(){
-     	return $this->hasMany('App\Obras_det')
+     	return $this->hasMany('App\Obras_det');
      }
 }
