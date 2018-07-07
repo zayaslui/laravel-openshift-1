@@ -1,5 +1,6 @@
 @extends('layouts.principal')
 @section('content')
+@section('tittle','Obras')
 		<!---End-wrap---->
 		<div class="clear"> </div>
 		<!---start-content---->
@@ -28,6 +29,6 @@
 			
 			<div class="clear"> </div>
 		</div>
-		@include('listar_obras')
+		@include('js.listarAllObrasAjax')
 
 @stop

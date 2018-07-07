@@ -1,6 +1,6 @@
 @extends('layouts.principal')
 @section('content')
-
+@section('tittle','Nosotros')
 		<!---start-content---->
 		<div class="content">
 			<div class="wrap">

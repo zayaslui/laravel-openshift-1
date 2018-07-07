@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>EDB</title>
+<title>EDB - @yield('tittle')</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <link href='//fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>

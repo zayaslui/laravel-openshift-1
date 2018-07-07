@@ -1,5 +1,6 @@
 @extends('layouts.principal')
 @section('content')
+@section('tittle','Servicios')
 
 		<div class="content">
 				<!---start-services---->

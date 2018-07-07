@@ -23,10 +23,17 @@ Route::get('/services/prefabricacion','FrontController@servicios_prefabricacion'
 Route::get('/services/mineria','FrontController@servicios_mineria');
 Route::get('/services/concreto','FrontController@servicios_concreto');
 
+
+/*pruebas layers*/
+Route::get('layers','FrontController@layer_demo');
+// Route::get('layer_obras','FrontController@layer_obral');
+
 // ajax
 Route::post('listarObras','ObrasController@listar');
-Route::post('little','ObrasController@little_obras');
+Route::get('little','ObrasController@little_obras');
+
 Route::get('obras_det/{imagen}','FrontController@obras_det');
+
 
 
 // errores

@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Obras;
+use App\Obras_det;
+
 use Illuminate\Support\Facades\DB;
 
 class ObrasController extends Controller
@@ -102,4 +104,8 @@ class ObrasController extends Controller
     {
         //
     }
+
+
 }
+
+

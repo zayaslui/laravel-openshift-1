@@ -12,7 +12,7 @@ class Obras extends Model
         'descripcion'
     ];
      
-     public function obras_det(){
+     public function detalles(){
      	return $this->hasMany('App\Obras_det');
      }
 }

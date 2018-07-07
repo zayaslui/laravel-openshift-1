@@ -4,6 +4,11 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Obras;
+use App\Obras_det;
+
+
+
 class FrontController extends Controller
 {
 
@@ -17,11 +22,6 @@ class FrontController extends Controller
 
     public function services(){
         return View('services');
-    }
-
-    /*procesa la obra individual*/
-    public function obras_det($id){
-        return view('obras_det');
     }
     
     public function obras(){
@@ -47,5 +47,18 @@ class FrontController extends Controller
    public function servicios_mineria(){
       return view('services.mineria');
    }
+
+   public function layer_demo(){
+      return view('layerslider');
+   }
+
+   public function obras_det(Request $request,$id){
+      $detalle = Obras::find(1)->detalles;
+      return $request->ajax();
+      // return view('obras_det',compact('detalle'));
+   }
+
+
+
 
 }

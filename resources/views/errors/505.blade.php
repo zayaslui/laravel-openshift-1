@@ -1,4 +1,5 @@
 @extends('layouts.principal')
+@section('tittle','505')
 @section('content')
 		<!---End-wrap---->
 		<div class="clear"> </div>

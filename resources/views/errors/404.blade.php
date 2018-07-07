@@ -1,5 +1,6 @@
 @extends('layouts.principal')
 @section('content')
+@section('tittle','404')
 		<!---End-wrap---->
 		<div class="clear"> </div>
 		<!---start-content---->

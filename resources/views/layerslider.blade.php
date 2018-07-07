@@ -1,13 +1,15 @@
 @extends('layouts.principal')
 @section('content')
-@section('tittle','Principal')
 
+<!---start-content---->
+<div class="content">	
+	
 		<!-- layerslayer -->
 	<div id="slider-wrapper">
 
 		<!-- LayerSlider start -->
 
-		<div id="layerslider" class="layerslider" style="width: 1280px; height: 500px;">
+		<div id="layerslider" class="layerslider centrar" style="width: 1280px; height: 500px;">
 
 			<!-- slide one start -->
 
@@ -15,7 +17,7 @@
 
 				<!-- slide background image -->
 
-				<img src="images/banner/1.jpg" class="ls-bg" alt="Slide background"/>
+				<img src="/images/obras/89_1.jpg" class="ls-bg" alt="Slide background"/>
 
 				<!-- layer one -->
 
@@ -55,7 +57,7 @@
 				    color:#ffffff;
 				    background:#3D82DA;
 				    border-radius:4px;
-				    white-space: nowrap;" data-ls="durationin:1500;delayin:3300;rotatein:20;rotatexin:30;scalexin:1.5;scaleyin:1.5;transformoriginin:left 50% 0;durationout:750;rotateout:20;rotatexout:-30;scalexout:0;scaleyout:0;transformoriginout:left 50% 0;">EDB Construcciones
+				    white-space: nowrap;" data-ls="durationin:1500;delayin:3300;rotatein:20;rotatexin:30;scalexin:1.5;scaleyin:1.5;transformoriginin:left 50% 0;durationout:750;rotateout:20;rotatexout:-30;scalexout:0;scaleyout:0;transformoriginout:left 50% 0;">Avda. Madame Lynch
 				</p>
 				<!-- layer two -->
 
@@ -100,12 +102,34 @@
 			<!-- slide one end -->
 
 			<!-- slide two start -->
-
+<!-- <h1 class="ls-l" style="
+				top: 10px;
+				left: 10px;
+				font-weight: 300;
+			    height:40px;
+			    padding-right:10px;
+			    padding-left:10px;
+			    font-size:30px;
+			    line-height:37px;
+			    color:#ffffff;
+			    background:#3D82DA;
+			    border-radius:4px;
+			    white-space: nowrap" 
+				data-ls="
+					offsetxin: 0;
+					offsetxout: 300;
+					offsetyin: top;
+					offsetyout: 300;
+					durationin: 2000;
+					durationout: 2000;
+					delayin: 2000;
+					rotateyin: 60;
+				">HORIZONTE VIAJES</h1> -->
 			<div class="ls-slide" data-ls="slidedelay: 5000; transition2d: 5; timeshift: -1000;">
 
 				<!-- slide background image -->
 
-				<img src="images/banner/2.jpg" class="ls-bg" alt="Slide background"/>
+				<img src="/images/obras/89_2.jpg" class="ls-bg" alt="Slide background"/>
 
 				<!-- layer one -->
 
@@ -154,7 +178,7 @@
 
 				<!-- slide background image -->
 
-				<img src="images/banner/3.jpg" class="ls-bg" alt="Slide background"/>
+				<img src="/images/obras/89_3.jpg" class="ls-bg" alt="Slide background"/>
 
 				<!-- layer one -->
 
@@ -195,7 +219,7 @@
 
 				<!-- slide background image -->
 
-				<img src="images/banner/4.jpg" class="ls-bg" alt="Slide background"/>
+				<img src="/images/obras/89_3.jpg" class="ls-bg" alt="Slide background"/>
 
 				<!-- layer one -->
 
@@ -223,8 +247,8 @@
 					easingin: easeoutquart;
 					easingout: easeinquart;
 					durationin: 2500;
-					delayin: 500;
-				"> -->
+					delayin: 500;">
+ -->
 
 			</div>
 
@@ -235,95 +259,20 @@
 		</div>
 
 		<!-- LayerSlider end -->
-
-	<!---start-content---->
-		<div class="content">
-		    <div class="content_top ">
-		    	<div class="wrap icon-logo">
-					<h1><a href="#">EDB Construcciones</a></h1>
-					<p>EDB Construcciones es una empresa Paraguaya de Ingeniería, especializada en la construcción vial de rutas, 
-                            puentes, viaductos, carreteras y todos los trabajos asociados redes de desagüe cloacal, redes de desagüe pluvial, 
-                            tendido de redes eléctricas y obras aeroportuarias y arquitectónicas. <br>
-                            Los procesos más importantes para la producción de insumos y materiales son realizados por nuestra empresa en 
-                            instalaciones y plantas que son propiedad del grupo empresarial, en los que se aplica procedimientos de control 
-                            y gestión de calidad, bajo la norma ISO 9001.<br></p>
-					<span><a class="learnmore" href="about">Leer más</a></span>
-				</div>
-		    </div>
-		    <div class="titulo-servicio">
-			    <div class="wrap">
-					<div class="specials-heading">
-						<h3>Servicios</h3>
-					</div>			
-			    </div>
-		    </div>
-			<div class="content-grids">
-				<div class="wrap fix">
-				 <div class="grid">
-					<a href="services/hormigon"><img src="images/hormigon.jpg" title="image-name" /></a>
-					<h3>HORMIGON ARMADO</h3>
-					<p>La empresa cuenta con varias plantas hormigoneras con capacidades de producción que oscilan..</p>
-					<a class="button" href="services/hormigon">Ver más</a>
-				</div>
- 				<div class="grid more more-icon">
-						<a href="services" class=""></a>
-				</div> 
-
-				<!--
-				 <div class="grid">
-					<a href="#"><img src="images/hormigon.jpg" title="image-name" /></a>
-					<h3>HORMIGON ARMADO</h3>
-					<p>La empresa cuenta con varias plantas hormigoneras con capacidades </p>
-					<a class="button" href="#">Ver más</a>
-				</div>
-				<div class="grid last-grid">
-					<a href="#"><img src="images/grids-img3.jpg" title="image-name" /></a>
-					<h3>SUPPORT</h3>
-					<p>Lorem ipsum dolor sit amet consectetur adiing elit. In volutpat luctus eros ac placerat. Quisque erat metus facilisis non feu,aliquam hendrerit quam. Donec ut lectus vel dolor adipiscing tincnt.</p>
-					<a class="button" href="#">More</a>
-				</div> -->
-				<div class="clear"> </div>
-			</div>
-		 </div>
-			
-			{{-- obras --}}
-			<div class="specials">
-				<div class="wrap" id="specials-grids">
-					<div class="specials-heading">
-						<h3>Obras Emblemáticas</h3>
-					</div>
-			    </div>
-			</div>	
-			@include('js.listarAllObrasAjax')
-			{{-- obras --}}
-
-		</div>
-
-  </div>
-	<div class="clear"> </div>
-	<!---End-content---->
-
-
-	{{-- redes sociales --}}
-	 <div class="social-bar">
-	    <a href="#" class="icon icon-facebook" target="_blank"></a>
-	    <a href="#" class="icon icon-twitter" target="_blank"></a>
-	    <a href="#" class="icon icon-youtube" target="_blank"></a>
-	    <a href="#" class="icon icon-instagram" target="_blank"></a>
-	  </div>
-	{{-- redes sociales --}}
+</div>
+{{-- end content --}}
 
 		<script>
 			$(document).ready(
 			function(){
 				$("#layerslider").layerSlider({
 						pauseOnHover: false,
-						skinsPath: 'skins/',
-			            width : '100%',
-			            height : '560px',
+						skinsPath: '/skins/',
+			            width : '75%',
+			            height : '500px',
 			            responsive : true,
 			            responsiveUnder : 960,
-			            // sublayerContainer : 960,
+			            sublayerContainer : 900,
 			            autoStart : true,
 			            pauseOnHover : true,
 			            firstLayer : 1,
@@ -369,5 +318,4 @@
 			});
 	</script>
 
-
-		@stop
+@stop
