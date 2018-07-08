@@ -3,10 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
 use App\Obras;
 use App\Obras_det;
-
 
 
 class FrontController extends Controller
@@ -52,13 +50,37 @@ class FrontController extends Controller
       return view('layerslider');
    }
 
-   public function obras_det(Request $request,$id){
-      $detalle = Obras::find(1)->detalles;
-      return $request->ajax();
-      // return view('obras_det',compact('detalle'));
-   }
+   public function obras_det(Request $request){
+      // return view('obras_det');
+      $detalles = Obras::find(1);
+      return response()->view('obras_det');
+  }
 
+    public function listar(Request $request) {
 
+        if($request->ajax()){
+            $dato = Obras::All();
+            return json_encode($dato);
+        }
 
+    }
+
+    public function little_obras(Request $request){
+        if($request->ajax()){
+            $dato = DB::table('obras')->limit(2)->get();
+            return json_encode($dato);
+        }
+    }
+
+    public function detalle_obra(Request $request){
+
+      if($request->ajax()){
+        $dato = Obras::find($request->id)->detalles;
+        return json_encode($dato);
+      }
+      
+    } 
+
+    
 
 }

@@ -303,16 +303,6 @@
 	<div class="clear"> </div>
 	<!---End-content---->
 
-
-	{{-- redes sociales --}}
-	 <div class="social-bar">
-	    <a href="#" class="icon icon-facebook" target="_blank"></a>
-	    <a href="#" class="icon icon-twitter" target="_blank"></a>
-	    <a href="#" class="icon icon-youtube" target="_blank"></a>
-	    <a href="#" class="icon icon-instagram" target="_blank"></a>
-	  </div>
-	{{-- redes sociales --}}
-
 		<script>
 			$(document).ready(
 			function(){

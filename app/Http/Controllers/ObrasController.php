@@ -12,21 +12,6 @@ use Illuminate\Support\Facades\DB;
 class ObrasController extends Controller
 {
     
-    public function listar(Request $request) {
-
-        if($request->ajax()){
-            $dato = Obras::All();
-            return json_encode($dato);
-        }
-
-    }
-
-    public function little_obras( Request $request){
-        if($request->ajax()){
-            $dato = DB::table('obras')->limit(2)->get();
-            return json_encode($dato);
-        }
-    }
 
 
     /**

@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Http\Request;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -26,15 +27,14 @@ Route::get('/services/concreto','FrontController@servicios_concreto');
 
 /*pruebas layers*/
 Route::get('layers','FrontController@layer_demo');
-// Route::get('layer_obras','FrontController@layer_obral');
 
 // ajax
-Route::post('listarObras','ObrasController@listar');
-Route::get('little','ObrasController@little_obras');
+Route::post('listarObras','FrontController@listar');
+Route::get('little','FrontController@little_obras');
 
 Route::get('obras_det/{imagen}','FrontController@obras_det');
-
-
+// traer el detalle de la obra
+Route::post('singleObras/{id}','FrontController@detalle_obra');
 
 // errores
 Route::get ('404', ['as' => '404', 'uses' => 'ErrorHandlerController@errorCode404']);

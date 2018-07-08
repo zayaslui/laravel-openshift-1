@@ -13,7 +13,6 @@
 				                cache: false,
 				                contentType: false,
 				                processData: false,
-
 				                success:function(response) {
 				                    //crear listado de obras
 				                    var data = JSON.parse(response);

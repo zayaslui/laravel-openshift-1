@@ -4,8 +4,9 @@
 <!---start-content---->
 <div class="content">	
 	
+		{{ csrf_field() }}
 		<div id="layer_">
-			
+				
 		</div>
 
 
@@ -44,21 +45,24 @@
 				var id = parseInt(location.href.split("/")[4]);
 				$.ajax({
 			                    headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
-				                url: 'obras_det',
+				                url: '/singleObras/'+id,
 				                datatType : 'json',
-				                type: 'GET',
-				                cache: false,
-				                contentType: false,
-				                processData: false,
+				                type: 'post',
+				                data: {
+									        name: 'John Smith',
+									        age: 34
+									    },
+				                // cache: false,
+				                // contentType: false,
+				                // processData: false,
 				                success:function(response) {
 				                	console.log(response);
-				                    //this.createSlider();
+				                	var dato = JSON.parse(response)[0].layer;
+				                    this.createSlider(dato);
 				                },
-				                createSlider:function(){
-				                	var html = '';
-				                	html+='<div id="slider-wrapper"><div id="layerslider" class="layerslider centrar" style="width: 1280px; height: 500px;"><div class="ls-slide" data-ls="slidedelay: 7000; transition2d: 75,79;"><img src="/images/obras/89_1.jpg" class="ls-bg" alt="Slide background"/><p class="ls-l" style="top:70px;left:10px;font-weight: 300;height:40px;padding-right:10px;padding-left:10px;font-size:30px;line-height:37px;color:#ffffff;background:#3D82DA;border-radius:4px;white-space: nowrap;" data-ls="durationin:1500;delayin:3300;rotatein:20;rotatexin:30;scalexin:1.5;scaleyin:1.5;transformoriginin:left 50% 0;durationout:750;rotateout:20;rotatexout:-30;scalexout:0;scaleyout:0;transformoriginout:left 50% 0;">Avda. Madame Lynch</p><p class="ls-l" style="top:130px;left:10px;font-weight: 300;height:40px;padding-right:10px;padding-left:10px;font-size:30px;line-height:37px;color:#ffffff;background:#3D82DA;border-radius:4px;white-space: nowrap;" data-ls="durationin:1500;delayin:4300;rotatein:20;rotatexin:30;scalexin:1.5;scaleyin:1.5;transformoriginin:left 50% 0;durationout:750;rotateout:20;rotatexout:-30;scalexout:0;scaleyout:0;transformoriginout:left 50% 0;">Una empresa Paraguaya de Ingeniería</p></div></div></div>';
-				                	$("#layer_").append(html);
-				                	this.load_script();		                	
+				                createSlider:function(data){
+									$('#layer_').append(data);
+									this.load_script();
 				                },
 				                load_script:function(){
 										$("#layerslider").layerSlider({
@@ -112,9 +116,11 @@
 									            cbNext : function(data) { }
 											});
 				                },
-				                error:function(jqXHR, textStatus, errorThrown ){
-				                	console.log(errorThrown);
-				                }
+				                //bendito 
+						        error: function(data) {
+						            var errors = data.responseJSON;
+						            console.log(errors);
+						        }
 				});
 			})
 		</script>

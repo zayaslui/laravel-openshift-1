@@ -17,7 +17,7 @@
 
 				<!-- slide background image -->
 
-				<img src="/images/obras/89_1.jpg" class="ls-bg" alt="Slide background"/>
+				<img src="/images/obras/82_1.jpg" class="ls-bg" alt="Slide background"/>
 
 				<!-- layer one -->
 
@@ -57,7 +57,7 @@
 				    color:#ffffff;
 				    background:#3D82DA;
 				    border-radius:4px;
-				    white-space: nowrap;" data-ls="durationin:1500;delayin:3300;rotatein:20;rotatexin:30;scalexin:1.5;scaleyin:1.5;transformoriginin:left 50% 0;durationout:750;rotateout:20;rotatexout:-30;scalexout:0;scaleyout:0;transformoriginout:left 50% 0;">Avda. Madame Lynch
+				    white-space: nowrap;" data-ls="durationin:1500;delayin:3300;rotatein:20;rotatexin:30;scalexin:1.5;scaleyin:1.5;transformoriginin:left 50% 0;durationout:750;rotateout:20;rotatexout:-30;scalexout:0;scaleyout:0;transformoriginout:left 50% 0;">Aeropuerto Internacional Guaraní
 				</p>
 				<!-- layer two -->
 
@@ -94,7 +94,7 @@
 				    color:#ffffff;
 				    background:#3D82DA;
 				    border-radius:4px;
-				    white-space: nowrap;" data-ls="durationin:1500;delayin:4300;rotatein:20;rotatexin:30;scalexin:1.5;scaleyin:1.5;transformoriginin:left 50% 0;durationout:750;rotateout:20;rotatexout:-30;scalexout:0;scaleyout:0;transformoriginout:left 50% 0;">Una empresa Paraguaya de Ingeniería
+				    white-space: nowrap;" data-ls="durationin:1500;delayin:4300;rotatein:20;rotatexin:30;scalexin:1.5;scaleyin:1.5;transformoriginin:left 50% 0;durationout:750;rotateout:20;rotatexout:-30;scalexout:0;scaleyout:0;transformoriginout:left 50% 0;">EDB Construcciones
 				</p>
 
 			</div>
@@ -129,7 +129,7 @@
 
 				<!-- slide background image -->
 
-				<img src="/images/obras/89_2.jpg" class="ls-bg" alt="Slide background"/>
+				<img src="/images/obras/82_2.jpg" class="ls-bg" alt="Slide background"/>
 
 				<!-- layer one -->
 
@@ -178,7 +178,7 @@
 
 				<!-- slide background image -->
 
-				<img src="/images/obras/89_3.jpg" class="ls-bg" alt="Slide background"/>
+				<img src="/images/obras/82_3.jpg" class="ls-bg" alt="Slide background"/>
 
 				<!-- layer one -->
 
@@ -219,7 +219,7 @@
 
 				<!-- slide background image -->
 
-				<img src="/images/obras/89_3.jpg" class="ls-bg" alt="Slide background"/>
+				<img src="/images/obras/82_4.jpg" class="ls-bg" alt="Slide background"/>
 
 				<!-- layer one -->
 
@@ -253,12 +253,259 @@
 			</div>
 
 			<!-- slide 4 end -->
+
+			<!-- slide 5 start -->
+
+			<div class="ls-slide" data-ls="slidedelay: 5000; transition2d: 5; timeshift: -1000;">
+
+				<!-- slide background image -->
+
+				<img src="/images/obras/82_5.jpg" class="ls-bg" alt="Slide background"/>
+
+				<!-- layer one -->
+
+				<h2 class="ls-l claim parrafo light-green" style="top: 600px; left: 50%;" data-ls="
+					offsetxin: -100;
+					offsetxout: 0;
+					offsetyin: 0;
+					offsetyout: bottom;
+					durationin: 2500;
+					delayin: 1000;
+					skewxin: 60;
+				">We like Tucans :)</h2>
+
+				<!-- layer 5 -->
+
+<!-- 				<img class="ls-l" style="left: 650px; top: 70px;" src="images/sliderimages/tucan.png" alt="Image layer" data-ls="
+					offsetxin: right;
+					offsetxout: 0;
+					offsetyin: 200;
+					offsetyout: bottom;
+					rotatein: 50;
+					rotateout: -20;
+					fadein: false;
+					fadeout: false;
+					easingin: easeoutquart;
+					easingout: easeinquart;
+					durationin: 2500;
+					delayin: 500;">
+ -->
+
+			</div>
+
+			<!-- slide 5 end -->
+
+			<!-- slide 6 start -->
+
+			<div class="ls-slide" data-ls="slidedelay: 5000; transition2d: 5; timeshift: -1000;">
+
+				<!-- slide background image -->
+
+				<img src="/images/obras/82_6.jpg" class="ls-bg" alt="Slide background"/>
+
+				<!-- layer one -->
+
+				<h2 class="ls-l claim parrafo light-green" style="top: 600px; left: 50%;" data-ls="
+					offsetxin: -100;
+					offsetxout: 0;
+					offsetyin: 0;
+					offsetyout: bottom;
+					durationin: 2500;
+					delayin: 1000;
+					skewxin: 60;
+				">We like Tucans :)</h2>
+
+				<!-- layer 5 -->
+
+<!-- 				<img class="ls-l" style="left: 650px; top: 70px;" src="images/sliderimages/tucan.png" alt="Image layer" data-ls="
+					offsetxin: right;
+					offsetxout: 0;
+					offsetyin: 200;
+					offsetyout: bottom;
+					rotatein: 50;
+					rotateout: -20;
+					fadein: false;
+					fadeout: false;
+					easingin: easeoutquart;
+					easingout: easeinquart;
+					durationin: 2500;
+					delayin: 500;">
+ -->
+
+			</div>
+
+			<!-- slide 6 end -->
+
+
+			<!-- slide 7 start -->
+
+			<div class="ls-slide" data-ls="slidedelay: 5000; transition2d: 5; timeshift: -1000;">
+
+				<!-- slide background image -->
+
+				<img src="/images/obras/82_7.jpg" class="ls-bg" alt="Slide background"/>
+
+				<!-- layer one -->
+
+				<h2 class="ls-l claim parrafo light-green" style="top: 600px; left: 50%;" data-ls="
+					offsetxin: -100;
+					offsetxout: 0;
+					offsetyin: 0;
+					offsetyout: bottom;
+					durationin: 2500;
+					delayin: 1000;
+					skewxin: 60;
+				">We like Tucans :)</h2>
+
+				<!-- layer 5 -->
+
+<!-- 				<img class="ls-l" style="left: 650px; top: 70px;" src="images/sliderimages/tucan.png" alt="Image layer" data-ls="
+					offsetxin: right;
+					offsetxout: 0;
+					offsetyin: 200;
+					offsetyout: bottom;
+					rotatein: 50;
+					rotateout: -20;
+					fadein: false;
+					fadeout: false;
+					easingin: easeoutquart;
+					easingout: easeinquart;
+					durationin: 2500;
+					delayin: 500;">
+ -->
+
+			</div>
+
+			<!-- slide 7 end -->
+
+			<!-- slide 8 start -->
+
+			<div class="ls-slide" data-ls="slidedelay: 5000; transition2d: 5; timeshift: -1000;">
+
+				<!-- slide background image -->
+
+				<img src="/images/obras/82_8.jpg" class="ls-bg" alt="Slide background"/>
+
+				<!-- layer one -->
+
+				<h2 class="ls-l claim parrafo light-green" style="top: 600px; left: 50%;" data-ls="
+					offsetxin: -100;
+					offsetxout: 0;
+					offsetyin: 0;
+					offsetyout: bottom;
+					durationin: 2500;
+					delayin: 1000;
+					skewxin: 60;
+				">We like Tucans :)</h2>
+
+				<!-- layer 5 -->
+
+<!-- 				<img class="ls-l" style="left: 650px; top: 70px;" src="images/sliderimages/tucan.png" alt="Image layer" data-ls="
+					offsetxin: right;
+					offsetxout: 0;
+					offsetyin: 200;
+					offsetyout: bottom;
+					rotatein: 50;
+					rotateout: -20;
+					fadein: false;
+					fadeout: false;
+					easingin: easeoutquart;
+					easingout: easeinquart;
+					durationin: 2500;
+					delayin: 500;">
+ -->
+
+			</div>
+
+			<!-- slide 8 end -->			
+
+			<!-- slide 9 start -->
+
+			<div class="ls-slide" data-ls="slidedelay: 5000; transition2d: 5; timeshift: -1000;">
+
+				<!-- slide background image -->
+
+				<img src="/images/obras/82_9.jpg" class="ls-bg" alt="Slide background"/>
+
+				<!-- layer one -->
+
+				<h2 class="ls-l claim parrafo light-green" style="top: 600px; left: 50%;" data-ls="
+					offsetxin: -100;
+					offsetxout: 0;
+					offsetyin: 0;
+					offsetyout: bottom;
+					durationin: 2500;
+					delayin: 1000;
+					skewxin: 60;
+				">We like Tucans :)</h2>
+
+				<!-- layer 5 -->
+
+<!-- 				<img class="ls-l" style="left: 650px; top: 70px;" src="images/sliderimages/tucan.png" alt="Image layer" data-ls="
+					offsetxin: right;
+					offsetxout: 0;
+					offsetyin: 200;
+					offsetyout: bottom;
+					rotatein: 50;
+					rotateout: -20;
+					fadein: false;
+					fadeout: false;
+					easingin: easeoutquart;
+					easingout: easeinquart;
+					durationin: 2500;
+					delayin: 500;">
+ -->
+
+			</div>
+
+			<!-- slide 9 end -->			
+
+			<!-- slide 10 start -->
+
+			<div class="ls-slide" data-ls="slidedelay: 5000; transition2d: 5; timeshift: -1000;">
+
+				<!-- slide background image -->
+
+				<img src="/images/obras/82_10.jpg" class="ls-bg" alt="Slide background"/>
+
+				<!-- layer one -->
+
+				<h2 class="ls-l claim parrafo light-green" style="top: 600px; left: 50%;" data-ls="
+					offsetxin: -100;
+					offsetxout: 0;
+					offsetyin: 0;
+					offsetyout: bottom;
+					durationin: 2500;
+					delayin: 1000;
+					skewxin: 60;
+				">We like Tucans :)</h2>
+
+				<!-- layer 5 -->
+
+<!-- 				<img class="ls-l" style="left: 650px; top: 70px;" src="images/sliderimages/tucan.png" alt="Image layer" data-ls="
+					offsetxin: right;
+					offsetxout: 0;
+					offsetyin: 200;
+					offsetyout: bottom;
+					rotatein: 50;
+					rotateout: -20;
+					fadein: false;
+					fadeout: false;
+					easingin: easeoutquart;
+					easingout: easeinquart;
+					durationin: 2500;
+					delayin: 500;">
+ -->
+
+			</div>
+
+			<!-- slide 10 end -->			
 		</div>
 
+	</div>
 
-		</div>
+	<!-- LayerSlider end -->
 
-		<!-- LayerSlider end -->
 </div>
 {{-- end content --}}
 
