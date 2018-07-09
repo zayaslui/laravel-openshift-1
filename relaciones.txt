@@ -12,3 +12,6 @@ Un usuario puede tener muchos roles -> $this->belongsToMany('App\Role')
 Un rol lo puede tener muchos usuario -> $this->belongsToMany('App\User')
 El orden lo impones tu mismo, ya que al crear las tablas en tu BD, también debes ir añadiendo los métodos "relaciones" en las entidades.
 
+editar style 
+.top-nav ul li
+para tener una lista vertical

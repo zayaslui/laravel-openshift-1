@@ -60,6 +60,8 @@ font-style : normal;
   *display: inline;
 }
 
+
+
 .social-links {
   display: block;
 }
@@ -334,9 +336,20 @@ font-style : normal;
     line-height: 27px;
     margin-top: 27%;
 }
+
+.top-nav ul.menu2{
+	display: none;
+}
+
+.top-nav a#pull {
+	display: none;
+}
 .top-nav{
 	float:right;
 	width: 50%;
+}
+.top-nav ul {
+	display: block;
 }
 .top-nav ul li{
 	display:inline-block;
@@ -1390,6 +1403,7 @@ hr {
 		float:left;
 		width: 20%;
 	}	
+
 	.wrap{
 		width:95%;
 	}
@@ -1425,6 +1439,29 @@ hr {
 	}
 }
 @media only screen and (max-width: 768px){
+	.top-nav ul{
+		display: none;
+		height: auto;
+	}
+	.top-nav ul.menu2{
+		display: block;
+	}
+	.header {
+	    padding: 2em 0px;
+	}
+	.logo img{
+		top:0px;
+	}
+	.top-nav a#pull {
+	    display: block;
+	    position: relative;
+	    color: #F26D7D;
+	    text-align: right;
+	    position: absolute;
+	    top: 14%;
+	    width: 7%;
+	    right: 48%;
+	}	
 	.blog-card {
 	    width: 250px;
 	    height: 340px;

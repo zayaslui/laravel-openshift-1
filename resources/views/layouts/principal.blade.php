@@ -28,6 +28,27 @@ var s = document.createElement('script'); s.type = 'text/javascript'; s.async = 
 
  </head>
     <body>
+<!--start-top-nav-script-->
+		<script>
+			$(function() {
+				var pull 		= $('#pull');
+					menu 		= $('.top-nav ul.menu2');
+					menuHeight	= menu.height();
+				$(pull).on('click', function(e) {
+					e.preventDefault();
+					menu.slideToggle();
+				});
+				$(window).resize(function(){
+	        		var w = $(window).width();
+	        		if(w > 320 && menu.is(':hidden')) {
+	        			menu.removeAttr('style');
+	        		}
+	    		});
+			});
+		</script>
+<!--End-top-nav-script-->
+
+
 		<!---start-header---->
 			<div class="header" id="menu">
 					<div class='wrap'>
@@ -35,16 +56,24 @@ var s = document.createElement('script'); s.type = 'text/javascript'; s.async = 
 								<a href='/'><img src='/images/logo.png' title='logo' /></a>
 							</div>
 							<div class='top-nav'>
-								<ul>
+								<ul class="">
 									<li class="{{ Request::path() == '/' ? 'active' : '' }} social-links principal-icon"><a href="/">Principal</a></li>
 									<li class="{{ Request::path() == 'about' ? 'active' : '' }} social-links nosotros-icon"><a href="/about">Acerca de</a></li>
 									<li class="{{ Request::is('services/*')  || Request::path() == 'services' ? 'active' : '' }} social-links servicios-icon"><a href="/services">Servicios</a></li>
 									<li class="{{ Request::is('obras/*') || Request::is('obras_det/*') || Request::path() == 'obras' ? 'active' : '' }} social-links planes-icon"><a href="/obras">Obras</a></li>
 									<li class="{{ Request::path() == 'contact' ? 'active' : '' }}  social-links contactos-icon"><a href="/contact">Contactos</a></li>
 								</ul>
+								<ul class="menu2">
+									<li>hola 1</li>
+									<li>hola 2</li>
+									<li>hola 3</li>
+								</ul>
+								<a href="#" id="pull">
+									<img src="/images/menu-icon.png" title="menu">
+								</a>
 							</div>
 							<div class='clear'> </div>
-					</div>				
+					</div>	
 			</div>
 			<!---End-header---->    	
 		<!---start-content---->
