@@ -1356,6 +1356,20 @@ hr {
 
 }
 @media only screen and (max-width: 800px) {
+	.top-nav ul{
+		display: none;
+		height: auto;
+	}
+	.top-nav a#pull {
+	    display: block;
+	    position: relative;
+	    color: #F26D7D;
+	    /*text-align: right;*/
+	    position: absolute;
+	    top: 14%;
+	    width: 7%;
+	    right: 0%;
+	}
 	.social-links a:before, .social-links a:after{
 		text-align:center;
 	}
@@ -1399,9 +1413,11 @@ hr {
 		width: 60%;
 	}
 	.top-nav ul li{
-		display:inline-block;
+		/*display:inline-block;
 		float:left;
-		width: 20%;
+		width: 20%;*/
+		display: block;
+		float: none;
 	}	
 
 	.wrap{
@@ -1439,29 +1455,15 @@ hr {
 	}
 }
 @media only screen and (max-width: 768px){
-	.top-nav ul{
-		display: none;
-		height: auto;
-	}
-	.top-nav ul.menu2{
-		display: block;
-	}
+
+
 	.header {
 	    padding: 2em 0px;
 	}
 	.logo img{
 		top:0px;
 	}
-	.top-nav a#pull {
-	    display: block;
-	    position: relative;
-	    color: #F26D7D;
-	    text-align: right;
-	    position: absolute;
-	    top: 14%;
-	    width: 7%;
-	    right: 48%;
-	}	
+	
 	.blog-card {
 	    width: 250px;
 	    height: 340px;
@@ -1597,9 +1599,11 @@ hr {
 		width: 62%;
 	}
 	.top-nav ul li{
-		display:inline-block;
+		/*display:inline-block;
 		float:left;
-		width: 20%;
+		width: 20%;*/
+		display: block;
+		float: none;
 	}
 	.wrap{
 		width:95%;
@@ -1750,8 +1754,8 @@ hr {
 		height: 70px;
 	}
 	.top-nav ul li{
-		display:inline-block;
-		float:left;
+		display:block;
+		float:none;
 		width: 20%;
 	}	
 

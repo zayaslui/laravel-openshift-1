@@ -32,7 +32,7 @@ var s = document.createElement('script'); s.type = 'text/javascript'; s.async = 
 		<script>
 			$(function() {
 				var pull 		= $('#pull');
-					menu 		= $('.top-nav ul.menu2');
+					menu 		= $('.top-nav ul');
 					menuHeight	= menu.height();
 				$(pull).on('click', function(e) {
 					e.preventDefault();
@@ -63,11 +63,7 @@ var s = document.createElement('script'); s.type = 'text/javascript'; s.async = 
 									<li class="{{ Request::is('obras/*') || Request::is('obras_det/*') || Request::path() == 'obras' ? 'active' : '' }} social-links planes-icon"><a href="/obras">Obras</a></li>
 									<li class="{{ Request::path() == 'contact' ? 'active' : '' }}  social-links contactos-icon"><a href="/contact">Contactos</a></li>
 								</ul>
-								<ul class="menu2">
-									<li>hola 1</li>
-									<li>hola 2</li>
-									<li>hola 3</li>
-								</ul>
+
 								<a href="#" id="pull">
 									<img src="/images/menu-icon.png" title="menu">
 								</a>
