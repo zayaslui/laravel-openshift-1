@@ -4,6 +4,15 @@
 <!---start-content---->
 <div class="content">	
 	
+		<div class="testmonials">
+			<div class="wrap">
+				<div class="testmonial-grid">
+					<h3 id="titulo_obra_"></h3>
+				</div>
+			</div>
+		</div>			
+			<div class="clear"> </div>
+			
 		{{ csrf_field() }}
 		<div id="layer_">
 				
@@ -13,25 +22,8 @@
 			<div class="testmonials">
 				<div class="wrap">
 					<div class="testmonial-grid">
-						<h3>Descripcion :</h3>
-						<p>&#34; MINISTERIO DE OBRAS PÚBLICAS Y COMUNICACIONES. 
-											Rehabilitación de la Circunvalación de Asunción, Tramo 4 Mojones – Defensores del Chaco – Avda. Madame Lynch – Empalme Ruta N°9. 
-											Volumen de Obras:
-
-											-Viales:
-											Una supercarretera de 12, 5 Km de longitud, de 4 vías.
-
-											-Tres Viaductos:
-											1-En Cuatro Mojones:  de 125 m  de longitud x 16 m de ancho, 1.600  m3 de H°A°.
-											2-En Avda. E. Ayala:  de 196 m de longitud x 16 m de ancho, 2.080 m3 de H°A°.
-											3-En Avda. Mcal. López:
-											lado derecho de 198 m de longitud x 8 m de ancho
-											lado izquierdo de 170 m de longitud x 8 m de ancho, 2.540 m3 de H°A°.
-
-											-Desagües: Se ejecutó un canal de cielo abierto de 6 Km de longitud con una 
-											excavación de 350.000 m3, con barandas metálicas protectoras y guarda raíles.
-											-Alcantarillas: Se construyeron 25.000 m de alcantarillas celulares de 2,5x2,5 m y 
-											6.000 m de tubulares de diferentes diámetro.&#34;</p>
+						<h3>Información :</h3>
+						<p id='info_'></p>
 					</div>
 				</div>
 			</div>			
@@ -57,8 +49,19 @@
 				                // processData: false,
 				                success:function(response) {
 				                	console.log(response);
-				                	var dato = JSON.parse(response)[0].layer;
-				                    this.createSlider(dato);
+				                	var layer = JSON.parse(response)[0].layer;
+				                	var info = JSON.parse(response)[0].contenido_obra;
+				                	var titulo = JSON.parse(response)[0].titulo_obra;
+				                	
+				                	this.createTitulo(titulo);
+				                    this.createSlider(layer);
+				                    this.createInformacion(info);
+				                },
+				                createTitulo:function(titulo){
+				                	$("#titulo_obra_").append(titulo);
+				                },
+				                createInformacion:function(info){
+				                	$('#info_').append(info);
 				                },
 				                createSlider:function(data){
 									$('#layer_').append(data);
