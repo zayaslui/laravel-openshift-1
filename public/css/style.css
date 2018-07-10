@@ -60,8 +60,6 @@ font-style : normal;
   *display: inline;
 }
 
-
-
 .social-links {
   display: block;
 }
@@ -1344,7 +1342,7 @@ hr {
 		left: 22px;
 	}
 	.social-links a:after {
-		content: "";	
+		visibility: hidden;	
 	}	
 	.wrap{
 		width:95%;
@@ -1356,7 +1354,23 @@ hr {
 
 }
 @media only screen and (max-width: 800px) {
+
+.social-links a:hover:before {
+    font-size: 30px;
+    padding-top: 0px;
+	/*left: 22px;*/
+	pointer-events:none;
+}
+.social-links a:hover:after {
+	/*content: "";	*/
+	/*font-size: 15px;*/
+    padding-top: 30px;
+    top:-30px;
+    /*left:-5px;*/
+}
+
 	.top-nav ul{
+		margin-top: 30px;
 		display: none;
 		height: auto;
 	}
@@ -1370,6 +1384,11 @@ hr {
 	    width: 7%;
 	    right: 0%;
 	}
+	.social-links a:after {
+		visibility: visible;	
+		padding-top: 5px;
+		padding-left: 80px;
+	}	
 	.social-links a:before, .social-links a:after{
 		text-align:center;
 	}
@@ -1404,27 +1423,35 @@ hr {
 	    padding-top: 7px;
 	}
 	.social-links a:before {
-	    font-size: 40px;
+	    font-size: 27px;
 	    padding-top: 3px;
 	    left: 15px;
 	}	
 	.top-nav{
 		float:right;
-		width: 60%;
+		width: 100%;
 	}
-	.top-nav ul li{
-		/*display:inline-block;
-		float:left;
-		width: 20%;*/
-		display: block;
-		float: none;
-	}	
+	.top-nav ul li {
+	    display: block;
+	    float: none;
+	    width: 100%;
+	    border: 1px solid #76848a;
+	    border-radius: 14px;
+	    -moz-border-radius: 14px;
+	    -webkit-border-radius: 14px;
+	}
+	.top-nav li.active a, .top-nav li a:hover {
+	    border: 1px solid #76848a;
+	    border-radius: 14px;
+	    -moz-border-radius: 14;
+	    -webkit-border-radius: 14px;
+	}
 
 	.wrap{
 		width:95%;
 	}
 	.top-nav ul li a{
-		padding:40px 15px;
+		padding:20px 15px;
 	}
 	.grid{
     width: 38.8%;
@@ -1480,6 +1507,12 @@ hr {
 }
 }
 @media only screen and (max-width: 736px){
+
+.top-nav ul{
+	margin-top: 40px;
+	display: none;
+	height: auto;
+}
 
 .logo-footer img {
     line-height: 13px;
@@ -1557,6 +1590,21 @@ hr {
 }
 /*  GO FULL WIDTH AT LESS THAN 640 PIXELS */
 @media only screen and (max-width: 640px){
+
+.social-links a:before{
+    font-size: 30px;
+    padding-top: 0px;
+    left: 5px;
+	pointer-events:none;
+}
+.social-links a:after {
+	/*content: "";	*/
+	font-size: 15px;
+    padding-top: 30px;
+    top:-30px;
+    /*left:-5px;*/
+}
+
 	.more-icon a:before {
 	    font-size: 27px;
 	    left: 7%;
@@ -1589,14 +1637,11 @@ hr {
 	    padding-top: 7px;
 	    left: -60px;
 	}
-	.social-links a:before {
-	    font-size: 40px;
-	    padding-top: 3px;
-	    left: 5px;
-	}	
+
 	.top-nav{
 		float:right;
-		width: 62%;
+		width: 100%;
+		margin-top: 40px;
 	}
 	.top-nav ul li{
 		/*display:inline-block;
