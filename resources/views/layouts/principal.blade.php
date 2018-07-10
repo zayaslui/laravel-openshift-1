@@ -64,9 +64,11 @@ var s = document.createElement('script'); s.type = 'text/javascript'; s.async = 
 									<li class="{{ Request::path() == 'contact' ? 'active' : '' }}  social-links contactos-icon"><a href="/contact">Contactos</a></li>
 								</ul>
 
-								<a href="#" id="pull">
-									<img src="/images/menu-icon.png" title="menu">
-								</a>
+								<div class="menu-links menu-mobile-link">
+									<a href="#" id="pull">
+									<!-- <img src="/images/menu-icon.png" title="menu">-->
+								</a>										
+								</div>
 							</div>
 							<div class='clear'> </div>
 					</div>	
