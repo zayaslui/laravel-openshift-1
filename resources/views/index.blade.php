@@ -310,7 +310,7 @@
 						pauseOnHover: false,
 						skinsPath: 'skins/',
 			            width : '100%',
-			            height : '560px',
+			            height : '500px',
 			            responsive : true,
 			            responsiveUnder : 960,
 			            // sublayerContainer : 960,
