@@ -1380,7 +1380,7 @@ hr {
 }
 @media only screen and (max-width: 800px) {
 	.menu-links.menu-mobile-link {
-	    position: relative;
+	    /*position: relative;*/
 	}
 	.social-links a:hover:before {
 	    font-size: 30px;
@@ -1899,8 +1899,9 @@ hr {
 	
 }
 @media only screen and (max-width: 414px) {
+
 .top-nav a#pull {
-	top:6%;
+	top:13%;
 }
 
 .logo-footer img {
@@ -1963,7 +1964,7 @@ hr {
 }
 @media only screen and (max-width: 384px) {
 	.top-nav a#pull {
-			
+		top:6%;
 	}
 	.top-nav ul li a {
 	    padding: 4px 11px;
