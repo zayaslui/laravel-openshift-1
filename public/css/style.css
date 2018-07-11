@@ -69,6 +69,7 @@ font-style : normal;
   font-size: 0;
   line-height: 0;
 }
+
 .menu-links a:before {
   -moz-transition: all 0.4s ease-in-out 0.1s;
   -o-transition: all 0.4s ease-in-out 0.1s;
@@ -92,6 +93,7 @@ font-style : normal;
   /*content: '\f142';*/
   content: '\f0c9';
 }
+
 .social-links a:before,.social-links a:after {
   -moz-transition: all 0.4s ease-in-out 0.1s;
   -o-transition: all 0.4s ease-in-out 0.1s;
@@ -1377,12 +1379,15 @@ hr {
 
 }
 @media only screen and (max-width: 800px) {
-
+	.menu-links.menu-mobile-link {
+	    position: relative;
+	}
 	.social-links a:hover:before {
 	    font-size: 30px;
 	    padding-top: 0px;
 		/*left: 22px;*/
 		pointer-events:none;
+
 	}
 	.social-links a:hover:after {
 		/*content: "";	*/
@@ -1779,6 +1784,7 @@ hr {
 /*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
 
 @media only screen and (max-width: 480px) {
+
 	.wrap .fix{
 		 padding-right: 5px;
 	    padding-left: 5px;
@@ -1893,6 +1899,10 @@ hr {
 	
 }
 @media only screen and (max-width: 414px) {
+.top-nav a#pull {
+	top:6%;
+}
+
 .logo-footer img {
 	line-height: 6px;
 	margin-top: 10%;
@@ -1952,12 +1962,15 @@ hr {
 }
 }
 @media only screen and (max-width: 384px) {
-.top-nav ul li a {
-    padding: 4px 11px;
-}
-.content_top h1 a {
-    font-size: 1.8em;
-}
+	.top-nav a#pull {
+			
+	}
+	.top-nav ul li a {
+	    padding: 4px 11px;
+	}
+	.content_top h1 a {
+	    font-size: 1.8em;
+	}
 }
 @media only screen and (max-width: 320px) {
 
@@ -2147,3 +2160,4 @@ hr {
 .layerslider.centrar{
 	padding: 1% 12%;
 }
+
