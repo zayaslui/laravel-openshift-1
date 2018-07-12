@@ -33,6 +33,7 @@ Route::get('layers','FrontController@layer_demo');
 // ajax
 Route::post('listarObras','FrontController@listar');
 Route::post('little','FrontController@little_obras');
+Route::post('listarPrensa','FrontController@listarPrensa');
 
 Route::get('obras_det/{imagen}','FrontController@obras_det');
 // traer el detalle de la obra

@@ -6,7 +6,7 @@
 
 				$.ajax({
 			                    headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
-				                url: 'listarObras',
+				                url: 'listarPrensa',
 				                datatType : 'json',
 				                type: 'POST',
 				                data: {'id' : 12,'name': 'john'},
@@ -22,37 +22,44 @@
 									//abrimos specials-grids
 									// tabla+="<div class='specials-grids'>";
 									$.each(data, function(idx, obj){ 
-										i=idx;
-					                     //specials-grids
-					                     if(i%3==0){
-					                     	// cerramos specials-grids y abrimos specials-grids
-					                     	tabla+="</div><div class='specials-grids'>"
-					                     }
-										var last = ((i+1)%3==0)?'spe-grid':'';
-										// console.log(i+1%3);
+									{{-- news --}}
+											tabla +='<div class="news-block">	';
+											tabla +='		<div class="news-block-bottom">';	
+											tabla +='			<div class="buzz-news">';		
+											tabla +='				<div class="news-1">';			
+											tabla +='				<div class="news-text1">';
+											tabla +='					<h2>Novedades</h2>';
+											tabla +='				</div>';
+											tabla +='				<div class="reaches">';
+											tabla +='					<h6>Archivo</h6>';
+											tabla +='				</div>';
+											tabla +='			   <div class="clear"> </div>';
+											tabla +='			</div>';
+											tabla +='			<h3><a href="'+obj.link+' target=blank_">Titulo</a></h3>';
+											tabla +='			<br>';
+											tabla +='			<p>'+obj.descripcion+'</p>';
+											tabla +='			<br>';
+											tabla +='			<br>';
+											tabla +='			<div class="news-btn-3"><a class="popup-with-zoom-anim" href="'+obj.link+'" target="blank_">Ver Más</a></div>';
+											tabla +='		</div>';
+											tabla +='		<div class="buzz-img">';
+											tabla +='			<a href="'+obj.link+'" target="blank_">';
+											tabla +='				<img src="images/prensas/'+obj.imagen+'.jpg" class="img-responsive" alt="">';
+											tabla +='			</a>';
+											tabla +='		</div>';
+											tabla +='	  <div class="clear"> </div>';
+											tabla +='	</div>';
+											tabla +='</div>';
 
-										if(obj.imagen!='90'){
-												tabla+= "<div class='special-grid "+last+"'>";
-												tabla+= "<img src='images/obras/"+obj.imagen+"_1.jpg' title='image-name' />";
-												tabla+= "<a href='#'>"+obj.titulo_obra+"</a>";
-												tabla+= obj.introduccion;
-												tabla+= "<div class='special-grid-background'></div>";
-												tabla+= "<a href='/obras_det/"+obj.id+"' class='ver-obras'>Ver obra</a>";
-												tabla+= "</div>";
-					                     }
-								});
-								if(i%3==0){
-					            // cerramos specials-grids
-					             	tabla+="</div>";
-					            }
-								$('#specials-grids').append(tabla);
-								tabla="<div class='clear'></div>";
-								$('#specials-grids').append(tabla);
-
+									{{-- news --}}												
+									});
+									/*agregar*/
+										$('#news-block').append(tabla);									
 				                },
-				                error:function(jqXHR, textStatus, errorThrown ){
-				                	console.log(errorThrown);
-				                }
+						        error: function(data) {
+						            var errors = data.responseJSON;
+						            console.log(errors);
+						        }
 				});
 			})
 		</script>

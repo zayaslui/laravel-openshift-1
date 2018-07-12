@@ -9,6 +9,7 @@ class Prensa extends Model
     protected $table='prensas';
 
     protected $fillable = [
-        'descripcion'
+        'descripcion',
+        'imagen'
     ];
 }

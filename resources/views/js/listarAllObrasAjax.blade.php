@@ -50,9 +50,10 @@
 								$('#specials-grids').append(tabla);
 
 				                },
-				                error:function(jqXHR, textStatus, errorThrown ){
-				                	console.log(errorThrown);
-				                }
+						        error: function(data) {
+						            var errors = data.responseJSON;
+						            console.log(errors);
+						        }
 				});
 			})
 		</script>

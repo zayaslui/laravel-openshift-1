@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Obras;
 use App\Obras_det;
-
+use App\Prensa;
 use Illuminate\Support\Facades\DB;
 
 class FrontController extends Controller
@@ -72,6 +72,13 @@ class FrontController extends Controller
             return json_encode($dato);
         }
 
+    }
+
+    public function listarPrensa(Request $request){
+      if($request->ajax()){
+        $noticias = Prensa::All();
+        return json_encode($noticias);
+      }
     }
 
     public function little_obras(Request $request){

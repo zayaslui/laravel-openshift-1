@@ -27,7 +27,9 @@
 			    </div>
 
 				{{-- news --}}
-									<div class="news-block">	
+				<div id="news-block">
+					
+{{-- 									<div class="news-block">	
 										<div class="news-block-bottom">
 											<div class="buzz-news">
 												<div class="news-1">
@@ -48,12 +50,14 @@
 											</div>
 											<div class="buzz-img">
 												<a href="#">
-													<img src="images/prensas/75_1.jpg" class="img-responsive" alt="">
+													<img src="images/prensas/71_1.jpg" class="img-responsive" alt="">
 												</a>
 											</div>
 										  <div class="clear"> </div>
 										</div>
-									</div>
+									</div> --}}
+
+				</div>
 
 				{{-- news --}}
 
@@ -65,6 +69,6 @@
 			
 			<div class="clear"> </div>
 		</div>
-		{{-- @include('js.listarAllPrensaAjax') --}}
+		@include('js.listarAllPrensaAjax')
 
 @stop
