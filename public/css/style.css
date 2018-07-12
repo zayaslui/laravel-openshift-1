@@ -124,15 +124,14 @@ font-style : normal;
 	background:url(../images/bg-h1.png) repeat-x center;
 }
 .social-links a:hover:before {
-    font-size: 60px;
+    font-size: 55px;
     padding-top: 3px;
-	/*left: 22px;*/
 }
 .social-links a:hover:after {
 	/*content: "";	*/
 	/*font-size: 15px;*/
     padding-top: 0px;
-    top:-30px;
+    top:-25px;
     /*left:-5px;*/
 }
 /*letras*/
@@ -174,6 +173,20 @@ font-style : normal;
 }
 .contactos-icon a:before{
   content: '\f0e0';
+}
+/*prensa*/
+.prensa-icon a:after{
+	content: "Prensa";
+}
+.prensa-icon a:before{
+  content: '\f1ea';
+}
+/*compromiso*/
+.compromiso-icon a:after{
+	content: "Compromiso";
+}
+.compromiso-icon a:before{
+  content: '\f2b5';
 }
 /*more*/
 .grid.more.more-icon {
@@ -301,6 +314,82 @@ font-style : normal;
 	box-shadow: 4px 8px 53px -2px rgba(6,46,85,0.56);
 }
 
+/*news*/
+
+.news-block-bottom {
+    border: 1px solid #ccc;
+    margin-top: 4em;
+    padding: 1em 1.5em;
+    background: #fff;
+}
+
+.news-block {
+    width: 52%;
+    margin: 3em auto 0em;
+}
+
+.buzz-news {
+    float: left;
+    width: 48%;
+}
+
+.news-1 {
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 1em;
+}
+
+.news-text1 h2 {
+    font-size: 1.6em;
+    color: #F19E35;
+    font-weight: 600;
+}
+
+.news-text1 {
+    float: left;
+    width: 49%;
+}
+
+.reaches {
+    float: right;
+    width: 50%;
+    text-align: right;
+}
+
+.reaches h6 {
+    font-size: 1em;
+    color: #B3812A;
+}
+
+a.popup-with-zoom-anim {
+    outline: none;
+    border: none;
+    text-decoration: none;
+    color: #fff;
+    font-size: 1em;
+}
+
+.news-btn-3 a {
+    font-size: 1em;
+    color: #fff;
+    background: #7cbb00;
+    padding: 0.5em 1em;
+    display: inline-block;
+    margin-top: 1em;
+}
+
+.buzz-news h3 a {
+    color: #182F50;
+}
+
+.buzz-img {
+    float: right;
+    width: 48%;
+}
+
+
+/*news*/
+
+
 .more_obras a:after{
     -moz-transition: all 0.4s ease-in-out 0.1s;
     -o-transition: all 0.4s ease-in-out 0.1s;
@@ -369,7 +458,7 @@ font-style : normal;
 }
 .top-nav{
 	float:right;
-	width: 50%;
+	width: 62%;
 }
 .top-nav ul {
 	display: block;
@@ -377,7 +466,7 @@ font-style : normal;
 .top-nav ul li{
 	display:inline-block;
 	float:left;
-	width: 20%;
+	/*width: 20%;*/
 }
 .top-nav ul li a:after{  
 	font-family: 'Roboto', sans-serif;
@@ -409,7 +498,7 @@ font-style : normal;
 .top-nav ul li a{
 	/*width: 100%;*/
 	height: 20px;
-	padding: 40px 25px;
+	padding: 40px 10px;
 }
 
 .top-nav li.active a, .top-nav li a:hover {
@@ -1323,12 +1412,28 @@ hr {
 	.wrap{
 		width:90%;
 	}
+	.top-nav {
+	    width: 69%;
+	}
+	.top-nav ul li a {
+		padding: 40px 5px;		
+	}	
 	.more-icon a:before{
 		font-size: 27px;
 		left: 7%;
 	}
+	.top-nav ul li a:after{
+		font-size: 0.775em;
+	}
+
 }
 @media only screen and (max-width: 1024px) {
+	.top-nav ul li a {
+		padding: 40px 0px;		
+	}
+	.top-nav {
+	    width: 67%;
+	}
 	.social-links a:hover:before {
 		font-size: 30px;
 	}
@@ -1362,7 +1467,7 @@ hr {
 	    font-size: 1em;
 	}
 	.social-links a:before {
-	    font-size: 40px;
+	    font-size: 30px;
 	    padding-top: 3px;
 		left: 22px;
 	}
@@ -1377,6 +1482,11 @@ hr {
 
 	}
 
+}
+@media only screen and (max-width: 900px) {
+	.top-nav {
+	    width: 67%;
+	}	
 }
 @media only screen and (max-width: 800px) {
 	.menu-links.menu-mobile-link {

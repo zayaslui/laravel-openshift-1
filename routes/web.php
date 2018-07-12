@@ -18,6 +18,8 @@ Route::get('services','FrontController@services');
 Route::get('about','FrontController@about');
 Route::get('contact','FrontController@contact');
 Route::get('admin','FrontController@admin');
+Route::get('prensa','FrontController@prensa');
+// Route::get('compromiso','FrontController@compromiso');
 
 Route::get('/services/hormigon','FrontController@servicios_hormigon');
 Route::get('/services/prefabricacion','FrontController@servicios_prefabricacion');

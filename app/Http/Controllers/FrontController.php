@@ -31,7 +31,14 @@ class FrontController extends Controller
    public function about(){
     return View('about');
    }
-
+   
+   public function compromiso(){
+    return view('compromiso');
+   }
+  
+  public function prensa(){
+    return view('prensa');
+   }
    public function servicios_hormigon(){
       return view('services.hormigon');
    }
