@@ -323,9 +323,14 @@ font-style : normal;
     background: #fff;
 }
 
+
+
 .news-block {
     width: 52%;
     margin: 3em auto 0em;
+	-webkit-box-shadow: 0px 56px 36px -60px #121D12;
+    -moz-box-shadow: 0px 56px 36px -60px #121D12;
+    -o-box-shadow: 0px 56px 36px -60px #121D12;
 }
 
 .buzz-news {
@@ -1409,6 +1414,27 @@ hr {
 
 }
 @media only screen and (max-width: 1280px) and (min-width: 1024px) {
+	.buzz-img {
+	    float: none;
+	    width: 70%;
+	    text-align: center;
+	    margin: auto;
+	}
+	.buzz-news {
+	    float: none;
+	    width: 100%;
+	}
+	.buzz-news p{
+		text-align: center;
+	}
+	.news-btn-3{
+		text-align: center;
+	}
+	.news-btn-3 a {
+	    padding: 0.5em 1em;
+	    margin-top: 1em;
+        margin-bottom: 1em;
+	}
 	.wrap{
 		width:90%;
 	}
@@ -1428,6 +1454,32 @@ hr {
 
 }
 @media only screen and (max-width: 1024px) {
+	.buzz-img {
+	    float: none;
+	    width: 70%;
+	    text-align: center;
+	    margin: auto;
+	}
+	.buzz-news {
+	    float: none;
+	    width: 100%;
+	}
+	.buzz-news p{
+		text-align: center;
+	}
+	.news-btn-3{
+		text-align: center;
+	}
+	.news-btn-3 a {
+	    padding: 0.5em 1em;
+	    margin-top: 1em;
+        margin-bottom: 1em;
+	}
+	.news-text1 h2 {
+	    font-size: 1.6em;
+	    color: #F19E35;
+	    font-weight: 600;
+	}		
 	.top-nav ul li a {
 		padding: 40px 0px;		
 	}
@@ -1730,6 +1782,32 @@ hr {
 /*  GO FULL WIDTH AT LESS THAN 640 PIXELS */
 @media only screen and (max-width: 640px){
 
+	.buzz-img {
+	    float: none;
+	    width: 70%;
+	    text-align: center;
+	    margin: auto;
+	}
+	.buzz-news {
+	    float: none;
+	    width: 100%;
+	}
+	.buzz-news p{
+		text-align: center;
+	}
+	.news-btn-3{
+		text-align: center;
+	}
+	.news-btn-3 a {
+	    padding: 0.5em 1em;
+	    margin-top: 1em;
+        margin-bottom: 1em;
+	}
+	.news-text1 h2 {
+	    font-size: 1.1em;
+	    color: #F19E35;
+	    font-weight: 600;
+	}
 .social-links a:before{
     font-size: 30px;
     padding-top: 0px;
@@ -1815,7 +1893,7 @@ hr {
 		margin-right:0;
 	}	
 	.specials{
-		padding:30px 0 0 0;
+		/*padding:30px 0 0 0;*/
 	}
 	.specials-grids{
 		padding:10px 0;
@@ -1894,6 +1972,11 @@ hr {
 /*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
 
 @media only screen and (max-width: 480px) {
+	.news-text1 h2 {
+	    font-size: 0.9em;
+	    color: #F19E35;
+	    font-weight: 600;
+	}
 	.top-nav a#pull {
 		top:6%;
 	}

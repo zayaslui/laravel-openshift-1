@@ -9,7 +9,7 @@
 			<div class="wrap">
 				<div class="about-us">
 					 <div class="about-header">
-					    <h3>Noticias EDBConstrucciones</h3>
+					    <h3>Prensa</h3>
 					 </div>
 					<div class="about-info">
 						<a href="/">EDB CONSTRUCCIONES</a>
@@ -29,7 +29,7 @@
 				{{-- news --}}
 				<div id="news-block">
 					
-{{-- 									<div class="news-block">	
+ 									<!-- <div class="news-block">	
 										<div class="news-block-bottom">
 											<div class="buzz-news">
 												<div class="news-1">
@@ -55,7 +55,7 @@
 											</div>
 										  <div class="clear"> </div>
 										</div>
-									</div> --}}
+									</div> -->
 
 				</div>
 

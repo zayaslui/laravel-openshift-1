@@ -38,8 +38,8 @@
 											tabla +='			<h3><a href="'+obj.link+' target=blank_">Titulo</a></h3>';
 											tabla +='			<br>';
 											tabla +='			<p>'+obj.descripcion+'</p>';
-											tabla +='			<br>';
-											tabla +='			<br>';
+											// tabla +='			<br>';
+											// tabla +='			<br>';
 											tabla +='			<div class="news-btn-3"><a class="popup-with-zoom-anim" href="'+obj.link+'" target="blank_">Ver Más</a></div>';
 											tabla +='		</div>';
 											tabla +='		<div class="buzz-img">';
