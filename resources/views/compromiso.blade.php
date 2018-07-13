@@ -11,16 +11,8 @@
 					 <div class="about-header">
 					    <h3>Compromiso</h3>
 					 </div>
-					<div class="about-info">
-						<a href="/">EDB CONSTRUCCIONES</a>
-						<p>Introduccion sobre los compromisos en general</p>
-					</div>
-				</div>
-			</div>
-			
-			<div class="content_top ico-12-1">
-		    	<div class="wrap ">
-					<h1><a href="#">Política de Calidad</a></h1>
+					<div class="about-compromiso">
+						<a href="/">Política de Calidad</a>
 						<p>
 							El Grupo Empresarial EDB Construcciones – Constructora Asunción S.A. adopta como política de calidad la misión institucional de:
 							Respetar los compromisos contractuales asumidos, Cumplir con los plazos convenidos, Optimizar los costos sin descuidar la Calidad y Mejorar Continuamente el Sistema de Gestión, todo ello con el fin de lograr la satisfacción plena de los clientes y mantener el nombre del Grupo en el sitial en que se ha ubicado luego de mas de 40 años de trabajo.<br>
@@ -42,21 +34,23 @@
 						</p>
 						<p>
 							6- Cumplir las medidas y exigencias que determinan las leyes en lo que respecta a la preservación del Medio Ambiente.
-						</p>
+						</p>						
+					</div>
 				</div>
-		    </div>
+			</div>
+			
 
 				<!---start-services---->
 				<div class="services">
 					<div class="wrap">
 					  <div class="services-header">
-						<h3>Compromisos</h3>
+						<h3>Misión - Visión</h3>
 					 </div>
 					   <div class="section group group">
 							<div class="listview_1_of_2 images_1_of_2">
-{{-- 								<div class="listimg listimg_2_of_1">
+<!--  								<div class="listimg listimg_2_of_1">
 									  <img src="images/one.png">
-								</div> --}}
+								</div> -->
 							    <div class="text list_2_of_1">
  									<h3><span>Misión</span></h3>
 			                      <div class="blog-card spring-fever img1">
@@ -78,9 +72,9 @@
 						   </div>
 
 							<div class="listview_1_of_2 images_1_of_2">
-{{-- 								<div class="listimg listimg_2_of_1">
+<!--  								<div class="listimg listimg_2_of_1">
 									  <img src="images/dos.png">
-								</div> --}}
+								</div> -->
 								<div class="text list_2_of_1">
 									  <h3><span>Visión </span></h3>
 			                      <div class="blog-card spring-fever img2">

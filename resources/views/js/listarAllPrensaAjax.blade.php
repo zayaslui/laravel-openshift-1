@@ -22,7 +22,7 @@
 									//abrimos specials-grids
 									// tabla+="<div class='specials-grids'>";
 									$.each(data, function(idx, obj){ 
-									{{-- news --}}
+
 											tabla +='<div class="news-block">	';
 											tabla +='		<div class="news-block-bottom">';	
 											tabla +='			<div class="buzz-news">';		
@@ -51,10 +51,10 @@
 											tabla +='	</div>';
 											tabla +='</div>';
 
-									{{-- news --}}												
+
 									});
 									/*agregar*/
-										$('#news-block').append(tabla);									
+									$('#news-block').append(tabla);									
 				                },
 						        error: function(data) {
 						            var errors = data.responseJSON;
