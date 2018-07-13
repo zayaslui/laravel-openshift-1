@@ -29,7 +29,7 @@
 				{{-- news --}}
 				<div id="news-block">
 					
- 									<!-- <div class="news-block">	
+{{--  									<div class="news-block">	
 										<div class="news-block-bottom">
 											<div class="buzz-news">
 												<div class="news-1">
@@ -55,7 +55,7 @@
 											</div>
 										  <div class="clear"> </div>
 										</div>
-									</div> -->
+									</div> --}}
 
 				</div>
 

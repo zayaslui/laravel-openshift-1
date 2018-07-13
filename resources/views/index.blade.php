@@ -238,8 +238,8 @@
 
 	<!---start-content---->
 		<div class="content">
-		    <div class="content_top ">
-		    	<div class="wrap icon-logo">
+		    <div class="content_top ico-12-1">
+		    	<div class="wrap ">
 					<h1><a href="#">EDB Construcciones</a></h1>
 					<p>EDB Construcciones es una empresa Paraguaya de Ingeniería, especializada en la construcción vial de rutas, 
                             puentes, viaductos, carreteras y todos los trabajos asociados redes de desagüe cloacal, redes de desagüe pluvial, 
