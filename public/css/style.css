@@ -571,7 +571,7 @@ a.popup-with-zoom-anim {
 .content {
 }
 .content_top{
-	background:#104c71b3;
+	background : rgba(61, 91, 121, 0.87);
 	padding:50px 0;
 	text-align: center;
 	font-family: 'Roboto', sans-serif;
