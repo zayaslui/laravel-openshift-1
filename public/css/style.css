@@ -2027,6 +2027,10 @@ hr {
 /*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
 
 @media only screen and (max-width: 480px) {
+	.ico-12-1 div:after {
+		font-size: 15em;
+		top: 80px
+	}
 	.news-text1 h2 {
 	    font-size: 0.9em;
 	    color: #F19E35;
