@@ -27,38 +27,7 @@
 			    </div>
 
 				{{-- news --}}
-				<div id="news-block">
-					
-{{--  									<div class="news-block">	
-										<div class="news-block-bottom">
-											<div class="buzz-news">
-												<div class="news-1">
-													<div class="news-text1">
-														<h2>Novedades</h2>
-													</div>
-													<div class="reaches">
-														<h6>Archivo</h6>
-													</div>
-												   <div class="clear"> </div>
-												</div>
-												<h3><a href="#">Tramos</a></h3>
-												<br>
-												<p>Culminan trabajos del 1er. tramo de la ruta Santa Rosa- Capitán Bado</p>
-												<br>
-												<br>
-												<div class="news-btn-3"><a class="popup-with-zoom-anim" href="#small-dialog">More</a></div>
-											</div>
-											<div class="buzz-img">
-												<a href="#">
-													<img src="images/prensas/71_1.jpg" class="img-responsive" alt="">
-												</a>
-											</div>
-										  <div class="clear"> </div>
-										</div>
-									</div> --}}
-
-				</div>
-
+				<div id="news-block"></div>
 				{{-- news --}}
 
 			</div>	
