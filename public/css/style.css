@@ -173,10 +173,11 @@ font-style : normal;
     /*left: 32px;*/
 }
 /*compromiso*/
+
 .listview_1_of_2_compromiso{
   display: block;
   float:left;
-  margin: 0% 0 4% 0%;
+  margin: 5% 0 4% 0%;
 }
 .listview_1_of_2_compromiso:first-child { 
   margin-left: 0;
