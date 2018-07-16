@@ -47,7 +47,7 @@
 				<div class="services">
 					<div class="wrap">
 					  <div class="services-header">
-						<h3>Misión - Visión</h3>
+						<h3>Identidad Corporativa</h3>
 					 </div>
 					   <div class="section group">
 							{{-- primero --}}

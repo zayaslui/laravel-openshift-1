@@ -33,7 +33,7 @@
 
 										if(obj.imagen!='90'){
 												tabla+= "<div class='special-grid "+last+"'>";
-												tabla+= "<img src='images/obras/"+obj.imagen+"_1.jpg' title='image-name' />";
+												tabla+= "<img src='images/obras/"+obj.imagen+"_1.jpg' title='"+obj.titulo_obra+"' />";
 												tabla+= "<a href='#'>"+obj.titulo_obra+"</a>";
 												tabla+= obj.introduccion;
 												tabla+= "<div class='special-grid-background'></div>";
