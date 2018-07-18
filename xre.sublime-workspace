@@ -1,0 +1,586 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"icon",
+				"icon-12-1"
+			],
+			[
+				"lis",
+				"listarPrensa"
+			],
+			[
+				"bo",
+				"bottom\tproperty"
+			],
+			[
+				"padd",
+				"padding-left\tproperty"
+			],
+			[
+				"crea",
+				"createTitulo"
+			],
+			[
+				"layer",
+				"layer_"
+			],
+			[
+				"obras",
+				"obras_det"
+			],
+			[
+				"com",
+				"compact"
+			],
+			[
+				"erro",
+				"errorThrown"
+			],
+			[
+				"req",
+				"request"
+			],
+			[
+				"json",
+				"json_encode"
+			],
+			[
+				"Re",
+				"Request"
+			],
+			[
+				"form",
+				"form-control"
+			],
+			[
+				"print",
+				"print_r"
+			],
+			[
+				"j",
+				"jquery"
+			],
+			[
+				"pu",
+				"public"
+			],
+			[
+				"lista",
+				"listarObrasIndex"
+			],
+			[
+				"mar",
+				"margin-right\tproperty"
+			],
+			[
+				"cur",
+				"cursor\tproperty"
+			],
+			[
+				"modal",
+				"modal-close"
+			],
+			[
+				"op",
+				"opacity\tproperty"
+			],
+			[
+				"bac",
+				"background-image\tproperty"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"z",
+				"z-index\tproperty"
+			],
+			[
+				"backgrou",
+				"background\tproperty"
+			],
+			[
+				"footer",
+				"footer-icons"
+			],
+			[
+				"paddin",
+				"padding\tproperty"
+			],
+			[
+				"pa",
+				"padding\tproperty"
+			],
+			[
+				"conte",
+				"content-grids"
+			],
+			[
+				"margin",
+				"margin-top\tproperty"
+			],
+			[
+				"padding-",
+				"padding-left\tproperty"
+			],
+			[
+				"border",
+				"border-radius\tproperty"
+			],
+			[
+				"fon",
+				"font-size\tproperty"
+			],
+			[
+				"POST",
+				"_POST"
+			],
+			[
+				"pos",
+				"position\tproperty"
+			],
+			[
+				"tex",
+				"text-align\tproperty"
+			],
+			[
+				"wid",
+				"width\tproperty"
+			],
+			[
+				"pro",
+				"production"
+			],
+			[
+				"wi",
+				"width"
+			],
+			[
+				"font",
+				"font-style"
+			],
+			[
+				"fu",
+				"function"
+			],
+			[
+				"add",
+				"addClass"
+			],
+			[
+				"au",
+				"aux_"
+			],
+			[
+				"get",
+				"getOpen"
+			],
+			[
+				"compro",
+				"compromiso"
+			],
+			[
+				"get_re",
+				"get_resource_type"
+			],
+			[
+				"numero",
+				"numero_de_filas"
+			],
+			[
+				"con",
+				"conexion"
+			],
+			[
+				"my",
+				"mysql1"
+			],
+			[
+				"cone",
+				"conectar"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "/home/luis/Documentos/workspace/xre/grails-app/controllers/xre/bienuso/BienUsoController.groovy",
+			"settings":
+			{
+				"buffer_size": 15664,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 132.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"html",
+				"Set Syntax: HTML"
+			],
+			[
+				"package Control: in",
+				"Package Control: Install Package"
+			],
+			[
+				"blade fo",
+				"Snippet: blade-foreach"
+			],
+			[
+				"Form",
+				"File: Copy Path From Project"
+			],
+			[
+				"Snippet: blade-",
+				"Snippet: blade-for"
+			],
+			[
+				"Snippet: blade-fo",
+				"Snippet: blade-foreach"
+			],
+			[
+				"bla",
+				"Set Syntax: Laravel Blade"
+			],
+			[
+				"Snippet: ",
+				"Snippet: Comment - HTML section footer"
+			],
+			[
+				"install ",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 560.0
+	},
+	"console":
+	{
+		"height": 178.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/home/luis/Documentos/workspace/xre"
+	],
+	"file_history":
+	[
+		"/home/luis/Documentos/workspace/xre/grails-app/controllers/xre/bienuso/BienUsoController.groovy",
+		"/home/luis/Documentos/workspace/xre/grails-app/domain/xre/bienuso/BienUso.groovy",
+		"/home/luis/Documentos/workspace/xre/grails-app/views/bienUso/create.gsp",
+		"/home/luis/Documentos/ggts-bundle/ggts-3.6.4.RELEASE/GGTS.ini",
+		"/home/luis/Documentos/workspace/xre/grails-app/views/bienUso/_form.gsp",
+		"/home/luis/Documentos/workspace/xre/xre_3_nofunciona.backup",
+		"/home/luis/Documentos/workspace/xre/xre.sublime-project",
+		"/var/www/html/laravel/laravel-openshift-1/composer.lock",
+		"/var/www/html/laravel/laravel-openshift-1/resources/views/services/little_service.blade.php",
+		"/var/www/html/laravel/laravel-openshift-1/routes/web.php",
+		"/var/www/html/laravel/laravel-openshift-1/app/Http/Controllers/FrontController.php",
+		"/var/www/html/laravel/laravel-openshift-1/resources/views/compromiso.blade.php",
+		"/var/www/html/laravel/laravel-openshift-1/resources/views/js/listarAllObrasAjax.blade.php",
+		"/var/www/html/laravel/laravel-openshift-1/public/css/style.css",
+		"/var/www/html/laravel/laravel-openshift-1/resources/views/prensa.blade.php",
+		"/var/www/html/laravel/laravel-openshift-1/resources/views/services.blade.php",
+		"/var/www/html/laravel/laravel-openshift-1/resources/views/index.blade.php",
+		"/var/www/html/laravel/laravel-openshift-1/resources/views/obras.blade.php",
+		"/var/www/html/laravel/laravel-openshift-1/sql/default.sql/insert_default.sql",
+		"/var/www/html/laravel/laravel-openshift-1/sql/default.sql/prensas.sql",
+		"/home/luis/Descargas/untitled-font-2/icons-reference.html",
+		"/var/www/html/laravel/laravel-openshift-1/resources/views/layouts/principal.blade.php",
+		"/home/luis/Descargas/untitled-font-2/styles.css",
+		"/home/luis/Descargas/untitled-font-3 (1)/icons-reference.html",
+		"/var/www/html/laravel/laravel-openshift-1/resources/views/obras_det.blade.php",
+		"/var/www/html/laravel/laravel-openshift-1/resources/views/js/listarAllPrensaAjax.blade.php",
+		"/var/www/html/laravel/laravel-openshift-1/app/Prensa.php",
+		"/home/luis/Descargas/untitled-font-3 (1)/styles.css",
+		"/var/www/html/laravel/laravel-openshift-1/database/migrations/2018_07_12_034924_add_column_descripcion_prensas.php",
+		"/var/www/html/laravel/laravel-openshift-1/database/migrations/2018_07_12_144056_add_column_imagen_prensa.php",
+		"/var/www/html/laravel/laravel-openshift-1/database/migrations/2018_07_12_032853_create_prensas_table.php",
+		"/var/www/html/laravel/laravel-openshift-1/database/migrations/2018_07_12_033153_add_column_link_prensas.php",
+		"/var/www/html/laravel/laravel-openshift-1/database/migrations/2018_07_05_022940_add_column_layer_obras_det.php",
+		"/var/www/html/laravel/laravel-openshift-1/database/migrations/2018_07_03_034043_create_table_obras.php",
+		"/var/www/html/laravel/laravel-openshift-1/database/migrations/2018_06_26_111736_agregar_campos_obras.php",
+		"/var/www/html/laravel/laravel-openshift-1/database/migrations/2018_07_08_201948_change_type_obras_det_contenido_obra.php",
+		"/var/www/html/laravel/laravel-openshift-1/relaciones.txt",
+		"/var/www/html/laravel/laravel-openshift-1/app/Http/Controllers/ObrasController.php",
+		"/var/www/html/laravel/laravel-openshift-1/resources/views/about.blade.php",
+		"/var/www/html/laravel/laravel-openshift-1/resources/views/little_obras.blade.php",
+		"/var/www/html/laravel/laravel-openshift-1/app/Obras.php",
+		"/var/www/html/laravel/laravel-openshift-1/resources/views/layerslider.blade.php",
+		"/var/www/html/laravel/laravel-openshift-1/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php",
+		"/var/www/html/laravel/laravel-openshift-1/database/migrations/2018_07_05_141930_cambio_de_nombre_columna_obra_id_to_obras_id_2.php",
+		"/var/www/html/laravel/laravel-openshift-1/.env",
+		"/var/www/html/laravel/laravel-openshift-1/public/js/funciones.js",
+		"/var/www/html/laravel/laravel-openshift-1/app/Http/Controllers/Controller.php",
+		"/var/www/html/laravel/laravel-openshift-1/resources/views/contact.blade.php",
+		"/var/www/html/laravel/laravel-openshift-1/resources/views/errors/404.blade.php",
+		"/var/www/html/laravel/laravel-openshift-1/resources/views/errors/505.blade.php",
+		"/var/www/html/laravel/laravel-openshift-1/app/Obras_det.php",
+		"/var/www/html/laravel/laravel-openshift-1/database/migrations/2018_07_05_140937_cambio_de_nombre_columna_obra_id_to_obras_id.php",
+		"/var/www/html/laravel/laravel-openshift-1/database/migrations/2018_07_04_042018_create_relacion_uno_a_muchos_obras_det.php",
+		"/var/www/html/laravel/laravel-openshift-1/composer.json",
+		"/var/www/html/laravel/my_app/composer.json",
+		"/var/www/html/laravel/laravel-openshift-1/resources/views/listar_obras.blade.php",
+		"/var/www/html/laravel/laravel-openshift-1/database/migrations/2018_07_04_041614_create_obras_dets_table.php",
+		"/var/www/html/laravel/laravel-openshift-1/resources/views/publicidad.blade.php",
+		"/var/www/html/laravel/laravel-openshift-1/resources/views/listar_obras.blade",
+		"/var/www/html/laravel/laravel-openshift-1/resources/views/plans.blade.php",
+		"/var/www/html/laravel/laravel-openshift-1/resources/views/services/hormigon.blade.php",
+		"/var/www/html/laravel/laravel-openshift-1/resources/views/services/mineria.blade.php",
+		"/var/www/html/laravel/laravel-openshift-1/resources/views/services/prefabricacion.blade.php",
+		"/var/www/html/laravel/laravel-openshift-1/resources/views/services/concreto.blade.php",
+		"/var/www/html/laravel/laravel-openshift-1/app/Providers/AppServiceProvider.php",
+		"/home/luis/Documentos/default.sql",
+		"/var/www/html/laravel/laravel-openshift-1/sql/default.sql",
+		"/home/luis/Documentos/laravel.anotaciones",
+		"/var/www/html/laravel/laravel-openshift-1/database/migrations/2018_06_16_175557_create_generos_table.php",
+		"/var/www/html/laravel/laravel-openshift-1/openshift/templates/laravel-mysql.json",
+		"/var/www/html/laravel/laravel-openshift-1/.env.example",
+		"/var/www/html/edbconstrucciones/migrate-database.sh",
+		"/var/www/html/edbconstrucciones/.env",
+		"/var/www/html/edbconstrucciones/.gitignore",
+		"/var/www/html/edbconstrucciones/database/migrations/2018_06_26_112151_borrar_cambos_genero_2.php",
+		"/var/www/html/construcciones/css/style.css",
+		"/var/www/html/construcciones/about.html",
+		"/var/www/html/construcciones/index.html",
+		"/var/www/html/laravel/my_app/resources/views/usuario/index.blade.php",
+		"/var/www/html/laravel/my_app/resources/views/alerts/success.blade.php",
+		"/var/www/html/laravel/my_app/resources/views/genero/create.blade.php",
+		"/var/www/html/laravel/my_app/resources/views/genero/index.blade.php",
+		"/var/www/html/laravel/my_app/resources/views/genero/edit.blade.php",
+		"/var/www/html/laravel/my_app/app/Http/Requests/GeneroCreateRequest.php",
+		"/var/www/html/laravel/my_app/app/Http/Requests/UserCreateRequest.php",
+		"/var/www/html/laravel/my_app/app/Http/Requests/UserUpdateRequest.php",
+		"/var/www/html/laravel/my_app/app/Http/Requests/GeneroUpdateRequest.php",
+		"/var/www/html/laravel/my_app/routes/web.php",
+		"/var/www/html/laravel/my_app/app/Http/Controllers/PeliculasController.php",
+		"/var/www/html/laravel/my_app/app/Peliculas.php",
+		"/var/www/html/laravel/my_app/app/Generos.php",
+		"/var/www/html/laravel/my_app/app/Http/Controllers/GeneroController.php",
+		"/var/www/html/laravel/my_app/app/Http/Controllers/UsuarioController.php",
+		"/var/www/html/laravel/my_app/database/migrations/2018_06_16_210634_create_peliculas_table.php",
+		"/var/www/html/laravel/my_app/config/app.php",
+		"/var/www/html/laravel/my_app/app/Providers/AppServiceProvider.php",
+		"/var/www/html/laravel/my_app/database/migrations/2018_06_16_191612_borrar_campo_descripcion2_genero.php",
+		"/var/www/html/laravel/my_app/database/migrations/2018_06_16_190426_borrar_campo_descripcion_generos.php",
+		"/var/www/html/lskdjfñlalsdjfskldñajf",
+		"/home/luis/.config/sublime-text-3/Packages/Default/Preferences.sublime-settings",
+		"/var/www/html/laravel/my_app/database/migrations/2018_06_16_182011_agregar_campo_generos.php",
+		"/var/www/html/laravel/my_app/database/migrations/2018_06_16_175557_create_generos_table.php",
+		"/var/www/html/laravel/my_app/app/Genero.php",
+		"/var/www/html/laravel/my_app/app/Libros.php",
+		"/var/www/html/laravel/my_app/database/migrations/2018_06_16_174047_create_libros_table.php",
+		"/var/www/html/laravel/my_app/database/migrations/2018_06_16_172857_create_libros_table.php",
+		"/var/www/html/laravel/my_app/database/migrations/2018_06_12_200700_add_deleted_to_users_table.php",
+		"/var/www/html/laravel/my_app/database/migrations/2018_06_16_164241_crear_tabla_genero.php",
+		"/var/www/html/laravel/my_app/database/migrations/2014_10_12_000000_create_users_table.php",
+		"/var/www/html/laravel/my_app/database/migrations/2018_06_16_164032_migracion.php",
+		"/var/www/html/laravel/my_app/resources/views/genero/forms/gen.blade.php",
+		"/var/www/html/laravel/my_app/resources/views/layouts/admin.blade.php",
+		"/var/www/html/laravel/my_app/resources/views/usuario/forms/usr.blade.php",
+		"/var/www/html/laravel/my_app/resources/views/layouts/principal.blade.php",
+		"/var/www/html/laravel/my_app/vendor/composer/autoload_classmap.php",
+		"/var/www/html/laravel/my_app/app/User.php",
+		"/var/www/html/laravel/my_app/app/Http/Controllers/MovieController.php",
+		"/var/www/html/laravel/my_app/resources/views/usuario/edit.blade.php",
+		"/var/www/html/laravel/my_app/resources/views/usuario/create.blade.php",
+		"/var/www/html/laravel/my_app/resources/views/alerts/request.blade.php",
+		"/var/www/html/laravel/my_app/resources/views/admin/index.blade.php",
+		"/var/www/html/laravel/my_app/resources/views/index.blade.php",
+		"/var/www/html/laravel/my_app/resources/views/usuario/delete.blade.php",
+		"/var/www/html/laravel/my_app/app/Http/Controllers/FrontController.php",
+		"/var/www/html/laravel/my_app/.env",
+		"/var/www/html/laravel/my_app/config/database.php",
+		"/var/www/html/laravel/my_app/vendor/composer/autoload_static.php",
+		"/var/www/html/laravel/my_app/app/Exceptions/Handler.php"
+	],
+	"find":
+	{
+		"height": 29.0
+	},
+	"find_in_files":
+	{
+		"height": 134.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"tipoaux"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"folders":
+	[
+		{
+			"path": "/home/luis/Documentos/workspace/xre"
+		}
+	],
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "/home/luis/Documentos/workspace/xre/grails-app/controllers/xre/bienuso/BienUsoController.groovy",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 15664,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2163,
+								2163
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Grails/Controller/GrailsController.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1420.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 29.0
+	},
+	"input":
+	{
+		"height": 52.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.unsaved_changes":
+	{
+		"height": 138.0
+	},
+	"pinned_build_system": "",
+	"project": "",
+	"replace":
+	{
+		"height": 54.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"/var/www/html/laravel/laravel-openshift-1/laravel.sublime-workspace"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 392.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 856.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 356.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
