@@ -74,7 +74,7 @@ class FrontController extends Controller
 
     }
 
-    public function listarPrensa(Request $request){
+    public function listarPrensa(Request $request){ 
       if($request->ajax()){
         $noticias = Prensa::All();
         return json_encode($noticias);
@@ -95,7 +95,11 @@ class FrontController extends Controller
         return json_encode($dato);
       }
       
-    } 
+    }
+
+    public function admin(){
+      return view('layouts.admin');
+    }
 
     
 

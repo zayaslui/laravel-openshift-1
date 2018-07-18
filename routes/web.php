@@ -42,6 +42,16 @@ Route::post('singleObras/{id}','FrontController@detalle_obra');
 // errores
 Route::get ('404', ['as' => '404', 'uses' => 'ErrorHandlerController@errorCode404']);
 Route::get ('405', ['as' => '405', 'uses' => 'ErrorHandlerController@errorCode405']);
+
+//admin
+
+Route::get('admin','FrontController@admin');
+
+Route::resources([
+	'usuario' => 'UsuariosController',
+]);
+
+
 /*
 |--------------------------------------------------------------------------
 | Readiness Probe
