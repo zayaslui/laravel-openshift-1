@@ -20,7 +20,9 @@
 					<td>{{$user->name}}</td>
 					<td>{{$user->email}}</td>
 					<td>
-						<a class="btn btn-small btn-info" href="{{ URL::to('usuario/' . $user->id . '/edit') }}">Edit this User</a>
+						{{-- <a class="btn btn-small btn-info" href="{{ URL::to('usuario/' . $user->id . '/edit') }}">Edit this User</a> --}}
+						<a class="btn btn-small btn-info" href="{{ URL::to('usuario/' . $user->slug . '/edit') }}">Edit this User</a>
+						<a class="btn btn-small btn-info" href="{{ URL::to('usuario/' . $user->slug) }}">show this User</a>						
 					</td>
 				</tbody>
 			@endforeach

@@ -19,17 +19,13 @@
                         <div class="panel-body">
                             <div class="row">
                                 <div class="col-lg-12">
-                                    <form method="PUT" action="/usuario">
+                                    <form method="POST" action="/usuario/{{$user->slug}}/edit" enctype="Multipart/form-data">
+                                        @method('PUT')
                                         @csrf
                                         @include('usuario.forms.usr')
-
-                                        <button type="submit" class="btn btn-primary">Enviar</button>
-
-                                        
-                              
+                                        <button type="submit" class="btn btn-primary">Editar</button>
                                     </form>
                                 </div>
-
                             </div>
                             <!-- /.row (nested) -->
                         </div>

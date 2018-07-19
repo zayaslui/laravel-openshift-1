@@ -17,7 +17,6 @@ class UsuariosController extends Controller
     public function index()
     {
         $usuarios = User::all();
-
         return view('usuario.index',compact('usuarios'));
     }
 
@@ -40,7 +39,7 @@ class UsuariosController extends Controller
     public function store(Request $request)
     {
         User::create($request->all());
-        return "salvado";
+        return Redirect::to('/usuario');
     }
 
     /**
@@ -49,9 +48,11 @@ class UsuariosController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($slug)
     {
-        //
+        // $user = User::find($id);
+        $user  = User::where('slug','=',$slug)->firstOrFail();
+        return view('usuario.show',compact('user'));
     }
 
     /**
@@ -60,11 +61,13 @@ class UsuariosController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit($slug)
     {
-        $user = User::find($id);
+        //$user = User::find($id);
         // return view('usuario.edit',['user'=>$user]);
-        return view('usuario.edit',compact('user','id'));
+        // return view('usuario.edit',compact('user'));
+        $user  = User::where('slug','=',$slug)->firstOrFail();
+        return view('usuario.edit',compact('user',$slug));
     }
 
     /**
@@ -74,9 +77,12 @@ class UsuariosController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
-    {
-        //
+    public function update(Request $request, $slug){
+        // $user = User::findOrFail($id);
+        $user  = User::where('slug','=',$slug)->firstOrFail();
+        $user->fill($request->all());
+        $user->save();
+        return Redirect::to("/usuario");
     }
 
     /**

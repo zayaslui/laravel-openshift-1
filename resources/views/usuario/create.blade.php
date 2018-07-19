@@ -21,7 +21,7 @@
                         <div class="panel-body">
                             <div class="row">
                                 <div class="col-lg-12">
-									<form method="POST" action="/usuario/{id}/edit">
+									<form method="POST" action="/usuario">
                                         @csrf
                                         @include('usuario.forms.usr')
                                       <button type="submit" class="btn btn-primary">Enviar</button>
