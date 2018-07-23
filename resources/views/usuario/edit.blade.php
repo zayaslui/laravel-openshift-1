@@ -19,11 +19,11 @@
                         <div class="panel-body">
                             <div class="row">
                                 <div class="col-lg-12">
-                                    <form method="POST" action="/usuario/{{$user->slug}}/edit" enctype="Multipart/form-data">
+                                    <form method="POST" action="/usuario/{{$user->slug}}" enctype="Multipart/form-data">
                                         @method('PUT')
                                         @csrf
                                         @include('usuario.forms.usr')
-                                        <button type="submit" class="btn btn-primary">Editar</button>
+                                        <button type="submit" class="btn btn-primary">Guardar cambios</button>
                                     </form>
                                 </div>
                             </div>

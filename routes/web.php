@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Http\Request;
+
+// use Illuminate\Routing\Middleware\SubstituteBindings;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -47,11 +49,21 @@ Route::get ('405', ['as' => '405', 'uses' => 'ErrorHandlerController@errorCode40
 
 Route::get('admin','FrontController@admin');
 
-Route::resources([
-	'usuario' => 'UsuariosController',
-]);
+// Route::resource('usuario','UsuariosController');
+
+Route::get('usuario','UsuariosController@index');
+Route::post('usuario','UsuariosController@store');
+Route::GET('usuario/create','UsuariosController@create');
+Route::get('usuario/{user}','UsuariosController@show');
+Route::put('usuario/{user}','UsuariosController@update');
+Route::get('usuario/{user}/edit','UsuariosController@edit');
+Route::delete('usuario/{user}','UsuariosController@destroy');
 
 
+
+Route::get('users/{user}', function (App\User $user) {
+    return $user;
+});
 /*
 |--------------------------------------------------------------------------
 | Readiness Probe

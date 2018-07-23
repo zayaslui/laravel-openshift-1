@@ -3,9 +3,13 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+
 use App\User;
 
 use Illuminate\Support\Facades\Redirect;
+use Illuminate\Routing\Middleware\SubstituteBindings;
+
+use App\Http\Requests\StoreUserRequest;
 
 class UsuariosController extends Controller
 {
@@ -25,8 +29,8 @@ class UsuariosController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
-    {
+
+    public function create(){
         return view('usuario.create');
     }
 
@@ -36,9 +40,11 @@ class UsuariosController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
-    {
-        User::create($request->all());
+    public function store(StoreUserRequest $request){
+
+        /*agregar el slug*/
+        $user = new User();
+        $user::create($request->all());
         return Redirect::to('/usuario');
     }
 
@@ -48,10 +54,9 @@ class UsuariosController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($slug)
-    {
+    public function show(User $user){
         // $user = User::find($id);
-        $user  = User::where('slug','=',$slug)->firstOrFail();
+        // $user  = User::where('slug','=',$slug)->firstOrFail();
         return view('usuario.show',compact('user'));
     }
 
@@ -61,13 +66,14 @@ class UsuariosController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($slug)
-    {
+    public function edit(User $user){
+
         //$user = User::find($id);
         // return view('usuario.edit',['user'=>$user]);
         // return view('usuario.edit',compact('user'));
-        $user  = User::where('slug','=',$slug)->firstOrFail();
-        return view('usuario.edit',compact('user',$slug));
+        // $user  = User::where('slug','=',$slug)->firstOrFail();
+        return view('usuario.edit',compact('user'));
+
     }
 
     /**
@@ -77,9 +83,9 @@ class UsuariosController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $slug){
+    public function update(Request $request, User $user){
         // $user = User::findOrFail($id);
-        $user  = User::where('slug','=',$slug)->firstOrFail();
+        // $user  = User::where('slug','=',$slug)->firstOrFail();
         $user->fill($request->all());
         $user->save();
         return Redirect::to("/usuario");
