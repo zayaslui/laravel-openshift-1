@@ -211,14 +211,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "routes/web.php",
-			"settings":
-			{
-				"buffer_size": 3224,
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -284,19 +276,11 @@
 	},
 	"expanded_folders":
 	[
-		"/var/www/html/laravel/laravel-openshift-1",
-		"/var/www/html/laravel/laravel-openshift-1/app",
-		"/var/www/html/laravel/laravel-openshift-1/app/Http",
-		"/var/www/html/laravel/laravel-openshift-1/app/Http/Controllers",
-		"/var/www/html/laravel/laravel-openshift-1/app/Http/Middleware",
-		"/var/www/html/laravel/laravel-openshift-1/app/Http/Requests",
-		"/var/www/html/laravel/laravel-openshift-1/resources",
-		"/var/www/html/laravel/laravel-openshift-1/resources/views",
-		"/var/www/html/laravel/laravel-openshift-1/resources/views/usuario",
-		"/var/www/html/laravel/laravel-openshift-1/routes"
+		"/var/www/html/laravel/laravel-openshift-1"
 	],
 	"file_history":
 	[
+		"/var/www/html/laravel/laravel-openshift-1/.gitignore",
 		"/var/www/html/laravel/laravel-openshift-1/resources/views/usuario/forms/usr.blade.php",
 		"/var/www/html/laravel/laravel-openshift-1/app/User.php",
 		"/var/www/html/laravel/laravel-openshift-1/app/Http/Kernel.php",
@@ -423,8 +407,7 @@
 		"/var/www/html/laravel/my_app/resources/views/usuario/create.blade.php",
 		"/var/www/html/laravel/my_app/resources/views/alerts/request.blade.php",
 		"/var/www/html/laravel/my_app/resources/views/admin/index.blade.php",
-		"/var/www/html/laravel/my_app/resources/views/index.blade.php",
-		"/var/www/html/laravel/my_app/resources/views/usuario/delete.blade.php"
+		"/var/www/html/laravel/my_app/resources/views/index.blade.php"
 	],
 	"find":
 	{
@@ -529,37 +512,8 @@
 	"groups":
 	[
 		{
-			"selected": 0,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "routes/web.php",
-					"semi_transient": true,
-					"settings":
-					{
-						"buffer_size": 3224,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2245,
-								2245
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 780.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				}
 			]
 		}
 	],
@@ -648,7 +602,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 352.0,
+	"side_bar_width": 348.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
