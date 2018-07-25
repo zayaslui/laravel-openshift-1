@@ -26,14 +26,9 @@
 									<form method="POST" action="/usuario" enctype="multipart/form-data">
                                         @csrf
                                         @include('usuario.forms.usr')
-                                          <div class="form-group">
-                                            <label for="2">Password</label>
-                                            <input type="text" class="form-control" id="slug" name="slug" placeholder="slug">
-                                          </div>
                                       <button type="submit" class="btn btn-primary">Enviar</button>
                                     </form>
                                 </div>
-
                             </div>
                             <!-- /.row (nested) -->
                         </div>

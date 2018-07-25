@@ -12,8 +12,6 @@ use Illuminate\Support\Facades\DB;
 class ObrasController extends Controller
 {
     
-
-
     /**
      * Display a listing of the resource.
      *

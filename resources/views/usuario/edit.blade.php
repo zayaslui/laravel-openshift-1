@@ -20,11 +20,19 @@
                             <div class="row">
                                 <div class="col-lg-12">
                                     <form method="POST" action="/usuario/{{$user->slug}}" enctype="Multipart/form-data">
+                                        {{-- agregar --}}
                                         @method('PUT')
                                         @csrf
                                         @include('usuario.forms.usr')
-                                        <button type="submit" class="btn btn-primary">Guardar cambios</button>
+                                        <button type="submit" class="btn btn-primary btn-sm">Guardar cambios</button>
+                                        {{-- delete --}}
                                     </form>
+                                    <form method="post" action="/usuario/{{ $user->slug }}">
+                                        @method('DELETE')
+                                        @csrf
+                                        <button type="submit" class="btn btn-danger btn-sm">Borrar Usuario</button>
+                                    </form>
+                                        <a  class="btn btn-sm btn-success " href="/usuario">Volver</a>
                                 </div>
                             </div>
                             <!-- /.row (nested) -->

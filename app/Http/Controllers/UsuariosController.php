@@ -6,18 +6,26 @@ use Illuminate\Http\Request;
 
 use App\User;
 
+use App\Http\Controllers\ServicesController;
+
 use Illuminate\Support\Facades\Redirect;
-use Illuminate\Routing\Middleware\SubstituteBindings;
 
 use App\Http\Requests\StoreUserRequest;
 
 class UsuariosController extends Controller
 {
+    protected $services;
+    
+    public function __construct(){
+        $this->services = new ServicesController();
+    }
+    
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
+
     public function index()
     {
         $usuarios = User::all();
@@ -41,11 +49,20 @@ class UsuariosController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(StoreUserRequest $request){
-
         /*agregar el slug*/
-        $user = new User();
-        $user::create($request->all());
+        // $user = new User();
+        // $user->name = $request->name;
+        // $user->slug = $this->createSlug($request->name);
+        // $user->email = $request->email;
+        // $user->password = $request->password;
+        // $user->save();
+        // $user::create(array_merge($request->all(), ['index' => 'value']));
+        //User::create($request->all()+['slug' => $this->createSlug($request->name)]);
+
+        User::create($request->all()+['slug' => $this->services->createSlug($request->name,new User)]);
         return Redirect::to('/usuario');
+
+        // return $request;
     }
 
     /**
@@ -73,7 +90,6 @@ class UsuariosController extends Controller
         // return view('usuario.edit',compact('user'));
         // $user  = User::where('slug','=',$slug)->firstOrFail();
         return view('usuario.edit',compact('user'));
-
     }
 
     /**
@@ -83,12 +99,14 @@ class UsuariosController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+
     public function update(Request $request, User $user){
         // $user = User::findOrFail($id);
         // $user  = User::where('slug','=',$slug)->firstOrFail();
         $user->fill($request->all());
         $user->save();
-        return Redirect::to("/usuario");
+        // return Redirect::to("/usuario");
+        return redirect()->route('usuario',$user);
     }
 
     /**
@@ -97,10 +115,10 @@ class UsuariosController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(User $user)
     {
-        $usuario = User::destroy($id);
-        return $usuario;
-        // return Redirect::to('/usuario');
+        // $usuario = User::destroy($user);
+        $user->delete();
+        return Redirect::to('/usuario');
     }
 }
