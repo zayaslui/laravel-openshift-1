@@ -382,7 +382,7 @@ font-style : normal;
 }
 /*more*/
 .grid.more.more-icon {
-    background: #49b994;
+    background: #0f4e8d;
     margin-top: 10%;
     border-radius: 2%;
     border: 7px solid #EBEBEB;
@@ -401,7 +401,8 @@ font-style : normal;
     -webkit-box-shadow: 0px 56px 36px -60px #121D12;
     -moz-box-shadow: 0px 56px 36px -60px #121D12;
     -o-box-shadow: 0px 56px 36px -60px #121D12;
-    background: #4ab993;
+    /*background: #4ab993;*/
+    background: linear-gradient( 90deg, #2e72a3 , #0e4e8c);
 }
 /*tamaño*/
 .more{
@@ -415,7 +416,7 @@ font-style : normal;
     -webkit-transition-delay: 0.1s;
     transition: all 0.4s ease-in-out 0.1s;
     font: normal 100px FontAwesome;
-    background: #4ab993;
+    background: #0f4e8d;
     /* float: right; */
     padding-left: 63%;
     color: white;
@@ -423,7 +424,7 @@ font-style : normal;
 }
 .more a:before{
     position: absolute;
-    background: #4ab993;
+    background: #0f4e8d;
     left: 7%;
     top: 35%;
     font-size: 32px;
@@ -537,7 +538,7 @@ font-style : normal;
 
 .news-text1 h2 {
     font-size: 1.6em;
-    color: #F19E35;
+    color: #0E4E8C;
     font-weight: 600;
 }
 
@@ -568,7 +569,7 @@ a.popup-with-zoom-anim {
 .news-btn-3 a {
     font-size: 1em;
     color: #fff;
-    background: #7cbb00;
+    background: #0f4e8d;
     padding: 0.5em 1em;
     display: inline-block;
     margin-top: 1em;
@@ -631,7 +632,8 @@ a.popup-with-zoom-anim {
 	/*background:#323A45;*/
 	/*background:#31759efa;*/
 	/*background: #080808;*/
-	background:#3d5b79;;
+	/*background:#3d5b79;;*/
+  background: linear-gradient( 90deg, #2e72a3 , #0e4e8c);
 	border-bottom:3px solid #104c71;;
 }
 .logo{
@@ -708,7 +710,8 @@ a.popup-with-zoom-anim {
 .content {
 }
 .content_top{
-	background : rgba(61, 91, 121, 0.87);
+	/*background : rgba(61, 91, 121, 0.87);*/
+  background: rgba(36, 101, 155, 0.91);  
 	padding:50px 0;
 	text-align: center;
 	font-family: 'Roboto', sans-serif;
@@ -778,7 +781,7 @@ a.popup-with-zoom-anim {
 	padding: 8px 0;
 	margin-bottom: 8px;
 	font-size: 1.6em;
-	color:#00B895;
+	color:#0f4e8d;
 	border-bottom: 1px solid #dedede;
 	font-family: 'PT Sans Narrow', sans-serif;
 }
@@ -792,7 +795,7 @@ a.popup-with-zoom-anim {
 .button{
 	font-family: 'Roboto', sans-serif;
 	color: #ffffff;
-	background-color:#00B895;
+	background-color:#0f4e8d;
 	display: inline-block;
 	text-transform: uppercase;
 	padding: 10px 30px;
@@ -983,7 +986,8 @@ height: 40px;
 }
 /*---start-footer-----*/
 .footer{
-	background: #3d5b79;
+	/*background: #3d5b79;*/
+  background: linear-gradient( 90deg, #2e72a3 , #0e4e8c);
 	padding: 50px 0;
 	position:relative;
 }
@@ -1351,7 +1355,7 @@ height: 40px;
 	text-align: center;
 }
 .list_2_of_1 h3 span{
-	color:#00B895;
+	color:#0f4e8d;
 }
 .list_2_of_1  p{
 	font-size:0.85em;
@@ -1379,7 +1383,7 @@ height: 40px;
 .error-page h3{
 	font-family: 'Roboto', sans-serif;
 	font-size: 10em;
-	color:#00B895;
+	color:#0f4e8d;
 	text-shadow: -2px 3px 4px #9B9B9B;
 }
 .error-page {
@@ -1625,7 +1629,7 @@ hr {
 	border:none;
 }
 .mybutton:hover{
-	background: #00B895;
+	background: #0f4e8d;
 	color: #FFF;
 }
 .company_address{
@@ -1646,7 +1650,7 @@ hr {
 	-webkit-transition: 0.5s ease;
 }
 .company_address p span:hover{
-	color:#00B895;
+	color:#0f4e8d;
 }
 /*----responsive-design-----*/
 @media only screen and (max-width: 1366px) and (min-width: 1280px) {
@@ -1737,7 +1741,7 @@ hr {
 	}
 	.news-text1 h2 {
 	    font-size: 1.6em;
-	    color: #F19E35;
+	    color: #0E4E8C;
 	    font-weight: 600;
 	}		
 	.top-nav ul li a {
@@ -1843,7 +1847,6 @@ hr {
 		text-align:center;
 	}
 	.grid.more.more-icon {
-	    background: #49b994;
 	    margin-top: 22%;
 	    border-radius: 2%;
 	    border: 7px solid #EBEBEB;
@@ -2012,8 +2015,7 @@ hr {
     -webkit-box-shadow: 0px 56px 36px -60px #121D12;
     -moz-box-shadow: 0px 56px 36px -60px #121D12;
     -o-box-shadow: 0px 56px 36px -60px #121D12;
-    background: #49b994;
-
+    /*background: #49b994;*/
 }
 .grid {
     width: 39.5%;
@@ -2083,7 +2085,7 @@ hr {
 	}
 	.news-text1 h2 {
 	    font-size: 1.1em;
-	    color: #F19E35;
+	    color: #0E4E8C;
 	    font-weight: 600;
 	}
 .social-links a:before{
@@ -2105,13 +2107,8 @@ hr {
 	    left: 7%;
 	}
 	.grid.more.more-icon {
-	    /* background: #49b994; */
 	     margin-top: 4%; 
-	    /* border-radius: 2%; */
-	    /* border: 7px solid #EBEBEB; */
 	    width: 65%;
-	    /* padding: 18px; */
-	    /* text-align: center; */
 	    margin-left: 15%;
 	}	
 	.blog-card {
@@ -2300,7 +2297,7 @@ hr {
 	}
 	.news-text1 h2 {
 	    font-size: 0.9em;
-	    color: #F19E35;
+	    color: #0E4E8C;
 	    font-weight: 600;
 	}
 	.top-nav a#pull {
