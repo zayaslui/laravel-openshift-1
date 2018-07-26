@@ -11,6 +11,9 @@
     <link rel="stylesheet" href="{{asset('css/metisMenu.min.css')}}">
     <link rel="stylesheet" href="{{asset('css/sb-admin-2.css')}}">
     <link rel="stylesheet" href="{{asset('css/font-awesome.min.css')}}">
+    <link rel="stylesheet" href="{{asset('css/toastr.min.css')}}"  type="text/css"  media="all" />
+    <script src="{{asset('js/jquery.min.js')}}"></script>
+    <script src="{{asset('js/toastr.min.js')}}"></script>
 </head>
 
 <body>

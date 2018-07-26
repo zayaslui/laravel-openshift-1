@@ -6,8 +6,8 @@
   </div>
 
   <div class="form-group">
-    <label for="exampleInputEmail1">Email address</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" name="email"aria-describedby="emailHelp" placeholder="Enter email" @if(isset($user)) value="{{ $user->email }} @endif">
+    <label for="exampleInputEmail2">Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail2" name="email"aria-describedby="emailHelp" placeholder="Enter email" @if(isset($user)) value="{{ $user->email }} @endif">
     <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
   </div>
 

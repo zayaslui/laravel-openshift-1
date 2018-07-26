@@ -59,6 +59,9 @@ Route::put('usuario/{user}','UsuariosController@update');
 Route::get('usuario/{user}/edit','UsuariosController@edit');
 Route::delete('usuario/{user}','UsuariosController@destroy');
 
+// datatables
+Route::get('create', 'DisplayDataController@create');
+Route::get('datatables', 'DisplayDataController@data');
 
 
 Route::get('users/{user}', function (App\User $user) {

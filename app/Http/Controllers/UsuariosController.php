@@ -9,6 +9,7 @@ use App\User;
 use App\Http\Controllers\ServicesController;
 
 use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\Session;
 
 use App\Http\Requests\StoreUserRequest;
 
@@ -39,7 +40,7 @@ class UsuariosController extends Controller
      */
 
     public function create(){
-        return view('usuario.create');
+        return view('usuario.create',['titulo'=>'Crear Usuario']);
     }
 
     /**
@@ -60,7 +61,8 @@ class UsuariosController extends Controller
         //User::create($request->all()+['slug' => $this->createSlug($request->name)]);
 
         User::create($request->all()+['slug' => $this->services->createSlug($request->name,new User)]);
-        return Redirect::to('/usuario');
+        //return Redirect::to('/usuario');
+        return redirect('usuario')->with('create', 'Profile updated!');
 
         // return $request;
     }
@@ -74,7 +76,7 @@ class UsuariosController extends Controller
     public function show(User $user){
         // $user = User::find($id);
         // $user  = User::where('slug','=',$slug)->firstOrFail();
-        return view('usuario.show',compact('user'));
+        return view('usuario.show',compact('user'),['titulo'=>'Ver Usuario']);
     }
 
     /**
@@ -89,7 +91,7 @@ class UsuariosController extends Controller
         // return view('usuario.edit',['user'=>$user]);
         // return view('usuario.edit',compact('user'));
         // $user  = User::where('slug','=',$slug)->firstOrFail();
-        return view('usuario.edit',compact('user'));
+        return view('usuario.edit',compact('user'),['titulo'=>'Editar Usuario']);
     }
 
     /**
@@ -106,7 +108,7 @@ class UsuariosController extends Controller
         $user->fill($request->all());
         $user->save();
         // return Redirect::to("/usuario");
-        return redirect('usuario/'.$user->slug);
+        return redirect('usuario/'.$user->slug)->with('update','Registro actualizado');
     }
 
     /**
@@ -119,6 +121,7 @@ class UsuariosController extends Controller
     {
         // $usuario = User::destroy($user);
         $user->delete();
-        return Redirect::to('/usuario');
+        // return Redirect::to('/usuario');
+        return redirect('usuario')->with('destroy', 'Profile eliminado!');
     }
 }

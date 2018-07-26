@@ -18,7 +18,7 @@
                 <div class="col-lg-12">
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            Agregar Usuarios
+                            {{$titulo}}
                         </div>
                         <div class="panel-body">
                             <div class="row">
@@ -26,7 +26,8 @@
 									<form method="POST" action="/usuario" enctype="multipart/form-data">
                                         @csrf
                                         @include('usuario.forms.usr')
-                                      <button type="submit" class="btn btn-primary">Enviar</button>
+                                      <button type="submit" class="btn btn-primary btn-sm">Enviar</button>
+                                      <a  class="btn btn-sm btn-success " href="/usuario">Volver</a>
                                     </form>
                                 </div>
                             </div>

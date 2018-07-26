@@ -17,6 +17,7 @@
 <script src="{{asset('js/responsiveslides.min.js')}}"></script>
 <script src="{{asset('js/greensock.js')}}" type="text/javascript"></script>
 <script src="{{asset('js/jquery.swipebox.js')}}" type="text/javascript"></script>
+	
 
 <link href="{{asset('css/style.css')}}" rel="stylesheet" type="text/css"  media="all" />	
 <link href="{{asset('css/swipebox.css')}}" rel="stylesheet" type="text/css"  media="all" />	
