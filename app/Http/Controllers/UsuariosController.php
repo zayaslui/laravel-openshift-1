@@ -106,7 +106,7 @@ class UsuariosController extends Controller
         $user->fill($request->all());
         $user->save();
         // return Redirect::to("/usuario");
-        return redirect()->route('usuario',$user);
+        return redirect('usuario/'.$user->slug);
     }
 
     /**

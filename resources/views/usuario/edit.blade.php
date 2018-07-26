@@ -27,7 +27,7 @@
                                         <button type="submit" class="btn btn-primary btn-sm">Guardar cambios</button>
                                         {{-- delete --}}
                                     </form>
-                                    <form method="post" action="/usuario/{{ $user->slug }}">
+                                    <form method="post" action="/usuario/{{$user->slug}}">
                                         @method('DELETE')
                                         @csrf
                                         <button type="submit" class="btn btn-danger btn-sm">Borrar Usuario</button>
