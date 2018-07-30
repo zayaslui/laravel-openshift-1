@@ -12,8 +12,21 @@
     <link rel="stylesheet" href="{{asset('css/sb-admin-2.css')}}">
     <link rel="stylesheet" href="{{asset('css/font-awesome.min.css')}}">
     <link rel="stylesheet" href="{{asset('css/toastr.min.css')}}"  type="text/css"  media="all" />
-    <script src="{{asset('js/jquery.min.js')}}"></script>
+    {{-- <script src="{{asset('js/jquery.min.js')}}"></script> --}}
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <link  href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">         
+    <script src="https://cdn.datatables.net/1.10.18/js/jquery.dataTables.min.js"></script>
     <script src="{{asset('js/toastr.min.js')}}"></script>
+    <style>
+            td.details-control {
+                background: url('https://datatables.net/examples/resources/details_open.png') no-repeat center center;
+                cursor: pointer;
+            }
+            tr.shown td.details-control {
+                background: url('https://datatables.net/examples/resources/details_close.png') no-repeat center center;
+            }        
+    </style>
 </head>
 
 <body>

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\User;
+use Datatables;
 
 use App\Http\Controllers\ServicesController;
 
@@ -32,6 +33,12 @@ class UsuariosController extends Controller
         $usuarios = User::all();
         return view('usuario.index',compact('usuarios'));
     }
+    // listar datatables
+    public function listar(){
+        $usuarios = User::all();
+        return view('usuario.listar',compact('usuarios'));
+    }
+
 
     /**
      * Show the form for creating a new resource.

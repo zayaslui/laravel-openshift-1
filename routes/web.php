@@ -52,6 +52,7 @@ Route::get('admin','FrontController@admin');
 // Route::resource('usuario','UsuariosController');
 
 Route::get('usuario','UsuariosController@index');
+Route::get('usuario/listar','UsuariosController@listar');
 Route::post('usuario','UsuariosController@store');
 Route::GET('usuario/create','UsuariosController@create');
 Route::get('usuario/{user}','UsuariosController@show');
@@ -63,6 +64,8 @@ Route::delete('usuario/{user}','UsuariosController@destroy');
 Route::get('create', 'DisplayDataController@create');
 Route::get('datatables', 'DisplayDataController@data');
 
+// pruebas datatables
+Route::get('listar_datatables', 'DisplayDataController@createData');
 
 Route::get('users/{user}', function (App\User $user) {
     return $user;
