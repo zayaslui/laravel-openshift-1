@@ -18,6 +18,7 @@
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">         
     <script src="https://cdn.datatables.net/1.10.18/js/jquery.dataTables.min.js"></script>
     <script src="{{asset('js/toastr.min.js')}}"></script>
+    
     <style>
             td.details-control {
                 background: url('https://datatables.net/examples/resources/details_open.png') no-repeat center center;

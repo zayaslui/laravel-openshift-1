@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use Illuminate\Http\File;
 use App\User;
 use Datatables;
 
@@ -57,6 +57,7 @@ class UsuariosController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(StoreUserRequest $request){
+
         /*agregar el slug*/
         // $user = new User();
         // $user->name = $request->name;
@@ -66,12 +67,25 @@ class UsuariosController extends Controller
         // $user->save();
         // $user::create(array_merge($request->all(), ['index' => 'value']));
         //User::create($request->all()+['slug' => $this->createSlug($request->name)]);
+        if($request->hasFile('avatar')){
+            $file = $request->file('avatar');
+            $name = time().$file->getClientOriginalName();
+            $file->move(public_path().'/images/avatar',$name);
+        }
 
-        User::create($request->all()+['slug' => $this->services->createSlug($request->name,new User)]);
-        //return Redirect::to('/usuario');
+        $user = new User();
+        $user -> name = $request->name;
+        $user -> slug = $this->services->createSlug($request->name,$user);
+        $user -> email = $request->email;
+        $user -> password = $request->password;
+        $user -> avatar = $name;
+        $user -> save();
+
+        // return $request->avatar->getClientOriginalName();
+        // $variables = $request->all()+['slug' => $this->services->createSlug($request->name,new User)]+['avatar'=>$request->avatar->getClientOriginalName()];
+        // User::create($request->all()+['slug' => $this->services->createSlug($request->name,new User)]+['avatar'=>$request->avatar->getClientOriginalName()]);
         return redirect('usuario')->with('create', 'Profile updated!');
-
-        // return $request;
+        // return $variables;
     }
 
     /**
@@ -112,7 +126,14 @@ class UsuariosController extends Controller
     public function update(Request $request, User $user){
         // $user = User::findOrFail($id);
         // $user  = User::where('slug','=',$slug)->firstOrFail();
-        $user->fill($request->all());
+        $user->fill($request->except('avatar'));
+
+        if($request->hasFile('avatar')){
+            $file = $request->file('avatar');
+            $name = time().$file->getClientOriginalName();
+            $user ->avatar = $name;
+            $file->move(public_path().'/images/avatar',$name);
+        }        
         $user->save();
         // return Redirect::to("/usuario");
         return redirect('usuario/'.$user->slug)->with('update','Registro actualizado');
@@ -127,8 +148,11 @@ class UsuariosController extends Controller
     public function destroy(User $user)
     {
         // $usuario = User::destroy($user);
+        $file_path = public_path().'/images/avatar/'.$user->avatar;
+        \File::delete($file_path);
+        // return $file_path;
         $user->delete();
         // return Redirect::to('/usuario');
-        return redirect('usuario')->with('destroy', 'Profile eliminado!');
+        return redirect('usuario/listar')->with('destroy', 'Profile eliminado!');
     }
 }

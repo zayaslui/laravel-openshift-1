@@ -36,6 +36,13 @@
 /* Formatting function for row details - modify as you need */
 		function format ( d ) {
 		    // `d` is the original data object for the row
+		    var imagen='';
+		    console.log(d.avatar);
+		    if(d.avatar==''){
+			    imagen =  '<img src=\"https://www.google.com.py/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png\" height=\"20\"/>' ;	    	
+		    }else{
+		    	imagen= '<img src=\"../images/avatar/'+d.avatar+'\" height=\"20\"/>' ;
+		    }
 		    return '<table cellpadding="5" cellspacing="0" border="0" style="padding-left:50px;">'+
 		        '<tr>'+
 		            '<td>Full name:</td>'+
@@ -47,7 +54,7 @@
 		        '</tr>'+
 		        '<tr>'+
 		            '<td>Extra info:</td>'+
-		            '<td><img src=\"https://www.google.com.py/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png\" height=\"20\"/></td>'+
+		            '<td>'+imagen+'</td>'+
 		        '</tr>'+
 		    '</table>';
 		}		                     

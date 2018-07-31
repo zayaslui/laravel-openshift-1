@@ -26,6 +26,10 @@
 									<form method="POST" action="/usuario" enctype="multipart/form-data">
                                         @csrf
                                         @include('usuario.forms.usr')
+                                        <div class="form-group">
+                                            <label for="avatar">Avatar</label>
+                                            <input type="file" name="avatar" id="avatar">
+                                        </div>
                                       <button type="submit" class="btn btn-primary btn-sm">Enviar</button>
                                       <a  class="btn btn-sm btn-success " href="/usuario">Volver</a>
                                     </form>

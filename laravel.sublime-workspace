@@ -4,6 +4,18 @@
 		"selected_items":
 		[
 			[
+				"file",
+				"file_path"
+			],
+			[
+				"re",
+				"request-"
+			],
+			[
+				"request",
+				"request-"
+			],
+			[
 				"data",
 				"datatables"
 			],
@@ -227,6 +239,33 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "resources/views/usuario/create.blade.php",
+			"settings":
+			{
+				"buffer_size": 1914,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "resources/views/usuario/edit.blade.php",
+			"settings":
+			{
+				"buffer_size": 2407,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "resources/views/usuario/listar.blade.php",
+			"settings":
+			{
+				"buffer_size": 3716,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -293,16 +332,24 @@
 	"expanded_folders":
 	[
 		"/var/www/html/laravel/laravel-openshift-1",
-		"/var/www/html/laravel/laravel-openshift-1/config"
+		"/var/www/html/laravel/laravel-openshift-1/public",
+		"/var/www/html/laravel/laravel-openshift-1/public/images",
+		"/var/www/html/laravel/laravel-openshift-1/resources",
+		"/var/www/html/laravel/laravel-openshift-1/resources/views",
+		"/var/www/html/laravel/laravel-openshift-1/resources/views/layouts",
+		"/var/www/html/laravel/laravel-openshift-1/resources/views/usuario"
 	],
 	"file_history":
 	[
+		"/var/www/html/laravel/laravel-openshift-1/app/Http/Controllers/UsuariosController.php",
+		"/var/www/html/laravel/laravel-openshift-1/vendor/laravel/framework/src/Illuminate/Database/README.md",
 		"/var/www/html/laravel/laravel-openshift-1/resources/views/layouts/admin.blade.php",
+		"/var/www/html/laravel/laravel-openshift-1/openshift/templates/laravel-mysql.json",
+		"/var/www/html/laravel/laravel-openshift-1/database/migrations/2018_07_31_004204_add_column_avatar_users.php",
 		"/var/www/html/laravel/laravel-openshift-1/resources/views/usuario/listar.blade.php",
 		"/var/www/html/laravel/laravel-openshift-1/app/Http/Controllers/DisplayDataController.php",
 		"/var/www/html/laravel/laravel-openshift-1/resources/views/displaydata.blade.php",
 		"/var/www/html/laravel/laravel-openshift-1/routes/web.php",
-		"/var/www/html/laravel/laravel-openshift-1/app/Http/Controllers/UsuariosController.php",
 		"/var/www/html/laravel/laravel-openshift-1/config/app.php",
 		"/var/www/html/laravel/laravel-openshift-1/composer.json",
 		"/var/www/html/laravel/laravel-openshift-1/public/css/sb-admin-2.css",
@@ -385,7 +432,6 @@
 		"/var/www/html/laravel/laravel-openshift-1/sql/default.sql",
 		"/home/luis/Documentos/laravel.anotaciones",
 		"/var/www/html/laravel/laravel-openshift-1/database/migrations/2018_06_16_175557_create_generos_table.php",
-		"/var/www/html/laravel/laravel-openshift-1/openshift/templates/laravel-mysql.json",
 		"/var/www/html/laravel/laravel-openshift-1/.env.example",
 		"/var/www/html/edbconstrucciones/migrate-database.sh",
 		"/var/www/html/edbconstrucciones/.env",
@@ -422,13 +468,11 @@
 		"/var/www/html/laravel/my_app/database/migrations/2018_06_12_200700_add_deleted_to_users_table.php",
 		"/var/www/html/laravel/my_app/database/migrations/2018_06_16_164241_crear_tabla_genero.php",
 		"/var/www/html/laravel/my_app/database/migrations/2014_10_12_000000_create_users_table.php",
-		"/var/www/html/laravel/my_app/database/migrations/2018_06_16_164032_migracion.php",
-		"/var/www/html/laravel/my_app/resources/views/genero/forms/gen.blade.php",
-		"/var/www/html/laravel/my_app/resources/views/layouts/admin.blade.php"
+		"/var/www/html/laravel/my_app/database/migrations/2018_06_16_164032_migracion.php"
 	],
 	"find":
 	{
-		"height": 29.0
+		"height": 41.0
 	},
 	"find_in_files":
 	{
@@ -443,6 +487,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"update",
+			"store",
 			">\n",
 			"Singapore",
 			"Singapur",
@@ -555,8 +601,98 @@
 	"groups":
 	[
 		{
+			"selected": 1,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "resources/views/usuario/create.blade.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1914,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1283,
+								1283
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Laravel Blade Highlighter/blade.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 120.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "resources/views/usuario/edit.blade.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2407,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1298,
+								1298
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Laravel Blade Highlighter/blade.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 240.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "resources/views/usuario/listar.blade.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3716,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1327,
+								1327
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Laravel Blade Highlighter/blade.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 600.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				}
 			]
 		}
 	],

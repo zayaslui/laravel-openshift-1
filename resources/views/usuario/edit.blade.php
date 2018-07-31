@@ -20,10 +20,14 @@
                             <div class="row">
                                 <div class="col-lg-12">
                                     <form method="POST" action="/usuario/{{$user->slug}}" enctype="Multipart/form-data">
-                                        {{-- agregar --}}
+                                        {{-- editar --}}
                                         @method('PUT')
                                         @csrf
                                         @include('usuario.forms.usr')
+                                        <div class="form-group">
+                                            <label for="avatar">Avatar</label>
+                                            <input type="file" name="avatar" id="avatar">
+                                        </div>
                                         <button type="submit" class="btn btn-primary btn-sm">Guardar cambios</button>
                                         {{-- delete --}}
                                     </form>
