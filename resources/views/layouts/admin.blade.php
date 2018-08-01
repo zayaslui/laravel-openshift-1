@@ -43,7 +43,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="/admin">Cinema Admin</a>
+                <a class="navbar-brand" href="/admin">Admin</a>
             </div>
            
 

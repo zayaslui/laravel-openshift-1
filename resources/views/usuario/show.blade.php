@@ -37,6 +37,13 @@
                                                 <label for="exampleInputPassword1">Password</label>
                                                 <input type="password" class="form-control" id="exampleInputPassword1" name="password" placeholder="Password" value="{{ $user->password}}" disabled>
                                               </div>
+                                              <div>
+                                                  {{-- <img src="/images/avatar/1533085196hormigon_elaborado.jpg" alt="" style="height:200px" class="img-thumbnail"> --}}
+                                                  <figure class="figure">
+                                                    <img src="/images/avatar/1533085196hormigon_elaborado.jpg" class="figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure." style="height: 100px">
+                                                    <figcaption class="figure-caption">A caption for the above image.</figcaption>
+                                                  </figure>
+                                              </div>
                                         <a class="btn btn-primary btn-sm" href="/usuario">Listar Usuarios</a>
                                     </form>
                                 </div>

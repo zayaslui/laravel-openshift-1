@@ -112,6 +112,7 @@ class UsuariosController extends Controller
         // return view('usuario.edit',['user'=>$user]);
         // return view('usuario.edit',compact('user'));
         // $user  = User::where('slug','=',$slug)->firstOrFail();
+
         return view('usuario.edit',compact('user'),['titulo'=>'Editar Usuario']);
     }
 
@@ -129,6 +130,10 @@ class UsuariosController extends Controller
         $user->fill($request->except('avatar'));
 
         if($request->hasFile('avatar')){
+            /*borrar la imagen vieja*/
+            $path_old_image = public_path().'/images/avatar/'.$user->avatar;
+            \File::delete($path_old_image);
+
             $file = $request->file('avatar');
             $name = time().$file->getClientOriginalName();
             $user ->avatar = $name;
