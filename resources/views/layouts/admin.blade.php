@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title></title>
+    <title>ADMIN - @yield('tittle')</title>
     <link rel="stylesheet" href=" {{asset('css/bootstrap.min.css')}}">
     <link rel="stylesheet" href="{{asset('css/metisMenu.min.css')}}">
     <link rel="stylesheet" href="{{asset('css/sb-admin-2.css')}}">
@@ -18,7 +18,10 @@
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">         
     <script src="https://cdn.datatables.net/1.10.18/js/jquery.dataTables.min.js"></script>
     <script src="{{asset('js/toastr.min.js')}}"></script>
-    
+    <link rel="stylesheet" href="{{asset('css/admin.css')}}">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tilt.js/1.2.1/tilt.jquery.min.js"></script> 
+   <script src="https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.min.js"></script> 
+    <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.2.3/css/responsive.dataTables.min.css">
     <style>
             td.details-control {
                 background: url('https://datatables.net/examples/resources/details_open.png') no-repeat center center;

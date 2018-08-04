@@ -25,18 +25,21 @@
                                         @csrf
                                         @include('usuario.forms.usr')
                                         <div class="form-group">
+                                            
                                             <label for="avatar">Avatar</label>
-                                            <input type="file" name="avatar" id="avatar">
+                                            <input type="file" name="avatar" id="avatar" class="">
                                         </div>
-                                        <button type="submit" class="btn btn-primary btn-sm">Guardar cambios</button>
+                                        <button type="submit" class="btn btn-primary btn-sm botonera"><i class="fa fa-save"></i></button>
                                         {{-- delete --}}
                                     </form>
                                     <form method="post" action="/usuario/{{$user->slug}}">
                                         @method('DELETE')
                                         @csrf
-                                        <button type="submit" class="btn btn-danger btn-sm">Borrar Usuario</button>
+                                        <button type="submit" class="btn btn-sm btn-danger  botonera delete"><i class="fa fa-trash"></i></button>
                                     </form>
-                                        <a  class="btn btn-sm btn-success " href="/usuario">Volver</a>
+                                    <form>
+                                        <a  class="btn btn-sm btn-success  botonera" href="/usuario"><i class="fa fa-undo"></i></a>
+                                    </form>
                                 </div>
                             </div>
                             <!-- /.row (nested) -->
@@ -48,4 +51,5 @@
                 <!-- /.col-lg-12 -->
             </div>
             <!-- /.row -->
+
 @endsection

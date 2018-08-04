@@ -251,6 +251,23 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "app/Http/Controllers/UsuariosController.php",
+			"settings":
+			{
+				"buffer_size": 5097,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "resources/views/usuario/show.blade.php",
+			"settings":
+			{
+				"buffer_size": 4738,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -591,8 +608,69 @@
 	"groups":
 	[
 		{
+			"selected": 1,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "app/Http/Controllers/UsuariosController.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5097,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 2730.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "resources/views/usuario/show.blade.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4738,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1053,
+								1053
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Laravel Blade Highlighter/blade.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 360.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
 			]
 		}
 	],

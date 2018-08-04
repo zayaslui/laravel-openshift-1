@@ -19,11 +19,11 @@
                         <div class="panel-body">
                             <div class="row">
                                 <div class="col-lg-12">
-                                    <form>
+                                    <form class="col-lg-8 col-md-6 col-sm-12">
                                         @csrf
                                               <div class="form-group">
                                                 <label for="exampleInputEmail1">Nick</label>
-                                               <input type="text" class="form-control" id="exampleInputEmail1" name="name"aria-describedby="emailHelp" placeholder="Enter nick"  value="{{ $user->name }}" disabled>
+                                               <input type="text" class="form-control" id="exampleInputEmail1" name="name" aria-describedby="emailHelp" placeholder="Enter nick"  value="{{ $user->name }}" disabled>
                                                 <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
                                               </div>
 
@@ -33,19 +33,25 @@
                                                 <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
                                               </div>
 
-                                              <div class="form-group">
-                                                <label for="exampleInputPassword1">Password</label>
-                                                <input type="password" class="form-control" id="exampleInputPassword1" name="password" placeholder="Password" value="{{ $user->password}}" disabled>
-                                              </div>
+                                                <div class="form-group">
+                                                  <label for="exampleInputPassword1">Password</label>
+                                                  <input type="password" class="form-control" id="exampleInputPassword1" name="password" placeholder="Password" value="{{ $user->password}}" disabled>
+                                                </div>
                                               <div>
-                                                  {{-- <img src="/images/avatar/1533085196hormigon_elaborado.jpg" alt="" style="height:200px" class="img-thumbnail"> --}}
-                                                  <figure class="figure">
-                                                    <img src="/images/avatar/1533085196hormigon_elaborado.jpg" class="figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure." style="height: 100px">
-                                                    <figcaption class="figure-caption">A caption for the above image.</figcaption>
-                                                  </figure>
+
                                               </div>
                                         <a class="btn btn-primary btn-sm" href="/usuario">Listar Usuarios</a>
                                     </form>
+                                    <div data-tilt class="col-lg-4 col-md-6 col-sm-12">
+                                      <figure class="figure  avatar">
+                                        @if($user -> avatar)
+                                        <img src="/images/avatar/{{ $user -> avatar }}" class="figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure.">
+                                        @else
+                                        <img src="https://www.google.com.py/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" class="figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure." style="height: 50px">                                        
+                                        @endif
+                                        <figcaption class="figure-caption"></figcaption>
+                                      </figure>
+                                    </div>
                                 </div>
 
                             </div>
@@ -82,4 +88,10 @@
                         @endif
                 })
             </script>
+
+            <script>
+                $('.js-tilt').tilt({
+                    scale: 1.2
+                })
+            </script>            
 @endsection

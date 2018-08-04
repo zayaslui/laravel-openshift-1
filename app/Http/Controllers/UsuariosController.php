@@ -158,6 +158,6 @@ class UsuariosController extends Controller
         // return $file_path;
         $user->delete();
         // return Redirect::to('/usuario');
-        return redirect('usuario/listar')->with('destroy', 'Profile eliminado!');
+        return redirect('usuario')->with('destroy', 'Profile eliminado!');
     }
 }

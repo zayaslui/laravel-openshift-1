@@ -1,6 +1,5 @@
 @extends('layouts.admin')
-
-
+@section('title','listar')
 
 @if (session('message'))
 	<div class="alert alert-success alert-dismissible" role="alert">
@@ -13,7 +12,7 @@
 
 
 {{-- contenido --}}
-<table class="display" id="example" >
+<table class="display nowrap" id="example" >
    <thead>
       <tr>
          <th></th>
@@ -41,7 +40,7 @@
 		    if(d.avatar==''){
 			    imagen =  '<img src=\"https://www.google.com.py/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png\"  height=\"100px\"/>' ;	    	
 		    }else{
-		    	imagen= '<img src=\"../images/avatar/'+d.avatar+'\" height=\"20\"/>' ;
+		    	imagen= '<img src=\"../images/avatar/'+d.avatar+'\" height=\"200\"/>' ;
 		    }
 		    return '<table cellpadding="5" cellspacing="0" border="0" style="padding-left:50px;">'+
 		        '<tr>'+
@@ -53,7 +52,7 @@
 		            '<td>Extension</td>'+
 		        '</tr>'+
 		        '<tr>'+
-		            '<td>Extra info:</td>'+
+		            '<td>Avatar:</td>'+
 		            '<td>'+imagen+'</td>'+
 		        '</tr>'+
 		    '</table>';
@@ -78,12 +77,18 @@
                         	"data": null,
                         	"defaultContent":'',
                         	render : function ( data, type, full, meta ) {
-					            return '<a class="btn btn-sm btn-success" href="usuario/'+data.slug+'">Show</a>'+
-					            '<a class="btn btn-sm btn-success" href="usuario/'+data.slug+'/edit">Editar</a>';
+					            return '<a class="btn btn-sm btn-success" href="usuario/'+data.slug+'"><i class="fa fa-eye"></i></a>'+
+					            '<a class="btn btn-sm btn-primary" href="usuario/'+data.slug+'/edit"><i class="fa fa-edit"></i></a>';
 					         }
-                        }
+                        },
                      ],
-               ajax: '{{ url('datatables') }}',                     
+			responsive: {
+	            details: {
+	                display: $.fn.dataTable.Responsive.display.childRowImmediate,
+	                type: ''
+	            }
+	        },               
+       		ajax: '{{ url('datatables') }}',                     
 		});
 
 		// Add event listener for opening and closing details
@@ -128,5 +133,10 @@
 					toastr["error"]("Se ha eliminado exitosamente el registro","Usuarios");
 				@endif
 	    })
+	</script>
+	<script>
+			$('.js-tilt').tilt({
+			    scale: 1.2
+			})
 	</script>
 @stop
