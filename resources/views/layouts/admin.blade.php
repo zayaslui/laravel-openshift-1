@@ -15,12 +15,14 @@
     {{-- <script src="{{asset('js/jquery.min.js')}}"></script> --}}
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
     <link  href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css" rel="stylesheet">
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">         
+    {{-- <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">          --}}
     <script src="https://cdn.datatables.net/1.10.18/js/jquery.dataTables.min.js"></script>
     <script src="{{asset('js/toastr.min.js')}}"></script>
     <link rel="stylesheet" href="{{asset('css/admin.css')}}">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tilt.js/1.2.1/tilt.jquery.min.js"></script> 
-   <script src="https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.min.js"></script> 
+   <script src="https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.min.js"></script>
+   <link rel="stylesheet" href="https://cdn.datatables.net/fixedheader/3.1.5/css/fixedHeader.dataTables.min.css">
+   <script src="https://cdn.datatables.net/fixedheader/3.1.5/js/dataTables.fixedHeader.min.js"></script>
     <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.2.3/css/responsive.dataTables.min.css">
     <style>
             td.details-control {
@@ -113,7 +115,7 @@
         </div>    
     </div>
     
-    <script src="{{asset('js/jquery.min.js')}}"></script>
+    {{-- <script src="{{asset('js/jquery.min.js')}}"></script> --}}
     <script src="{{asset('js/bootstrap.min.js')}}"></script>
     <script src="{{asset('js/metisMenu.min.js')}}"></script>
     <script src="{{asset('js/sb-admin-2.js')}}"></script>

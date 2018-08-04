@@ -68,11 +68,11 @@
 			                "data":           null,
 			                "defaultContent": ''
 			            },
-                        {data :'id', name:'id'},
-                        { data: 'name', name: 'name' },
-                        { data: 'email', name: 'email' },
+                        {data :"id", name:"id", className:"desktop"},
+                        { data: "name", name: "name",className:"min-tablet" },
+                        { data: "email", name: "email",className:"all" },
                         {
-                        	"className":'controles',
+                        	"className":'all',
                         	"orderable":false,
                         	"data": null,
                         	"defaultContent":'',
@@ -87,10 +87,12 @@
 	                display: $.fn.dataTable.Responsive.display.childRowImmediate,
 	                type: ''
 	            }
-	        },               
-       		ajax: '{{ url('datatables') }}',                     
+	        },
+       		ajax: '{{ url('datatables') }}',
 		});
-
+			// header
+			new $.fn.dataTable.FixedHeader( table );
+			
 		// Add event listener for opening and closing details
 		    $('#example tbody').on('click', 'td.details-control', function () {
 		        var tr = $(this).closest('tr');
