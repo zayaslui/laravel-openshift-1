@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>ADMIN - @yield('tittle')</title>
+    <title>ADMIN - @yield('title')</title>
     <link rel="stylesheet" href=" {{asset('css/bootstrap.min.css')}}">
     <link rel="stylesheet" href="{{asset('css/metisMenu.min.css')}}">
     <link rel="stylesheet" href="{{asset('css/sb-admin-2.css')}}">

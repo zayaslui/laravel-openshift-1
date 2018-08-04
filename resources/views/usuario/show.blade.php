@@ -1,7 +1,7 @@
 @extends('layouts.admin')
 
 @section('content')
-@section('title','Editar Usuarios')
+@section('title','Ver Usuarios')
 
            <div class="row">
                 <div class="col-lg-12">

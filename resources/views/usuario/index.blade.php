@@ -1,5 +1,5 @@
 @extends('layouts.admin')
-@section('title','listar')
+@section('title','Usuarios')
 
 @if (session('message'))
 	<div class="alert alert-success alert-dismissible" role="alert">
@@ -26,13 +26,7 @@
 </table>
 {{-- contenido --}}
 
-	<script>
-		// datatables
-						// { data: 'avatar', name: 'avatar',
-		    //                 render: function( data, type, full, meta ) {
-		    //                     return "<img src=\"https://www.google.com.py/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png\" height=\"20\"/>";
-		    //                 }
-		    //             },       
+	<script>   
 /* Formatting function for row details - modify as you need */
 		function format ( d ) {
 		    // `d` is the original data object for the row
@@ -44,15 +38,15 @@
 		    }
 		    return '<table cellpadding="5" cellspacing="0" border="0" style="padding-left:50px;">'+
 		        '<tr>'+
-		            '<td>Full name:</td>'+
+		            '<td><strong>Full name:</strong></td>'+
 		            '<td>'+d.name+'</td>'+
 		        '</tr>'+
 		        '<tr>'+
-		            '<td>Extension number:</td>'+
+		            '<td><strong>Extension number:</strong></td>'+
 		            '<td>Extension</td>'+
 		        '</tr>'+
 		        '<tr>'+
-		            '<td>Avatar:</td>'+
+		            '<td><strong>Avatar:</strong></td>'+
 		            '<td>'+imagen+'</td>'+
 		        '</tr>'+
 		    '</table>';
@@ -92,7 +86,7 @@
 		});
 			// header
 			new $.fn.dataTable.FixedHeader( table );
-			
+
 		// Add event listener for opening and closing details
 		    $('#example tbody').on('click', 'td.details-control', function () {
 		        var tr = $(this).closest('tr');
@@ -126,7 +120,7 @@
 					  "showEasing": "swing",
 					  "hideEasing": "linear",
 					  "showMethod": "fadeIn",
-					  "hideMethod": "fadeOut"
+					  "hideMethod": "fadeOut",
 					}				
 				@if (session('create'))
 					toastr["success"]("Se ha creado exitosamente el registro","Usuarios");
