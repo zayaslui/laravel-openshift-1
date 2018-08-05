@@ -47,7 +47,7 @@ Route::get ('405', ['as' => '405', 'uses' => 'ErrorHandlerController@errorCode40
 
 //admin
 
-Route::get('admin','FrontController@admin');
+// Route::get('admin','FrontController@admin');
 
 // Route::resource('usuario','UsuariosController');
 
@@ -108,8 +108,5 @@ Route::post('password/email', 'Auth\ForgotPasswordController@sendResetLinkEmail'
 Route::get('password/reset/{token}', 'Auth\ResetPasswordController@showResetForm')->name('password.reset');
 Route::post('password/reset', 'Auth\ResetPasswordController@reset');
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/admin', 'HomeController@admin')->name('admin');
 
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');

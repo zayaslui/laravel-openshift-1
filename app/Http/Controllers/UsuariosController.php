@@ -20,6 +20,7 @@ class UsuariosController extends Controller
     
     public function __construct(){
         $this->services = new ServicesController();
+         $this->middleware('auth');
     }
     
     /**
@@ -67,18 +68,19 @@ class UsuariosController extends Controller
         // $user->save();
         // $user::create(array_merge($request->all(), ['index' => 'value']));
         //User::create($request->all()+['slug' => $this->createSlug($request->name)]);
+        $user = new User();
+
         if($request->hasFile('avatar')){
             $file = $request->file('avatar');
             $name = time().$file->getClientOriginalName();
             $file->move(public_path().'/images/avatar',$name);
+            $user -> avatar = $name;
         }
 
-        $user = new User();
         $user -> name = $request->name;
         $user -> slug = $this->services->createSlug($request->name,$user);
         $user -> email = $request->email;
         $user -> password = $request->password;
-        $user -> avatar = $name;
         $user -> save();
 
         // return $request->avatar->getClientOriginalName();

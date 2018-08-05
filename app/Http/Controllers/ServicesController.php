@@ -8,6 +8,7 @@ use App\User;
 use App\Obras;
 use App\Prensa;
 use App\Obras_det;
+use Faker\Generator as Faker;
 
 class ServicesController extends Controller
 {

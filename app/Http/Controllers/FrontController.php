@@ -97,10 +97,5 @@ class FrontController extends Controller
       
     }
 
-    public function admin(){
-      return view('layouts.admin');
-    }
-
-    
 
 }
