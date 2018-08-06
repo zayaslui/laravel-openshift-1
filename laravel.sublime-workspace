@@ -263,7 +263,7 @@
 			"file": "public/css/admin.css",
 			"settings":
 			{
-				"buffer_size": 579,
+				"buffer_size": 583,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -272,7 +272,7 @@
 			"file": "resources/views/auth/login.blade.php",
 			"settings":
 			{
-				"buffer_size": 2132,
+				"buffer_size": 2148,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -281,7 +281,7 @@
 			"file": "resources/views/layouts/app.blade.php",
 			"settings":
 			{
-				"buffer_size": 1668,
+				"buffer_size": 758,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -290,8 +290,51 @@
 			"file": "public/css/login.css",
 			"settings":
 			{
-				"buffer_size": 3094,
+				"buffer_size": 3352,
 				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "public/js/builder_scripts.js",
+			"settings":
+			{
+				"buffer_size": 9542,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "public/js/waterpipe.js",
+			"settings":
+			{
+				"buffer_size": 20347,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/Http/Controllers/UsuariosController.php",
+			"settings":
+			{
+				"buffer_size": 5131,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "resources/views/layouts/admin.blade.php",
+			"settings":
+			{
+				"buffer_size": 6605,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/Http/Controllers/HomeController.php",
+			"settings":
+			{
+				"buffer_size": 461,
 				"line_ending": "Unix"
 			}
 		}
@@ -364,15 +407,13 @@
 		"/var/www/html/laravel/laravel-openshift-1/app",
 		"/var/www/html/laravel/laravel-openshift-1/app/Http",
 		"/var/www/html/laravel/laravel-openshift-1/app/Http/Controllers",
-		"/var/www/html/laravel/laravel-openshift-1/public",
-		"/var/www/html/laravel/laravel-openshift-1/public/css",
 		"/var/www/html/laravel/laravel-openshift-1/resources",
 		"/var/www/html/laravel/laravel-openshift-1/resources/views",
-		"/var/www/html/laravel/laravel-openshift-1/resources/views/auth",
 		"/var/www/html/laravel/laravel-openshift-1/resources/views/layouts"
 	],
 	"file_history":
 	[
+		"/var/www/html/laravel/laravel-openshift-1/public/css/piper.css",
 		"/var/www/html/laravel/laravel-openshift-1/resources/views/auth/login.blade.php",
 		"/var/www/html/laravel/laravel-openshift-1/resources/views/layouts/app.blade.php",
 		"/var/www/html/laravel/laravel-openshift-1/public/css/app.css",
@@ -499,8 +540,7 @@
 		"/var/www/html/laravel/my_app/app/Http/Requests/UserUpdateRequest.php",
 		"/var/www/html/laravel/my_app/app/Http/Requests/GeneroUpdateRequest.php",
 		"/var/www/html/laravel/my_app/routes/web.php",
-		"/var/www/html/laravel/my_app/app/Http/Controllers/PeliculasController.php",
-		"/var/www/html/laravel/my_app/app/Peliculas.php"
+		"/var/www/html/laravel/my_app/app/Http/Controllers/PeliculasController.php"
 	],
 	"find":
 	{
@@ -519,6 +559,19 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"createElement",
+			"initCanvas",
+			"displayWidth",
+			"canvas",
+			"image",
+			".data",
+			"data",
+			"sampleParams",
+			"setNewParams",
+			"smokyBG",
+			"noUiSlider",
+			"niceScroll",
+			"wavybg-wrapper",
 			"Faker",
 			"logout-form",
 			"css",
@@ -645,7 +698,7 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 3,
 			"sheets":
 			[
 				{
@@ -654,21 +707,81 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 579,
+						"buffer_size": 583,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								65,
-								65
+								432,
+								432
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/CSS/CSS.sublime-syntax",
 							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 441.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "resources/views/auth/login.blade.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2148,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								50,
+								50
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Laravel Blade Highlighter/blade.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "resources/views/layouts/app.blade.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 758,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								504,
+								504
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Laravel Blade Highlighter/blade.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -678,80 +791,20 @@
 					"type": "text"
 				},
 				{
-					"buffer": 1,
-					"file": "resources/views/auth/login.blade.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2132,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								47,
-								47
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Laravel Blade Highlighter/blade.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 540.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "resources/views/layouts/app.blade.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1668,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								720,
-								720
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Laravel Blade Highlighter/blade.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
 					"buffer": 3,
 					"file": "public/css/login.css",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3094,
+						"buffer_size": 3352,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								219,
-								219
+								3312,
+								3312
 							]
 						],
 						"settings":
@@ -761,10 +814,159 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
+						"translation.y": 2980.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "public/js/builder_scripts.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 9542,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								9542,
+								9542
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 7320.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "public/js/waterpipe.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 20347,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2067,
+								2067
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 720.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "app/Http/Controllers/UsuariosController.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5131,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								493,
+								493
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 60.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "resources/views/layouts/admin.blade.php",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 6605,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								313,
+								313
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Laravel Blade Highlighter/blade.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "app/Http/Controllers/HomeController.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 461,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								270,
+								270
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
 					"type": "text"
 				}
 			]

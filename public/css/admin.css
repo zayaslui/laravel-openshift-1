@@ -30,14 +30,14 @@ a.btn {
 	width: 100px;
 }
 */
-@media (min-width: 768px)
+@media (min-width: 768px){
 	.navbar-right {
 	    float: right!important;
 	    margin-right: -0px;
-	}
+	}	
+}
 
 @media only screen and (max-width: 480px) {
-
 	.botonera{
 		left: 50%;
 	}

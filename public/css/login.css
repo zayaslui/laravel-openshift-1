@@ -8,6 +8,10 @@ body, html {
     font-size: 14px;
 }
 
+canvas {
+  /*width: 100%;*/
+  /*height: auto;*/
+}
 
 .wraper-login{
     top:5%;
@@ -144,3 +148,22 @@ body, html {
 .forgot-password:focus{
     color: rgb(12, 97, 33);
 }
+
+
+@media (min-width: 768px){
+     .wraper-login{
+        top:5%;
+        left: 7%;
+        position: absolute;
+    }
+}  
+
+
+@media only screen and (max-width: 480px) {
+     .wraper-login{
+        top:0%;
+        left: 4%;
+        position: absolute;
+    }
+}
+

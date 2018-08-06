@@ -31,7 +31,9 @@ $( document ).ready(function() {
 		}
 	});
 
-	$(window).resize();
+	$(window).resize(function(){
+		location.reload();
+	});
 
 	//Init waterpipe
 	var smokyBG = $('#wavybg-wrapper').waterpipe();
