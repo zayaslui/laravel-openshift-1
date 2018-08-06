@@ -149,21 +149,68 @@ canvas {
     color: rgb(12, 97, 33);
 }
 
+@media only screen and (max-width: 1366px) and (min-width: 1280px) {
+     .container.wraper-login{
+        top:0%;
+        left: 7%;
+        position: absolute;
+    }
+}
 
+@media only screen and (max-width: 1024px) {
+     .container.wraper-login{
+        top:0%;
+        left: 7%;
+        position: absolute;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+ .container.wraper-login{
+        top:5%;
+        left: 30%;
+        position: absolute;
+    }
+}
 @media (min-width: 768px){
-     .wraper-login{
+   .container.wraper-login{
         top:5%;
         left: 7%;
         position: absolute;
     }
 }  
 
+@media only screen and (max-width: 736px){
+ .container.wraper-login{
+        top:5%;
+        left: 23%;
+        position: absolute;
+    }
+}
+@media only screen and (max-width: 640px){
 
+}
 @media only screen and (max-width: 480px) {
-     .wraper-login{
+        .container.wraper-login{
         top:0%;
-        left: 4%;
+        left: 15%;
         position: absolute;
     }
 }
 
+@media only screen and (max-width: 384px) {
+        .container.wraper-login{
+        top:0%;
+        left: 5%;
+        position: absolute;
+    }
+
+}
+
+@media only screen and (max-width: 320px) {
+        .container.wraper-login{
+        top:0%;
+        left: 15%;
+        position: absolute;
+    }
+}
