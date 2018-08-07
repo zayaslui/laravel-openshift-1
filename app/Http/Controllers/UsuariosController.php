@@ -80,7 +80,7 @@ class UsuariosController extends Controller
         $user -> name = $request->name;
         $user -> slug = $this->services->createSlug($request->name,$user);
         $user -> email = $request->email;
-        $user -> password = $request->password;
+        $user -> password = bcrypt($request->password);
         $user -> save();
 
         // return $request->avatar->getClientOriginalName();
