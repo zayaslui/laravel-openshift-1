@@ -96,6 +96,8 @@ Route::get('health.php', function () {
 // Authentication Routes...
 Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
 Route::post('login', 'Auth\LoginController@login');
+
+
 Route::post('logout', 'Auth\LoginController@logout')->name('logout');
 
 // Registration Routes...
@@ -108,5 +110,9 @@ Route::post('password/email', 'Auth\ForgotPasswordController@sendResetLinkEmail'
 Route::get('password/reset/{token}', 'Auth\ResetPasswordController@showResetForm')->name('password.reset');
 Route::post('password/reset', 'Auth\ResetPasswordController@reset');
 
-Route::get('/admin', 'HomeController@admin')->name('admin');
+Route::get('admin', 'HomeController@admin')->name('admin');
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

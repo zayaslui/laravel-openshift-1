@@ -20,7 +20,7 @@ class UsuariosController extends Controller
     
     public function __construct(){
         $this->services = new ServicesController();
-         $this->middleware('auth');
+        $this->middleware('auth');
     }
     
     /**
