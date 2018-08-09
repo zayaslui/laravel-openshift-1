@@ -5,7 +5,7 @@ namespace App;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Support\Facades\Hash;
-
+use Illuminate\Foundation\Auth\AuthenticatesUsers;
 
 class User extends Authenticatable
 {
@@ -17,7 +17,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password','slug'
+        'name', 'email'
     ];
 
     /**
@@ -32,9 +32,10 @@ class User extends Authenticatable
     public function getRouteKeyName(){
         return 'slug';
     }
-
-    public function setPasswordAttribute($password){
-        $this->attributes['password'] = bcrypt($password);
+    
+    public function setPasswordAttribute($password)
+    {
+        $this->attributes['password'] = \Hash::make($password);
     }
 
 }

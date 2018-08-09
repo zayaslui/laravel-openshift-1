@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Session;
 
 use App\Http\Requests\StoreUserRequest;
+use \Illuminate\Foundation\Auth\AuthenticatesUsers;
 
 class UsuariosController extends Controller
 {
