@@ -18,8 +18,7 @@ class LoginController extends Controller
     |
     */
 
-    use AuthenticatesUsers;
-
+    // use AuthenticatesUsers;
     /**
      * Where to redirect users after login.
      *
@@ -36,4 +35,15 @@ class LoginController extends Controller
     {
         $this->middleware('guest')->except('logout');
     }
+    // public function login(){
+    //         $credentials = $this->validate(request(),[
+    //             'email' => 'email|required|string',
+    //             'password' => 'required|string'
+    //         ]);
+    // // dd($credentials);            
+    //     if(Auth::attempt($credentials)){
+    //         return 'ok';
+    //     }
+    //     return 'error';
+    // }
 }

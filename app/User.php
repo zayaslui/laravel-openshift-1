@@ -32,10 +32,5 @@ class User extends Authenticatable
     public function getRouteKeyName(){
         return 'slug';
     }
-    
-    public function setPasswordAttribute($password)
-    {
-        $this->attributes['password'] = \Hash::make($password);
-    }
 
 }
