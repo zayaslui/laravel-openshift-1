@@ -32,7 +32,7 @@
 		    // `d` is the original data object for the row
 		    var imagen='';
 		    if(d.avatar==''){
-			    imagen =  '<img src=\"https://www.google.com.py/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png\"  height=\"100px\"/>' ;	    	
+			    imagen =  '<img src=\"../images/sistema/image-not-found.png\"  height=\"100px\"/>' ;	    	
 		    }else{
 		    	imagen= '<img src=\"../images/avatar/'+d.avatar+'\" height=\"200\"/>' ;
 		    }
