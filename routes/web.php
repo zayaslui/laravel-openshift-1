@@ -60,6 +60,11 @@ Route::put('usuario/{user}','UsuariosController@update');
 Route::get('usuario/{user}/edit','UsuariosController@edit');
 Route::delete('usuario/{user}','UsuariosController@destroy');
 
+
+Route::resource('layersliders','LayerSlidersController');
+/*listar datatables*/
+Route::get('layersliders_data','LayerSlidersController@listar');
+
 // datatables
 Route::get('create', 'DisplayDataController@create');
 Route::get('datatables', 'DisplayDataController@data');
