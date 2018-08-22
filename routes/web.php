@@ -31,6 +31,8 @@ Route::get('/services/concreto','FrontController@servicios_concreto');
 
 /*pruebas layers*/
 Route::get('layers','FrontController@layer_demo');
+/*pruebas layers*/
+Route::get('prueba','FrontController@prueba');
 
 // ajax
 Route::post('listarObras','FrontController@listar');
@@ -64,6 +66,11 @@ Route::delete('usuario/{user}','UsuariosController@destroy');
 Route::resource('layersliders','LayerSlidersController');
 /*listar datatables*/
 Route::get('layersliders_data','LayerSlidersController@listar');
+/*listar datatables layers*/
+Route::get('layers_data','LayerSlidersController@listar_layers');
+
+/*metodos que no aparecen en LayerSlidersController */
+Route::get('show_sliders/{id}','LayerSlidersController@show_sliders');
 
 // datatables
 Route::get('create', 'DisplayDataController@create');
@@ -71,6 +78,7 @@ Route::get('datatables', 'DisplayDataController@data');
 
 // pruebas datatables
 Route::get('listar_datatables', 'DisplayDataController@createData');
+
 
 Route::get('users/{user}', function (App\User $user) {
     return $user;

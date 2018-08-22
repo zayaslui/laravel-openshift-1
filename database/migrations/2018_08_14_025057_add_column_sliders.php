@@ -16,7 +16,7 @@ class AddColumnSliders extends Migration
         Schema::table('sliders', function (Blueprint $table) {
             $table->integer('layerslider_id')->unsigned()->index();
             $table->string('clase',191);
-            $table->string('data-ls',191);
+            $table->string('data_ls',191);
             $table->foreign('layerslider_id')->references('id')->on('layersliders')->onUpdate('cascade')->onDelete('restrict');
         });
     }

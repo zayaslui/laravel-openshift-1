@@ -192,8 +192,13 @@
 	<script>   
 /* Formatting function for row details - modify as you need */
 		function format ( d ) {
-		    // `d` is the original data object for the row
             var dato = JSON.parse(d.detalles.replace(/&quot;/g,'"'))[0];
+			var a = (d === undefined || d == null || d.length <= 0)?true:false;
+
+		    // `d` is the original data object for the row
+		    if(dato === undefined || dato == null || dato.length <= 0){
+			    return '<table cellpadding="5" cellspacing="0" border="0" style="padding-left:50px;"><button class="btn btn-sm btn-primary">Agregar Slider</button></table>'
+		    }
 		    var imagen='';
 		    if(d.avatar=='' || d.vatar==null){
 			    imagen =  '<img src=\"../images/sistema/image-not-found.png\"  height=\"100px\"/>' ;	    	
@@ -211,12 +216,16 @@
 		        '</tr>'+
 		        '<tr>'+
 		            '<td><strong>Data-ls:</strong></td>'+
-		            '<td>'+dato['data-ls']+'</td>'+
+		            '<td>'+dato['data_ls']+'</td>'+
 		        '</tr>'+		        
 		        '<tr>'+
-		            '<td><strong>Avatar:</strong></td>'+
+		            '<td><strong>Imagen:</strong></td>'+
 		            '<td>'+imagen+'</td>'+
 		        '</tr>'+
+		        '<tr>'+
+		            '<td><strong>Operaciones:</strong></td>'+
+		            '<td><a href="/show_sliders/'+dato.id+'" class="btn btn-sm btn-primary">show</a></td>'+
+		        '</tr>'+		        
 		    '</table>';
 		}
 		function controles(d){

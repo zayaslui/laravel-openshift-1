@@ -20,7 +20,7 @@
                                       <div class="panel-body">
                                           <div class="row">
                                               <div class="col-lg-12">
-                                                  <form class="col-lg-8 col-md-6 col-sm-12">
+                                                  <form class="col-lg-12 col-md-6 col-sm-12">
                                                       @csrf
                                                         @include('layersliders.forms.default')
                                                       <a class="btn btn-primary btn-sm" href="/layersliders">Listar Layersliders</a>

@@ -97,5 +97,7 @@ class FrontController extends Controller
       
     }
 
-
+    public function prueba(){
+      return view("prueba");
+    }
 }

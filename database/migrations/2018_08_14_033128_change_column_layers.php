@@ -14,7 +14,7 @@ class ChangeColumnLayers extends Migration
     public function up()
     {
         Schema::table('layers', function (Blueprint $table) {
-            $table->string('data-ls', 191)->nullable()->default(null)->change();
+            $table->string('data_ls', 191)->nullable()->default(null)->change();
             $table->string('src', 191)->nullable()->default(null)->change();
             $table->string('style', 191)->nullable()->default(null)->change();
             $table->string('otros', 191)->nullable()->default(null)->change();

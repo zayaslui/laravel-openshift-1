@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Http\File;
 use App\Layerslider;
+use App\Slider;
+use App\Layer;
 use Datatables;
 
 use App\Http\Controllers\ServicesController;
@@ -47,6 +49,10 @@ class LayerSlidersController extends Controller
                     ->make(true);
     }
 
+    public function listar_layers(){
+        return Datatables::of(Layer::query())->make(true);
+    }
+
     /**
      * Show the form for creating a new resource.
      *
@@ -78,7 +84,7 @@ class LayerSlidersController extends Controller
     public function show($id)
     {
         $layersliders = Layerslider::find($id);
-       return view('layersliders.show',compact('layersliders'),['subtitulo'=>'Ver LayerSliders','titulo'=>'Layerslider']);
+        return view('layersliders.show',compact('layersliders'),['subtitulo'=>'Ver LayerSliders','titulo'=>'Layerslider']);
     }
 
     /**
@@ -114,4 +120,11 @@ class LayerSlidersController extends Controller
     {
         //
     }
+
+    public function show_sliders($id){
+        $slider = Slider::find($id);
+        return view("sliders.show",compact('slider'));
+        // return compact('slider');
+    }
+
 }
