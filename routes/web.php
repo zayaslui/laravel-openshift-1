@@ -63,7 +63,10 @@ Route::get('usuario/{user}/edit','UsuariosController@edit');
 Route::delete('usuario/{user}','UsuariosController@destroy');
 
 
-Route::resource('layersliders','LayerSlidersController');
+Route::resources([
+								'layersliders'=>'LayerSlidersController',
+								'layers'=>'LayersController'
+							]);
 /*listar datatables*/
 Route::get('layersliders_data','LayerSlidersController@listar');
 /*listar datatables layers*/

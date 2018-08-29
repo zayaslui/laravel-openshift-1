@@ -26,6 +26,7 @@
 
 </table>
 {{-- contenido --}}
+
 	{{-- modals inicio --}}
 
     <!-- Modal form to add a post -->

@@ -4,8 +4,28 @@
 		"selected_items":
 		[
 			[
+				"hi",
+				"hidden\tAttr"
+			],
+			[
+				"re",
+				"request"
+			],
+			[
+				"st",
+				"style"
+			],
+			[
 				"data",
-				"dataTable"
+				"data_ls"
+			],
+			[
+				"slide",
+				"slider_id"
+			],
+			[
+				"btn",
+				"btn-primary"
 			],
 			[
 				"deta",
@@ -18,10 +38,6 @@
 			[
 				"layersli",
 				"layersliders"
-			],
-			[
-				"re",
-				"required"
 			],
 			[
 				"tabl",
@@ -38,10 +54,6 @@
 			[
 				"col",
 				"col-lg-8"
-			],
-			[
-				"btn",
-				"btn-success"
 			],
 			[
 				"da",
@@ -272,28 +284,10 @@
 	"buffers":
 	[
 		{
-			"file": "routes/web.php",
+			"file": "resources/views/obras_det.blade.php",
 			"settings":
 			{
-				"buffer_size": 4818,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "resources/views/layersliders/create.blade.php",
-			"settings":
-			{
-				"buffer_size": 1963,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "resources/views/layersliders/index.blade.php",
-			"settings":
-			{
-				"buffer_size": 13603,
+				"buffer_size": 4520,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -302,26 +296,25 @@
 			"file": "resources/views/sliders/show.blade.php",
 			"settings":
 			{
-				"buffer_size": 8846,
+				"buffer_size": 30109,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "resources/views/sliders/forms/default.blade.php",
+			"file": "app/Http/Controllers/LayersController.php",
 			"settings":
 			{
-				"buffer_size": 1017,
+				"buffer_size": 2045,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "app/Http/Controllers/LayerSlidersController.php",
+			"file": "resources/views/layersliders/show.blade.php",
 			"settings":
 			{
-				"buffer_size": 3148,
-				"encoding": "UTF-8",
+				"buffer_size": 3259,
 				"line_ending": "Unix"
 			}
 		}
@@ -391,13 +384,32 @@
 	"expanded_folders":
 	[
 		"/var/www/html/laravel/laravel-openshift-1",
+		"/var/www/html/laravel/laravel-openshift-1/app",
+		"/var/www/html/laravel/laravel-openshift-1/app/Http",
+		"/var/www/html/laravel/laravel-openshift-1/app/Http/Controllers",
 		"/var/www/html/laravel/laravel-openshift-1/resources",
 		"/var/www/html/laravel/laravel-openshift-1/resources/views",
-		"/var/www/html/laravel/laravel-openshift-1/resources/views/layouts",
-		"/var/www/html/laravel/laravel-openshift-1/routes"
+		"/var/www/html/laravel/laravel-openshift-1/resources/views/layersliders",
+		"/var/www/html/laravel/laravel-openshift-1/resources/views/sliders"
 	],
 	"file_history":
 	[
+		"/var/www/html/laravel/laravel-openshift-1/app/Http/Controllers/UsuariosController.php",
+		"/var/www/html/laravel/laravel-openshift-1/resources/views/layersliders/index.blade.php",
+		"/var/www/html/laravel/laravel-openshift-1/app/Http/Controllers/SliderController.php",
+		"/var/www/html/laravel/laravel-openshift-1/resources/views/little_obras.blade.php",
+		"/var/www/html/laravel/laravel-openshift-1/resources/views/layerslider.blade.php",
+		"/var/www/html/laravel/laravel-openshift-1/app/Layer.php",
+		"/var/www/html/laravel/laravel-openshift-1/app/Http/Controllers/LayersController.php",
+		"/var/www/html/laravel/laravel-openshift-1/routes/web.php",
+		"/var/www/html/laravel/laravel-openshift-1/resources/views/layersliders/create.blade.php",
+		"/var/www/html/laravel/laravel-openshift-1/resources/views/sliders/show.blade.php",
+		"/var/www/html/laravel/laravel-openshift-1/resources/views/sliders/forms/default.blade.php",
+		"/var/www/html/laravel/laravel-openshift-1/app/Http/Controllers/LayerSlidersController.php",
+		"/var/www/html/laravel/laravel-openshift-1/resources/views/usuario/show.blade.php",
+		"/home/luis/Descargas/descarga (2)",
+		"/home/luis/Descargas/descarga (1)",
+		"/home/luis/Documentos/inventario_bajas",
 		"/var/www/html/laravel/laravel-openshift-1/database/migrations/2018_08_14_031104_add_column_layers.php",
 		"/var/www/html/laravel/laravel-openshift-1/database/migrations/2018_08_14_025057_add_column_sliders.php",
 		"/var/www/html/laravel/laravel-openshift-1/database/migrations/2018_08_14_033128_change_column_layers.php",
@@ -409,16 +421,10 @@
 		"/var/www/html/laravel/laravel-openshift-1/database/migrations/2018_08_20_013937_change_campo_sliders.php",
 		"/var/www/html/laravel/laravel-openshift-1/app/Slider.php",
 		"/var/www/html/laravel/laravel-openshift-1/app/Http/Controllers/FrontController.php",
-		"/var/www/html/laravel/laravel-openshift-1/app/Http/Controllers/LayerSlidersController.php",
-		"/var/www/html/laravel/laravel-openshift-1/app/Layer.php",
 		"/var/www/html/laravel/laravel-openshift-1/app/Layerslider.php",
 		"/var/www/html/laravel/laravel-openshift-1/resources/views/layouts/admin.blade.php",
 		"/var/www/html/laravel/laravel-openshift-1/resources/views/layersliders/forms/default.blade.php",
-		"/var/www/html/laravel/laravel-openshift-1/resources/views/layersliders/create.blade.php",
-		"/var/www/html/laravel/laravel-openshift-1/routes/web.php",
-		"/var/www/html/laravel/laravel-openshift-1/resources/views/layersliders/index.blade.php",
 		"/var/www/html/laravel/laravel-openshift-1/database/migrations/2018_08_15_014546_add_foreign__key_layersliders.php",
-		"/var/www/html/laravel/laravel-openshift-1/app/Http/Controllers/UsuariosController.php",
 		"/var/www/html/laravel/laravel-openshift-1/resources/views/usuario/index.blade.php",
 		"/var/www/html/laravel/laravel-openshift-1/app/Http/Controllers/DisplayDataController.php",
 		"/var/www/html/laravel/laravel-openshift-1/vendor/yajra/laravel-datatables-oracle/src/helper.php",
@@ -465,7 +471,6 @@
 		"/var/www/html/laravel/laravel-openshift-1/vendor/laravel/framework/src/Illuminate/Routing/Router.php",
 		"/var/www/html/laravel/laravel-openshift-1/resources/views/welcome.blade.php",
 		"/var/www/html/laravel/laravel-openshift-1/resources/views/usuario/edit.blade.php",
-		"/var/www/html/laravel/laravel-openshift-1/resources/views/usuario/show.blade.php",
 		"/var/www/html/laravel/laravel-openshift-1/resources/views/layouts/principal.blade.php",
 		"/var/www/html/laravel/laravel-openshift-1/resources/views/usuario/forms/usr.blade.php",
 		"/var/www/html/laravel/laravel-openshift-1/resources/views/usuario/create.blade.php",
@@ -490,7 +495,6 @@
 		"/var/www/html/laravel/laravel-openshift-1/database/migrations/2018_07_19_131315_add_column_slug.php",
 		"/var/www/html/laravel/laravel-openshift-1/app/Providers/RouteServiceProvider.php",
 		"/var/www/html/laravel/laravel-openshift-1/app/Http/Controllers/ErrorHandlerController.php",
-		"/var/www/html/laravel/laravel-openshift-1/resources/views/layerslider.blade.php",
 		"/var/www/html/laravel/laravel-openshift-1/composer.lock",
 		"/var/www/html/laravel/laravel-openshift-1/resources/views/services/little_service.blade.php",
 		"/var/www/html/laravel/laravel-openshift-1/resources/views/compromiso.blade.php",
@@ -516,20 +520,12 @@
 		"/var/www/html/laravel/laravel-openshift-1/database/migrations/2018_07_08_201948_change_type_obras_det_contenido_obra.php",
 		"/var/www/html/laravel/laravel-openshift-1/relaciones.txt",
 		"/var/www/html/laravel/laravel-openshift-1/resources/views/about.blade.php",
-		"/var/www/html/laravel/laravel-openshift-1/resources/views/little_obras.blade.php",
 		"/var/www/html/laravel/laravel-openshift-1/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php",
-		"/var/www/html/laravel/laravel-openshift-1/database/migrations/2018_07_05_141930_cambio_de_nombre_columna_obra_id_to_obras_id_2.php",
-		"/var/www/html/laravel/laravel-openshift-1/.env",
-		"/var/www/html/laravel/laravel-openshift-1/public/js/funciones.js",
-		"/var/www/html/laravel/laravel-openshift-1/app/Http/Controllers/Controller.php",
-		"/var/www/html/laravel/laravel-openshift-1/resources/views/contact.blade.php",
-		"/var/www/html/laravel/laravel-openshift-1/resources/views/errors/404.blade.php",
-		"/var/www/html/laravel/laravel-openshift-1/resources/views/errors/505.blade.php",
-		"/var/www/html/laravel/laravel-openshift-1/database/migrations/2018_07_04_042018_create_relacion_uno_a_muchos_obras_det.php"
+		"/var/www/html/laravel/laravel-openshift-1/database/migrations/2018_07_05_141930_cambio_de_nombre_columna_obra_id_to_obras_id_2.php"
 	],
 	"find":
 	{
-		"height": 29.0
+		"height": 41.0
 	},
 	"find_in_files":
 	{
@@ -544,6 +540,21 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"_show",
+			"show",
+			"showModal",
+			"src_show",
+			"tipo_show",
+			"slider_id_show",
+			"show",
+			"add",
+			"tipo",
+			"imagen",
+			"sliders",
+			"slider_id",
+			"_add",
+			"title_add",
+			"addModal",
 			"controles",
 			"layersliders",
 			"js-tilt",
@@ -660,6 +671,8 @@
 		"regex": false,
 		"replace_history":
 		[
+			"_delete",
+			"_show",
 			"slider",
 			"Layersliders",
 			"Route",
@@ -697,32 +710,33 @@
 	"groups":
 	[
 		{
-			"selected": 3,
+			"selected": 1,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "routes/web.php",
+					"file": "resources/views/obras_det.blade.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4818,
+						"buffer_size": 4520,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2572,
-								2572
+								507,
+								507
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax"
+							"syntax": "Packages/Laravel Blade Highlighter/blade.sublime-syntax",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 1160.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 2,
@@ -730,77 +744,19 @@
 				},
 				{
 					"buffer": 1,
-					"file": "resources/views/layersliders/create.blade.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1963,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1527,
-								1527
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Laravel Blade Highlighter/blade.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 240.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "resources/views/layersliders/index.blade.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 13603,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								9838,
-								9838
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Laravel Blade Highlighter/blade.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 3980.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
 					"file": "resources/views/sliders/show.blade.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 8846,
+						"buffer_size": 30109,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								7635,
-								7635
+								24006,
+								24006
 							]
 						],
 						"settings":
@@ -810,27 +766,57 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 600.0,
+						"translation.y": 9720.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
 					"type": "text"
 				},
 				{
-					"buffer": 4,
-					"file": "resources/views/sliders/forms/default.blade.php",
+					"buffer": 2,
+					"file": "app/Http/Controllers/LayersController.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1017,
+						"buffer_size": 2045,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								985,
-								985
+								2036,
+								2036
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1360.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "resources/views/layersliders/show.blade.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3259,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
 							]
 						],
 						"settings":
@@ -844,36 +830,6 @@
 						"zoom_level": 1.0
 					},
 					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "app/Http/Controllers/LayerSlidersController.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3148,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1374,
-								1374
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 660.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
 					"type": "text"
 				}
 			]
@@ -922,7 +878,7 @@
 	"project": "",
 	"replace":
 	{
-		"height": 54.0
+		"height": 74.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -946,7 +902,7 @@
 		[
 			[
 				"",
-				"/var/www/html/laravel/laravel-openshift-1/laravel.sublime-workspace"
+				"~/Documentos/workspace/xre/xre.sublime-project"
 			]
 		],
 		"width": 380.0
