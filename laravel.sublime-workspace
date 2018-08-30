@@ -4,6 +4,34 @@
 		"selected_items":
 		[
 			[
+				"Dat",
+				"DataTable"
+			],
+			[
+				"r",
+				"row"
+			],
+			[
+				"deta",
+				"details-control"
+			],
+			[
+				"set",
+				"setTimeout"
+			],
+			[
+				"fade",
+				"fadeOut"
+			],
+			[
+				"de",
+				"delete_row"
+			],
+			[
+				"dato",
+				"dato_delete"
+			],
+			[
 				"hi",
 				"hidden\tAttr"
 			],
@@ -26,10 +54,6 @@
 			[
 				"btn",
 				"btn-primary"
-			],
-			[
-				"deta",
-				"detalles"
 			],
 			[
 				"la",
@@ -296,7 +320,7 @@
 			"file": "resources/views/sliders/show.blade.php",
 			"settings":
 			{
-				"buffer_size": 30109,
+				"buffer_size": 31112,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -394,6 +418,7 @@
 	],
 	"file_history":
 	[
+		"/var/www/html/laravel/laravel-openshift-1/.gitignore",
 		"/var/www/html/laravel/laravel-openshift-1/app/Http/Controllers/UsuariosController.php",
 		"/var/www/html/laravel/laravel-openshift-1/resources/views/layersliders/index.blade.php",
 		"/var/www/html/laravel/laravel-openshift-1/app/Http/Controllers/SliderController.php",
@@ -489,7 +514,6 @@
 		"/home/luis/Descargas/palette.scss",
 		"/var/www/html/laravel/laravel-openshift-1/app/Http/Requests/StoreUserRequest.php",
 		"/var/www/html/laravel/laravel-openshift-1/app/Http/Controllers/ObrasController.php",
-		"/var/www/html/laravel/laravel-openshift-1/.gitignore",
 		"/var/www/html/laravel/laravel-openshift-1/app/Http/Kernel.php",
 		"/var/www/html/laravel/my_app/app/Http/Controllers/GeneroController.php",
 		"/var/www/html/laravel/laravel-openshift-1/database/migrations/2018_07_19_131315_add_column_slug.php",
@@ -540,6 +564,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"delete-modal",
 			"_show",
 			"show",
 			"showModal",
@@ -748,15 +773,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 30109,
+						"buffer_size": 31112,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								24006,
-								24006
+								29776,
+								29776
 							]
 						],
 						"settings":
@@ -766,7 +791,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 9720.0,
+						"translation.y": 11780.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -878,7 +903,7 @@
 	"project": "",
 	"replace":
 	{
-		"height": 74.0
+		"height": 54.0
 	},
 	"save_all_on_build": true,
 	"select_file":

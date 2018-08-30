@@ -385,7 +385,19 @@
                         }
                     } else {
                         toastr.success('Successfully added Post!', 'Success Alert', {timeOut: 5000});
-                        // $('#postTable').append("<tr class='item" + data.id + "'><td>" + data.id + "</td><td>" + data.title + "</td><td>" + data.content + "</td><td class='text-center'><input type='checkbox' class='new_published' data-id='" + data.id + " '></td><td>Right now</td><td><button class='show-modal btn btn-success' data-id='" + data.id + "' data-title='" + data.title + "' data-content='" + data.content + "'><span class='glyphicon glyphicon-eye-open'></span> Show</button> <button class='edit-modal btn btn-info' data-id='" + data.id + "' data-title='" + data.title + "' data-content='" + data.content + "'><span class='glyphicon glyphicon-edit'></span> Edit</button> <button class='delete-modal btn btn-danger' data-id='" + data.id + "' data-title='" + data.title + "' data-content='" + data.content + "'><span class='glyphicon glyphicon-trash'></span> Delete</button></td></tr>");
+                        
+                        $('#layers').DataTable().row.add( {
+                                "id":       data.id,
+                                "slider_id":   data.slider_id,
+                                "tipo":     data.tipo,
+                                "clase": data.clase,
+                                "src": data.src    ,
+                                "otros":data.otros,
+                                "descripcion" :data.descripcion,
+                                "data_ls":data.data_ls,
+                                "style":data.style
+                            } ).draw();
+
                         // $('.new_published').iCheck({
                         //     checkboxClass: 'icheckbox_square-yellow',
                         //     radioClass: 'iradio_square-yellow',
@@ -536,9 +548,10 @@
                 new $.fn.dataTable.FixedHeader( table );
               // Add event listener for opening and closing details
                   $('#layers tbody').on('click', 'td.details-control', function () {
+                      var table = $('#layers').DataTable();
                       var tr = $(this).closest('tr');
                       var row = table.row( tr );
-               
+      
                       if ( row.child.isShown() ) {
                           // This row is already open - close it
                           row.child.hide();
@@ -552,13 +565,13 @@
                   } );
                   function format(d){
                     var imagen='';
-                    if(d.src=='' || d.src==null){
-                      imagen =  '<img src=\"../images/sistema/image-not-found.png\"  height=\"100px\"/>' ;        
-                    }else{
-                      imagen =  '<img src=\"../images/avatar/'+d.src+'\" height=\"200\"/>' ;
-                    }
+                    // if(d.src=='' || d.src==null){
+                    //   imagen =  '<img src=\"../images/sistema/image-not-found.png\"  height=\"100px\"/>' ;        
+                    // }else{
+                    //   imagen =  '<img src=\"../images/avatar/'+d.src+'\" height=\"200\"/>' ;
+                    // }
 
-                    return '<table class="tbody" cellpadding="5" cellspacing="0" border="0" style="padding-left:50px;">'+
+                    return '<table class=" table-details table table-responsive" cellpadding="5" cellspacing="0" border="0" style="padding-left:50px;width:10%">'+
                         '<tr>'+
                         '<tr>'+
                             '<td class="uno"><strong>Data_ls:</strong></td>'+
@@ -569,7 +582,7 @@
                         '</tr>'+
                         '<tr class="">'+
                             '<td><strong>Imagen:</strong></td>'+
-                            '<td>dato4</td>'+
+                            '<td>'+d.src+'</td>'+
                         '</tr>'+
                         '<tr>'+
                             '<td><strong>Operaciones:</strong></td>'+
@@ -577,7 +590,10 @@
                         '</tr>'+            
                     '</table>';
                   }
-                  
+                  $(".table-details").DataTable({
+                    responsive:true,
+                    "scrollX": true
+                  })
             </script>
             <script>
                 $(document).ready(function(){
