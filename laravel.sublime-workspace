@@ -307,41 +307,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "resources/views/obras_det.blade.php",
-			"settings":
-			{
-				"buffer_size": 4520,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "resources/views/sliders/show.blade.php",
-			"settings":
-			{
-				"buffer_size": 31112,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/Http/Controllers/LayersController.php",
-			"settings":
-			{
-				"buffer_size": 2045,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "resources/views/layersliders/show.blade.php",
-			"settings":
-			{
-				"buffer_size": 3259,
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -418,6 +383,10 @@
 	],
 	"file_history":
 	[
+		"/var/www/html/laravel/laravel-openshift-1/app/Http/Controllers/LayersController.php",
+		"/var/www/html/laravel/laravel-openshift-1/resources/views/sliders/show.blade.php",
+		"/var/www/html/laravel/laravel-openshift-1/resources/views/obras_det.blade.php",
+		"/var/www/html/laravel/laravel-openshift-1/resources/views/layersliders/show.blade.php",
 		"/var/www/html/laravel/laravel-openshift-1/.gitignore",
 		"/var/www/html/laravel/laravel-openshift-1/app/Http/Controllers/UsuariosController.php",
 		"/var/www/html/laravel/laravel-openshift-1/resources/views/layersliders/index.blade.php",
@@ -425,10 +394,8 @@
 		"/var/www/html/laravel/laravel-openshift-1/resources/views/little_obras.blade.php",
 		"/var/www/html/laravel/laravel-openshift-1/resources/views/layerslider.blade.php",
 		"/var/www/html/laravel/laravel-openshift-1/app/Layer.php",
-		"/var/www/html/laravel/laravel-openshift-1/app/Http/Controllers/LayersController.php",
 		"/var/www/html/laravel/laravel-openshift-1/routes/web.php",
 		"/var/www/html/laravel/laravel-openshift-1/resources/views/layersliders/create.blade.php",
-		"/var/www/html/laravel/laravel-openshift-1/resources/views/sliders/show.blade.php",
 		"/var/www/html/laravel/laravel-openshift-1/resources/views/sliders/forms/default.blade.php",
 		"/var/www/html/laravel/laravel-openshift-1/app/Http/Controllers/LayerSlidersController.php",
 		"/var/www/html/laravel/laravel-openshift-1/resources/views/usuario/show.blade.php",
@@ -441,7 +408,6 @@
 		"/var/www/html/laravel/laravel-openshift-1/public/css/admin.css",
 		"/var/www/html/laravel/laravel-openshift-1/public/css/style.css",
 		"/var/www/html/laravel/laravel-openshift-1/resources/views/prueba.blade.php",
-		"/var/www/html/laravel/laravel-openshift-1/resources/views/layersliders/show.blade.php",
 		"/var/www/html/laravel/laravel-openshift-1/database/migrations/2018_07_05_140937_cambio_de_nombre_columna_obra_id_to_obras_id.php",
 		"/var/www/html/laravel/laravel-openshift-1/database/migrations/2018_08_20_013937_change_campo_sliders.php",
 		"/var/www/html/laravel/laravel-openshift-1/app/Slider.php",
@@ -531,7 +497,6 @@
 		"/home/luis/Descargas/untitled-font-2/icons-reference.html",
 		"/home/luis/Descargas/untitled-font-2/styles.css",
 		"/home/luis/Descargas/untitled-font-3 (1)/icons-reference.html",
-		"/var/www/html/laravel/laravel-openshift-1/resources/views/obras_det.blade.php",
 		"/var/www/html/laravel/laravel-openshift-1/resources/views/js/listarAllPrensaAjax.blade.php",
 		"/var/www/html/laravel/laravel-openshift-1/app/Prensa.php",
 		"/home/luis/Descargas/untitled-font-3 (1)/styles.css",
@@ -549,7 +514,7 @@
 	],
 	"find":
 	{
-		"height": 41.0
+		"height": 29.0
 	},
 	"find_in_files":
 	{
@@ -564,6 +529,9 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"add",
+			"show-modal",
+			"disabled",
 			"delete-modal",
 			"_show",
 			"show",
@@ -696,6 +664,7 @@
 		"regex": false,
 		"replace_history":
 		[
+			"",
 			"_delete",
 			"_show",
 			"slider",
@@ -735,128 +704,8 @@
 	"groups":
 	[
 		{
-			"selected": 1,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "resources/views/obras_det.blade.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 4520,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								507,
-								507
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Laravel Blade Highlighter/blade.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "resources/views/sliders/show.blade.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 31112,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								29776,
-								29776
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Laravel Blade Highlighter/blade.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 11780.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "app/Http/Controllers/LayersController.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2045,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2036,
-								2036
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 1360.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "resources/views/layersliders/show.blade.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3259,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Laravel Blade Highlighter/blade.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				}
 			]
 		}
 	],

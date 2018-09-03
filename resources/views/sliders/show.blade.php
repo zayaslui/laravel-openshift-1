@@ -172,6 +172,91 @@
       </div>
   </div>
 
+{{-- edit --}}
+<div id="editModal" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal">×</button>
+                  <h4 class="modal-title"></h4>
+              </div>
+              <div class="modal-body">
+                  <form class="form-horizontal" role="form">
+                      <div class="form-group">
+                          <label class="control-label col-sm-2" for="slider_id_edit">Slider_id:</label>
+                          <div class="col-sm-10">
+                              <input type="text" class="form-control" id="slider_id_edit" autofocus disabled>
+                              <small>Min: 2, Max: 32, only text</small>
+                              <p class="errorTitle text-center alert alert-danger hidden"></p>
+                          </div>
+                      </div>
+                      <div class="form-group">
+                          <label class="control-label col-sm-2" for="tipo_edit">Tipo:</label>
+                          <div class="col-sm-10">
+                              <input type="text" class="form-control" id="tipo_edit"  >
+                              <small>Min: 2, Max: 128, only text</small>
+                              <p class="errorContent text-center alert alert-danger hidden"></p>
+                          </div>
+                      </div>
+                      <div class="form-group">
+                          <label class="control-label col-sm-2" for="clase_edit">Clase:</label>
+                          <div class="col-sm-10">
+                              <input type="text" class="form-control" id="clase_edit"  >
+                              <small>Min: 2, Max: 32, only text</small>
+                              <p class="errorTitle text-center alert alert-danger hidden"></p>
+                          </div>
+                      </div>
+                      
+                      <div class="form-group">
+                          <label class="control-label col-sm-2" for="src_edit">Src</label>
+                          <div class="col-sm-10">
+                              <input type="text" class="form-control" id="src_edit"  >
+                              <small>Min: 2, Max: 32, only text</small>
+                              <p class="errorTitle text-center alert alert-danger hidden"></p>
+                          </div>
+                      </div>
+
+                      <div class="form-group">
+                          <label class="control-label col-sm-2" for="otros_edit">Otros</label>
+                          <div class="col-sm-10">
+                              <input type="text" class="form-control" id="otros_edit"  >
+                              <small>Min: 2, Max: 32, only text</small>
+                              <p class="errorTitle text-center alert alert-danger hidden"></p>
+                          </div>
+                      </div>
+
+                      <div class="form-group">
+                          <label class="control-label col-sm-2" for="descripcion_edit">descripcion</label>
+                          <div class="col-sm-10">
+                              <input type="text" class="form-control" id="descripcion_edit" >
+                              <small>Min: 2, Max: 32, only text</small>
+                              <p class="errorTitle text-center alert alert-danger hidden"></p>
+                          </div>
+                      </div>
+
+                      <div class="form-group">
+                          <label class="control-label col-sm-2" for="data_ls_edit">Data-ls</label>
+                          <div class="col-sm-10">
+                            <textarea class="form-control" id="data_ls_edit" cols="40" rows="5"  ></textarea>
+                              <small>Min: 2, Max: 32, only text</small>
+                              <p class="errorTitle text-center alert alert-danger hidden"></p>
+                          </div>
+                      </div>
+                  </form>
+                  <div class="modal-footer">
+                      <button type="button" class="btn btn-success edit" data-dismiss="modal" id="">
+                          <span id="" class=''></span> Edit
+                      </button>
+                      <button type="button" class="btn btn-warning" data-dismiss="modal">
+                          <span class=''></span> Close
+                      </button>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+
+
 {{-- show --}}
 
   <div id="showModal" class="modal fade" role="dialog">
@@ -245,9 +330,6 @@
                       </div>
                   </form>
                   <div class="modal-footer">
-                      <button type="button" class="btn btn-success add" data-dismiss="modal">
-                          <span id="" class=''></span> Add
-                      </button>
                       <button type="button" class="btn btn-warning" data-dismiss="modal">
                           <span class=''></span> Close
                       </button>
@@ -447,6 +529,23 @@
             $('#showModal').modal('show');
         });
 
+        // edit a layer
+        $(document).on('click', '.edit-modal', function() {
+            var table = $('#layers').DataTable();
+            var data = table.row( $(this).parents('tr') ).data();
+            $('.modal-title').text('Edit');
+            // $('#id').val(data["id"]);
+            $('#slider_id_edit').val(data["slider_id"]);
+            $('#tipo_edit').val(data["tipo"]);
+            $('#clase_edit').val(data["clase"]);
+            $('#src_edit').val(data["src"]);
+            $('#otros_edit').val(data["otros"]);
+            $('#descripcion_edit').val(data["descripcion"]);
+            $('#data_ls_edit').val(data["data_ls"]);
+            $('#style_edit').val(data["style"]);
+            $('#editModal').modal('show');
+        });
+
         //delete layer
       // $(document).on('click', '.delete-modal', function() {
       //       var table = $('#layers').DataTable();
@@ -490,6 +589,90 @@
                     }
                 });
             });
+          $(document).on('click','.edit-modal',function(){
+              var id = this.id.split("_")[1];
+              $(".edit").attr('id',id);
+          });
+
+          // edit
+          $('.modal-footer').on('click', '.edit', function() {
+                      //obtener id del modal-edit
+                      console.log()
+                      var id = this.id;
+
+                      $.ajax({
+                          type: 'PUT',
+                          url: '/layers/' + id,
+                          data: {
+                              '_token': $('input[name=_token]').val(),
+                              'slider_id': $('#slider_id_edit').val(),
+                              'tipo': $('#tipo_edit').val(),   
+                              'clase': $('#clase_edit').val(),
+                              'src': $('#src_edit').val(),
+                              'otros': $('#otros_edit').val(),
+                              'descripcion': $('#descripcion_edit').val(),
+                              'data_ls': $('#data_ls_edit').val(),                    
+                              'style': $('#style_edit').val()
+                          },
+                          success: function(data) {
+                              // $('.errorTitle').addClass('hidden');
+                              // $('.errorContent').addClass('hidden');
+                              // console.log(data);  
+
+                              if ((data.errors)) {
+                                  // setTimeout(function () {
+                                  //     $('#editModal').modal('show');
+                                  //     toastr.error('Validation error!', 'Error Alert', {timeOut: 5000});
+                                  // }, 500);
+
+                                  // if (data.errors.title) {
+                                  //     $('.errorTitle').removeClass('hidden');
+                                  //     $('.errorTitle').text(data.errors.title);
+                                  // }
+                                  // if (data.errors.content) {
+                                  //     $('.errorContent').removeClass('hidden');
+                                  //     $('.errorContent').text(data.errors.content);
+                                  // }
+                              } else {
+                                  toastr.success('Successfully updated Post!', 'Success Alert', {timeOut: 5000});
+                                  var newData = table.row($("#item"+data.id)).data();
+                                  var actual = table.row($("#item"+data.id)).data(data).draw();
+                                  $("#item"+data.id).closest('tr').toggleClass('warning');
+
+                                  // if (data.is_published) {
+                                  //     $('.edit_published').prop('checked', true);
+                                  //     $('.edit_published').closest('tr').addClass('warning');
+                                  // }
+                                  // $('.edit_published').iCheck({
+                                  //     checkboxClass: 'icheckbox_square-yellow',
+                                  //     radioClass: 'iradio_square-yellow',
+                                  //     increaseArea: '20%'
+                                  // });
+                                  // $('.edit_published').on('ifToggled', function(event) {
+                                  //     $(this).closest('tr').toggleClass('warning');
+                                  // });
+                                  // $('.edit_published').on('ifChanged', function(event){
+                                  //     id = $(this).data('id');
+                                  //     $.ajax({
+                                  //         type: 'POST',
+                                          // url: " -{-{ URL::route('changeStatus') }}",
+                                  //         data: {
+                                  //             '_token': $('input[name=_token]').val(),
+                                  //             'id': id
+                                  //         },
+                                  //         success: function(data) {
+                                  //             // empty
+                                  //         },
+                                  //     });
+                                  // });
+                              }
+                          },
+                          error: function(data) {
+                              var errors = data.responseJSON;
+                              console.log(errors);
+                          }
+                      });
+                  });          
 </script>
 {{-- ajax crud --}}
 
@@ -523,7 +706,7 @@
                                       "defaultContent":'',
                                       render : function ( data, type, full, meta ) {
                                           return '<a class="show-modal btn btn-sm btn-success"><i class="fa fa-eye"></i></a>'+
-                                          '<a class="btn btn-sm btn-primary" id=""><i class="fa fa-edit"></i></a>' +
+                                          '<a class="edit-modal btn btn-sm btn-primary" id="edit_'+data.id+'"><i class="fa fa-edit"></i></a>' +
                                           '<a class="delete-modal btn btn-sm btn-danger" id="delete_'+data.id+'"><i class="fa fa-trash"></i></a>';
                                        }
                                     },
@@ -571,14 +754,14 @@
                     //   imagen =  '<img src=\"../images/avatar/'+d.src+'\" height=\"200\"/>' ;
                     // }
 
-                    return '<table class=" table-details table table-responsive" cellpadding="5" cellspacing="0" border="0" style="padding-left:50px;width:10%">'+
+                    return '<table class=" table-details table table-responsive" cellpadding="5" cellspacing="0" border="0" style="padding-left:50px;width:50px">'+
                         '<tr>'+
-                        '<tr>'+
+                        '<tr style="width:100px;">'+
                             '<td class="uno"><strong>Data_ls:</strong></td>'+
-                            '<td class="dos">'+d.data_ls+'</td>'+
+                            '<td class="dos"> <textarea class="form-control" id="data_ls_edit" cols="10" rows="5" style="width: 435px; height: 127px;" disabled>'+d.data_ls+'</textarea></td>'+
                         '</tr>'+
                             '<td class="uno"><strong>Style:</strong></td>'+
-                            '<td class="dos">'+d.style+'</td>'+
+                            '<td class="dos"><textarea class="form-control" id="style_edit" cols="10" rows="5" style="width: 100%; height: 100%;" disabled>'+d.style+'</textarea></td>'+
                         '</tr>'+
                         '<tr class="">'+
                             '<td><strong>Imagen:</strong></td>'+
@@ -593,7 +776,7 @@
                   $(".table-details").DataTable({
                     responsive:true,
                     "scrollX": true
-                  })
+                  });
             </script>
             <script>
                 $(document).ready(function(){

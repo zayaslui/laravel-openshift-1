@@ -141,7 +141,7 @@ class UsuariosController extends Controller
             $name = time().$file->getClientOriginalName();
             $user ->avatar = $name;
             $file->move(public_path().'/images/avatar',$name);
-        }        
+        }
         $user->save();
         // return Redirect::to("/usuario");
         return redirect('usuario/'.$user->slug)->with('update','Registro actualizado');
