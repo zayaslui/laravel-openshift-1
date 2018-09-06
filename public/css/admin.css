@@ -37,7 +37,7 @@ a.btn {
 
 /*@import url('//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-theme.min.css');*/
  body {
-    margin-top:30px;
+    /*margin-top:30px;*/
 }
 .stepwizard-step p {
     margin-top: 0px;
@@ -84,6 +84,16 @@ a.btn {
     border-radius: 15px;
 }
 
+.subtabla{
+    padding-left:50px;
+    padding-bottom:50px;
+    margin-bottom: 20px;
+
+border-top:0px dotted #99a7a9;
+border-right:0px solid #99a7a9;
+border-bottom:5px inset #99a7a9;
+border-left:5px ridge #99a7a9;
+}
 
 @media (min-width: 768px){
 	.navbar-right {

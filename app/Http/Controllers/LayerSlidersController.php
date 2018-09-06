@@ -49,8 +49,10 @@ class LayerSlidersController extends Controller
                     ->make(true);
     }
 
-    public function listar_layers(){
-        return Datatables::of(Layer::query())->make(true);
+    public function listar_layers(Request $request,$id){
+        //creador de consulta
+        $layers = Layer::query()->where('slider_id', $id);
+        return Datatables::of($layers)->make(true);
     }
 
     /**

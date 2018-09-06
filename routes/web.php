@@ -70,7 +70,7 @@ Route::resources([
 /*listar datatables*/
 Route::get('layersliders_data','LayerSlidersController@listar');
 /*listar datatables layers*/
-Route::get('layers_data','LayerSlidersController@listar_layers');
+Route::get('layers_data/{id}','LayerSlidersController@listar_layers');
 
 /*metodos que no aparecen en LayerSlidersController */
 Route::get('show_sliders/{id}','LayerSlidersController@show_sliders');

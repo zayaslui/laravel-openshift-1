@@ -1,5 +1,5 @@
 @extends('layouts.admin')
-@section('title','Usuarios')
+@section('title','Layersliders')
 
 @if (session('message'))
 	<div class="alert alert-success alert-dismissible" role="alert">
@@ -193,41 +193,61 @@
 	<script>   
 /* Formatting function for row details - modify as you need */
 		function format ( d ) {
-            var dato = JSON.parse(d.detalles.replace(/&quot;/g,'"'))[0];
+
+            var dato = JSON.parse(d.detalles.replace(/&quot;/g,'"'));
+            // console.log(dato);
 			var a = (d === undefined || d == null || d.length <= 0)?true:false;
 
 		    // `d` is the original data object for the row
 		    if(dato === undefined || dato == null || dato.length <= 0){
 			    return '<table cellpadding="5" cellspacing="0" border="0" style="padding-left:50px;"><button class="btn btn-sm btn-primary">Agregar Slider</button></table>'
 		    }
-		    var imagen='';
-		    if(d.avatar=='' || d.vatar==null){
-			    imagen =  '<img src=\"../images/sistema/image-not-found.png\"  height=\"100px\"/>' ;	    	
-		    }else{
-		    	imagen =  '<img src=\"../images/avatar/'+d.avatar+'\" height=\"200\"/>' ;
-		    }
-		    return '<table cellpadding="5" cellspacing="0" border="0" style="padding-left:50px;">'+
-		        '<tr>'+
-		        '<tr>'+
-		            '<td><strong>Id:</strong></td>'+
-		            '<td>'+dato.id+'</td>'+
-		        '</tr>'+
-		            '<td><strong>Clase:</strong></td>'+
-		            '<td>'+dato.clase+'</td>'+
-		        '</tr>'+
-		        '<tr>'+
-		            '<td><strong>Data-ls:</strong></td>'+
-		            '<td>'+dato['data_ls']+'</td>'+
-		        '</tr>'+		        
-		        '<tr>'+
-		            '<td><strong>Imagen:</strong></td>'+
-		            '<td>'+imagen+'</td>'+
-		        '</tr>'+
-		        '<tr>'+
-		            '<td><strong>Operaciones:</strong></td>'+
-		            '<td><a href="/show_sliders/'+dato.id+'" class="btn btn-sm btn-primary">show</a></td>'+
-		        '</tr>'+		        
-		    '</table>';
+		    var tabla = '';
+		    for(var i=0;i<dato.length;i++){
+		    	var id="";
+		    	var clase="";
+		    	var data_ls="";
+			    var imagen='';
+
+				    if(d.avatar=='' || d.avatar==null){
+					    imagen =  '<img src=\"../images/sistema/image-not-found.png\"  height=\"100px\"/>' ;	    	
+				    }else{
+				    	imagen =  '<img src=\"../images/avatar/'+d.avatar+'\" height=\"200\"/>' ;
+				    }
+				    
+		    		for(var j in dato[i])
+		    		{
+		    			 // console.log(j +' ---------'+dato[i][j])
+		    			 if(j=='id'){id = dato[i][j]};
+		    			 if(j=='clase'){clase = dato[i][j]};
+		    			 if(j=='data_ls'){data_ls = dato[i][j]};
+		    			 if(j=='imagen'){imagen = dato[i][j]};
+				    }
+	    			 tabla+='<table class="subtabla" cellpadding="5" cellspacing="0" border="0" style="">'+
+							        '<tr>'+
+							        '<tr>'+
+							            '<td><strong>Id:</strong></td>'+
+							            '<td>'+id+'</td>'+
+							        '</tr>'+
+							            '<td><strong>Clase:</strong></td>'+
+							            '<td>'+clase+'</td>'+
+							        '</tr>'+
+							        '<tr>'+
+							            '<td><strong>Data-ls:</strong></td>'+
+							            '<td>'+data_ls+'</td>'+
+							        '</tr>'+		        
+							        '<tr>'+
+							            '<td><strong>Imagen:</strong></td>'+
+							            '<td>'+imagen+'</td>'+
+							        '</tr>'+
+							        '<tr>'+
+							            '<td><strong>Operaciones:</strong></td>'+
+							            '<td><a href="/show_sliders/'+id+'" class="btn btn-sm btn-primary">show</a></td>'+
+							        '</tr>'+		        
+							    '</table>';
+				}
+
+		    return tabla;
 		}
 		function controles(d){
 			return "<button class='btn btn-sm btn-success'>Agregar</button>";
@@ -278,6 +298,7 @@
 		        }
 		        else {
 		            // Open this row
+		            //detalles
 		            row.child( format(row.data()) ).show();
 		            tr.addClass('shown');
 		        }

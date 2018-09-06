@@ -1,7 +1,7 @@
 @extends('layouts.admin')
 
 @section('content')
-@section('title','Ver Usuarios')
+@section('title','Ver Layersliders')
 
 
       <ul class="nav nav-tabs">
@@ -33,7 +33,7 @@
                                               <form class="col-lg-12 col-md-6 col-sm-12">
                                                   @csrf
                                                     @include('sliders.forms.default')
-                                                  <a class="btn btn-primary btn-sm" href="/sliders">Sliders</a>
+                                                  <a class="btn btn-primary btn-sm" href="/layersliders">Listar LayerSliders</a>
                                               </form>
                                             <div data-tilt class="col-lg-4 col-md-6 col-sm-12"></div>
                                           </div>
@@ -92,7 +92,7 @@
                       <div class="form-group">
                           <label class="control-label col-sm-2" for="slider_id_add">Slider_id:</label>
                           <div class="col-sm-10">
-                              <input type="number" class="form-control" id="slider_id_add" autofocus value=1 disabled>
+                              <input type="number" class="form-control" id="slider_id_add" autofocus disabled>
                               <small>Min: 2, Max: 32, only text</small>
                               <p class="errorTitle text-center alert alert-danger hidden"></p>
                           </div>
@@ -100,7 +100,7 @@
                       <div class="form-group">
                           <label class="control-label col-sm-2" for="tipo_add">Tipo:</label>
                           <div class="col-sm-10">
-                              <input type="text" class="form-control" id="tipo_add" value="tipo1">
+                              <input type="text" class="form-control" id="tipo_add">
                               <small>Min: 2, Max: 128, only text</small>
                               <p class="errorContent text-center alert alert-danger hidden"></p>
                           </div>
@@ -108,7 +108,7 @@
                       <div class="form-group">
                           <label class="control-label col-sm-2" for="clase_add">Clase:</label>
                           <div class="col-sm-10">
-                              <input type="text" class="form-control" id="clase_add" value="clase1">
+                              <input type="text" class="form-control" id="clase_add" >
                               <small>Min: 2, Max: 32, only text</small>
                               <p class="errorTitle text-center alert alert-danger hidden"></p>
                           </div>
@@ -117,7 +117,7 @@
                       <div class="form-group">
                           <label class="control-label col-sm-2" for="src_add">Src</label>
                           <div class="col-sm-10">
-                              <input type="text" class="form-control" id="src_add" value="src">
+                              <input type="text" class="form-control" id="src_add" >
                               <small>Min: 2, Max: 32, only text</small>
                               <p class="errorTitle text-center alert alert-danger hidden"></p>
                           </div>
@@ -126,7 +126,7 @@
                       <div class="form-group">
                           <label class="control-label col-sm-2" for="otros_add">Otros</label>
                           <div class="col-sm-10">
-                              <input type="text" class="form-control" id="otros_add" value="otros">
+                              <input type="text" class="form-control" id="otros_add" >
                               <small>Min: 2, Max: 32, only text</small>
                               <p class="errorTitle text-center alert alert-danger hidden"></p>
                           </div>
@@ -135,7 +135,7 @@
                       <div class="form-group">
                           <label class="control-label col-sm-2" for="descripcion_add">descripcion</label>
                           <div class="col-sm-10">
-                              <input type="text" class="form-control" id="descripcion_add" value="descripcion">
+                              <input type="text" class="form-control" id="descripcion_add" >
                               <small>Min: 2, Max: 32, only text</small>
                               <p class="errorTitle text-center alert alert-danger hidden"></p>
                           </div>
@@ -144,7 +144,7 @@
                       <div class="form-group">
                           <label class="control-label col-sm-2" for="data_ls_add">Data-ls</label>
                           <div class="col-sm-10">
-                              <input type="text" class="form-control" id="data_ls_add" value="data_ls">
+                              <input type="text" class="form-control" id="data_ls_add" >
                               <small>Min: 2, Max: 32, only text</small>
                               <p class="errorTitle text-center alert alert-danger hidden"></p>
                           </div>
@@ -152,7 +152,7 @@
                       <div class="form-group">
                           <label class="control-label col-sm-2" for="style_add">Style</label>
                           <div class="col-sm-10">
-                              <input type="text" class="form-control" id="style_add" value="style">
+                              <input type="text" class="form-control" id="style_add" >
                               <small>Min: 2, Max: 32, only text</small>
                               <p class="errorTitle text-center alert alert-danger hidden"></p>
                           </div>
@@ -431,7 +431,18 @@
           // add a new post
         $(document).on('click', '.add-modal', function() {
             $('.modal-title').text('Add');
+            $('#slider_id_add').val(window.location.href.substring(window.location.href.lastIndexOf('/') + 1));
+            $('#slider_id_edit').val("");
+            $('#tipo_edit').val("");
+            $('#clase_edit').val("");
+            $('#src_edit').val("");
+            $('#otros_edit').val("");
+            $('#descripcion_edit').val("");
+            $('#data_ls_edit').val("");
+            $('#style_edit').val("");            
             $('#addModal').modal('show');
+
+
         });
         $('.modal-footer').on('click', '.add', function() {
             $.ajax({
@@ -683,6 +694,11 @@
                   'createdRow': function( row, data, dataIndex ) {
                       $(row).attr('id', 'item'+data.id);
                   },
+                  'getId' : function(){
+                    var url = window.location.href;
+                    var id = url.substring(url.lastIndexOf('/') + 1);
+                    return id;
+                  },
                   columns: [
                                     {
                                         "className":      'details-control',
@@ -725,7 +741,7 @@
                               type: ''
                           }
                       },
-                      ajax: '{{ url('layers_data') }}',
+                      ajax: '/layers_data/'+window.location.href.substring(window.location.href.lastIndexOf('/') + 1),
                 });
                 // header
                 new $.fn.dataTable.FixedHeader( table );
@@ -747,6 +763,7 @@
                       }
                   } );
                   function format(d){
+                    
                     var imagen='';
                     // if(d.src=='' || d.src==null){
                     //   imagen =  '<img src=\"../images/sistema/image-not-found.png\"  height=\"100px\"/>' ;        
