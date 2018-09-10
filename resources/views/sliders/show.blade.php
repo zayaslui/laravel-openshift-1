@@ -117,9 +117,8 @@
                       <div class="form-group">
                           <label class="control-label col-sm-2" for="src_add">Src</label>
                           <div class="col-sm-10">
-                              <input type="text" class="form-control" id="src_add" >
+                              <input type="file" name="src" id="src_add">
                               <small>Min: 2, Max: 32, only text</small>
-                              <p class="errorTitle text-center alert alert-danger hidden"></p>
                           </div>
                       </div>
 
@@ -484,7 +483,7 @@
                                 "slider_id":   data.slider_id,
                                 "tipo":     data.tipo,
                                 "clase": data.clase,
-                                "src": data.src    ,
+                                "src": data.src,
                                 "otros":data.otros,
                                 "descripcion" :data.descripcion,
                                 "data_ls":data.data_ls,

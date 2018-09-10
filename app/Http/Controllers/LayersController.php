@@ -36,12 +36,19 @@ class LayersController extends Controller
     public function store(Request $request)
     {
         $layer = new Layer();
+        
+        if($request->hasFile('src')){
+            $file = $request->file('src');
+            $name = time().$file->getClientOriginalName();
+            $file->move(public_path().'/images/layers',$name);
+            $layer -> src = $name;        
+        }
+
         $layer -> slider_id = $request -> slider_id;
         $layer -> tipo = $request -> tipo;
         $layer -> clase = $request -> clase;
         $layer -> data_ls = $request -> data_ls;
         $layer -> style = $request -> style;
-        $layer -> src = $request -> src;
         $layer -> otros = $request -> otros;
         $layer -> descripcion = $request -> descripcion;
         $layer -> save();
