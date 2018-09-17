@@ -24,6 +24,7 @@
    <link rel="stylesheet" href="https://cdn.datatables.net/fixedheader/3.1.5/css/fixedHeader.dataTables.min.css">
    <script src="https://cdn.datatables.net/fixedheader/3.1.5/js/dataTables.fixedHeader.min.js"></script>
     <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.2.3/css/responsive.dataTables.min.css">
+    <meta name="_token" content="{{ csrf_token() }}" />
     <style>
             td.details-control {
                 background: url('https://datatables.net/examples/resources/details_open.png') no-repeat center center;

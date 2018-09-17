@@ -88,70 +88,73 @@
                   <h4 class="modal-title"></h4>
               </div>
               <div class="modal-body">
-                  <form class="form-horizontal" role="form">
+
+                  <form class="form-horizontal" role="form" enctype="multipart/form-data" id="add_form" name="add_form">
+                     @csrf
                       <div class="form-group">
-                          <label class="control-label col-sm-2" for="slider_id_add">Slider_id:</label>
+                          <label class="control-label col-sm-2" for="slider_id">Slider_id:</label>
                           <div class="col-sm-10">
-                              <input type="number" class="form-control" id="slider_id_add" autofocus disabled>
+                              <input type="number" class="form-control" id="slider_id" autofocus disabled>
                               <small>Min: 2, Max: 32, only text</small>
                               <p class="errorTitle text-center alert alert-danger hidden"></p>
                           </div>
                       </div>
                       <div class="form-group">
-                          <label class="control-label col-sm-2" for="tipo_add">Tipo:</label>
+                          <label class="control-label col-sm-2" for="tipo">Tipo:</label>
                           <div class="col-sm-10">
-                              <input type="text" class="form-control" id="tipo_add">
+                              <input type="text" class="form-control" id="tipo">
                               <small>Min: 2, Max: 128, only text</small>
                               <p class="errorContent text-center alert alert-danger hidden"></p>
                           </div>
                       </div>
                       <div class="form-group">
-                          <label class="control-label col-sm-2" for="clase_add">Clase:</label>
+                          <label class="control-label col-sm-2" for="clase">Clase:</label>
                           <div class="col-sm-10">
-                              <input type="text" class="form-control" id="clase_add" >
+                              <input type="text" class="form-control" id="clase" >
                               <small>Min: 2, Max: 32, only text</small>
                               <p class="errorTitle text-center alert alert-danger hidden"></p>
                           </div>
                       </div>
                       
                       <div class="form-group">
-                          <label class="control-label col-sm-2" for="src_add">Src</label>
-                          <div class="col-sm-10">
-                              <input type="file" name="src" id="src_add">
+                          <label class="control-label col-sm-2" for="src">Src</label>
+                          <div class="file col-sm-10">
+                            Imagen
+                              <input type="file" name="src" id="src">
                               <small>Min: 2, Max: 32, only text</small>
                           </div>
                       </div>
 
                       <div class="form-group">
-                          <label class="control-label col-sm-2" for="otros_add">Otros</label>
+                          <label class="control-label col-sm-2" for="otros">Otros</label>
                           <div class="col-sm-10">
-                              <input type="text" class="form-control" id="otros_add" >
+                              <input type="text" class="form-control" id="otros" name="otros">
                               <small>Min: 2, Max: 32, only text</small>
                               <p class="errorTitle text-center alert alert-danger hidden"></p>
                           </div>
                       </div>
 
                       <div class="form-group">
-                          <label class="control-label col-sm-2" for="descripcion_add">descripcion</label>
+                          <label class="control-label col-sm-2" for="descripcion">descripcion</label>
                           <div class="col-sm-10">
-                              <input type="text" class="form-control" id="descripcion_add" >
+                              <input type="text" class="form-control" id="descripcion" >
                               <small>Min: 2, Max: 32, only text</small>
                               <p class="errorTitle text-center alert alert-danger hidden"></p>
                           </div>
                       </div>
 
                       <div class="form-group">
-                          <label class="control-label col-sm-2" for="data_ls_add">Data-ls</label>
+                          <label class="control-label col-sm-2" for="data_ls">Data-ls</label>
                           <div class="col-sm-10">
-                              <input type="text" class="form-control" id="data_ls_add" >
+                              <input type="text" class="form-control" id="data_ls" >
                               <small>Min: 2, Max: 32, only text</small>
                               <p class="errorTitle text-center alert alert-danger hidden"></p>
                           </div>
                       </div>
                       <div class="form-group">
-                          <label class="control-label col-sm-2" for="style_add">Style</label>
+                          <label class="control-label col-sm-2" for="style">Style</label>
                           <div class="col-sm-10">
-                              <input type="text" class="form-control" id="style_add" >
+                              <input type="text" class="form-control" id="style" >
                               <small>Min: 2, Max: 32, only text</small>
                               <p class="errorTitle text-center alert alert-danger hidden"></p>
                           </div>
@@ -430,35 +433,36 @@
           // add a new post
         $(document).on('click', '.add-modal', function() {
             $('.modal-title').text('Add');
-            $('#slider_id_add').val(window.location.href.substring(window.location.href.lastIndexOf('/') + 1));
-            $('#slider_id_edit').val("");
-            $('#tipo_edit').val("");
-            $('#clase_edit').val("");
-            $('#src_edit').val("");
-            $('#otros_edit').val("");
-            $('#descripcion_edit').val("");
-            $('#data_ls_edit').val("");
-            $('#style_edit').val("");            
+            $('#slider_id').val(window.location.href.substring(window.location.href.lastIndexOf('/') + 1));
+            $('#tipo').val("");
+            $('#clase').val("");
+            $('#src').val("");
+            $('#otros').val("");
+            $('#descripcion').val("");
+            $('#data_ls').val("");
+            $('#style').val("");            
             $('#addModal').modal('show');
 
 
         });
         $('.modal-footer').on('click', '.add', function() {
+
             $.ajax({
                 type: 'POST',
                 url: '/layers',
                 data: {
                     '_token': $('input[name=_token]').val(),
-                    'slider_id': $('#slider_id_add').val(),
-                    'tipo': $('#tipo_add').val(),   
-                    'clase': $('#clase_add').val(),
-                    'src': $('#src_add').val(),
-                    'otros': $('#otros_add').val(),
-                    'descripcion': $('#descripcion_add').val(),
-                    'data_ls': $('#data_ls_add').val(),                    
-                    'style': $('#style_add').val()
-                },
+                    'slider_id': $('#slider_id').val(),
+                    'tipo': $('#tipo').val(),   
+                    'clase': $('#clase').val(),
+                    'src': $('#src').val(),
+                    'otros': $('#otros').val(),
+                    'descripcion': $('#descripcion').val(),
+                    'data_ls': $('#data_ls').val(),                    
+                    'style': $('#style').val()
+                },                
                 success: function(data) {
+                  console.log(data);
                     $('.errorTitle').addClass('hidden');
                     $('.errorContent').addClass('hidden');
 
@@ -479,15 +483,15 @@
                         toastr.success('Successfully added Post!', 'Success Alert', {timeOut: 5000});
                         
                         $('#layers').DataTable().row.add( {
-                                "id":       data.id,
-                                "slider_id":   data.slider_id,
-                                "tipo":     data.tipo,
+                                "id": data.id,
+                                "slider_id": data.slider_id,
+                                "tipo": data.tipo,
                                 "clase": data.clase,
                                 "src": data.src,
-                                "otros":data.otros,
-                                "descripcion" :data.descripcion,
-                                "data_ls":data.data_ls,
-                                "style":data.style
+                                "otros": data.otros,
+                                "descripcion" : data.descripcion,
+                                "data_ls": data.data_ls,
+                                "style": data.style
                             } ).draw();
 
                         // $('.new_published').iCheck({

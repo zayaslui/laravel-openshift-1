@@ -36,12 +36,24 @@ class LayersController extends Controller
     public function store(Request $request)
     {
         $layer = new Layer();
-        
+        $folder='images/layers';
+
+        if(!file_exists($folder)){
+          mkdir('images/layers', 0777, true);
+        }
+
+        $file = $request->src;
+        return $file;
+
         if($request->hasFile('src')){
             $file = $request->file('src');
             $name = time().$file->getClientOriginalName();
             $file->move(public_path().'/images/layers',$name);
-            $layer -> src = $name;        
+            $layer->src = $name;
+            return $layer ->src;
+        }else{
+            $layer->src='ndoikoi';
+            return $layer->src;
         }
 
         $layer -> slider_id = $request -> slider_id;

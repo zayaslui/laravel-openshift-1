@@ -22,7 +22,6 @@ class Layer extends Model
         'src',
         'otros',
         'descripcion',
-        
     ];
 
 	public function layers(){
