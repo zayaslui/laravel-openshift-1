@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Http\File;
 use App\Layer;
 
 class LayersController extends Controller
@@ -42,15 +43,13 @@ class LayersController extends Controller
           mkdir('images/layers', 0777, true);
         }
 
-        $file = $request->src;
-        return $file;
 
         if($request->hasFile('src')){
             $file = $request->file('src');
             $name = time().$file->getClientOriginalName();
             $file->move(public_path().'/images/layers',$name);
             $layer->src = $name;
-            return $layer ->src;
+            return $layer->src;
         }else{
             $layer->src='ndoikoi';
             return $layer->src;
