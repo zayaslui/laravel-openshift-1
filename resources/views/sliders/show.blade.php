@@ -61,13 +61,13 @@
                     <tr>
                        <th></th>
                        <th>Id</th>
-                       <th>Slider_id</th>
+                       <!-- <th>Slider_id</th> -->
                        <th>Tipo</th>
                        <th>clase</th>
 {{--                        <th>Data-ls</th>
                        <th>Style</th> --}}
-                       <th>Src</th>
-                       <th>Otros</th>
+                       <!-- <th>Src</th> -->
+                       <!-- <th>Otros</th> -->
                        <th>Descripcion</th>                                              
                        <th>Controles</th>         
                     </tr>
@@ -213,10 +213,10 @@
                       
                       <div class="form-group">
                           <label class="control-label col-sm-2" for="src_edit">Src</label>
-                          <div class="col-sm-10">
-                              <input type="text" class="form-control" id="src_edit"  >
+                          <div class="file col-sm-10">
+                            Imagen
+                              <input type="file" id="src_edit" name="src_edit" >
                               <small>Min: 2, Max: 32, only text</small>
-                              <p class="errorTitle text-center alert alert-danger hidden"></p>
                           </div>
                       </div>
 
@@ -435,8 +435,8 @@
           // add a new post
         $(document).on('click', '.add-modal', function() {
             $('.modal-title').text('Add');
-            // $('#slider_id').val(window.location.href.substring(window.location.href.lastIndexOf('/') + 1));
-            $('#slider_id').val(1);
+            $('#slider_id').val(window.location.href.substring(window.location.href.lastIndexOf('/') + 1));
+            // $('#slider_id').val(1);
             $('#tipo').val("tipo");
             $('#clase').val("clase");
             // $('#src').val("");
@@ -550,7 +550,7 @@
             $('#slider_id_edit').val(data["slider_id"]);
             $('#tipo_edit').val(data["tipo"]);
             $('#clase_edit').val(data["clase"]);
-            $('#src_edit').val(data["src"]);
+            // $('#src_edit').val(data["src"]);
             $('#otros_edit').val(data["otros"]);
             $('#descripcion_edit').val(data["descripcion"]);
             $('#data_ls_edit').val(data["data_ls"]);
@@ -609,9 +609,7 @@
           // edit
           $('.modal-footer').on('click', '.edit', function() {
                       //obtener id del modal-edit
-                      console.log()
                       var id = this.id;
-
                       $.ajax({
                           type: 'PUT',
                           url: '/layers/' + id,
@@ -629,7 +627,7 @@
                           success: function(data) {
                               // $('.errorTitle').addClass('hidden');
                               // $('.errorContent').addClass('hidden');
-                              // console.log(data);  
+                              console.log(data);  
 
                               if ((data.errors)) {
                                   // setTimeout(function () {
@@ -708,13 +706,13 @@
                                         "defaultContent": ''
                                     },
                                     { data :"id", name:"id", className:"all"},
-                                    { data: "slider_id", name: "slider_id", className:"min-tablet" },
+                                    // { data: "slider_id", name: "slider_id", className:"min-tablet" },
                                     { data: "tipo", name: "tipo",className:"all" },
                                     { data: "clase", name: "clase",className:"all" },
                                     // { data: "data_ls", name: "data_ls",className:"all" },
                                     // { data: "style", name: "style",className:"all" },
-                                    { data: "src", name: "src",className:"all" },
-                                    { data: "otros", name: "otros",className:"all" },
+                                    // { data: "src", name: "src",className:"all" },
+                                    // { data: "otros", name: "otros",className:"all" },
                                     { data: "descripcion", name: "descripcion",className:"all" },
                                     {
                                       "className":'all',
@@ -766,14 +764,21 @@
                   function format(d){
                     
                     var imagen='';
-                    // if(d.src=='' || d.src==null){
-                    //   imagen =  '<img src=\"../images/sistema/image-not-found.png\"  height=\"100px\"/>' ;        
-                    // }else{
-                    //   imagen =  '<img src=\"../images/avatar/'+d.src+'\" height=\"200\"/>' ;
-                    // }
+                    if(d.src=='' || d.src==null){
+                      imagen =  '<img src=\"../images/sistema/image-not-found.png\"  height=\"100px\"/>';       
+                    }else{
+                      imagen =  '<img src=\"../images/layers/obras/'+d.src+'\" height=\"200\"/>' ;
+                    }
 
                     return '<table class=" table-details table table-responsive" cellpadding="5" cellspacing="0" border="0" style="padding-left:50px;width:50px">'+
-                        '<tr>'+
+                        '<tr class="">'+
+                            '<td><strong>Slider_id:</strong></td>'+
+                            '<td>'+d.slider_id+'</td>'+
+                        '</tr>'+
+                        '<tr class="">'+
+                            '<td><strong>Src:</strong></td>'+
+                            '<td>'+imagen+'</td>'+
+                        '</tr>'+                                            
                         '<tr style="width:100px;">'+
                             '<td class="uno"><strong>Data_ls:</strong></td>'+
                             '<td class="dos"> <textarea class="form-control" id="data_ls_edit" cols="10" rows="5" style="width: 435px; height: 127px;" disabled>'+d.data_ls+'</textarea></td>'+
@@ -782,9 +787,9 @@
                             '<td class="dos"><textarea class="form-control" id="style_edit" cols="10" rows="5" style="width: 100%; height: 100%;" disabled>'+d.style+'</textarea></td>'+
                         '</tr>'+
                         '<tr class="">'+
-                            '<td><strong>Imagen:</strong></td>'+
-                            '<td>'+d.src+'</td>'+
-                        '</tr>'+
+                            '<td><strong>Otros:</strong></td>'+
+                            '<td>'+d.otros+'</td>'+
+                        '</tr>'+                        
                         '<tr>'+
                             '<td><strong>Operaciones:</strong></td>'+
                             '<td><a href="/show_sliders/" class="btn btn-sm btn-primary">show</a></td>'+

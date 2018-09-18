@@ -46,7 +46,7 @@ class LayersController extends Controller
         if($request->hasFile('src')){
             $file = $request->file('src');
             $name = time().$file->getClientOriginalName();
-            $file->move(public_path().'/images/layers',$name);
+            $file->move(public_path().'/images/layers/obras/',$name);
             $layer->src = $name;
         }
 
@@ -94,17 +94,33 @@ class LayersController extends Controller
     public function update(Request $request, $id)
     {
 
-            $layer = Layer::findOrFail($id);
+        $layer = Layer::findOrFail($id);
 
-            // $layer->fill($request->all())->save();
-            $layer->slider_id=$request->slider_id;
-            $layer->tipo=$request->tipo;
-            $layer->clase = $request->clase;
-            $layer->data_ls=$request->data_ls;
-            $layer->style=$request->style;
-            $layer->src=$request->src;
-            $layer->otros=$request->otros;
-            $layer->descripcion=$request->descripcion;
+        $layer->fill($request->except('src'));
+
+        if($request->hasFile('src')){
+            /*borrar la imagen vieja*/
+            $path_old_image = public_path().'/images/layers/obras/'.$layer->src;
+            \File::delete($path_old_image);
+
+            
+            
+            $file = $request->file('src');
+            $name = time().$file->getClientOriginalName();
+            $layer->src = $name;
+            $file->move(public_path().'/images/layers/obras/',$name);
+        }
+
+
+            // $layer->fill($request->all())->save();            
+            // $layer->slider_id=$request->slider_id;
+            // $layer->tipo=$request->tipo;
+            // $layer->clase = $request->clase;
+            // $layer->data_ls=$request->data_ls;
+            // $layer->style=$request->style;
+            // $layer->src=$request->src;
+            // $layer->otros=$request->otros;
+            // $layer->descripcion=$request->descripcion;
             $layer->save();   
 
             return response()->json($layer);
