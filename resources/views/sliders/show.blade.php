@@ -89,12 +89,12 @@
               </div>
               <div class="modal-body">
 
-                  <form class="form-horizontal" role="form" enctype="multipart/form-data" id="add_form" name="add_form">
+                  <form  class="form-horizontal" role="form" enctype="multipart/form-data" id="add_form" name="add_form">
                      @csrf
                       <div class="form-group">
                           <label class="control-label col-sm-2" for="slider_id">Slider_id:</label>
                           <div class="col-sm-10">
-                              <input type="number" class="form-control" id="slider_id" autofocus disabled>
+                              <input type="text" class="form-control" id="slider_id" name="slider_id">
                               <small>Min: 2, Max: 32, only text</small>
                               <p class="errorTitle text-center alert alert-danger hidden"></p>
                           </div>
@@ -102,7 +102,7 @@
                       <div class="form-group">
                           <label class="control-label col-sm-2" for="tipo">Tipo:</label>
                           <div class="col-sm-10">
-                              <input type="text" class="form-control" id="tipo">
+                              <input type="text" class="form-control" id="tipo" name="tipo">
                               <small>Min: 2, Max: 128, only text</small>
                               <p class="errorContent text-center alert alert-danger hidden"></p>
                           </div>
@@ -110,7 +110,7 @@
                       <div class="form-group">
                           <label class="control-label col-sm-2" for="clase">Clase:</label>
                           <div class="col-sm-10">
-                              <input type="text" class="form-control" id="clase" >
+                              <input type="text" class="form-control" id="clase" name="clase">
                               <small>Min: 2, Max: 32, only text</small>
                               <p class="errorTitle text-center alert alert-danger hidden"></p>
                           </div>
@@ -120,7 +120,7 @@
                           <label class="control-label col-sm-2" for="src">Src</label>
                           <div class="file col-sm-10">
                             Imagen
-                              <input type="file" name="src" id="src">
+                              <input type="file" id="src" name="src" >
                               <small>Min: 2, Max: 32, only text</small>
                           </div>
                       </div>
@@ -137,7 +137,7 @@
                       <div class="form-group">
                           <label class="control-label col-sm-2" for="descripcion">descripcion</label>
                           <div class="col-sm-10">
-                              <input type="text" class="form-control" id="descripcion" >
+                              <input type="text" class="form-control" id="descripcion" name="descripcion">
                               <small>Min: 2, Max: 32, only text</small>
                               <p class="errorTitle text-center alert alert-danger hidden"></p>
                           </div>
@@ -146,15 +146,16 @@
                       <div class="form-group">
                           <label class="control-label col-sm-2" for="data_ls">Data-ls</label>
                           <div class="col-sm-10">
-                              <input type="text" class="form-control" id="data_ls" >
+                              <input type="text" class="form-control" id="data_ls" name="data_ls">
                               <small>Min: 2, Max: 32, only text</small>
                               <p class="errorTitle text-center alert alert-danger hidden"></p>
                           </div>
                       </div>
+
                       <div class="form-group">
                           <label class="control-label col-sm-2" for="style">Style</label>
                           <div class="col-sm-10">
-                              <input type="text" class="form-control" id="style" >
+                              <input type="text" class="form-control" id="style" name="style">
                               <small>Min: 2, Max: 32, only text</small>
                               <p class="errorTitle text-center alert alert-danger hidden"></p>
                           </div>
@@ -169,6 +170,7 @@
                           <span class=''></span> Close
                       </button>
                   </div>
+
               </div>
           </div>
       </div>
@@ -433,34 +435,30 @@
           // add a new post
         $(document).on('click', '.add-modal', function() {
             $('.modal-title').text('Add');
-            $('#slider_id').val(window.location.href.substring(window.location.href.lastIndexOf('/') + 1));
-            $('#tipo').val("");
-            $('#clase').val("");
-            $('#src').val("");
-            $('#otros').val("");
-            $('#descripcion').val("");
-            $('#data_ls').val("");
-            $('#style').val("");            
+            // $('#slider_id').val(window.location.href.substring(window.location.href.lastIndexOf('/') + 1));
+            $('#slider_id').val(1);
+            $('#tipo').val("tipo");
+            $('#clase').val("clase");
+            // $('#src').val("");
+            $('#otros').val("otros");
+            $('#descripcion').val("descripcion");
+            $('#data_ls').val("data_ls");
+            $('#style').val("style");            
             $('#addModal').modal('show');
-
-
         });
+
         $('.modal-footer').on('click', '.add', function() {
+          // deben de tener name igual que el id
+              var formulario = $('#add_form')[0]; //capturar el formulario
+              var formData = new FormData(formulario); //crear un formData
+              console.log(formData);
 
             $.ajax({
                 type: 'POST',
                 url: '/layers',
-                data: {
-                    '_token': $('input[name=_token]').val(),
-                    'slider_id': $('#slider_id').val(),
-                    'tipo': $('#tipo').val(),   
-                    'clase': $('#clase').val(),
-                    'src': $('#src').val(),
-                    'otros': $('#otros').val(),
-                    'descripcion': $('#descripcion').val(),
-                    'data_ls': $('#data_ls').val(),                    
-                    'style': $('#style').val()
-                },                
+                data:formData,
+                contentType: false, // options para enviar
+                processData: false,  // options para enviar
                 success: function(data) {
                   console.log(data);
                     $('.errorTitle').addClass('hidden');

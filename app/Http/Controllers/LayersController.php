@@ -43,25 +43,20 @@ class LayersController extends Controller
           mkdir('images/layers', 0777, true);
         }
 
-
         if($request->hasFile('src')){
             $file = $request->file('src');
             $name = time().$file->getClientOriginalName();
             $file->move(public_path().'/images/layers',$name);
             $layer->src = $name;
-            return $layer->src;
-        }else{
-            $layer->src='ndoikoi';
-            return $layer->src;
         }
 
-        $layer -> slider_id = $request -> slider_id;
-        $layer -> tipo = $request -> tipo;
-        $layer -> clase = $request -> clase;
-        $layer -> data_ls = $request -> data_ls;
-        $layer -> style = $request -> style;
-        $layer -> otros = $request -> otros;
-        $layer -> descripcion = $request -> descripcion;
+        $layer -> slider_id = $request->slider_id;
+        $layer -> tipo = $request->tipo;
+        $layer -> clase = $request->clase;
+        $layer -> data_ls = $request->data_ls;
+        $layer -> style = $request->style;
+        $layer -> otros = $request->otros;
+        $layer -> descripcion = $request->descripcion;
         $layer -> save();
 
         return response()->json($layer);
