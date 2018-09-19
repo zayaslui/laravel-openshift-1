@@ -185,7 +185,8 @@
                   <h4 class="modal-title"></h4>
               </div>
               <div class="modal-body">
-                  <form class="form-horizontal" role="form">
+                  <form class="form-horizontal" role="form" enctype="multipart/form-data" id="edit_form" name="edit_form">
+                       @csrf    
                       <div class="form-group">
                           <label class="control-label col-sm-2" for="slider_id_edit">Slider_id:</label>
                           <div class="col-sm-10">
@@ -609,25 +610,32 @@
           // edit
           $('.modal-footer').on('click', '.edit', function() {
                       //obtener id del modal-edit
+                      var formulario = $('#edit_form')[0]; //capturar el formulario
+                      var formData = new FormData(formulario); //crear un formData
+                      console.log(formData);
+
                       var id = this.id;
                       $.ajax({
                           type: 'PUT',
                           url: '/layers/' + id,
-                          data: {
-                              '_token': $('input[name=_token]').val(),
-                              'slider_id': $('#slider_id_edit').val(),
-                              'tipo': $('#tipo_edit').val(),   
-                              'clase': $('#clase_edit').val(),
-                              'src': $('#src_edit').val(),
-                              'otros': $('#otros_edit').val(),
-                              'descripcion': $('#descripcion_edit').val(),
-                              'data_ls': $('#data_ls_edit').val(),                    
-                              'style': $('#style_edit').val()
-                          },
+                           data:formData,
+                          // data: {
+                          //     '_token': $('input[name=_token]').val(),
+                          //     'slider_id': $('#slider_id_edit').val(),
+                          //     'tipo': $('#tipo_edit').val(),   
+                          //     'clase': $('#clase_edit').val(),
+                          //     'src': $('#src_edit').val(),
+                          //     'otros': $('#otros_edit').val(),
+                          //     'descripcion': $('#descripcion_edit').val(),
+                          //     'data_ls': $('#data_ls_edit').val(),                    
+                          //     'style': $('#style_edit').val()
+                          // },                          
+                          contentType: false, // options para enviar
+                          processData: false,  // options para enviar
                           success: function(data) {
                               // $('.errorTitle').addClass('hidden');
                               // $('.errorContent').addClass('hidden');
-                              console.log(data);  
+                              console.log(data);
 
                               if ((data.errors)) {
                                   // setTimeout(function () {

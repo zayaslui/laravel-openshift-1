@@ -95,14 +95,15 @@ class LayersController extends Controller
     {
 
         $layer = Layer::findOrFail($id);
+        // $layer->fill($request->except('src'));
 
-        $layer->fill($request->except('src'));
+        return var_dump($request->hasFile('src'));
+
 
         if($request->hasFile('src')){
             /*borrar la imagen vieja*/
             $path_old_image = public_path().'/images/layers/obras/'.$layer->src;
             \File::delete($path_old_image);
-
                     
             $file = $request->file('src');
             $name = time().$file->getClientOriginalName();
