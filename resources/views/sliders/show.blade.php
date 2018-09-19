@@ -609,16 +609,16 @@
 
           // edit
           $('.modal-footer').on('click', '.edit', function() {
-                      //obtener id del modal-edit
-                      var formulario = $('#edit_form')[0]; //capturar el formulario
-                      var formData = new FormData(formulario); //crear un formData
-                      console.log(formData);
+                    //obtener id del modal-edit
+                    var formulario = $('#edit_form')[0]; //capturar el formulario
+                    var formData = new FormData(formulario); //crear un formData
+                    console.log(formData);
 
                       var id = this.id;
                       $.ajax({
                           type: 'PUT',
                           url: '/layers/' + id,
-                           data:formData,
+                          data : formData,
                           // data: {
                           //     '_token': $('input[name=_token]').val(),
                           //     'slider_id': $('#slider_id_edit').val(),
