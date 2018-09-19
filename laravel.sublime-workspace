@@ -352,7 +352,7 @@
 			"file": "resources/views/sliders/show.blade.php",
 			"settings":
 			{
-				"buffer_size": 41868,
+				"buffer_size": 42217,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -378,7 +378,7 @@
 			"file": "app/Http/Controllers/LayersController.php",
 			"settings":
 			{
-				"buffer_size": 2920,
+				"buffer_size": 3448,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -611,7 +611,7 @@
 	],
 	"find":
 	{
-		"height": 41.0
+		"height": 29.0
 	},
 	"find_in_files":
 	{
@@ -840,15 +840,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 41868,
+						"buffer_size": 42217,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								4092,
-								4092
+								0,
+								0
 							]
 						],
 						"settings":
@@ -930,15 +930,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2920,
+						"buffer_size": 3448,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1096,
-								1096
+								887,
+								887
 							]
 						],
 						"settings":
@@ -948,7 +948,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 680.0,
+						"translation.y": 1860.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -1049,7 +1049,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 39.0
+		"height": 29.0
 	},
 	"input":
 	{
@@ -1090,7 +1090,7 @@
 	"project": "",
 	"replace":
 	{
-		"height": 74.0
+		"height": 54.0
 	},
 	"save_all_on_build": true,
 	"select_file":

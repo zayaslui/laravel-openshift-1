@@ -103,8 +103,7 @@ class LayersController extends Controller
             $path_old_image = public_path().'/images/layers/obras/'.$layer->src;
             \File::delete($path_old_image);
 
-            
-            
+                    
             $file = $request->file('src');
             $name = time().$file->getClientOriginalName();
             $layer->src = $name;
