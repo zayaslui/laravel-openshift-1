@@ -93,41 +93,43 @@ class LayersController extends Controller
      */
     public function update(Request $request, $id)
     {
+        return $request;
 
         $layer = Layer::findOrFail($id);
         // $layer->fill($request->except('src'));
+        
+        if($request->hasFile('src')){
 
-        if($request->hasFile('src_edit')){
             /*borrar la imagen vieja*/
             $path_old_image = public_path().'/images/layers/obras/'.$layer->src;
             \File::delete($path_old_image);
                     
-            $file = $request->file('src_edit');
+            $file = $request->file('src');
             $name = time().$file->getClientOriginalName();
             $layer->src = $name;
             $file->move(public_path().'/images/layers/obras/',$name);
             $layer->src = 'oiko..............';
         }else{
-            // $layer->src = 'ndoikoi';
+            $layer->src = 'ndoikoi';
         }
 
 
             // $layer->fill($request->all())->save();            
-            $layer->slider_id=$request->slider_id_edit;
-            $layer->tipo=$request->tipo_edit;
-            $layer->clase = $request->clase_edit;
-            $layer->data_ls=$request->data_ls_edit;
-            $layer->style=$request->style_edit;
-            $layer->otros=$request->otros_edit;
-            $layer->descripcion=$request->descripcion_edit;
+            // $layer->slider_id=$request->slider_id_edit;
+            // $layer->tipo=$request->tipo_edit;
+            // $layer->clase = $request->clase_edit;
+            // $layer->data_ls=$request->data_ls_edit;
+            // $layer->style=$request->style_edit;
+            // $layer->otros=$request->otros_edit;
+            // $layer->descripcion=$request->descripcion_edit;
 
-            // $layer->slider_id=$request->slider_id;
-            // $layer->tipo=$request->tipo;
-            // $layer->clase = $request->clase;
-            // $layer->data_ls=$request->data_ls;
-            // $layer->style=$request->style;
-            // $layer->otros=$request->otros;
-            // $layer->descripcion=$request->descripcion;
+            $layer->slider_id=$request->slider_id;
+            $layer->tipo=$request->tipo;
+            $layer->clase = $request->clase;
+            $layer->data_ls=$request->data_ls;
+            $layer->style=$request->style;
+            $layer->otros=$request->otros;
+            $layer->descripcion=$request->descripcion;
 
             $layer->save();
 

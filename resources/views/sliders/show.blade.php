@@ -608,30 +608,37 @@
           });
 
           // edit
+          //problema https://laravel.com/docs/5.2/routing#form-method-spoofing
           $('.modal-footer').on('click', '.edit', function() {
                     //obtener id del modal-edit
                     var formulario = $('#edit_form')[0]; //capturar el formulario
                     var formData = new FormData(formulario); //crear un formData
+                    //formData.append('src', $("#src_edit").get(0).files);
+                    // $("#fileInput")[0].files[0].name;
                     console.log(formData);
-
+                    var token = "{{ csrf_token() }}";
                       var id = this.id;
+                      var src = $("#src_edit").get(0).files
                       $.ajax({
                           type: 'PUT',
                           url: '/layers/' + id,
+                          headers: { 'X-CSRF-TOKEN': token },
                           data : formData,
                           // data: {
                           //     '_token': $('input[name=_token]').val(),
                           //     'slider_id': $('#slider_id_edit').val(),
                           //     'tipo': $('#tipo_edit').val(),   
                           //     'clase': $('#clase_edit').val(),
-                          //     'src': $('#src_edit').val(),
+                          //     'src': src,
                           //     'otros': $('#otros_edit').val(),
                           //     'descripcion': $('#descripcion_edit').val(),
                           //     'data_ls': $('#data_ls_edit').val(),                    
                           //     'style': $('#style_edit').val()
-                          // },                          
+                          // },
                           contentType: false, // options para enviar
                           processData: false,  // options para enviar
+                          // dataType: "JSON",
+
                           success: function(data) {
                               // $('.errorTitle').addClass('hidden');
                               // $('.errorContent').addClass('hidden');
