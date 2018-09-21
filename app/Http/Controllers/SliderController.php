@@ -23,7 +23,7 @@ class SliderController extends Controller
      */
     public function create()
     {
-        //
+        return view('sliders.create',['titulo'=>'Crear Slider','subtitulo'=>'Sliders']);
     }
 
     /**

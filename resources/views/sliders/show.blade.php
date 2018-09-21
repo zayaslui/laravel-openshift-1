@@ -606,12 +606,15 @@
           $(document).on('click','.edit-modal',function(){
               var id = this.id.split("_")[1];
               $(".edit").attr('id',id);
+              $("#src_edit").val("");
           });
 
           // edit
           //problema https://laravel.com/docs/5.2/routing#form-method-spoofing
           $('.modal-footer').on('click', '.edit', function() {
                     //obtener id del modal-edit
+                    //set null input;
+                    
                     var formulario = $('#edit_form')[0]; //capturar el formulario
                     var formData = new FormData(formulario); //crear un formData
                     var inputFile = document.querySelector('#src_edit');
@@ -624,7 +627,9 @@
                     formData.append('clase', $('#clase_edit').val());
                     //formData.append('src',$("#src_edit").val());
                     //formData.append('src',$("#src_edit").get(0).files);
-                    formData.append('src',inputFile.files[0]); //funciono para edit
+                    if($("#src_edit").val()){
+                      formData.append('src',inputFile.files[0]); //funciono para edit                    
+                    }
                     formData.append('otros', $('#otros_edit').val());
                     formData.append('descripcion', $('#descripcion_edit').val());
                     formData.append('data_ls', $('#data_ls_edit').val());                    

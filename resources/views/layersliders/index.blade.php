@@ -200,7 +200,8 @@
 
 		    // `d` is the original data object for the row
 		    if(dato === undefined || dato == null || dato.length <= 0){
-			    return '<table cellpadding="5" cellspacing="0" border="0" style="padding-left:50px;"><button class="btn btn-sm btn-primary">Agregar Slider</button></table>'
+			    return '<table cellpadding="5" cellspacing="0" border="0" style="padding-left:50px;">'
+			    +'<a class="btn btn-sm btn-primary" href="sliders/create">Agregar Slider</a></table>'
 		    }
 		    var tabla = '';
 		    for(var i=0;i<dato.length;i++){
@@ -271,7 +272,7 @@
                         	"defaultContent":'',
                         	render : function ( data, type, full, meta ) {
 					            return '<a class="btn btn-sm btn-success" href="layersliders/'+data.id+'"><i class="fa fa-eye"></i></a>'+
-					            '<a class="btn btn-sm btn-primary" href="usuario/'+data.id+'/edit"><i class="fa fa-edit"></i></a>';
+					            '<a class="btn btn-sm btn-primary" href="layersliders/'+data.id+'/edit"><i class="fa fa-edit"></i></a>';
 					         }
                         },
                      ],
