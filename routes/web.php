@@ -64,9 +64,17 @@ Route::delete('usuario/{user}','UsuariosController@destroy');
 
 
 Route::resources([
-								'layersliders'=>'LayerSlidersController',
-								'layers'=>'LayersController'
+								'layersliders'=>'LayerSlidersController'
 							]);
+Route::get('layers','LayersController@index');
+Route::get('layers/listar','LayersController@listar');
+Route::post('layers','LayersController@store');
+Route::GET('layers/create','LayersController@create');
+Route::get('layers/{layer}','LayersController@show');
+Route::put('layers/{layer}','LayersController@update');
+Route::get('layers/{layer}/edit','LayersController@edit');
+Route::delete('layers/{layer}','LayersController@destroy');
+
 /*listar datatables*/
 Route::get('layersliders_data','LayerSlidersController@listar');
 /*listar datatables layers*/

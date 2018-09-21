@@ -93,7 +93,6 @@ class LayersController extends Controller
      */
     public function update(Request $request, $id)
     {
-        return $request;
 
         $layer = Layer::findOrFail($id);
         // $layer->fill($request->except('src'));
@@ -108,7 +107,6 @@ class LayersController extends Controller
             $name = time().$file->getClientOriginalName();
             $layer->src = $name;
             $file->move(public_path().'/images/layers/obras/',$name);
-            $layer->src = 'oiko..............';
         }else{
             $layer->src = 'ndoikoi';
         }

@@ -186,7 +186,8 @@
               </div>
               <div class="modal-body">
                   <form class="form-horizontal" role="form" enctype="multipart/form-data" id="edit_form" name="edit_form">
-                       @csrf    
+                    @method('PUT')
+                    @csrf
                       <div class="form-group">
                           <label class="control-label col-sm-2" for="slider_id_edit">Slider_id:</label>
                           <div class="col-sm-10">
@@ -613,15 +614,30 @@
                     //obtener id del modal-edit
                     var formulario = $('#edit_form')[0]; //capturar el formulario
                     var formData = new FormData(formulario); //crear un formData
+                    var inputFile = document.querySelector('#src_edit');
                     //formData.append('src', $("#src_edit").get(0).files);
                     // $("#fileInput")[0].files[0].name;
+                    formData.append('src','oiko');
+                    formData.append('slider_id',$('#slider_id_edit').val());
+                    formData.append('tipo',$('#tipo_edit').val());
+                    formData.append('tipo', $('#tipo_edit').val());
+                    formData.append('clase', $('#clase_edit').val());
+                    //formData.append('src',$("#src_edit").val());
+                    //formData.append('src',$("#src_edit").get(0).files);
+                    formData.append('src',inputFile.files[0]); //funciono para edit
+                    formData.append('otros', $('#otros_edit').val());
+                    formData.append('descripcion', $('#descripcion_edit').val());
+                    formData.append('data_ls', $('#data_ls_edit').val());                    
+                    formData.append('style', $('#style_edit').val())                    
+
                     console.log(formData);
                     var token = "{{ csrf_token() }}";
                       var id = this.id;
                       var src = $("#src_edit").get(0).files
                       $.ajax({
-                          type: 'PUT',
-                          url: '/layers/' + id,
+                          type: 'POST',
+                          //directo al update
+                          url: '/layers/'+id,
                           headers: { 'X-CSRF-TOKEN': token },
                           data : formData,
                           // data: {
@@ -637,6 +653,7 @@
                           // },
                           contentType: false, // options para enviar
                           processData: false,  // options para enviar
+                          cache: false,
                           // dataType: "JSON",
 
                           success: function(data) {
