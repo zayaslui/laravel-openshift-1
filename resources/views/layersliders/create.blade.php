@@ -27,10 +27,7 @@
                                     <form method="POST" action="/layersliders" enctype="multipart/form-data">
                                         @csrf
                                         @include('layersliders.forms.default')
-                                        <div class="form-group">
-                                            <label for="avatar">Avatar</label>
-                                            <input type="file" name="avatar" id="avatar">
-                                        </div>
+
                                       <button type="submit" class="btn btn-primary btn-sm">Enviar</button>
                                       <a  class="btn btn-sm btn-success " href="/layersliders">Volver</a>
                                     </form>

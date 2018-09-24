@@ -1,7 +1,7 @@
 @extends('layouts.admin')
 
 @section('content')
-@section('title','Ver Layersliders')
+@section('title','Ver Slider')
 
 
       <ul class="nav nav-tabs">
@@ -17,7 +17,9 @@
                 {{-- inicio --}}
                   <div class="row">
                       <div class="col-lg-12">
-                          <h1 class="page-header">Titulo</h1>
+                          <h1 class="page-header">
+                            @if(isset($slider)) {{$titulo}} @elseif(isset($datos)) {{$datos['titulo']}}@endif
+                        </h1>
                       </div>
                       <!-- /.col-lg-12 -->
                   </div>
@@ -25,7 +27,7 @@
                           <div class="col-lg-12">
                               <div class="panel panel-default">
                                   <div class="panel-heading">
-                                      Subtitulo
+                                    @if(isset($slider)) {{$subtitulo}}@elseif(isset($datos)) {{$datos['subtitulo']}} @endif
                                   </div>
                                   <div class="panel-body">
                                       <div class="row">
@@ -50,7 +52,9 @@
                 {{-- fin --}}
         </div>
         <div class="tab-pane" id="2">
-              {{-- contenido --}}
+                <h1 class="page-header">
+                    {{-- @if(isset($slider)) {{$titulo}} @endif --}}
+                </h1>
             <div>
                 <div class="add-modal btn btn-sm btn-primary">
                     <li>Agregar Layer</li>
@@ -76,10 +80,11 @@
               </table>
               {{-- contenido --}}
         </div>
-      </div>
+      </div
+      >
 
 
-    <!-- Modal form to add a post -->
+    {{--Modal form to add --}}
   <div id="addModal" class="modal fade" role="dialog">
       <div class="modal-dialog">
           <div class="modal-content">
@@ -92,11 +97,11 @@
                   <form  class="form-horizontal" role="form" enctype="multipart/form-data" id="add_form" name="add_form">
                      @csrf
                       <div class="form-group">
-                          <label class="control-label col-sm-2" for="slider_id">Slider_id:</label>
+                          {{-- <label class="control-label col-sm-2" for="slider_id">Slider_id:</label> --}}
                           <div class="col-sm-10">
-                              <input type="text" class="form-control" id="slider_id" name="slider_id">
-                              <small>Min: 2, Max: 32, only text</small>
-                              <p class="errorTitle text-center alert alert-danger hidden"></p>
+                              <input type="hidden" class="form-control" id="slider_id" name="slider_id">
+                              {{-- <small>Min: 2, Max: 32, only text</small> --}}
+                              {{-- <p class="errorTitle text-center alert alert-danger hidden"></p> --}}
                           </div>
                       </div>
                       <div class="form-group">
@@ -189,11 +194,11 @@
                     @method('PUT')
                     @csrf
                       <div class="form-group">
-                          <label class="control-label col-sm-2" for="slider_id_edit">Slider_id:</label>
+                          {{-- <label class="control-label col-sm-2" for="slider_id_edit">Slider_id:</label> --}}
                           <div class="col-sm-10">
-                              <input type="text" class="form-control" id="slider_id_edit" autofocus disabled>
-                              <small>Min: 2, Max: 32, only text</small>
-                              <p class="errorTitle text-center alert alert-danger hidden"></p>
+                              <input type="hidden" class="form-control" id="slider_id_edit" autofocus disabled>
+                              {{-- <small>Min: 2, Max: 32, only text</small> --}}
+                              {{-- <p class="errorTitle text-center alert alert-danger hidden"></p> --}}
                           </div>
                       </div>
                       <div class="form-group">

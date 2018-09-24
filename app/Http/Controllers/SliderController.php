@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Slider;
+use Illuminate\Support\Facades\Redirect;
 
 class SliderController extends Controller
 {
@@ -21,9 +23,15 @@ class SliderController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create($layerslider_id)
     {
-        return view('sliders.create',['titulo'=>'Crear Slider','subtitulo'=>'Sliders']);
+        $datos = array (
+            'titulo'=>'Crear Slider',
+            'subtitulo'=>'Sliders',
+            'layerslider_id'=>$layerslider_id,
+        );
+        $params = ["disabled"=>true];
+        return view('sliders.create',compact('datos'),$params);
     }
 
     /**
@@ -34,7 +42,8 @@ class SliderController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $slider = Slider::create($request->all());
+        return redirect('/sliders/'.$slider->id);
     }
 
     /**
@@ -45,8 +54,16 @@ class SliderController extends Controller
      */
     public function show($id)
     {
-        //
+        $datos = array (
+            'titulo'=>'Show Slider',
+            'subtitulo'=>'Sliders',
+            'tituloLayer'=>'Listar Layers '
+        );
+        
+        $slider = Slider::find($id);
+        return view("sliders.show",compact('slider'),$datos);
     }
+
 
     /**
      * Show the form for editing the specified resource.
@@ -77,8 +94,15 @@ class SliderController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Slider $slider)
     {
-        //
+            foreach ($slider->layers as $layer) {
+                 $file_path = public_path().'/images/layers/obras/'.$layer->src;
+                   \File::delete($file_path);
+                   //borra el layer
+                   $layer->delete();
+            }
+            //eliminar sliders
+            $slider->delete();
     }
 }

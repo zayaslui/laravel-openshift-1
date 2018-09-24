@@ -65,8 +65,19 @@ Route::delete('usuario/{user}','UsuariosController@destroy');
 
 Route::resources([
 								'layersliders'=>'LayerSlidersController',
-                                'sliders'=>'SliderController'
 							]);
+
+
+Route::get('sliders','SliderController@index');
+Route::get('sliders/listar','SliderController@listar');
+Route::post('sliders','SliderController@store');
+Route::GET('sliders/create/{slider}','SliderController@create');
+Route::get('sliders/{slider}','SliderController@show');
+Route::put('sliders/{slider}','SliderController@update');
+Route::get('sliders/{slider}/edit','SliderController@edit');
+Route::delete('sliders/{slider}','SliderController@destroy');
+
+
 Route::get('layers','LayersController@index');
 Route::get('layers/listar','LayersController@listar');
 Route::post('layers','LayersController@store');
@@ -82,7 +93,7 @@ Route::get('layersliders_data','LayerSlidersController@listar');
 Route::get('layers_data/{id}','LayerSlidersController@listar_layers');
 
 /*metodos que no aparecen en LayerSlidersController */
-Route::get('show_sliders/{id}','LayerSlidersController@show_sliders');
+// Route::get('show_sliders/{id}','LayerSlidersController@show_sliders');
 
 // datatables
 Route::get('create', 'DisplayDataController@create');

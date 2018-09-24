@@ -195,13 +195,13 @@
 		function format ( d ) {
 
             var dato = JSON.parse(d.detalles.replace(/&quot;/g,'"'));
-            // console.log(dato);
 			var a = (d === undefined || d == null || d.length <= 0)?true:false;
+            var layersliders_id = d.id;
 
 		    // `d` is the original data object for the row
 		    if(dato === undefined || dato == null || dato.length <= 0){
 			    return '<table cellpadding="5" cellspacing="0" border="0" style="padding-left:50px;">'
-			    +'<a class="btn btn-sm btn-primary" href="sliders/create">Agregar Slider</a></table>'
+			    +'<a class="btn btn-sm btn-primary" href="sliders/create/'+layersliders_id+'">Agregar Slider</a></table>';
 		    }
 		    var tabla = '';
 		    for(var i=0;i<dato.length;i++){
@@ -224,7 +224,7 @@
 		    			 if(j=='data_ls'){data_ls = dato[i][j]};
 		    			 if(j=='imagen'){imagen = dato[i][j]};
 				    }
-	    			 tabla+='<table class="subtabla" cellpadding="5" cellspacing="0" border="0" style="">'+
+	    			 tabla+='<table id="slider_'+id+'" class="subtabla" cellpadding="5" cellspacing="0" border="0" style="">'+
 							        '<tr>'+
 							        '<tr>'+
 							            '<td><strong>Id:</strong></td>'+
@@ -243,11 +243,13 @@
 							        '</tr>'+
 							        '<tr>'+
 							            '<td><strong>Operaciones:</strong></td>'+
-							            '<td><a href="/show_sliders/'+id+'" class="btn btn-sm btn-primary">show</a></td>'+
-							        '</tr>'+		        
+							            '<td><a href="/sliders/'+id+'" class="btn btn-sm btn-primary">show</a>'+
+							            '<a id="delete_'+id+'" name="delete_'+id+'" class="btn btn-sm btn-danger delete">delete</a></td>'+
+							        '</tr>'+	
 							    '</table>';
 				}
-
+				tabla+='<table cellpadding="5" cellspacing="0" border="0" style="padding-left:50px;">'
+			    +'<a class="btn btn-sm btn-primary" href="sliders/create/'+layersliders_id+'">Agregar Slider</a></table>';
 		    return tabla;
 		}
 		function controles(d){
@@ -271,8 +273,8 @@
                         	"data": null,
                         	"defaultContent":'',
                         	render : function ( data, type, full, meta ) {
-					            return '<a class="btn btn-sm btn-success" href="layersliders/'+data.id+'"><i class="fa fa-eye"></i></a>'+
-					            '<a class="btn btn-sm btn-primary" href="layersliders/'+data.id+'/edit"><i class="fa fa-edit"></i></a>';
+					            return '<a class="btn btn-sm btn-success" href="/layersliders/'+data.id+'"><i class="fa fa-eye"></i></a>'+
+					            '<a class="btn btn-sm btn-primary" href="/layersliders/'+data.id+'/edit"><i class="fa fa-edit"></i></a>';
 					         }
                         },
                      ],
@@ -291,7 +293,7 @@
 		    $('#example tbody').on('click', 'td.details-control', function () {
 		        var tr = $(this).closest('tr');
 		        var row = table.row( tr );
-		 
+
 		        if ( row.child.isShown() ) {
 		            // This row is already open - close it
 		            row.child.hide();
@@ -304,6 +306,35 @@
 		            tr.addClass('shown');
 		        }
 		    } );
+
+		    $(document).on('click','.delete',function(){
+		    	var id = this.id.split('_')[1];
+		    	console.log($("#slider_"+id));
+		    	$("#slider_"+id).remove();
+
+		    	$.ajax({
+                    type: 'DELETE',
+                    url: '/sliders/'+id,
+                    data: {
+                        '_token': $('input[name=_token]').val(),
+                    },
+                    success: function(data) {
+                    	console.log(data);
+                       toastr.success('Successfully deleted Slider!', 'Success Alert', {timeOut: 5000});
+                       var that = this;
+                       setTimeout(function(){
+                        that.delete_row();
+                       },2000)
+                    },
+                    delete_row:function(){
+                      $("#slider_"+id).remove();
+                    },
+                    error: function(data) {
+	                      var errors = data.responseJSON;
+	                      console.log(errors);
+	                  }
+                });
+		    });
 
 	    $(document).ready(function(){
 					toastr.options = {

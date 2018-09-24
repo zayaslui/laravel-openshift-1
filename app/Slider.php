@@ -9,8 +9,12 @@ class Slider extends Model
     protected $table = 'sliders';
     protected $guarded = [];
 
+    protected $fillable = [
+        'layerslider_id', 'clase','data_ls'
+    ];  
+
     public function getRouteKeyName(){
-        return 'slider';
+        return 'id';
     }
 
     public function layersliders(){

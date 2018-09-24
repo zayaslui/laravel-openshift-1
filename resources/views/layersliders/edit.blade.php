@@ -5,7 +5,7 @@
 
            <div class="row">
                 <div class="col-lg-12">
-                    <h1 class="page-header">Usuarios</h1>
+                    <h1 class="page-header">LayerSlider</h1>
                 </div>
                 <!-- /.col-lg-12 -->
             </div>
@@ -18,27 +18,26 @@
                         </div>
                         <div class="panel-body">
                             <div class="row">
-                                <div class="col-lg-12">
-                                    <form method="POST" action="/usuario/{{$user->slug}}" enctype="Multipart/form-data">
+                                <div class="col-lg-12" style="padding-top: 2%;">
+                                    <form method="POST" action="/layersliders/{{$layerslider->id}}">
                                         {{-- editar --}}
                                         @method('PUT')
                                         @csrf
-                                        @include('usuario.forms.usr')
-                                        <div class="form-group">
-                                            
-                                            <label for="avatar">Avatar</label>
-                                            <input type="file" name="avatar" id="avatar" class="">
+                                        @include('layersliders.forms.default')
+                                         <div class="form-group">
+                                            <label for="avatar">Operaciones</label>
+                                            {{-- <input type="file" name="avatar" id="avatar"> --}}
                                         </div>
                                         <button type="submit" class="btn btn-primary btn-sm botonera"><i class="fa fa-save"></i></button>
                                         {{-- delete --}}
                                     </form>
-                                    <form method="post" action="/usuario/{{$user->slug}}">
+                                    <form method="post" action="/layersliders/{{$layerslider->id}}">
                                         @method('DELETE')
                                         @csrf
                                         <button type="submit" class="btn btn-sm btn-danger  botonera delete"><i class="fa fa-trash"></i></button>
                                     </form>
                                     <form>
-                                        <a  class="btn btn-sm btn-success  botonera" href="/usuario"><i class="fa fa-undo"></i></a>
+                                        <a  class="btn btn-sm btn-success  botonera" href="/layersliders"><i class="fa fa-undo"></i></a>
                                     </form>
                                 </div>
                             </div>

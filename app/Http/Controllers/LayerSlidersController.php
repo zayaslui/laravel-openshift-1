@@ -48,7 +48,7 @@ class LayerSlidersController extends Controller
                     })
                     ->make(true);
     }
-
+    /*funciones de datatables*/
     public function listar_layers(Request $request,$id){
         //creador de consulta
         $layers = Layer::query()->where('slider_id', $id);
@@ -62,7 +62,7 @@ class LayerSlidersController extends Controller
      */
     public function create()
     {
-        return view('layersliders.create',['subtitulo'=>'Crear LayerSliders','titulo'=>'Layerslider']);
+        return view('layersliders.create',['subtitulo'=>'Crear LayerSliders','titulo'=>'Layerslider','disabled'=>false]);
     }
 
     /**
@@ -73,8 +73,9 @@ class LayerSlidersController extends Controller
      */
     public function store(Request $request)
     {
+
         LayerSlider::create($request->all());
-        return redirect('layersliders')->with('create','hola');
+        return redirect('layersliders');
     }
 
     /**
@@ -83,10 +84,10 @@ class LayerSlidersController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Layerslider $layerslider)
     {
-        $layersliders = Layerslider::find($id);
-        return view('layersliders.show',compact('layersliders'),['subtitulo'=>'Ver LayerSliders','titulo'=>'Layerslider']);
+        $params = ['subtitulo'=>'Ver LayerSliders','titulo'=>'Layerslider','disabled'=>true];
+        return view('layersliders.show',compact('layerslider'),$params);
     }
 
     /**
@@ -95,9 +96,10 @@ class LayerSlidersController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Layerslider $layerslider)
     {
-        //
+        $params = ['titulo'=>'Editar LayerSlider','disabled'=>false];
+        return view('layersliders.edit',compact('layerslider'),$params);
     }
 
     /**
@@ -107,9 +109,10 @@ class LayerSlidersController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Layerslider $layerslider)
     {
-        //
+            $layerslider->fill($request->all())->save();
+            return view('layersliders.index');
     }
 
     /**
@@ -118,15 +121,27 @@ class LayerSlidersController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(LayerSlider $layerslider)
     {
-        //
-    }
-
-    public function show_sliders($id){
-        $slider = Slider::find($id);
-        return view("sliders.show",compact('slider'));
-        // return compact('slider');
+        //eliminar las fotos de layers
+        $layerslider->sliders;
+        foreach ( $layerslider->sliders as $slider) {
+                //borrar fotos primero
+                 foreach ($slider->layers as $layer) {
+                    //borra la imagen
+                    // print_r($layer);
+                   $file_path = public_path().'/images/layers/obras/'.$layer->src;
+                   \File::delete($file_path);
+                   //borra el layer
+                   $layer->delete();
+                }
+                //eliminar sliders
+                $slider->delete();
+        }
+        // $layerslider->sliders()->delete();
+        // eliminar layersliders
+        $layerslider->delete();
+        return view('layersliders.index');
     }
 
 }
