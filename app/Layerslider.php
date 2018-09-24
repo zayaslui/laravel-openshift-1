@@ -9,7 +9,7 @@ class Layerslider extends Model
     protected $table='layersliders';
 
     protected $fillable = [
-        'table', 'clase','style'
+        'tabla', 'clase','style'
     ];    
     public function sliders(){
      	return $this->hasMany('App\Slider');
