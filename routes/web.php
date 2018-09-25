@@ -65,8 +65,9 @@ Route::delete('usuario/{user}','UsuariosController@destroy');
 
 Route::resources([
 								'layersliders'=>'LayerSlidersController',
+								'obras' => 'ObrasController',
 							]);
-
+Route::get('listar_obras','ObrasController@listar_obras');
 
 Route::get('sliders','SliderController@index');
 Route::get('sliders/listar','SliderController@listar');

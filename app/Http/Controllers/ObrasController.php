@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Obras;
 use App\Obras_det;
-
+use Datatables;
 use Illuminate\Support\Facades\DB;
 
 class ObrasController extends Controller
@@ -19,9 +19,22 @@ class ObrasController extends Controller
      */
     public function index()
     {
-        //
+        //respuesta del dataTable()
+        // $obras = Obras::all();
+        return view('obras.index');
     }
 
+    public function listar_obras(){
+        $obras = Obras::query();
+        return Datatables::of($obras)
+        ->addColumn('obras_det_count', function($obras) {
+            return $obras->detalles->count();
+        })
+       ->addColumn('detalles',function($obras){
+            return $obras->detalles;
+        })
+        ->make(true);
+    }
     /**
      * Show the form for creating a new resource.
      *

@@ -820,7 +820,7 @@
                         '<tr class="">'+
                             '<td><strong>Src:</strong></td>'+
                             '<td>'+imagen+'</td>'+
-                        '</tr>'+                                            
+                        '</tr>'+
                         '<tr style="width:100px;">'+
                             '<td class="uno"><strong>Data_ls:</strong></td>'+
                             '<td class="dos"> <textarea class="form-control" id="data_ls_edit" cols="10" rows="5" style="width: 435px; height: 127px;" disabled>'+d.data_ls+'</textarea></td>'+
@@ -838,6 +838,7 @@
                         '</tr>'+            
                     '</table>';
                   }
+
                   $(".table-details").DataTable({
                     responsive:true,
                     "scrollX": true
