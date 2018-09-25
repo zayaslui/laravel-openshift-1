@@ -9,7 +9,11 @@ class Obras_det extends Model
     protected $table='obras_det';
 
     protected $fillable = [
-        'descripcion'
+        //'obras_id',
+        'titulo_obra',
+       	'contenido_obra',
+       	'imagen',
+       	'layerslider_id'
     ];
 
     public function obras(){
