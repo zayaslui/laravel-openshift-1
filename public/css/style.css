@@ -1651,6 +1651,9 @@ font-family: 'Roboto', sans-serif;
 	font-family: Arial, Helvetica, sans-serif;
 	line-height: 1.8em;
 }
+.company_address p strong{
+  font-weight: bold;
+}
 .company_address p span{
 	text-decoration:underline;
 	color:#012231;
@@ -1661,6 +1664,52 @@ font-family: 'Roboto', sans-serif;
 }
 .company_address p span:hover{
 	color:#0f4e8d;
+}
+
+.wrap_intro_talento{
+    padding: 10px;
+    position: relative;
+    margin: auto;
+    display: flex;
+}
+.wrap_intro_talento .intro_talento{
+  width: 50%;
+}
+.group_talento_1{
+  padding: 10px;  
+}
+.group_talento_2{
+  padding: 10px;  
+}
+.parrafo_talento{
+    font-size: 0.875em;
+    color: rgba(85, 81, 81, 0.84);
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.8em;
+}
+.imagen_talento{
+  width: 100%;
+  margin: 0;
+}
+.leyenda{
+  padding: 20px;
+}
+
+.leyenda h5{
+    font-size: 1em;
+    color: rgba(85, 81, 81, 0.84);
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 2.8em;
+    background: #efefd5;
+    margin: 0;
+    padding: 10px;
+    text-align: center;
+    border-radius: 2%;
+}
+.contenedor_talento{
+  background: #efefd5;
+  padding: 20px;
+  margin: 50px auto;
 }
 /*----responsive-design-----*/
 @media only screen and (max-width: 1366px) and (min-width: 1280px) {
@@ -2769,4 +2818,3 @@ font-family: 'Roboto', sans-serif;
   content: '\f0c6';
   margin-left: 10%;
 }
-

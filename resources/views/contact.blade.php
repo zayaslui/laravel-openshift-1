@@ -28,11 +28,11 @@
 				    	 	<span class="titulo">Información</span>		    	 		
 						<div class="separator  small center  " style="background-color: #FF6A13;height: 2px;"></div>				  		
 						<div class="company_address">
-						<p>Luis Alberto de Herrera 1424 entre Pai Perez y Adva Perú</p>
-				   		<p><strong>Tel :</strong> (021) 214-368</p>
-				   		<p>Celular : (0981) 000 000</p>
-				   		<p>Fax: (000) 000 00 00 0</p>
-				 	 	<p>Email: <span><a href="mailto:info@example.com">mail@example.com</a></span></p>
+							<p>Luis Alberto de Herrera 1424 entre Pai Perez y Adva Perú</p>
+					   		<p><strong>Tel :</strong> (021) 214-368</p>
+					   		<p><strong>Celular :</strong> (0981) 000 1</p>
+					   		<p> <strong>Fax:</strong> (000) 000 00 00 0</p>
+				 	 		<p><strong>Email: </strong><span><a href="mailto:info@example.com">mail@example.com</a></span></p>
 			    	 	</div>				     	
 				   </div>
 				   {{-- talento --}}
