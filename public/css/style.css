@@ -1616,7 +1616,7 @@ hr {
 }
 .mybutton{
 	font-family: 'Roboto', sans-serif;
-	background: #012231;
+	background: #226299;
 	color: #d6d6d6;
 	padding: 15px 40px;
 	font-size: 0.875em;
@@ -2687,17 +2687,44 @@ hr {
     background-color: #FF6A13;
     height: 2px;
     position: relative;
-    width: 22px;
+    width: 30px;
     display: block;
-    margin: 10px auto 20px;
+    margin: 20px auto 20px;
     padding:0;
 }
 
-.talento{
-    padding: 0px 0px;
-    margin-top: 40%;
+/*talento*/
+
+.trabaja_con_nosotros{
+  text-align: center;
+  color: #2d6fa1;
 }
 
-.link_talento{
-  
+.trabaja_con_nosotros .titulo{
+  font-size: 1em;
+  font-weight: bold;
+}
+
+.trabaja_con_nosotros .company_address{
+  text-align: left;
+}
+
+.trabaja_con_nosotros .link_talento{
+  font-family: 'Roboto', sans-serif;
+    background: #cc3636;
+    color: #d6d6d6;
+    padding: 15px 40px;
+    font-size: 0.875em;
+    text-transform: uppercase;
+    display: block;
+    transition: 0.5s ease;
+    -o-transition: 0.5s ease;
+    -webkit-transition: 0.5s ease;
+    cursor: pointer;
+    border: none;
+    text-align: center;
+    margin: 10% auto;
+}
+.trabaja_con_nosotros .link_talento::hover{
+  background: 
 }

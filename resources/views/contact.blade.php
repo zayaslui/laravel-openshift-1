@@ -20,7 +20,7 @@
 					   			</small>
 					   		</div>
       				</div>
-      			<div class="company_address">
+					<div class="company_address">
 				     	<h3>Información :</h3>
 						<p>Luis Alberto de Herrera 1424 entre Pai Perez y Adva Perú</p>
 				   		<p>Tel : (021) 214-368</p>
@@ -28,6 +28,21 @@
 				   		<p>Fax: (000) 000 00 00 0</p>
 				 	 	<p>Email: <span><a href="mailto:info@example.com">mail@example.com</a></span></p>
 				   </div>
+				   {{-- talento --}}
+				   <div class="trabaja_con_nosotros">
+					<div class="separator  small center  " style="background-color: #FF6A13;height: 2px;"></div>
+				  	<p>
+				  		<span class="titulo">
+				  			Trabaja con nosotros!
+				  		</span>
+						<div class="separator  small center  " style="background-color: #FF6A13;height: 2px;"></div>				  		
+						<div class="company_address">
+					  		<p>Si quieres trabajar en <strong>EDBCONSTRUCCIONES</strong> envíanos tus datos y CV a través  Será estupendo poder conocernos y que formes parte de nuestra Empresa.</p>
+					  		<strong><a  class="link_talento" href="/emprende_con_nosotros">Enviar currículum</a></strong>
+						</div>				  		
+				  	</p>				   	
+				   </div>
+				   {{-- talento --}}				   
 				</div>				
 				<div class="col span_2_of_3">
 				  <div class="contact-form">
@@ -36,15 +51,17 @@
 						<div class="company_address">
 					  		<p>Si tienes cualquier duda, pregunta o simplemente estas interesado en que trabajemos juntos no dudes en ponerte en contacto con nosotros. Lo puedes hacer en nuestras oficinas, por télefono o rellenando el siguiente formulario.</p>				
 						</div>
-				  	<div class="separator  small center  " style="background-color: #FF6A13;height: 2px;"></div>
+			  	<div class="separator  small center  " style="background-color: #FF6A13;height: 2px;"></div>
+{{-- 	
 				  	<p>
-				  		<span style="color: #ff6a13;text-align: center;">
+				  		<span>
 				  			<strong>Trabaja con nosotros</strong>
 				  		</span>
 						<div class="company_address">
-					  		<p>Si quieres trabajar en EDBCONSTRUCCIONES envíanos tus datos y CV a través   <strong><a  class="link_talento" href="/emprende_con_nosotros">este formulario</a></strong> Será estupendo poder conocernos y que formes parte de nuestra Empresa.</p>				
+					  		<p>Si quieres trabajar en EDBCONSTRUCCIONES envíanos tus datos y CV,  Será estupendo poder conocernos y que formes parte de nuestra Empresa.</p>
+					  		 <strong><a  class="link_talento" href="/emprende_con_nosotros">Enviar currículum</a></strong> 
 						</div>				  		
-				  	</p>
+				  	</p> --}}
 					    <form>
 					    	<div>
 						    	<span><label>Nombre</label></span>
