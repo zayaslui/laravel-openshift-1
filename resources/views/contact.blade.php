@@ -31,7 +31,20 @@
 				</div>				
 				<div class="col span_2_of_3">
 				  <div class="contact-form">
-				  	<h3>Contáctanos</h3>
+				  	<h3 style="text-align: center;">Formulario de Contactos</h3>
+				  	<div class="separator  small center  " style="background-color: #FF6A13;height: 2px;"></div>
+						<div class="company_address">
+					  		<p>Si tienes cualquier duda, pregunta o simplemente estas interesado en que trabajemos juntos no dudes en ponerte en contacto con nosotros. Lo puedes hacer en nuestras oficinas, por télefono o rellenando el siguiente formulario.</p>				
+						</div>
+				  	<div class="separator  small center  " style="background-color: #FF6A13;height: 2px;"></div>
+				  	<p>
+				  		<span style="color: #ff6a13;text-align: center;">
+				  			<strong>Trabaja con nosotros</strong>
+				  		</span>
+						<div class="company_address">
+					  		<p>Si quieres trabajar en EDBCONSTRUCCIONES envíanos tus datos y CV a través del formulario de la sección <a href="/emprende_con_nosotros"><strong>“Emprende con nosotros“…</strong></a> Será estupendo poder conocernos y que formes parte de nuestra Empresa.</p>				
+						</div>				  		
+				  	</p>
 					    <form>
 					    	<div>
 						    	<span><label>Nombre</label></span>

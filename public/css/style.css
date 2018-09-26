@@ -2683,3 +2683,17 @@ hr {
 	padding: 1% 12%;
 }
 
+.separator.small {
+    background-color: #FF6A13;
+    height: 2px;
+    position: relative;
+    width: 22px;
+    display: block;
+    margin: 10px auto 20px;
+    padding:0;
+}
+
+.talento{
+      padding: 0px 0px;
+    margin-top: 40%;
+}

@@ -100,4 +100,8 @@ class FrontController extends Controller
     public function prueba(){
       return view("prueba");
     }
+
+    public function emprende_con_nosotros(){
+      return view("emprende_con_nosotros");
+    }
 }

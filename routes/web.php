@@ -22,6 +22,7 @@ Route::get('contact','FrontController@contact');
 Route::get('admin','FrontController@admin');
 Route::get('prensa','FrontController@prensa');
 Route::get('compromiso','FrontController@compromiso');
+Route::get('emprende_con_nosotros','FrontController@emprende_con_nosotros');
 
 Route::get('/services/hormigon','FrontController@servicios_hormigon');
 Route::get('/services/prefabricacion','FrontController@servicios_prefabricacion');
@@ -65,7 +66,7 @@ Route::delete('usuario/{user}','UsuariosController@destroy');
 
 Route::resources([
 								'layersliders'=>'LayerSlidersController',
-								'obras' => 'ObrasController',
+								// 'obras' => 'ObrasController',
 							]);
 Route::get('listar_obras','ObrasController@listar_obras');
 
