@@ -38,7 +38,11 @@
 						<div class="separator  small center  " style="background-color: #FF6A13;height: 2px;"></div>				  		
 						<div class="company_address">
 					  		<p>Si quieres trabajar en <strong>EDBCONSTRUCCIONES</strong> envíanos tus datos y CV a través  Será estupendo poder conocernos y que formes parte de nuestra Empresa.</p>
-					  		<strong><a  class="link_talento" href="/emprende_con_nosotros">Enviar currículum</a></strong>
+					  		<strong>
+					  			<div class="curriculum curriculum-icons">
+						  			<a  class="" href="/emprende_con_nosotros"></a>
+					  			</div>
+					  		</strong>
 						</div>				  		
 				  	</p>				   	
 				   </div>

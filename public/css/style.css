@@ -2709,7 +2709,7 @@ hr {
   text-align: left;
 }
 
-.trabaja_con_nosotros .link_talento{
+.trabaja_con_nosotros .curriculum{
   font-family: 'Roboto', sans-serif;
     background: #cc3636;
     color: #d6d6d6;
@@ -2724,7 +2724,35 @@ hr {
     border: none;
     text-align: center;
     margin: 10% auto;
+    position: relative;;
+
 }
 .trabaja_con_nosotros .link_talento::hover{
-  background: 
+
+}
+
+
+.curriculum-icons a:after{
+    -moz-transition: all 0.4s ease-in-out 0.1s;
+    -o-transition: all 0.4s ease-in-out 0.1s;
+    -webkit-transition: all 0.4s ease-in-out;
+    -webkit-transition-delay: 0.1s;
+    transition: all 0.4s ease-in-out 0.1s;
+    position: absolute;
+    text-indent: 0;
+    /*display: block;*/
+    font: normal 30px FontAwesome;
+    color: #fff;
+    line-height: 16px;
+}
+.curriculum-icons a:before{
+  color: white;
+  /*position: relative;*/
+}
+.curriculum-icons a:before{
+  content: "Enviar Currículum";
+}
+.curriculum-icons a:after{
+  content: '\f0c6';
+  margin-left: 10%;
 }
