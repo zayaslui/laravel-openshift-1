@@ -1577,11 +1577,19 @@ hr {
 }
 .span_2_of_3  h3,
 .span_1_of_3  h3 {
-	font-family: 'Roboto', sans-serif;
-	font-size: 1.5em;
-	padding: 0.5em 0;
-	color: #012231;
-	text-transform: uppercase;
+font-family: 'Roboto', sans-serif;
+    font-size: 1.8em;
+    color: #6C6C6D;
+    text-align: center;
+    text-transform: uppercase;
+    /* background: url(../images/bg-h2.png) repeat-x center; */
+    text-shadow: -2px 3px 4px #9B9B9B;
+    /* font-family: 'Roboto', sans-serif; */
+    /* font-size: 1.5em; */
+    /* padding: 0.5em 0; */
+    /* color: #012231; */
+    text-transform: uppercase;
+    margin: 25px auto;
 }
 .contact-form{
 	position:relative;
@@ -1633,7 +1641,9 @@ hr {
 	color: #FFF;
 }
 .company_address{
-	padding-top:26px;
+	    padding-top: 26px;
+    padding: 10px;
+    margin: 10px;
 }
 .company_address p{
 	font-size: 0.875em;
@@ -2696,8 +2706,11 @@ hr {
 /*talento*/
 
 .trabaja_con_nosotros{
-  text-align: center;
-  color: #2d6fa1;
+    text-align: center;
+    color: #2d6fa1;
+    margin: 10px;
+    padding: 10px;
+    background: beige;
 }
 
 .trabaja_con_nosotros .titulo{
@@ -2756,3 +2769,4 @@ hr {
   content: '\f0c6';
   margin-left: 10%;
 }
+

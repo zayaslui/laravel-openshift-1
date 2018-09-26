@@ -9,24 +9,31 @@
 				<div class="col span_1_of_3">
 					<div class="contact_info">
 			    	 	<h3>Encuentranos</h3>
+{{-- 			    	 	<div class="trabaja_con_nosotros">
+				    	 	<span class="titulo">Encuentranos</span>		    	 		
+			    	 	</div> --}}
 			    	 		<div class="map">
 								<iframe width="100%" height="175" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d901.8331362176517!2d-57.6227218!3d-25.293029!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x945da7e0ecdb44f7%3A0xc04a88c55614b952!2sEDB+Construcciones!5e0!3m2!1ses-419!2spy!4v1530460499969" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>					   			
 					   			<br>
 					   			<small>
 					   				<div class="map map-icon">
 					   				<a class="" target="_blank" href="https://goo.gl/maps/aVrxbswQxGo" style="color:#666;text-align:left;font-size:0.85em">Ver mapa ampliado</a>
-					   					
 					   				</div>
 					   			</small>
 					   		</div>
       				</div>
-					<div class="company_address">
-				     	<h3>Información :</h3>
+			    	 	<div class="trabaja_con_nosotros">
+				     	{{-- <h3>Información :</h3> --}}
+						<div class="separator  small center  " style="background-color: #FF6A13;height: 2px;"></div>				  		
+				    	 	<span class="titulo">Información</span>		    	 		
+						<div class="separator  small center  " style="background-color: #FF6A13;height: 2px;"></div>				  		
+						<div class="company_address">
 						<p>Luis Alberto de Herrera 1424 entre Pai Perez y Adva Perú</p>
-				   		<p>Tel : (021) 214-368</p>
+				   		<p><strong>Tel :</strong> (021) 214-368</p>
 				   		<p>Celular : (0981) 000 000</p>
 				   		<p>Fax: (000) 000 00 00 0</p>
 				 	 	<p>Email: <span><a href="mailto:info@example.com">mail@example.com</a></span></p>
+			    	 	</div>				     	
 				   </div>
 				   {{-- talento --}}
 				   <div class="trabaja_con_nosotros">
@@ -35,6 +42,7 @@
 				  		<span class="titulo">
 				  			Trabaja con nosotros!
 				  		</span>
+				  		{{-- <h3>Trabaja con nosotros</h3> --}}
 						<div class="separator  small center  " style="background-color: #FF6A13;height: 2px;"></div>				  		
 						<div class="company_address">
 					  		<p>Si quieres trabajar en <strong>EDBCONSTRUCCIONES</strong> envíanos tus datos y CV a través  Será estupendo poder conocernos y que formes parte de nuestra Empresa.</p>
