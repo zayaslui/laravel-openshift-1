@@ -42,7 +42,7 @@
 				  			<strong>Trabaja con nosotros</strong>
 				  		</span>
 						<div class="company_address">
-					  		<p>Si quieres trabajar en EDBCONSTRUCCIONES envíanos tus datos y CV a través del formulario de la sección <a href="/emprende_con_nosotros"><strong>“Emprende con nosotros“…</strong></a> Será estupendo poder conocernos y que formes parte de nuestra Empresa.</p>				
+					  		<p>Si quieres trabajar en EDBCONSTRUCCIONES envíanos tus datos y CV a través   <strong><a  class="link_talento" href="/emprende_con_nosotros">este formulario</a></strong> Será estupendo poder conocernos y que formes parte de nuestra Empresa.</p>				
 						</div>				  		
 				  	</p>
 					    <form>

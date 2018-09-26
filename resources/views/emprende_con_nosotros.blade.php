@@ -17,7 +17,7 @@
 				</div>				
 				<div class="col span_2_of_3">
 				  <div class="contact-form">
-				  	<h3 style="text-align: center;">Formulario de CV</h3>
+				  	<h3 style="text-align: center;">Formulario de Currículum Vitae</h3>
 				  	<div class="separator  small center  " style="background-color: #FF6A13;height: 2px;"></div>
 				  	<p>			  		
 				  	</p>

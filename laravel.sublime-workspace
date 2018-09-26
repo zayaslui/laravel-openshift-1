@@ -420,6 +420,24 @@
 			}
 		},
 		{
+			"file": "database/migrations/2018_09_25_151623_add_layerslider_obras_det.php",
+			"settings":
+			{
+				"buffer_size": 651,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/Obras_det.php",
+			"settings":
+			{
+				"buffer_size": 361,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
 			"file": "public/css/admin.css",
 			"settings":
 			{
@@ -531,10 +549,8 @@
 	[
 		"/var/www/html/laravel/laravel-openshift-1",
 		"/var/www/html/laravel/laravel-openshift-1/app",
-		"/var/www/html/laravel/laravel-openshift-1/resources",
-		"/var/www/html/laravel/laravel-openshift-1/resources/views",
-		"/var/www/html/laravel/laravel-openshift-1/resources/views/layersliders",
-		"/var/www/html/laravel/laravel-openshift-1/routes"
+		"/var/www/html/laravel/laravel-openshift-1/app/Http",
+		"/var/www/html/laravel/laravel-openshift-1/app/Http/Controllers"
 	],
 	"file_history":
 	[
@@ -669,7 +685,7 @@
 	],
 	"find":
 	{
-		"height": 41.0
+		"height": 29.0
 	},
 	"find_in_files":
 	{
@@ -865,7 +881,7 @@
 	"groups":
 	[
 		{
-			"selected": 3,
+			"selected": 5,
 			"sheets":
 			[
 				{
@@ -894,7 +910,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 6,
 					"type": "text"
 				},
 				{
@@ -924,7 +940,7 @@
 						"translation.y": 16241.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
@@ -952,7 +968,7 @@
 						"translation.y": 1400.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
@@ -978,14 +994,72 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 5220.0,
+						"translation.y": 10581.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "database/migrations/2018_09_25_151623_add_layerslider_obras_det.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 651,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								443,
+								443
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "app/Obras_det.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 361,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								248,
+								248
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
 					"type": "text"
 				},
 				{
-					"buffer": 4,
+					"buffer": 6,
 					"file": "public/css/admin.css",
 					"semi_transient": false,
 					"settings":
@@ -1011,11 +1085,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 7,
 					"type": "text"
 				},
 				{
-					"buffer": 5,
+					"buffer": 7,
 					"file": "app/Http/Controllers/ObrasController.php",
 					"semi_transient": false,
 					"settings":
@@ -1041,11 +1115,11 @@
 						"translation.y": 240.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 8,
 					"type": "text"
 				},
 				{
-					"buffer": 6,
+					"buffer": 8,
 					"file": "resources/views/layersliders/index.blade.php",
 					"semi_transient": false,
 					"settings":
@@ -1069,11 +1143,11 @@
 						"translation.y": 4380.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 4,
 					"type": "text"
 				},
 				{
-					"buffer": 7,
+					"buffer": 9,
 					"file": "app/Http/Controllers/LayerSlidersController.php",
 					"semi_transient": false,
 					"settings":
@@ -1099,11 +1173,11 @@
 						"translation.y": 600.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 7,
+					"stack_index": 9,
 					"type": "text"
 				},
 				{
-					"buffer": 8,
+					"buffer": 10,
 					"file": "routes/web.php",
 					"semi_transient": false,
 					"settings":
@@ -1127,7 +1201,7 @@
 						"translation.y": 1260.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 8,
+					"stack_index": 10,
 					"type": "text"
 				}
 			]
