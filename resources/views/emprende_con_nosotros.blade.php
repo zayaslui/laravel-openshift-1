@@ -24,7 +24,8 @@
 					</p>
 				</div>
 			</div>
-			<div class="contenedor_talento">
+
+			<div class="specials contenedor_talento">
 				<div class="section group">			
 					<div class="col span_1_of_3">
 						<div class="contact_info">
@@ -75,10 +76,9 @@
 					    </div>
 	  				</div>				
 				  </div>
-
 				</div>
-
 			  </div>
+
 			<!---End-contact---->
 			<div class="clear"> </div>
 		</div>
