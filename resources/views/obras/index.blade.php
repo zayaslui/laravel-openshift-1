@@ -62,6 +62,7 @@
 						 if(j=='titulo_obra'){titulo_obra = detalles[i][j]};
 						 if(j=='contenido_obra'){contenido_obra = detalles[i][j]};
 						 if(j=='imagen'){imagen = detalles[i][j]};
+						 if(j=='layersliders_id'){layersliders_id = detalles[i][j]};						 
 					}
 
 			    tabla+='<hr class="style12"/>';
@@ -80,9 +81,13 @@
 	                            '<td class="dos"><textarea class="form-control" id="style_edit" cols="10" rows="5" style="width: 100%; height: 100%;" disabled>'+contenido_obra+'</textarea></td>'+
 	                        '</tr>'+
 					        '<tr>'+
-					            '<td><strong>LayerSlider:</strong></td>'+
+					            '<td><strong>Imagen:</strong></td>'+
 					            '<td>'+imagen+'</td>'+
 					        '</tr>'+
+					        '<tr>'+
+					            '<td><strong>LayerSlider:</strong></td>'+
+					            '<td>'+layersliders_id+'</td>'+
+					        '</tr>'+					        
 					        '<tr>'+
 					            '<td><strong>Operaciones:</strong></td>'+
 					            '<td><a href="/obras/1" class="btn btn-sm btn-primary">show</a>'+

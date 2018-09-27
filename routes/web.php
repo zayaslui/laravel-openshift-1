@@ -29,9 +29,10 @@ Route::get('/services/prefabricacion','FrontController@servicios_prefabricacion'
 Route::get('/services/mineria','FrontController@servicios_mineria');
 Route::get('/services/concreto','FrontController@servicios_concreto');
 
-
 /*pruebas layers*/
-Route::get('layers','FrontController@layer_demo');
+Route::get('layer_demo','FrontController@layer_demo');
+Route::get('demo','FrontController@demo');
+Route::get('layerdata','FrontController@layerdata');
 /*pruebas layers*/
 Route::get('prueba','FrontController@prueba');
 

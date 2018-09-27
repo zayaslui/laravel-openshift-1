@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Obras;
 use App\Obras_det;
 use App\Prensa;
+use App\Layerslider;
 use Illuminate\Support\Facades\DB;
 
 class FrontController extends Controller
@@ -59,6 +60,10 @@ class FrontController extends Controller
       return view('layerslider');
    }
 
+   public function demo(){
+      return view('demo');
+   }
+
    public function obras_det(Request $request){
       // return view('obras_det');
       $detalles = Obras::find(1);
@@ -104,4 +109,11 @@ class FrontController extends Controller
     public function emprende_con_nosotros(){
       return view("emprende_con_nosotros");
     }
+
+     public function layerdata(){
+      /*reponse para generer el layerslider*/
+      // $layerslider = LayerSlider::find(1);
+      $html = '<div>hola</div>';
+      return $html;
+     }
 }
