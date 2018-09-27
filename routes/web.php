@@ -66,7 +66,7 @@ Route::delete('usuario/{user}','UsuariosController@destroy');
 
 Route::resources([
 								'layersliders'=>'LayerSlidersController',
-								// 'obras' => 'ObrasController',
+								'obras_' => 'ObrasController',
 							]);
 Route::get('listar_obras','ObrasController@listar_obras');
 
@@ -144,3 +144,8 @@ Route::post('password/email', 'Auth\ForgotPasswordController@sendResetLinkEmail'
 Route::get('password/reset/{token}', 'Auth\ResetPasswordController@showResetForm')->name('password.reset');
 Route::post('password/reset', 'Auth\ResetPasswordController@reset');
 Route::get('admin', 'HomeController@admin')->name('admin');
+
+
+
+// mail
+Route::get('mail', 'HomeController@mail');

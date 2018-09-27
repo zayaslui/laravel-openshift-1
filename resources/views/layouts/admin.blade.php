@@ -109,10 +109,10 @@
                             <a href="#"><i class="fa fa-child fa-fw"></i> Obras<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="{!!URL::to('/obras/create')!!}"><i class='fa fa-plus fa-fw'></i> Agregar</a>
+                                    <a href="{!!URL::to('/obras_/create')!!}"><i class='fa fa-plus fa-fw'></i> Agregar</a>
                                 </li>
                                 <li>
-                                    <a href="{!!URL::to('/obras')!!}"><i class='fa fa-list-ol fa-fw'></i> Generos</a>
+                                    <a href="{!!URL::to('/obras_')!!}"><i class='fa fa-list-ol fa-fw'></i> Obras</a>
                                 </li>
                             </ul>
                         </li>
