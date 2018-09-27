@@ -60,10 +60,11 @@ var s = document.createElement('script'); s.type = 'text/javascript'; s.async = 
 								<ul class="">
 									<li class="{{ Request::path() == '/' ? 'active' : '' }} social-links principal-icon"><a href="/">Principal</a></li>
 									<li class="{{ Request::path() == 'about' ? 'active' : '' }} social-links nosotros-icon"><a href="/about">Acerca de</a></li>
-									<li class="{{ Request::is('services/*')  || Request::path() == 'services' ? 'active' : '' }} social-links servicios-icon"><a href="/services">Servicios</a></li>
-									<li class="{{ Request::is('obras/*') || Request::is('obras_det/*') || Request::path() == 'obras' ? 'active' : '' }} social-links planes-icon"><a href="/obras">Obras</a></li>
-									<li class="{{ Request::path() == 'compromiso' ? 'active' : '' }}  social-links compromiso-icon"><a href="/compromiso">Compromiso</a></li>
-									<li class="{{ Request::path() == 'prensa' ? 'active' : '' }}  social-links prensa-icon"><a href="/prensa">Prensa</a></li>
+									<li class="{{ Request::is('services/*')  || Request::path() == 'services' ? 'active' : '' }} social-links servicios-icon"><a href="/services"></a></li>
+									<li class="{{ Request::is('obras/*') || Request::is('obras_det/*') || Request::path() == 'obras' ? 'active' : '' }} social-links planes-icon"><a href="/obras"></a></li>
+									<li class="{{ Request::path() == 'compromiso' ? 'active' : '' }}  social-links compromiso-icon"><a href="/compromiso"></a></li>
+									<li class="{{ Request::path() == 'emprende_con_nosotros' ? 'active' : '' }}  social-links talento-icon"><a href="/emprende_con_nosotros"></a></li>
+									<li class="{{ Request::path() == 'prensa' ? 'active' : '' }}  social-links prensa-icon"><a href="/prensa"></a></li>									
 									<li class="{{ Request::path() == 'contact' ? 'active' : '' }}  social-links contactos-icon"><a href="/contact">Contactos</a></li>																		
 								</ul>
 
