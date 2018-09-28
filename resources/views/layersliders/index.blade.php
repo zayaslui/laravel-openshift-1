@@ -17,7 +17,8 @@
       <tr>
          <th></th>
          <th>Id</th>
-         <th>tabla</th>
+         <th>target</th>
+         <th>descripcion</th>         
          <th>clase</th>
          <th>style</th>
          <th>Controles</th>         
@@ -265,6 +266,7 @@
 			            },
                         {data :"id", name:"id", className:"desktop"},
                         { data: "tabla", name: "name",className:"min-tablet" },
+                        { data: "descripcion", name: "descripcion",className:"min-tablet" },                        
                         { data: "clase", name: "clase",className:"all" },
                         { data: "style", name: "style",className:"all" },
                         {
