@@ -1,7 +1,5 @@
 @extends('layouts.principal')
 @section('content')
-{{-- cargar el html de layerslider --}}
-
 
 <!---start-content---->
 <div class="content">	
@@ -10,23 +8,17 @@
 	</div>
 </div>
 
-		<script>
-			$(document).ready(function(){
-				$.ajax({
-					type:'POST',
-					url:'layerdata',
-					// data:'',
-					sucess:function(data){
-						/*realizar el append*/
-						// $("#slider-wrapper").append(data);
-						console.log(data);
-					},
-
-				})
-			});
-
-
-	</script>
+<script>
+$.ajax({
+      url: 'puta',
+      type: "post",
+      headers: { 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
+      data: {},
+      success: function(data){
+      console.log(data);
+      }
+    });
+</script>
 
 
 @stop

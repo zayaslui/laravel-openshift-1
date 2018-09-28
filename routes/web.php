@@ -32,7 +32,8 @@ Route::get('/services/concreto','FrontController@servicios_concreto');
 /*pruebas layers*/
 Route::get('layer_demo','FrontController@layer_demo');
 Route::get('demo','FrontController@demo');
-Route::get('layerdata','FrontController@layerdata');
+
+Route::post('puta','FrontController@puta');
 /*pruebas layers*/
 Route::get('prueba','FrontController@prueba');
 

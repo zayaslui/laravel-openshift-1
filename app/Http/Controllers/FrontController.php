@@ -109,11 +109,28 @@ class FrontController extends Controller
     public function emprende_con_nosotros(){
       return view("emprende_con_nosotros");
     }
+    public function puta(){
+      $layerslider = Layerslider::find(1);
+      $sliders = $layerslider->sliders;
+      //crear el layerslider
+      $html='';
+      $html.=
+              '
+              <!-- apertura layerslider -->
+              <div id="layerslider" class="layerslider centrar" style="'.$layerslider->style.'">';
+              for($i=0;$i<count($sliders);$i++){
+                foreach ($sliders[$i] as $key => $value) {
+                    $html .= $sliders[$i];
+                }
+              }
 
-     public function layerdata(){
-      /*reponse para generer el layerslider*/
-      // $layerslider = LayerSlider::find(1);
-      $html = '<div>hola</div>';
+      $html.=
+              '
+              </div>
+              <!-- cierre layerslider -->
+              ';
+
       return $html;
-     }
+    } 
+
 }
