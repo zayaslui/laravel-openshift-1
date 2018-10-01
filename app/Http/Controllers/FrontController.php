@@ -118,11 +118,11 @@ class FrontController extends Controller
               '
               <!-- apertura layerslider -->
               <div id="layerslider" class="layerslider centrar" style="'.$layerslider->style.'">';
-              for($i=0;$i<count($sliders);$i++){
-                foreach ($sliders[$i] as $key => $value) {
-                    $html .= $sliders[$i];
+                for($i=0;$i<count($sliders);$i++){
+                  foreach ($sliders[$i] as $key => $value) {
+                      $html .= $sliders[$i];
+                  }
                 }
-              }
 
       $html.=
               '
