@@ -33,7 +33,7 @@ Route::get('/services/concreto','FrontController@servicios_concreto');
 Route::get('layer_demo','FrontController@layer_demo');
 Route::get('demo','FrontController@demo');
 
-Route::post('puta','FrontController@puta');
+Route::post('create_layerslider','FrontController@create_layerslider');
 /*pruebas layers*/
 Route::get('prueba','FrontController@prueba');
 

@@ -109,7 +109,7 @@ class FrontController extends Controller
     public function emprende_con_nosotros(){
       return view("emprende_con_nosotros");
     }
-    public function puta(){
+    public function create_layerslider(){
       $layerslider = Layerslider::find(3);
       $src_path = "";
       switch ($layerslider->tabla) {
