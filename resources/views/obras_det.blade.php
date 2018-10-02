@@ -48,13 +48,13 @@
 				                // contentType: false,
 				                // processData: false,
 				                success:function(response) {
-				                	console.log(response);
+				                	console.log(JSON.parse(response));
 				                	var layer = JSON.parse(response)[0].layer;
 				                	var info = JSON.parse(response)[0].contenido_obra;
 				                	var titulo = JSON.parse(response)[0].titulo_obra;
 				                	
 				                	this.createTitulo(titulo);
-				                    this.createSlider(layer);
+				                    // this.createSlider(layer);
 				                    this.createInformacion(info);
 				                },
 				                createTitulo:function(titulo){

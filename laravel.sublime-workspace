@@ -4,16 +4,24 @@
 		"selected_items":
 		[
 			[
+				"layer",
+				"layerslider_id"
+			],
+			[
+				"layerslider",
+				"layerslider_id"
+			],
+			[
+				"create",
+				"create_layerslider"
+			],
+			[
 				"sc",
 				"script"
 			],
 			[
 				"pa",
 				"src_path"
-			],
-			[
-				"layer",
-				"layerslider"
 			],
 			[
 				"data",
@@ -407,7 +415,7 @@
 			"file": "resources/views/demo.blade.php",
 			"settings":
 			{
-				"buffer_size": 2749,
+				"buffer_size": 559,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -443,7 +451,61 @@
 			"file": "app/Http/Controllers/FrontController.php",
 			"settings":
 			{
-				"buffer_size": 4221,
+				"buffer_size": 2604,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/Http/Controllers/ServicesController.php",
+			"settings":
+			{
+				"buffer_size": 3723,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "resources/views/obras_det.blade.php",
+			"settings":
+			{
+				"buffer_size": 4535,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/Layerslider.php",
+			"settings":
+			{
+				"buffer_size": 380,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/Obras_det.php",
+			"settings":
+			{
+				"buffer_size": 366,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/Obras.php",
+			"settings":
+			{
+				"buffer_size": 274,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "routes/web.php",
+			"settings":
+			{
+				"buffer_size": 6089,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -527,12 +589,16 @@
 	"expanded_folders":
 	[
 		"/var/www/html/laravel/laravel-openshift-1",
-		"/var/www/html/laravel/laravel-openshift-1/resources",
-		"/var/www/html/laravel/laravel-openshift-1/resources/views",
-		"/var/www/html/laravel/laravel-openshift-1/resources/views/sliders"
+		"/var/www/html/laravel/laravel-openshift-1/app",
+		"/var/www/html/laravel/laravel-openshift-1/app/Http",
+		"/var/www/html/laravel/laravel-openshift-1/database",
+		"/var/www/html/laravel/laravel-openshift-1/database/migrations"
 	],
 	"file_history":
 	[
+		"/var/www/html/laravel/laravel-openshift-1/database/migrations/2018_10_02_144229_add_foreign_key_obras_det.php",
+		"/var/www/html/laravel/laravel-openshift-1/database/migrations/2018_10_02_144039_add_foreign_key_layersliders.php",
+		"/var/www/html/laravel/laravel-openshift-1/app/Http/Controllers/UsuariosController.php",
 		"/var/www/html/laravel/laravel-openshift-1/database/migrations/2018_09_28_050016_add_column_script_layerslider.php",
 		"/var/www/html/laravel/laravel-openshift-1/database/migrations/2018_09_06_143404_change_campo_layers.php",
 		"/var/www/html/laravel/laravel-openshift-1/app/Http/Controllers/LayersController.php",
@@ -565,7 +631,6 @@
 		"/var/www/html/laravel/laravel-openshift-1/resources/views/layerslider.blade.php",
 		"/var/www/html/laravel/laravel-openshift-1/database/migrations/2018_09_25_151623_add_layerslider_obras_det.php",
 		"/var/www/html/laravel/laravel-openshift-1/app/Obras_det.php",
-		"/var/www/html/laravel/laravel-openshift-1/app/Http/Controllers/UsuariosController.php",
 		"/var/www/html/laravel/laravel-openshift-1/.gitignore",
 		"/home/luis/Documentos/datos/datos.sql",
 		"/home/luis/Documentos/datos/usuarios.sql",
@@ -658,9 +723,7 @@
 		"/var/www/html/laravel/laravel-openshift-1/app/Http/Kernel.php",
 		"/var/www/html/laravel/my_app/app/Http/Controllers/GeneroController.php",
 		"/var/www/html/laravel/laravel-openshift-1/database/migrations/2018_07_19_131315_add_column_slug.php",
-		"/var/www/html/laravel/laravel-openshift-1/app/Providers/RouteServiceProvider.php",
-		"/var/www/html/laravel/laravel-openshift-1/app/Http/Controllers/ErrorHandlerController.php",
-		"/var/www/html/laravel/laravel-openshift-1/composer.lock"
+		"/var/www/html/laravel/laravel-openshift-1/app/Providers/RouteServiceProvider.php"
 	],
 	"find":
 	{
@@ -679,6 +742,10 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"$this->services",
+			"services",
+			"Faker",
+			"obras_det",
 			"edit",
 			"edit_form",
 			"file",
@@ -802,11 +869,7 @@
 			"css",
 			"$Route",
 			"this->",
-			"this",
-			"'",
-			"listar_usuario",
-			"update",
-			"store"
+			"this"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -861,7 +924,7 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 8,
 			"sheets":
 			[
 				{
@@ -870,15 +933,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2749,
+						"buffer_size": 559,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								531,
-								531
+								522,
+								522
 							]
 						],
 						"settings":
@@ -891,7 +954,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 11,
 					"type": "text"
 				},
 				{
@@ -916,10 +979,10 @@
 							"syntax": "Packages/Laravel Blade Highlighter/blade.sublime-syntax"
 						},
 						"translation.x": 0.0,
-						"translation.y": 6480.0,
+						"translation.y": 220.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 10,
 					"type": "text"
 				},
 				{
@@ -946,10 +1009,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 13300.0,
+						"translation.y": 13000.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 9,
 					"type": "text"
 				},
 				{
@@ -965,8 +1028,8 @@
 						"selection":
 						[
 							[
-								2054,
-								2054
+								2008,
+								2008
 							]
 						],
 						"settings":
@@ -976,7 +1039,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 2440.0,
+						"translation.y": 2461.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 4,
@@ -988,15 +1051,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4221,
+						"buffer_size": 2604,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3901,
-								3901
+								2311,
+								2311
 							]
 						],
 						"settings":
@@ -1006,14 +1069,189 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 2840.0,
+						"translation.y": 1840.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "app/Http/Controllers/ServicesController.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3723,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3548,
+								3548
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1980.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "resources/views/obras_det.blade.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4535,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1317,
+								1317
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Laravel Blade Highlighter/blade.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 830.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "app/Layerslider.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 380,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								379,
+								379
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 3,
 					"type": "text"
 				},
 				{
-					"buffer": 5,
+					"buffer": 8,
+					"file": "app/Obras_det.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 366,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								366,
+								366
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "app/Obras.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 274,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								186,
+								186
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "routes/web.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6089,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1811,
+								1811
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 420.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 11,
 					"file": "resources/views/layerslider.blade.php",
 					"semi_transient": false,
 					"settings":
@@ -1035,7 +1273,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 11480.0,
+						"translation.y": 900.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 5,

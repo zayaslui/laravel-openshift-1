@@ -19,4 +19,5 @@ class Obras_det extends Model
     public function obras(){
     	return $this->belongsTo('App\Obras');
     }
+    
 }

@@ -11,8 +11,12 @@ class Layerslider extends Model
     protected $fillable = [
         'tabla', 'clase','style'
     ];    
+
     public function sliders(){
      	return $this->hasMany('App\Slider');
      }
-     
+
+    public function obras_detalles(){
+    	return $this->belongsTo('App\Obras');
+    }
 }

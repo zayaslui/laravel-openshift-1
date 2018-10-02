@@ -9,9 +9,17 @@ use App\Obras_det;
 use App\Prensa;
 use App\Layerslider;
 use Illuminate\Support\Facades\DB;
+use App\Http\Controllers\ServicesController;
+
 
 class FrontController extends Controller
 {
+
+    protected $services;
+    
+    public function __construct(){
+        $this->services = new ServicesController();
+    }
 
     public function index(){
         return View('index');
@@ -64,7 +72,7 @@ class FrontController extends Controller
       return view('demo');
    }
 
-   public function obras_det(Request $request){
+   public function obras_det(Request $request,$id){
       // return view('obras_det');
       $detalles = Obras::find(1);
       return response()->view('obras_det');
@@ -92,12 +100,14 @@ class FrontController extends Controller
             return json_encode($dato);
         }
     }
-
+    //singleObras
     public function detalle_obra(Request $request){
 
       if($request->ajax()){
-        $dato = Obras::find($request->id)->detalles;
-        return json_encode($dato);
+        $obras_det = Obras::find($request->id)->detalles;
+        $layerslider =  Layerslider::find(1);
+
+        return json_encode(compact('obras_det'));
       }
       
     }
@@ -109,78 +119,9 @@ class FrontController extends Controller
     public function emprende_con_nosotros(){
       return view("emprende_con_nosotros");
     }
+
     public function create_layerslider(){
-      $layerslider = Layerslider::find(3);
-      $src_path = "";
-      switch ($layerslider->tabla) {
-        case 'obras':
-            $src_path = "/images/layers/obras/";
-          break;
-        case 'principal':
-            $src_path = "/images/layers/principal/";
-          break;        
-      }
-
-      //crear el layerslider
-      $html='';
-      $html.=
-              '
-              <!-- apertura layerslider -->
-
-              <div id="layerslider" class="layerslider centrar" style="'.$layerslider->style.'">';
-                for($i=0;$i<count($sliders);$i++){
-                  foreach ($sliders[$i] as $key => $value) {
-                      $html .= $sliders[$i];
-                  }
-                }
-
-      $html.='
-
-              <div id="layerslider" class="layerslider centrar" style="'.$layerslider->style.'">
-              ';
-              foreach ($layerslider->sliders as $slider) {
-                //recorrer el interior del div slider
-                $html.='<div class="'.$slider->clase.'" data-ls="'.$slider->data_ls.'">';
-                //recorre layer
-
-                foreach ($slider->layers as $layer) {
-                  if($layer->tipo == 'imagen'){
-                    $html .= '
-                    <img class="'.$layer->clase.'" src="'.$src_path.$layer->src.'">
-                    '; 
-                  }
-                  if($layer->tipo=='parrafo'){
-                    $html.= '
-                          <p class="'.$layer->clase.'" data-ls="'.$layer->data_ls.'" alt="" style="'.$layer->style.'" >'.$layer->descripcion.'</p>
-                          ';
-                  }
-                }
-                $html.='
-                </div>
-                ';                  
-              }
-              $html.='
-                </div>
-                          ';
-      $html .=
-              '
-              </div>
-              <!-- cierre layerslider -->
-              ';
-
-      $script=
-      '
-      <script>
-              function start(){
-                $("#layerslider").layerSlider({
-                          '.$layerslider->script.'
-                  });
-              }
-              start();
-      </script>
-      ';
-      $arr = ['html'=>$html,'script'=>$script];
-      return compact('arr');
-    } 
+        return $this->services->create_layerslider(); 
+    }
 
 }
