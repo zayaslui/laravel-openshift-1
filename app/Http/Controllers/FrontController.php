@@ -106,7 +106,6 @@ class FrontController extends Controller
       if($request->ajax()){
         $obras_det = Obras::find($request->id)->detalles;
         $layerslider =  Layerslider::find(1);
-
         return json_encode(compact('obras_det'));
       }
       

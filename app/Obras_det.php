@@ -16,8 +16,11 @@ class Obras_det extends Model
        	'layerslider_id'
     ];
 
-    public function obras(){
-    	return $this->belongsTo('App\Obras');
+    public function sliders(){
+      return $this->hasMany('App\Slider');
     }
-    
+
+    public function layersliders(){
+      return $this->belongsTo('App\Layerslider');
+    }    
 }
