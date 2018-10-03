@@ -19,5 +19,9 @@ class Obras_det extends Model
     public function obras(){
     	return $this->belongsTo('App\Obras');
     }
-    
+
+    public function detalle(){
+      return $this->belongsTo('App\Layerslider','layerslider_id');
+     }
+
 }

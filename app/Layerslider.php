@@ -17,6 +17,7 @@ class Layerslider extends Model
      }
 
     public function obras_detalles(){
-    	return $this->belongsTo('App\Obras');
+      return $this->hasMany('App\Obras_det');
     }
+
 }

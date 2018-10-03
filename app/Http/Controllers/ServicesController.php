@@ -43,8 +43,9 @@ class ServicesController extends Controller
             ->get();
         }    
 
-            public function create_layerslider(){
-      $layerslider = Layerslider::find(3);
+public function create_layerslider($id){
+    if(!isset($id)) return "layerSlider is Empty";
+      $layerslider = Layerslider::findOrFail(1);
       $src_path = "";
       switch ($layerslider->tabla) {
         case 'obras':
@@ -62,21 +63,15 @@ class ServicesController extends Controller
               <!-- apertura layerslider -->
 
               <div id="layerslider" class="layerslider centrar" style="'.$layerslider->style.'">';
-                // for($i=0;$i<count($sliders);$i++){
-                //   foreach ($sliders[$i] as $key => $value) {
-                //       $html .= $sliders[$i];
-                //   }
-                // }
 
-      $html.='
+      // $html.='
 
-              <div id="layerslider" class="layerslider centrar" style="'.$layerslider->style.'">
-              ';
+      //         <div id="layerslider" class="layerslider centrar" style="'.$layerslider->style.'">
+      //         ';
               foreach ($layerslider->sliders as $slider) {
                 //recorrer el interior del div slider
                 $html.='<div class="'.$slider->clase.'" data-ls="'.$slider->data_ls.'">';
                 //recorre layer
-
                 foreach ($slider->layers as $layer) {
                   if($layer->tipo == 'imagen'){
                     $html .= '
@@ -93,9 +88,9 @@ class ServicesController extends Controller
                 </div>
                 ';                  
               }
-              $html.='
-                </div>
-                          ';
+              // $html.='
+              //   </div>
+              //             ';
       $html .=
               '
               </div>

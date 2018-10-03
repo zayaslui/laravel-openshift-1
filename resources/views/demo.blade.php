@@ -12,11 +12,12 @@
 </div>
 <script>
 $.ajax({
-      url: 'create_layerslider',
+      url: 'create_layerslider_demo',
       type: "post",
       headers: { 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
       data: {},
       success: function(data){
+        console.log(data);
         $("#slider-wrapper").append(data.arr.html);
         $("#script_start_layerslider").append(data.arr.script);
       }

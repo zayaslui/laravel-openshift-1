@@ -14,10 +14,8 @@
 			<div class="clear"> </div>
 			
 		{{ csrf_field() }}
-		<div id="layer_">
-				
-		</div>
-
+			<div id="slider-wrapper">
+			</div>
 
 			<div class="testmonials">
 				<div class="wrap">
@@ -30,6 +28,9 @@
 			<div class="clear"> </div>
 </div>
 {{-- end content --}}
+<div id="script_start_layerslider">
+  
+</div>
 
 {{-- script listar obras --}}
 		<script>
@@ -48,11 +49,17 @@
 				                // contentType: false,
 				                // processData: false,
 				                success:function(response) {
-				                	console.log(JSON.parse(response));
-				                	var layer = JSON.parse(response)[0].layer;
-				                	var info = JSON.parse(response)[0].contenido_obra;
-				                	var titulo = JSON.parse(response)[0].titulo_obra;
+
+				                	var layer = JSON.parse(response).response.layerslider.arr.html;
+				                	var info = JSON.parse(response).response.obras_det.contenido_obra;
+				                	var titulo = JSON.parse(response).response.obras_det.titulo_obra;
+				                	var script = JSON.parse(response).response.layerslider.arr.script;
 				                	
+				                	$("#slider-wrapper").append(layer);
+							        $("#script_start_layerslider").append(script);
+
+				                	console.log(JSON.parse(response).response.layerslider);
+
 				                	this.createTitulo(titulo);
 				                    // this.createSlider(layer);
 				                    this.createInformacion(info);
@@ -68,56 +75,56 @@
 									this.load_script();
 				                },
 				                load_script:function(){
-										$("#layerslider").layerSlider({
-												pauseOnHover: false,
-												skinsPath: '/skins/',
-									            width : '75%',
-									            height : '500px',
-									            responsive : true,
-									            responsiveUnder : 960,
-									            sublayerContainer : 900,
-									            autoStart : true,
-									            pauseOnHover : true,
-									            firstLayer : 1,
-									            animateFirstLayer : true,
-									            randomSlideshow : false,
-									            twoWaySlideshow : true,
-									            loops : 0,
-									            forceLoopNum : true,
-									            autoPlayVideos : true,
-									            autoPauseSlideshow : 'auto',
-									            // youtubePreview : 'maxresdefault.jpg',
-									            keybNav : true,
-									            touchNav : true,
-									            // skin : '',
-									            // globalBGColor : 'transparent',
-												navPrevNext : true,
-									            navStartStop : true,
-									            navButtons : true,
-									            hoverPrevNext : true,
-									            hoverBottomNav : false,
-									            showBarTimer : false,
-									            showCircleTimer : true,
-									            thumbnailNavigation : 'disabled',
-									            tnWidth : 100,
-									            tnHeight : 60,
-									            tnContainerWidth : '60%',
-									            tnActiveOpacity : 35,
-									            tnInactiveOpacity : 100,
-									            imgPreload : true,
-									    		yourLogo : false,
-									            yourLogoStyle : 'left: 10px; top: 10px;',
-									            yourLogoLink : false,
-									            yourLogoTarget : '_self',
-									            cbInit : function(element) { },
-									            cbStart : function(data) { },
-									            cbStop : function(data) { },
-									            cbPause : function(data) { },
-									            cbAnimStart : function(data) { },
-									            cbAnimStop : function(data) { },
-									            cbPrev : function(data) { },
-									            cbNext : function(data) { }
-											});
+										// $("#layerslider").layerSlider({
+										// 		pauseOnHover: false,
+										// 		skinsPath: '/skins/',
+									 //            width : '75%',
+									 //            height : '500px',
+									 //            responsive : true,
+									 //            responsiveUnder : 960,
+									 //            sublayerContainer : 900,
+									 //            autoStart : true,
+									 //            pauseOnHover : true,
+									 //            firstLayer : 1,
+									 //            animateFirstLayer : true,
+									 //            randomSlideshow : false,
+									 //            twoWaySlideshow : true,
+									 //            loops : 0,
+									 //            forceLoopNum : true,
+									 //            autoPlayVideos : true,
+									 //            autoPauseSlideshow : 'auto',
+									 //            // youtubePreview : 'maxresdefault.jpg',
+									 //            keybNav : true,
+									 //            touchNav : true,
+									 //            // skin : '',
+									 //            // globalBGColor : 'transparent',
+										// 		navPrevNext : true,
+									 //            navStartStop : true,
+									 //            navButtons : true,
+									 //            hoverPrevNext : true,
+									 //            hoverBottomNav : false,
+									 //            showBarTimer : false,
+									 //            showCircleTimer : true,
+									 //            thumbnailNavigation : 'disabled',
+									 //            tnWidth : 100,
+									 //            tnHeight : 60,
+									 //            tnContainerWidth : '60%',
+									 //            tnActiveOpacity : 35,
+									 //            tnInactiveOpacity : 100,
+									 //            imgPreload : true,
+									 //    		yourLogo : false,
+									 //            yourLogoStyle : 'left: 10px; top: 10px;',
+									 //            yourLogoLink : false,
+									 //            yourLogoTarget : '_self',
+									 //            cbInit : function(element) { },
+									 //            cbStart : function(data) { },
+									 //            cbStop : function(data) { },
+									 //            cbPause : function(data) { },
+									 //            cbAnimStart : function(data) { },
+									 //            cbAnimStop : function(data) { },
+									 //            cbPrev : function(data) { },
+									 //            cbNext : function(data) { }
+										// 	});
 				                },
 				                //bendito 
 						        error: function(data) {

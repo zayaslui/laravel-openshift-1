@@ -103,12 +103,15 @@ class FrontController extends Controller
     //singleObras
     public function detalle_obra(Request $request){
 
-      if($request->ajax()){
-        $obras_det = Obras::find($request->id)->detalles;
-        $layerslider =  Layerslider::find(1);
-
-        return json_encode(compact('obras_det'));
-      }
+        if($request->ajax()){
+          /*info para obras_det*/
+          $obras_det = Obras_det::findOrFail($request->id);
+          /*info para layersliders asociado a obras_det*/
+          //usar el servicio de laytersliders
+          $layerslider =   $this->services->create_layerslider($obras_det->layerslider_id);
+          $response  = ["obras_det"=>$obras_det,"layerslider"=>$layerslider];
+          return json_encode(compact('response'));
+        }
       
     }
 
@@ -120,8 +123,8 @@ class FrontController extends Controller
       return view("emprende_con_nosotros");
     }
 
-    public function create_layerslider(){
-        return $this->services->create_layerslider(); 
+    public function create_layerslider_demo(){
+        return $this->services->create_layerslider(1); 
     }
 
 }
