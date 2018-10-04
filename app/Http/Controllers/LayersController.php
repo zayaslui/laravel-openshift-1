@@ -123,7 +123,8 @@ class LayersController extends Controller
 
             $layer->save();
 
-            return response()->json($layer);
+            return response()->json($request);
+
     }
 
     /**

@@ -239,7 +239,7 @@
                       <div class="form-group">
                           <label class="control-label col-sm-2" for="descripcion_edit">descripcion</label>
                           <div class="col-sm-10">
-                              <input type="text" class="form-control" id="descripcion_edit" >
+                              <input type="text" class="form-control" id="descripcion_edit" neme="descripcion_edit">
                               <small>Min: 2, Max: 32, only text</small>
                               <p class="errorTitle text-center alert alert-danger hidden"></p>
                           </div>
@@ -249,6 +249,14 @@
                           <label class="control-label col-sm-2" for="data_ls_edit">Data-ls</label>
                           <div class="col-sm-10">
                             <textarea class="form-control" id="data_ls_edit" name="data_ls_edit" cols="40" rows="5"  ></textarea>
+                              <small>Min: 2, Max: 32, only text</small>
+                              <p class="errorTitle text-center alert alert-danger hidden"></p>
+                          </div>
+                      </div>
+                      <div class="form-group">
+                          <label class="control-label col-sm-2" for="style_edit">Style</label>
+                          <div class="col-sm-10">
+                            <textarea class="form-control" id="style_edit" name="style_edit" cols="40" rows="5"  ></textarea>
                               <small>Min: 2, Max: 32, only text</small>
                               <p class="errorTitle text-center alert alert-danger hidden"></p>
                           </div>
@@ -339,6 +347,14 @@
                               <p class="errorTitle text-center alert alert-danger hidden"></p>
                           </div>
                       </div>
+                      <div class="form-group">
+                          <label class="control-label col-sm-2" for="style_show">Style</label>
+                          <div class="col-sm-10">
+                               <textarea class="form-control" id="style_show" name="style_show" cols="40" rows="5"  disabled></textarea>
+                              <small>Min: 2, Max: 32, only text</small>
+                              <p class="errorTitle text-center alert alert-danger hidden"></p>
+                          </div>
+                      </div>                      
                   </form>
                   <div class="modal-footer">
                       <button type="button" class="btn btn-warning" data-dismiss="modal">
@@ -548,22 +564,6 @@
             $('#showModal').modal('show');
         });
 
-        // edit a layer
-        $(document).on('click', '.edit-modal', function() {
-            var table = $('#layers').DataTable();
-            var data = table.row( $(this).parents('tr') ).data();
-            $('.modal-title').text('Edit');
-            // $('#id').val(data["id"]);
-            $('#slider_id_edit').val(data["slider_id"]);
-            $('#tipo_edit').val(data["tipo"]);
-            $('#clase_edit').val(data["clase"]);
-            // $('#src_edit').val(data["src"]);
-            $('#otros_edit').val(data["otros"]);
-            $('#descripcion_edit').val(data["descripcion"]);
-            $('#data_ls_edit').val(data["data_ls"]);
-            $('#style_edit').val(data["style"]);
-            $('#editModal').modal('show');
-        });
 
         //delete layer
       // $(document).on('click', '.delete-modal', function() {
@@ -614,21 +614,37 @@
               $("#src_edit").val("");
           });
 
+       // edit a layer
+        $(document).on('click', '.edit-modal', function() {
+
+            var table = $('#layers').DataTable();
+            var data = table.row( $(this).parents('tr') ).data();
+            $('.modal-title').text('Edit');
+            $('#slider_id_edit').val(data["slider_id"]);
+            $('#tipo_edit').val(data["tipo"]);
+            $('#clase_edit').val(data["clase"]);
+            // $('#src_edit').val(data["src"]);
+            $('#otros_edit').val(data["otros"]);
+            $('#descripcion_edit').val(data["descripcion"]);
+            $('#data_ls_edit').val(data["data_ls"]);
+            $('#style_edit').val(data["style"]);
+            $('#editModal').modal('show');
+        });
           // edit
           //problema https://laravel.com/docs/5.2/routing#form-method-spoofing
           $('.modal-footer').on('click', '.edit', function() {
                     //obtener id del modal-edit
                     //set null input;
-                    
+
+                    console.log($('#descripcion_edit').val());
+
                     var formulario = $('#edit_form')[0]; //capturar el formulario
                     var formData = new FormData(formulario); //crear un formData
                     var inputFile = document.querySelector('#src_edit');
                     //formData.append('src', $("#src_edit").get(0).files);
                     // $("#fileInput")[0].files[0].name;
-                    formData.append('src','oiko');
                     formData.append('slider_id',$('#slider_id_edit').val());
                     formData.append('tipo',$('#tipo_edit').val());
-                    formData.append('tipo', $('#tipo_edit').val());
                     formData.append('clase', $('#clase_edit').val());
                     //formData.append('src',$("#src_edit").val());
                     //formData.append('src',$("#src_edit").get(0).files);
@@ -722,13 +738,14 @@
                           error: function(data) {
                               var errors = data.responseJSON;
                               console.log(errors);
+                          },
+                          beforeSend:function(data){
+
                           }
                       });
                   });          
 </script>
 {{-- ajax crud --}}
-
-
 
             <script>
                 var table = $('#layers').DataTable({
@@ -823,10 +840,10 @@
                         '</tr>'+
                         '<tr style="width:100px;">'+
                             '<td class="uno"><strong>Data_ls:</strong></td>'+
-                            '<td class="dos"> <textarea class="form-control" id="data_ls_edit" cols="10" rows="5" style="width: 435px; height: 127px;" disabled>'+d.data_ls+'</textarea></td>'+
+                            '<td class="dos"> <textarea class="form-control" id="data_ls_edit_'+d.id+'" cols="10" rows="5" style="width: 435px; height: 127px;" disabled>'+d.data_ls+'</textarea></td>'+
                         '</tr>'+
                             '<td class="uno"><strong>Style:</strong></td>'+
-                            '<td class="dos"><textarea class="form-control" id="style_edit" cols="10" rows="5" style="width: 100%; height: 100%;" disabled>'+d.style+'</textarea></td>'+
+                            '<td class="dos"><textarea class="form-control" id="style_edit_'+d.id+'" cols="10" rows="5" style="width: 100%; height: 100%;" disabled>'+d.style+'</textarea></td>'+
                         '</tr>'+
                         '<tr class="">'+
                             '<td><strong>Otros:</strong></td>'+
