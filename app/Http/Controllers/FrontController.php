@@ -124,7 +124,7 @@ class FrontController extends Controller
     }
 
     public function create_layerslider_demo(){
-        return $this->services->create_layerslider(1); 
+        return $this->services->create_layerslider(3); 
     }
 
 }

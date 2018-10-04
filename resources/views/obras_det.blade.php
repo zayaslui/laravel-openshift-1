@@ -39,7 +39,7 @@
 				$.ajax({
 			                    headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
 				                url: '/singleObras/'+id,
-				                datatType : 'json',
+				                // datatType : 'text',
 				                type: 'post',
 				                data: {
 									        name: 'John Smith',
@@ -58,7 +58,6 @@
 				                	$("#slider-wrapper").append(layer);
 							        $("#script_start_layerslider").append(script);
 
-				                	console.log(JSON.parse(response).response.layerslider);
 
 				                	this.createTitulo(titulo);
 				                    // this.createSlider(layer);

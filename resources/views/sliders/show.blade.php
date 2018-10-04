@@ -151,7 +151,7 @@
                       <div class="form-group">
                           <label class="control-label col-sm-2" for="data_ls">Data-ls</label>
                           <div class="col-sm-10">
-                              <input type="text" class="form-control" id="data_ls" name="data_ls">
+                              <textarea class="form-control" id="data_ls" name="data_ls" cols="40" rows="5"  ></textarea>
                               <small>Min: 2, Max: 32, only text</small>
                               <p class="errorTitle text-center alert alert-danger hidden"></p>
                           </div>
@@ -160,7 +160,7 @@
                       <div class="form-group">
                           <label class="control-label col-sm-2" for="style">Style</label>
                           <div class="col-sm-10">
-                              <input type="text" class="form-control" id="style" name="style">
+                              <textarea class="form-control" id="style" cols="40" rows="5"  ></textarea>
                               <small>Min: 2, Max: 32, only text</small>
                               <p class="errorTitle text-center alert alert-danger hidden"></p>
                           </div>
@@ -248,7 +248,7 @@
                       <div class="form-group">
                           <label class="control-label col-sm-2" for="data_ls_edit">Data-ls</label>
                           <div class="col-sm-10">
-                            <textarea class="form-control" id="data_ls_edit" cols="40" rows="5"  ></textarea>
+                            <textarea class="form-control" id="data_ls_edit" name="data_ls_edit" cols="40" rows="5"  ></textarea>
                               <small>Min: 2, Max: 32, only text</small>
                               <p class="errorTitle text-center alert alert-danger hidden"></p>
                           </div>
@@ -334,7 +334,7 @@
                       <div class="form-group">
                           <label class="control-label col-sm-2" for="data_ls_show">Data-ls</label>
                           <div class="col-sm-10">
-                              <input type="text" class="form-control" id="data_ls_show" disabled>
+                               <textarea class="form-control" id="data_ls_show" name="data_ls_show" cols="40" rows="5"  disabled></textarea>
                               <small>Min: 2, Max: 32, only text</small>
                               <p class="errorTitle text-center alert alert-danger hidden"></p>
                           </div>
@@ -444,13 +444,13 @@
             $('.modal-title').text('Add');
             $('#slider_id').val(window.location.href.substring(window.location.href.lastIndexOf('/') + 1));
             // $('#slider_id').val(1);
-            $('#tipo').val("tipo");
-            $('#clase').val("clase");
+            $('#tipo').val("");
+            $('#clase').val("");
             // $('#src').val("");
-            $('#otros').val("otros");
-            $('#descripcion').val("descripcion");
-            $('#data_ls').val("data_ls");
-            $('#style').val("style");            
+            $('#otros').val("");
+            $('#descripcion').val("");
+            $('#data_ls').val("");
+            $('#style').val("");
             $('#addModal').modal('show');
         });
 
@@ -638,7 +638,7 @@
                     formData.append('otros', $('#otros_edit').val());
                     formData.append('descripcion', $('#descripcion_edit').val());
                     formData.append('data_ls', $('#data_ls_edit').val());                    
-                    formData.append('style', $('#style_edit').val())                    
+                    formData.append('style', $('#style_edit').val());     
 
                     console.log(formData);
                     var token = "{{ csrf_token() }}";
@@ -762,7 +762,7 @@
                                       "data": null,
                                       "defaultContent":'',
                                       render : function ( data, type, full, meta ) {
-                                          return '<a class="show-modal btn btn-sm btn-success"><i class="fa fa-eye"></i></a>'+
+                                          return '<a class="show-modal btn btn-sm btn-success" id="show_'+data.id+'"><i class="fa fa-eye"></i></a>'+
                                           '<a class="edit-modal btn btn-sm btn-primary" id="edit_'+data.id+'"><i class="fa fa-edit"></i></a>' +
                                           '<a class="delete-modal btn btn-sm btn-danger" id="delete_'+data.id+'"><i class="fa fa-trash"></i></a>';
                                        }

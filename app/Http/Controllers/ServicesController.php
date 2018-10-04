@@ -45,7 +45,7 @@ class ServicesController extends Controller
 
 public function create_layerslider($id){
     if(!isset($id)) return "layerSlider is Empty";
-      $layerslider = Layerslider::findOrFail(1);
+      $layerslider = Layerslider::findOrFail(3);
       $src_path = "";
       switch ($layerslider->tabla) {
         case 'obras':
@@ -53,7 +53,7 @@ public function create_layerslider($id){
           break;
         case 'principal':
             $src_path = "/images/layers/principal/";
-          break;        
+          break;
       }
 
       //crear el layerslider
@@ -69,23 +69,38 @@ public function create_layerslider($id){
       //         <div id="layerslider" class="layerslider centrar" style="'.$layerslider->style.'">
       //         ';
               foreach ($layerslider->sliders as $slider) {
-                //recorrer el interior del div slider
+                //recorrer el interior del div slider}
+
+                $html.='
+
+                <!-- apertura slider -->
+
+                            ';
                 $html.='<div class="'.$slider->clase.'" data-ls="'.$slider->data_ls.'">';
                 //recorre layer
                 foreach ($slider->layers as $layer) {
+
                   if($layer->tipo == 'imagen'){
                     $html .= '
-                    <img class="'.$layer->clase.'" src="'.$src_path.$layer->src.'">
+
+                            <img class="'.$layer->clase.'" src="'.$src_path.$layer->src.'">
+
                     '; 
                   }
                   if($layer->tipo=='parrafo'){
                     $html.= '
-                          <p class="'.$layer->clase.'" data-ls="'.$layer->data_ls.'" alt="" style="'.$layer->style.'" >'.$layer->descripcion.'</p>
+
+                            <p class="'.$layer->clase.'" data-ls="'.$layer->data_ls.'" alt="" style="'.$layer->style.'" >'.$layer->descripcion.'</p>
+
                           ';
                   }
+
                 }
                 $html.='
                 </div>
+
+                 <!-- cierre slider -->
+
                 ';                  
               }
               // $html.='
@@ -110,5 +125,6 @@ public function create_layerslider($id){
       ';
       $arr = ['html'=>$html,'script'=>$script];
       return compact('arr');
+      // return $html;
     } 
 }
