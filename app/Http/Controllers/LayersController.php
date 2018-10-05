@@ -8,6 +8,17 @@ use App\Layer;
 
 class LayersController extends Controller
 {
+
+
+    /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     /**
      * Display a listing of the resource.
      *
@@ -111,7 +122,7 @@ class LayersController extends Controller
         }
 
 
-            //$layer->fill($request->all())->save();
+            $layer->fill($request->all())->save();
 
             // $layer->slider_id=$request->slider_id;
             // $layer->tipo=$request->tipo;
@@ -121,9 +132,9 @@ class LayersController extends Controller
             // $layer->otros=$request->otros;
             // $layer->descripcion=$request->descripcion;
 
-            $layer->save();
+            // $layer->save();
 
-            return response()->json($request);
+            return response()->json($layer);
 
     }
 

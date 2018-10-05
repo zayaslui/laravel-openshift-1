@@ -13,9 +13,11 @@ use Faker\Generator as Faker;
 
 class ServicesController extends Controller
 {
-	public function saludar(){
-		return "hola mundo";
-	}
+
+  	public function saludar(){
+  		  return "hola mundo";
+  	}
+  
 //For Generating Unique Slug Our Custom function
     public function createSlug($title, $class, $id = 0){
             // Normalize the title

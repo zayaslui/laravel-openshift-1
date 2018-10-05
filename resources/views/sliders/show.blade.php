@@ -633,10 +633,6 @@
           // edit
           //problema https://laravel.com/docs/5.2/routing#form-method-spoofing
           $('.modal-footer').on('click', '.edit', function() {
-                    //obtener id del modal-edit
-                    //set null input;
-
-                    console.log($('#descripcion_edit').val());
 
                     var formulario = $('#edit_form')[0]; //capturar el formulario
                     var formData = new FormData(formulario); //crear un formData
@@ -656,7 +652,7 @@
                     formData.append('data_ls', $('#data_ls_edit').val());                    
                     formData.append('style', $('#style_edit').val());     
 
-                    console.log(formData);
+                    // console.log(formData);
                     var token = "{{ csrf_token() }}";
                       var id = this.id;
                       var src = $("#src_edit").get(0).files
@@ -685,7 +681,7 @@
                           success: function(data) {
                               // $('.errorTitle').addClass('hidden');
                               // $('.errorContent').addClass('hidden');
-                              console.log(data);
+                              // console.log(data);
 
                               if ((data.errors)) {
                                   // setTimeout(function () {
