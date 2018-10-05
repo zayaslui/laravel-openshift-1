@@ -457,6 +457,7 @@
 
           // add a new post
         $(document).on('click', '.add-modal', function() {
+          console.log(".add-modal");
             $('.modal-title').text('Add');
             $('#slider_id').val(window.location.href.substring(window.location.href.lastIndexOf('/') + 1));
             // $('#slider_id').val(1);

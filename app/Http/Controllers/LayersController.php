@@ -122,17 +122,17 @@ class LayersController extends Controller
         }
 
 
-            $layer->fill($request->all())->save();
+            // $layer->fill($request->all())->save();
 
-            // $layer->slider_id=$request->slider_id;
-            // $layer->tipo=$request->tipo;
-            // $layer->clase = $request->clase;
-            // $layer->data_ls=$request->data_ls;
-            // $layer->style=$request->style;
-            // $layer->otros=$request->otros;
-            // $layer->descripcion=$request->descripcion;
+            $layer->slider_id=$request->slider_id;
+            $layer->tipo=$request->tipo;
+            $layer->clase = $request->clase;
+            $layer->data_ls=$request->data_ls;
+            $layer->style=$request->style;
+            $layer->otros=$request->otros;
+            $layer->descripcion=$request->descripcion;
 
-            // $layer->save();
+            $layer->save();
 
             return response()->json($layer);
 
