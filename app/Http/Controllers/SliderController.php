@@ -76,9 +76,9 @@ class SliderController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Slider $slider)
     {
-        //
+        return view('sliders.edit',compact('slider'),['titulo'=>'Editar Slider']);
     }
 
     /**
@@ -88,9 +88,10 @@ class SliderController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Slider $slider)
     {
-        //
+        $slider->fill($request->all())->save();
+        return redirect('/layersliders');
     }
 
     /**

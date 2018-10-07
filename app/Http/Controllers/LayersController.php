@@ -121,7 +121,6 @@ class LayersController extends Controller
 
         }
 
-
             // $layer->fill($request->all())->save();
 
             $layer->slider_id=$request->slider_id;

@@ -15,3 +15,8 @@
     <label for="style">Style</label>
     <input type="text" class="form-control" id="style" name="style" placeholder="Style" @if(isset($layerslider)) value="{{ $layerslider->style }}" @endif @if($disabled) disabled @endif>
   </div>
+
+<div class="form-group">
+  <label for="comment">Comment:</label>
+  <textarea class="form-control" rows="5" id="script" name="script">@if(isset($layerslider)) {{ $layerslider->script }} @endif</textarea>
+</div>

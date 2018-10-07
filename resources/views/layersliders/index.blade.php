@@ -244,8 +244,11 @@
 							        '</tr>'+
 							        '<tr>'+
 							            '<td><strong>Operaciones:</strong></td>'+
-							            '<td><a href="/sliders/'+id+'" class="btn btn-sm btn-primary">show</a>'+
-							            '<a id="delete_'+id+'" name="delete_'+id+'" class="btn btn-sm btn-danger delete">delete</a></td>'+
+							            '<td>'+
+							            		'<a href="/sliders/'+id+'" class="btn btn-sm btn-primary">show</a>'+
+							            		'<a id="delete_'+id+'" name="delete_'+id+'" class="btn btn-sm btn-danger delete">delete</a>'+
+												'<a id="edit_'+id+'" name="edit_'+id+'" class="btn btn-sm btn-warning" href="/sliders/'+id+'/edit">edit</a>'+							            		
+							            '</td>'+
 							        '</tr>'+	
 							    '</table>';
 				}

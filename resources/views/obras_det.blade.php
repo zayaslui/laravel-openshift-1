@@ -2,6 +2,11 @@
 @section('content')
 @section('tittle','Obras')
 <!---start-content---->
+<style>
+	.dibujo{
+		top:200px;
+	}
+</style>
 <div class="content">	
 	
 		<div class="testmonials">

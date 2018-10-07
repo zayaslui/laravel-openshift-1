@@ -111,8 +111,8 @@ class LayerSlidersController extends Controller
      */
     public function update(Request $request, Layerslider $layerslider)
     {
-            $layerslider->fill($request->all())->save();
-            return view('layersliders.index');
+        $layerslider->fill($request->all())->save();
+        return view('layersliders.index');
     }
 
     /**
