@@ -432,7 +432,16 @@
 			"file": "resources/views/layersliders/index.blade.php",
 			"settings":
 			{
-				"buffer_size": 15989,
+				"buffer_size": 15991,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "resources/views/obras/index.blade.php",
+			"settings":
+			{
+				"buffer_size": 5434,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -492,6 +501,15 @@
 			}
 		},
 		{
+			"file": "resources/views/layersliders/forms/default.blade.php",
+			"settings":
+			{
+				"buffer_size": 1562,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
 			"file": "resources/views/layouts/admin.blade.php",
 			"settings":
 			{
@@ -504,7 +522,16 @@
 			"file": "app/Http/Controllers/FrontController.php",
 			"settings":
 			{
-				"buffer_size": 2877,
+				"buffer_size": 3093,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/Http/Controllers/ServicesController.php",
+			"settings":
+			{
+				"buffer_size": 3766,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -519,30 +546,21 @@
 			}
 		},
 		{
-			"file": "app/Http/Controllers/UsuariosController.php",
-			"settings":
-			{
-				"buffer_size": 5182,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
 			"file": "resources/views/obras_det.blade.php",
 			"settings":
 			{
-				"buffer_size": 4988,
+				"buffer_size": 2696,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"contents": "MINISTERIO DE OBRAS PÚBLICAS Y COMUNICACIONES. \n\nRehabilitación de la Circunvalación de Asunción, Tramo 4 Mojones – Defensores del Chaco – Avda. Madame Lynch – Empalme Ruta N°9.\n\nVolumen de Obras: \n\n\t-Viales: \n\t\t\tUna supercarretera de 12, 5 Km de longitud, de 4 vías. \n\t-Tres Viaductos: \n\t\t\t1-En Cuatro Mojones: de 125 m de longitud x 16 m de ancho, 1.600 m3 de H°A°. \n\t\t\t2-En Avda. E. Ayala: de 196 m de longitud x 16 m de ancho, 2.080 m3 de H°A°. \n\t\t\t3-En Avda. Mcal. López: lado derecho de 198 m de longitud x 8 m de ancho lado izquierdo de 170 m de longitud x 8 m de ancho, 2.540 m3 de H°A°. \n\t-Desagües: \n\t\t\tSe ejecutó un canal de cielo abierto de 6 Km de longitud con una excavación de 350.000 m3, con barandas metálicas protectoras y guarda raíles. \n\t-Alcantarillas: \n\t\t\tSe construyeron 25.000 m de alcantarillas celulares de 2,5x2,5 m y 6.000 m de tubulares de diferentes diámetro\n\n\noffsetxin:0;\noffsetyin:top;\ndurationin:1500;\ndelayin:2250;\neasingin:easeOutElastic;\nfadein:false;\noffsetxout:0;\noffsetyout:bottom;\ndurationout:1500;\nshowuntil:500;\nfadeout:false;\n\noffsetxin:0;\ndurationin:2500;\ndelayin:5000;\neasingin:easeOutElastic;\nrotatexin:90;\ntransformoriginin:50% top 0;\noffsetxout:0;\ndurationout:1000;\nrotatexout:90;\ntransformoriginout:50% bottom 0;\n\n\ntop: 300px;\n left: 200.039px; \nfont-weight: 300; \ntext-align: right; \nheight: 39.7188px; \npadding: 0px 9.92969px 0px 0px; \nfont-size: 29.7891px; \nline-height: 36.7398px; \ncolor: rgb(255, 255, 255); \nbackground: rgb(240, 106, 82); \nwhite-space: nowrap; \nfilter: none; \nborder-width: 0px; \nmargin-left: 0px; \nmargin-top: 0px; \ntransform-origin: 50% top 0px; \ntransform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, -0.002, 0, 0, 0, 1); opacity: 1; \nvisibility: visible;\n\n\n\n\n\n\ndurationin:1500;delayin:5300;rotatein:20;rotatexin:30;scalexin:1.5;scaleyin:1.5;transformoriginin:left 50% 0;durationout:750;rotateout:20;rotatexout:-30;scalexout:0;scaleyout:0;transformoriginout:left 50% 0;\n\ntop:270px; left:50px; font-weight: 300; height:40px; padding-right:10px; padding-left:10px; font-size:20px; line-height:37px; color:#ffffff; background:#3D82DA; border-radius:4px; white-space: nowrap;",
+			"file": "resources/views/js/listarAllObrasAjax.blade.php",
 			"settings":
 			{
-				"buffer_size": 2145,
-				"line_ending": "Unix",
-				"name": "MINISTERIO DE OBRAS PÚBLICAS Y COMUNICACIONES."
+				"buffer_size": 2207,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
 			}
 		},
 		{
@@ -581,10 +599,19 @@
 			}
 		},
 		{
+			"file": "app/Http/Controllers/LayerSlidersController.php",
+			"settings":
+			{
+				"buffer_size": 4137,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
 			"file": "app/Layerslider.php",
 			"settings":
 			{
-				"buffer_size": 383,
+				"buffer_size": 406,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -594,15 +621,6 @@
 			"settings":
 			{
 				"buffer_size": 6099,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "resources/views/layerslider.blade.php",
-			"settings":
-			{
-				"buffer_size": 14872,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -677,13 +695,18 @@
 	"expanded_folders":
 	[
 		"/var/www/html/laravel/laravel-openshift-1",
+		"/var/www/html/laravel/laravel-openshift-1/app",
+		"/var/www/html/laravel/laravel-openshift-1/app/Http",
+		"/var/www/html/laravel/laravel-openshift-1/app/Http/Controllers",
 		"/var/www/html/laravel/laravel-openshift-1/resources",
-		"/var/www/html/laravel/laravel-openshift-1/resources/views",
-		"/var/www/html/laravel/laravel-openshift-1/resources/views/sliders",
-		"/var/www/html/laravel/laravel-openshift-1/resources/views/sliders/forms"
+		"/var/www/html/laravel/laravel-openshift-1/resources/views"
 	],
 	"file_history":
 	[
+		"/var/www/html/laravel/laravel-openshift-1/app/Http/Controllers/UsuariosController.php",
+		"/var/www/html/laravel/laravel-openshift-1/resources/views/obras.blade.php",
+		"/var/www/html/laravel/laravel-openshift-1/resources/views/layerslider.blade.php",
+		"/var/www/html/laravel/laravel-openshift-1/app/Layerslider.php",
 		"/var/www/html/laravel/laravel-openshift-1/resources/views/usuario/edit.blade.php",
 		"/var/www/html/laravel/laravel-openshift-1/app/Http/Controllers/ServicesController.php",
 		"/var/www/html/laravel/laravel-openshift-1/app/Http/Controllers/LayerSlidersController.php",
@@ -693,7 +716,6 @@
 		"/var/www/html/laravel/laravel-openshift-1/database/migrations/2018_09_28_050016_add_column_script_layerslider.php",
 		"/var/www/html/laravel/laravel-openshift-1/database/migrations/2018_10_02_144229_add_foreign_key_obras_det.php",
 		"/var/www/html/laravel/laravel-openshift-1/database/migrations/2018_10_02_144039_add_foreign_key_layersliders.php",
-		"/var/www/html/laravel/laravel-openshift-1/app/Http/Controllers/UsuariosController.php",
 		"/var/www/html/laravel/laravel-openshift-1/database/migrations/2018_09_06_143404_change_campo_layers.php",
 		"/var/www/html/laravel/laravel-openshift-1/app/Http/Controllers/LayersController.php",
 		"/var/www/html/laravel/laravel-openshift-1/database/migrations/2018_09_28_031918_add_column_descripcion_layerslider.php",
@@ -704,7 +726,6 @@
 		"/var/www/html/laravel/laravel-openshift-1/routes/web.php",
 		"/var/www/html/laravel/laravel-openshift-1/resources/views/demo.blade.php",
 		"/var/www/html/laravel/laravel-openshift-1/resources/views/obras/index.blade.php",
-		"/var/www/html/laravel/laravel-openshift-1/app/Layerslider.php",
 		"/var/www/html/laravel/laravel-openshift-1/resources/views/little_obras.blade.php",
 		"/var/www/html/laravel/laravel-openshift-1/app/Http/Controllers/HomeController.php",
 		"/var/www/html/laravel/laravel-openshift-1/resources/views/layouts/admin.blade.php",
@@ -713,7 +734,6 @@
 		"/var/www/html/laravel/laravel-openshift-1/resources/views/name.blade.php",
 		"/var/www/html/laravel/laravel-openshift-1/resources/views/layouts/principal.blade.php",
 		"/var/www/html/laravel/laravel-openshift-1/resources/views/emprende_con_nosotros.blade.php",
-		"/var/www/html/laravel/laravel-openshift-1/resources/views/obras.blade.php",
 		"/var/www/html/laravel/laravel-openshift-1/public/css/style.css",
 		"/var/www/html/laravel/laravel-openshift-1/resources/views/contact.blade.php",
 		"/var/www/html/laravel/laravel-openshift-1/composer.json",
@@ -721,7 +741,6 @@
 		"/var/www/html/laravel/laravel-openshift-1/public/css/admin.css",
 		"/var/www/html/laravel/laravel-openshift-1/resources/views/usuario/index.blade.php",
 		"/var/www/html/laravel/laravel-openshift-1/resources/views/sliders/show.blade.php",
-		"/var/www/html/laravel/laravel-openshift-1/resources/views/layerslider.blade.php",
 		"/var/www/html/laravel/laravel-openshift-1/database/migrations/2018_09_25_151623_add_layerslider_obras_det.php",
 		"/var/www/html/laravel/laravel-openshift-1/app/Obras_det.php",
 		"/var/www/html/laravel/laravel-openshift-1/.gitignore",
@@ -815,7 +834,7 @@
 	],
 	"find":
 	{
-		"height": 41.0
+		"height": 44.0
 	},
 	"find_in_files":
 	{
@@ -830,6 +849,11 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"LayerSlider",
+			"layersliders_id",
+			"create",
+			"slide",
+			"\"",
 			"fill",
 			"addModal",
 			"style_edit",
@@ -952,12 +976,7 @@
 			"home",
 			"createElement",
 			"initCanvas",
-			"displayWidth",
-			"canvas",
-			"image",
-			".data",
-			"data",
-			"sampleParams"
+			"displayWidth"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -965,6 +984,7 @@
 		"regex": false,
 		"replace_history":
 		[
+			"'",
 			"\"",
 			"layerslider",
 			"slider",
@@ -1012,7 +1032,7 @@
 	"groups":
 	[
 		{
-			"selected": 7,
+			"selected": 14,
 			"sheets":
 			[
 				{
@@ -1042,7 +1062,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 20,
+					"stack_index": 22,
 					"type": "text"
 				},
 				{
@@ -1051,15 +1071,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 15989,
+						"buffer_size": 15991,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								11519,
-								11519
+								9185,
+								9185
 							]
 						],
 						"settings":
@@ -1067,14 +1087,42 @@
 							"syntax": "Packages/Laravel Blade Highlighter/blade.sublime-syntax"
 						},
 						"translation.x": 0.0,
-						"translation.y": 4680.0,
+						"translation.y": 4158.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 9,
 					"type": "text"
 				},
 				{
 					"buffer": 2,
+					"file": "resources/views/obras/index.blade.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5434,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2408,
+								2408
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Laravel Blade Highlighter/blade.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 1213.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
 					"file": "resources/views/usuario/forms/usr.blade.php",
 					"semi_transient": false,
 					"settings":
@@ -1100,11 +1148,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 17,
 					"type": "text"
 				},
 				{
-					"buffer": 3,
+					"buffer": 4,
 					"file": "resources/views/sliders/forms/default.blade.php",
 					"semi_transient": false,
 					"settings":
@@ -1127,14 +1175,14 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 123.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 14,
 					"type": "text"
 				},
 				{
-					"buffer": 4,
+					"buffer": 5,
 					"file": "resources/views/sliders/show.blade.php",
 					"semi_transient": false,
 					"settings":
@@ -1157,14 +1205,14 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 12480.0,
+						"translation.y": 14232.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 14,
+					"stack_index": 18,
 					"type": "text"
 				},
 				{
-					"buffer": 5,
+					"buffer": 6,
 					"file": "app/Http/Controllers/LayersController.php",
 					"semi_transient": false,
 					"settings":
@@ -1176,8 +1224,8 @@
 						"selection":
 						[
 							[
-								2028,
-								2028
+								1840,
+								1840
 							]
 						],
 						"settings":
@@ -1187,14 +1235,14 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1860.0,
+						"translation.y": 398.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 11,
 					"type": "text"
 				},
 				{
-					"buffer": 6,
+					"buffer": 7,
 					"file": "app/Http/Controllers/ObrasController.php",
 					"semi_transient": false,
 					"settings":
@@ -1217,14 +1265,14 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1260.0,
+						"translation.y": 138.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 8,
+					"stack_index": 7,
 					"type": "text"
 				},
 				{
-					"buffer": 7,
+					"buffer": 8,
 					"file": "app/Http/Controllers/SliderController.php",
 					"semi_transient": false,
 					"settings":
@@ -1247,14 +1295,44 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1800.0,
+						"translation.y": 498.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 10,
 					"type": "text"
 				},
 				{
-					"buffer": 8,
+					"buffer": 9,
+					"file": "resources/views/layersliders/forms/default.blade.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1562,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1112,
+								1112
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Laravel Blade Highlighter/blade.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 24.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 13,
+					"type": "text"
+				},
+				{
+					"buffer": 10,
 					"file": "resources/views/layouts/admin.blade.php",
 					"semi_transient": false,
 					"settings":
@@ -1277,27 +1355,27 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1980.0,
+						"translation.y": 2166.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 18,
+					"stack_index": 21,
 					"type": "text"
 				},
 				{
-					"buffer": 9,
+					"buffer": 11,
 					"file": "app/Http/Controllers/FrontController.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2877,
+						"buffer_size": 3093,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2579,
-								2579
+								2629,
+								2629
 							]
 						],
 						"settings":
@@ -1307,14 +1385,44 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 420.0,
+						"translation.y": 2162.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 15,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
-					"buffer": 10,
+					"buffer": 12,
+					"file": "app/Http/Controllers/ServicesController.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3766,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1547,
+								1547
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 2668.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 13,
 					"file": "resources/views/little_obras.blade.php",
 					"semi_transient": false,
 					"settings":
@@ -1339,54 +1447,24 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 12,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
-					"buffer": 11,
-					"file": "app/Http/Controllers/UsuariosController.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 5182,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3676,
-								3676
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 1980.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 7,
-					"type": "text"
-				},
-				{
-					"buffer": 12,
+					"buffer": 14,
 					"file": "resources/views/obras_det.blade.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4988,
+						"buffer_size": 2696,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								125,
-								125
+								1403,
+								1403
 							]
 						],
 						"settings":
@@ -1395,43 +1473,43 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 180.0,
+						"translation.y": 1320.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 13,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
-					"buffer": 13,
+					"buffer": 15,
+					"file": "resources/views/js/listarAllObrasAjax.blade.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2145,
+						"buffer_size": 2207,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2145,
-								2145
+								269,
+								269
 							]
 						],
 						"settings":
 						{
-							"auto_name": "MINISTERIO DE OBRAS PÚBLICAS Y COMUNICACIONES.",
-							"default_dir": "/var/www/html/laravel/laravel-openshift-1/resources/views",
-							"syntax": "Packages/Text/Plain text.tmLanguage"
+							"syntax": "Packages/Laravel Blade Highlighter/blade.sublime-syntax",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 1180.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 11,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
-					"buffer": 14,
+					"buffer": 16,
 					"file": "resources/views/sliders/edit.blade.php",
 					"semi_transient": false,
 					"settings":
@@ -1457,11 +1535,11 @@
 						"translation.y": 280.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 16,
 					"type": "text"
 				},
 				{
-					"buffer": 15,
+					"buffer": 17,
 					"file": "app/Obras.php",
 					"semi_transient": false,
 					"settings":
@@ -1485,11 +1563,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 17,
+					"stack_index": 20,
 					"type": "text"
 				},
 				{
-					"buffer": 16,
+					"buffer": 18,
 					"file": "app/Http/Controllers/HomeController.php",
 					"semi_transient": false,
 					"settings":
@@ -1515,11 +1593,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 16,
+					"stack_index": 19,
 					"type": "text"
 				},
 				{
-					"buffer": 17,
+					"buffer": 19,
 					"file": "app/Obras_det.php",
 					"semi_transient": false,
 					"settings":
@@ -1545,24 +1623,54 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 10,
+					"stack_index": 15,
 					"type": "text"
 				},
 				{
-					"buffer": 18,
-					"file": "app/Layerslider.php",
+					"buffer": 20,
+					"file": "app/Http/Controllers/LayerSlidersController.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 383,
+						"buffer_size": 4137,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								833,
+								833
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 552.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 21,
+					"file": "app/Layerslider.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 406,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								218,
+								218
 							]
 						],
 						"settings":
@@ -1575,11 +1683,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 9,
+					"stack_index": 12,
 					"type": "text"
 				},
 				{
-					"buffer": 19,
+					"buffer": 22,
 					"file": "routes/web.php",
 					"semi_transient": false,
 					"settings":
@@ -1591,8 +1699,8 @@
 						"selection":
 						[
 							[
-								3146,
-								3146
+								1551,
+								1551
 							]
 						],
 						"settings":
@@ -1602,39 +1710,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1200.0,
+						"translation.y": 598.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 20,
-					"file": "resources/views/layerslider.blade.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 14872,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								14852,
-								14852
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Laravel Blade Highlighter/blade.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 19,
 					"type": "text"
 				}
 			]
@@ -1642,7 +1721,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 29.0
+		"height": 32.0
 	},
 	"input":
 	{
@@ -1683,7 +1762,7 @@
 	"project": "",
 	"replace":
 	{
-		"height": 54.0
+		"height": 60.0
 	},
 	"save_all_on_build": true,
 	"select_file":

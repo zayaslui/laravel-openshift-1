@@ -74,14 +74,19 @@ class FrontController extends Controller
 
    public function obras_det(Request $request,$id){
       // return view('obras_det');
-      $detalles = Obras::find(1);
+      $detalles = Obras::find($id);
       return response()->view('obras_det');
   }
 
     public function listar(Request $request) {
 
         if($request->ajax()){
-            $dato = Obras::All();
+            // $dato = Obras::All();
+            /*custom*/
+            $dato = DB::table('obras') 
+            -> join('obras_det','obras.id','=','obras_det.obras_id')
+            ->select('obras.*','obras_det.id as detalle')
+            ->get();
             return json_encode($dato);
         }
 

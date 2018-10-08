@@ -57,14 +57,13 @@
 
 					for(var j in detalles[i])
 					{
-						 // console.log(j +' ---------'+dato[i][j])
-						 if(j=='id'){id = detalles[i][j]};
-						 if(j=='titulo_obra'){titulo_obra = detalles[i][j]};
-						 if(j=='contenido_obra'){contenido_obra = detalles[i][j]};
-						 if(j=='imagen'){imagen = detalles[i][j]};
-						 if(j=='layersliders_id'){layersliders_id = detalles[i][j]};						 
+						 console.log(j +' ---------'+detalles[i][j])
+						 if(j=='id'){id = detalles[i][j]}
+						 if(j=='titulo_obra'){titulo_obra = detalles[i][j]}
+						 if(j=='contenido_obra'){contenido_obra = detalles[i][j]}
+						 if(j=='imagen'){imagen = detalles[i][j]}
+						 if(j=='layerslider_id'){layersliders_id = detalles[i][j]}
 					}
-
 			    tabla+='<hr class="style12"/>';
 
 				tabla+='<table id="" class="subtabla" cellpadding="5" cellspacing="0" border="0" style="">'+

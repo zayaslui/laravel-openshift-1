@@ -9,7 +9,7 @@ class Layerslider extends Model
     protected $table='layersliders';
 
     protected $fillable = [
-        'tabla', 'clase','style','script'
+        'tabla', 'clase','style','script','descripcion'
     ];
 
     public function sliders(){

@@ -47,7 +47,7 @@ class ServicesController extends Controller
 
 public function create_layerslider($id){
     if(!isset($id)) return "layerSlider is Empty";
-      $layerslider = Layerslider::findOrFail(3);
+      $layerslider = Layerslider::findOrFail($id);
       $src_path = "";
       switch ($layerslider->tabla) {
         case 'obras':

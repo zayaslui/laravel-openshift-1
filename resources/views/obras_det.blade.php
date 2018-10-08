@@ -54,7 +54,9 @@
 				                // contentType: false,
 				                // processData: false,
 				                success:function(response) {
-
+				                	// console.log(response);
+				                	//console.log(JSON.parse(response));
+				                	
 				                	var layer = JSON.parse(response).response.layerslider.arr.html;
 				                	var info = JSON.parse(response).response.obras_det.contenido_obra;
 				                	var titulo = JSON.parse(response).response.obras_det.titulo_obra;
@@ -76,59 +78,6 @@
 				                },
 				                createSlider:function(data){
 									$('#layer_').append(data);
-									this.load_script();
-				                },
-				                load_script:function(){
-										// $("#layerslider").layerSlider({
-										// 		pauseOnHover: false,
-										// 		skinsPath: '/skins/',
-									 //            width : '75%',
-									 //            height : '500px',
-									 //            responsive : true,
-									 //            responsiveUnder : 960,
-									 //            sublayerContainer : 900,
-									 //            autoStart : true,
-									 //            pauseOnHover : true,
-									 //            firstLayer : 1,
-									 //            animateFirstLayer : true,
-									 //            randomSlideshow : false,
-									 //            twoWaySlideshow : true,
-									 //            loops : 0,
-									 //            forceLoopNum : true,
-									 //            autoPlayVideos : true,
-									 //            autoPauseSlideshow : 'auto',
-									 //            // youtubePreview : 'maxresdefault.jpg',
-									 //            keybNav : true,
-									 //            touchNav : true,
-									 //            // skin : '',
-									 //            // globalBGColor : 'transparent',
-										// 		navPrevNext : true,
-									 //            navStartStop : true,
-									 //            navButtons : true,
-									 //            hoverPrevNext : true,
-									 //            hoverBottomNav : false,
-									 //            showBarTimer : false,
-									 //            showCircleTimer : true,
-									 //            thumbnailNavigation : 'disabled',
-									 //            tnWidth : 100,
-									 //            tnHeight : 60,
-									 //            tnContainerWidth : '60%',
-									 //            tnActiveOpacity : 35,
-									 //            tnInactiveOpacity : 100,
-									 //            imgPreload : true,
-									 //    		yourLogo : false,
-									 //            yourLogoStyle : 'left: 10px; top: 10px;',
-									 //            yourLogoLink : false,
-									 //            yourLogoTarget : '_self',
-									 //            cbInit : function(element) { },
-									 //            cbStart : function(data) { },
-									 //            cbStop : function(data) { },
-									 //            cbPause : function(data) { },
-									 //            cbAnimStart : function(data) { },
-									 //            cbAnimStop : function(data) { },
-									 //            cbPrev : function(data) { },
-									 //            cbNext : function(data) { }
-										// 	});
 				                },
 				                //bendito 
 						        error: function(data) {

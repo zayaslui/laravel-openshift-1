@@ -202,7 +202,7 @@
 		    // `d` is the original data object for the row
 		    if(dato === undefined || dato == null || dato.length <= 0){
 			    return '<table cellpadding="5" cellspacing="0" border="0" style="padding-left:50px;">'
-			    +'<a class="btn btn-sm btn-primary" href="sliders/create/'+layersliders_id+'">Agregar Slider</a></table>';
+			    +'<a class="btn btn-sm btn-primary" href="/sliders/create/'+layersliders_id+'">Agregar Slider</a></table>';
 		    }
 		    var tabla = '';
 		    for(var i=0;i<dato.length;i++){
@@ -253,7 +253,7 @@
 							    '</table>';
 				}
 				tabla+='<table cellpadding="5" cellspacing="0" border="0" style="padding-left:50px;">'
-			    +'<a class="btn btn-sm btn-primary" href="sliders/create/'+layersliders_id+'">Agregar Slider</a></table>';
+			    +'<a class="btn btn-sm btn-primary" href="/sliders/create/'+layersliders_id+'">Agregar Slider</a></table>';
 		    return tabla;
 		}
 		function controles(d){

@@ -16,7 +16,12 @@
     <input type="text" class="form-control" id="style" name="style" placeholder="Style" @if(isset($layerslider)) value="{{ $layerslider->style }}" @endif @if($disabled) disabled @endif>
   </div>
 
+  <div class="form-group">
+    <label for="descripcion">Descripcion</label>
+    <input type="text" class="form-control" id="descripcion" name="descripcion" placeholder="descripcion" @if(isset($layerslider)) value="{{ $layerslider->descripcion }}" @endif @if($disabled) disabled @endif>
+  </div>
+
 <div class="form-group">
-  <label for="comment">Comment:</label>
+  <label for="comment">Script:</label>
   <textarea class="form-control" rows="5" id="script" name="script">@if(isset($layerslider)) {{ $layerslider->script }} @endif</textarea>
 </div>
