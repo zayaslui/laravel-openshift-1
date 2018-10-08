@@ -695,14 +695,12 @@
 	"expanded_folders":
 	[
 		"/var/www/html/laravel/laravel-openshift-1",
-		"/var/www/html/laravel/laravel-openshift-1/app",
-		"/var/www/html/laravel/laravel-openshift-1/app/Http",
-		"/var/www/html/laravel/laravel-openshift-1/app/Http/Controllers",
-		"/var/www/html/laravel/laravel-openshift-1/resources",
-		"/var/www/html/laravel/laravel-openshift-1/resources/views"
+		"/var/www/html/laravel/laravel-openshift-1/sql",
+		"/var/www/html/laravel/laravel-openshift-1/sql/default.sql"
 	],
 	"file_history":
 	[
+		"/var/www/html/laravel/laravel-openshift-1/.gitignore",
 		"/var/www/html/laravel/laravel-openshift-1/app/Http/Controllers/UsuariosController.php",
 		"/var/www/html/laravel/laravel-openshift-1/resources/views/obras.blade.php",
 		"/var/www/html/laravel/laravel-openshift-1/resources/views/layerslider.blade.php",
@@ -743,7 +741,6 @@
 		"/var/www/html/laravel/laravel-openshift-1/resources/views/sliders/show.blade.php",
 		"/var/www/html/laravel/laravel-openshift-1/database/migrations/2018_09_25_151623_add_layerslider_obras_det.php",
 		"/var/www/html/laravel/laravel-openshift-1/app/Obras_det.php",
-		"/var/www/html/laravel/laravel-openshift-1/.gitignore",
 		"/home/luis/Documentos/datos/datos.sql",
 		"/home/luis/Documentos/datos/usuarios.sql",
 		"/var/www/html/laravel/laravel-openshift-1/sql/datos/datos.sql",
@@ -834,7 +831,7 @@
 	],
 	"find":
 	{
-		"height": 44.0
+		"height": 32.0
 	},
 	"find_in_files":
 	{
@@ -1463,8 +1460,8 @@
 						"selection":
 						[
 							[
-								1403,
-								1403
+								1997,
+								1997
 							]
 						],
 						"settings":
