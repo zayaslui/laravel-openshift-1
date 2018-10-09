@@ -112,8 +112,25 @@ class FrontController extends Controller
           /*info para obras_det*/
           $obras_det = Obras_det::findOrFail($request->id);
           /*info para layersliders asociado a obras_det*/
+
+          $obras_det = DB::table('obras_det') 
+          -> join('obras','obras.id','=','obras_det.obras_id')
+          ->select('obras_det.id as id',
+                          'obras_det.obras_id as obras_id',
+                          'obras_det.contenido_obra as contenido_obra',
+                          'obras_det.imagen as imagen',
+                          'obras_det.layerslider_id as layerslider_id',
+                          'obras.titulo_obra as titulo_obra')
+          ->where('obras_det.id', '=', $request->id)
+          ->get();
+
+          // $response = $obras_det[0]->layerslider_id;
+
+          // return json_encode(compact('response'));
+          
+          // return json_encode(compact('response'));
           //usar el servicio de laytersliders
-          $layerslider =   $this->services->create_layerslider($obras_det->layerslider_id);
+          $layerslider =   $this->services->create_layerslider($obras_det[0]->layerslider_id);
           $response  = ["obras_det"=>$obras_det,"layerslider"=>$layerslider];
           return json_encode(compact('response'));
         }

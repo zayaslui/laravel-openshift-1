@@ -16,7 +16,7 @@
 				                success:function(response) {
 				                    //crear listado de obras
 				                    var data = JSON.parse(response);
-				                    // console.log(data);
+				                    // console.log(JSON.parse(response));
 
 									var tabla ="";
 									var i=0;
