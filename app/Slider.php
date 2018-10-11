@@ -17,8 +17,8 @@ class Slider extends Model
         return 'id';
     }
 
-    public function layersliders(){
-    	return $this->belongsTo('App\LayerSlider');
+    public function layerslider(){
+    	return $this->belongsTo('App\Layerslider','layerslider_id');
     }
 
     public function layers(){

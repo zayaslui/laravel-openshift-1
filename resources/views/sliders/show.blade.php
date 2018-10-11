@@ -466,7 +466,7 @@
             // $('#src').val("");
             $('#otros').val("");
             $('#descripcion').val("");
-            $('#data_ls').val("");
+            $('#data_ls').empty();
             $('#style').val("");
             $('#addModal').modal('show');
         });
@@ -505,15 +505,16 @@
                         toastr.success('Successfully added Post!', 'Success Alert', {timeOut: 5000});
                         
                         $('#layers').DataTable().row.add( {
-                                "id": data.id,
-                                "slider_id": data.slider_id,
-                                "tipo": data.tipo,
-                                "clase": data.clase,
-                                "src": data.src,
-                                "otros": data.otros,
-                                "descripcion" : data.descripcion,
-                                "data_ls": data.data_ls,
-                                "style": data.style
+                                "id": data.layer.id,
+                                "slider_id": data.layer.slider_id,
+                                "tipo": data.layer.tipo,
+                                "clase": data.layer.clase,
+                                "src": data.layer.src,
+                                "otros": data.layer.otros,
+                                "descripcion" : data.layer.descripcion,
+                                "data_ls": data.layer.data_ls,
+                                "style": data.layer.style,
+                                "path": data.path
                             } ).draw();
 
                         // $('.new_published').iCheck({
@@ -606,7 +607,11 @@
                             .row( $("#"+dato_delete).parents('tr') )
                             .remove()
                             .draw();
-                    }
+                    },
+                    error: function(data) {
+                        var errors = data.responseJSON;
+                        console.log(errors);
+                    },                    
                 });
             });
           $(document).on('click','.edit-modal',function(){
@@ -682,8 +687,7 @@
                           success: function(data) {
                               // $('.errorTitle').addClass('hidden');
                               // $('.errorContent').addClass('hidden');
-                              // console.log(data);
-
+                              data.layer.path = data.path;
                               if ((data.errors)) {
                                   // setTimeout(function () {
                                   //     $('#editModal').modal('show');
@@ -699,10 +703,11 @@
                                   //     $('.errorContent').text(data.errors.content);
                                   // }
                               } else {
+
                                   toastr.success('Successfully updated Post!', 'Success Alert', {timeOut: 5000});
-                                  var newData = table.row($("#item"+data.id)).data();
-                                  var actual = table.row($("#item"+data.id)).data(data).draw();
-                                  $("#item"+data.id).closest('tr').toggleClass('warning');
+                                  var newData = table.row($("#item"+data.layer.id)).data();
+                                  var actual = table.row($("#item"+data.layer.id)).data(data.layer).draw();
+                                  $("#item"+data.layer.id).closest('tr').toggleClass('warning');
 
                                   // if (data.is_published) {
                                   //     $('.edit_published').prop('checked', true);
@@ -818,15 +823,18 @@
                       }
                   } );
                   function format(d){
-                    
+
                     var imagen='';
+                    var html = '';
+                    var path = '../images/layers/'+d.path+'/'+d.src;
+
                     if(d.src=='' || d.src==null){
                       imagen =  '<img src=\"../images/sistema/image-not-found.png\"  height=\"100px\"/>';       
                     }else{
-                      imagen =  '<img src=\"../images/layers/obras/'+d.src+'\" height=\"200\"/>' ;
+                      imagen =  '<img src=\"'+path+'\" height=\"200\"/>' ;
                     }
 
-                    return '<table class=" table-details table table-responsive" cellpadding="5" cellspacing="0" border="0" style="padding-left:50px;width:50px">'+
+                    html+='<table class=" table-details table table-responsive" cellpadding="5" cellspacing="0" border="0" style="padding-left:50px;width:50px">'+
                         '<tr class="">'+
                             '<td><strong>Slider_id:</strong></td>'+
                             '<td>'+d.slider_id+'</td>'+
@@ -834,23 +842,34 @@
                         '<tr class="">'+
                             '<td><strong>Src:</strong></td>'+
                             '<td>'+imagen+'</td>'+
-                        '</tr>'+
-                        '<tr style="width:100px;">'+
-                            '<td class="uno"><strong>Data_ls:</strong></td>'+
-                            '<td class="dos"> <textarea class="form-control" id="data_ls_edit_'+d.id+'" cols="10" rows="5" style="width: 435px; height: 127px;" disabled>'+d.data_ls+'</textarea></td>'+
-                        '</tr>'+
-                            '<td class="uno"><strong>Style:</strong></td>'+
-                            '<td class="dos"><textarea class="form-control" id="style_edit_'+d.id+'" cols="10" rows="5" style="width: 100%; height: 100%;" disabled>'+d.style+'</textarea></td>'+
-                        '</tr>'+
-                        '<tr class="">'+
-                            '<td><strong>Otros:</strong></td>'+
-                            '<td>'+d.otros+'</td>'+
-                        '</tr>'+                        
+                        '</tr>';
+                        if(d.data_ls){
+                          html+=
+                          '<tr style="width:100px;">'+
+                              '<td class="uno"><strong>Data_ls:</strong></td>'+
+                              '<td class="dos"> <textarea class="form-control" id="data_ls_edit_'+d.id+'" cols="10" rows="5" style="width: 435px; height: 127px;" disabled>'+d.data_ls+'</textarea></td>'+
+                          '</tr>';
+                        }
+                        if(d.style){
+                          html+=
+                              '<td class="uno"><strong>Style:</strong></td>'+
+                              '<td class="dos"><textarea class="form-control" id="style_edit_'+d.id+'" cols="10" rows="5" style="width: 100%; height: 100%;" disabled>'+d.style+'</textarea></td>'+
+                          '</tr>';
+                        }
+                        if(d.otros){
+                          html+=
+                          '<tr class="">'+
+                              '<td><strong>Otros:</strong></td>'+
+                              '<td>'+d.otros+'</td>'+
+                          '</tr>';
+                        }
+                        html+=                        
                         '<tr>'+
                             '<td><strong>Operaciones:</strong></td>'+
                             '<td><a href="/show_sliders/" class="btn btn-sm btn-primary">show</a></td>'+
                         '</tr>'+            
                     '</table>';
+                    return html;
                   }
 
                   $(".table-details").DataTable({

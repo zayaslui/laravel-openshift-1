@@ -48,11 +48,17 @@ class LayerSlidersController extends Controller
                     })
                     ->make(true);
     }
+
     /*funciones de datatables*/
+
     public function listar_layers(Request $request,$id){
         //creador de consulta
         $layers = Layer::query()->where('slider_id', $id);
-        return Datatables::of($layers)->make(true);
+        return Datatables::of($layers)
+                            ->addColumn('path',function($layer){
+                                return $layer->slider->layerslider->tabla;
+                            })
+                            ->make(true);
     }
 
     /**
@@ -73,7 +79,6 @@ class LayerSlidersController extends Controller
      */
     public function store(Request $request)
     {
-
         LayerSlider::create($request->all());
         return redirect('layersliders');
     }
@@ -125,12 +130,13 @@ class LayerSlidersController extends Controller
     {
         //eliminar las fotos de layers
         $layerslider->sliders;
+        $path = '/images/layers/'.$layerslider->tabla.'/';
         foreach ( $layerslider->sliders as $slider) {
                 //borrar fotos primero
                  foreach ($slider->layers as $layer) {
                     //borra la imagen
                     // print_r($layer);
-                   $file_path = public_path().'/images/layers/obras/'.$layer->src;
+                   $file_path = public_path().$path.$layer->src;
                    \File::delete($file_path);
                    //borra el layer
                    $layer->delete();

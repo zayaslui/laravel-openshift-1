@@ -2826,7 +2826,21 @@ font-family: 'Roboto', sans-serif;
     padding: 10px;
     background: beige;
 }
-
+.tituloh3{
+      font-family: 'Roboto', sans-serif;
+    font-size: 1.8em;
+    color: #6C6C6D;
+    text-align: center;
+    text-transform: uppercase;
+    /* background: url(../images/bg-h2.png) repeat-x center; */
+    text-shadow: -2px 3px 4px #9B9B9B;
+    /* font-family: 'Roboto', sans-serif; */
+    /* font-size: 1.5em; */
+    /* padding: 0.5em 0; */
+    /* color: #012231; */
+    text-transform: uppercase;
+    margin: 25px auto;
+}
 .trabaja_con_nosotros .titulo{
   font-size: 1em;
   font-weight: bold;

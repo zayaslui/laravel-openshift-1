@@ -48,15 +48,15 @@ class ServicesController extends Controller
 public function create_layerslider($id){
     if(!isset($id)) return "layerSlider is Empty";
       $layerslider = Layerslider::findOrFail($id);
-      $src_path = "";
-      switch ($layerslider->tabla) {
-        case 'obras':
-            $src_path = "/images/layers/obras/";
-          break;
-        case 'principal':
-            $src_path = "/images/layers/principal/";
-          break;
-      }
+      $src_path = "/images/layers/".$layerslider->tabla."/";
+      // switch ($layerslider->tabla) {
+      //   case 'obras':
+      //       $src_path = "/images/layers/obras/";
+      //     break;
+      //   case 'principal':
+      //       $src_path = "/images/layers/principal/";
+      //     break;
+      // }
 
       //crear el layerslider
       $html='';
@@ -64,7 +64,7 @@ public function create_layerslider($id){
               '
               <!-- apertura layerslider -->
 
-              <div id="layerslider" class="layerslider centrar" style="'.$layerslider->style.'">';
+              <div id="layerslider" class="'.$layerslider->clase.'" style="'.$layerslider->style.'">';
 
       // $html.='
 

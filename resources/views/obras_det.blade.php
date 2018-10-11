@@ -11,7 +11,7 @@
 	
 		<div class="testmonials">
 			<div class="wrap">
-				<div class="testmonial-grid">
+				<div class="tituloh3">
 					<h3 id="titulo_obra_"></h3>
 				</div>
 			</div>
@@ -25,8 +25,8 @@
 			<div class="testmonials">
 				<div class="wrap">
 					<div class="testmonial-grid">
-						<h3>Información :</h3>
-						<p id='info_'></p>
+							<h3>Información :</h3>						
+							<p id='info_'></p>
 					</div>
 				</div>
 			</div>			

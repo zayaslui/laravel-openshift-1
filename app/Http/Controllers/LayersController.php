@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Http\File;
 use App\Layer;
+use App\Slider;
+use App\Layerslider;
 
 class LayersController extends Controller
 {
@@ -47,17 +49,22 @@ class LayersController extends Controller
      */
     public function store(Request $request)
     {
+
+        /*validar */
         $layer = new Layer();
-        $folder='images/layers';
+        $target = Slider::findOrFail($request->slider_id)->layerslider->tabla;
+
+        $path = '/images/layers/'.$target.'/';
+        $folder = 'images/layers/'.$target;
 
         if(!file_exists($folder)){
-          mkdir('images/layers', 0777, true);
+          mkdir($folder, 0777, true);
         }
 
         if($request->hasFile('src')){
             $file = $request->file('src');
             $name = time().$file->getClientOriginalName();
-            $file->move(public_path().'/images/layers/obras/',$name);
+            $file->move(public_path().$path,$name);
             $layer->src = $name;
         }
 
@@ -70,7 +77,9 @@ class LayersController extends Controller
         $layer -> descripcion = $request->descripcion;
         $layer -> save();
 
-        return response()->json($layer);
+        $response = ["layer"=>$layer,"path"=>$target];
+
+        return response()->json($response);
     }
 
     /**
@@ -103,21 +112,23 @@ class LayersController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
-    {
-
+    {        
         $layer = Layer::findOrFail($id);
         //$layer->fill($request->except('src'));
         
+        //path
+        $src_path='/images/layers/'.$layer->slider->layerslider->tabla.'/';
+        $target = $layer->slider->layerslider->tabla;
         if($request->hasFile('src')){
 
             /*borrar la imagen vieja*/
-            $path_old_image = public_path().'/images/layers/obras/'.$layer->src;
+            $path_old_image = public_path().$src_path.$layer->src;
             \File::delete($path_old_image);
                     
             $file = $request->file('src');
             $name = time().$file->getClientOriginalName();
             $layer->src = $name;
-            $file->move(public_path().'/images/layers/obras/',$name);
+            $file->move(public_path().$src_path,$name);
 
         }
 
@@ -133,7 +144,9 @@ class LayersController extends Controller
 
             $layer->save();
 
-            return response()->json($layer);
+            $response = ["layer"=>$layer,"path"=>$target];
+
+            return response()->json($response);
 
     }
 
@@ -146,6 +159,12 @@ class LayersController extends Controller
     public function destroy($id)
     {
         $layer = Layer::findOrFail($id);
-        $layer->delete();
+        $path = '/images/layers/'.$layer->slider->layerslider->tabla.'/';
+        /*borrar la imagen*/
+       $file_path = public_path().$path.$layer->src;
+       \File::delete($file_path);
+       //borra el layer
+       $layer->delete();
+
     }
 }

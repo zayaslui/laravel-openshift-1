@@ -105,6 +105,19 @@ class FrontController extends Controller
             return json_encode($dato);
         }
     }
+    //layerslider layer
+    public function layersliderPrincipal(){
+       $response =  $this->services->create_layerslider(1);
+       return json_encode(compact('response')); 
+    }
+    // trayectoria
+    public function trayectoria(){
+        return view('trayectoria');
+    }
+    public function layersliderTrayectoria(){
+      $response = $this->services->create_layerslider(9);
+       return json_encode(compact('response'));  
+    }
     //singleObras
     public function detalle_obra(Request $request){
 

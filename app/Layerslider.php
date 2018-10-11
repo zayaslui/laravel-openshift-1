@@ -16,7 +16,6 @@ class Layerslider extends Model
         return $this->hasMany('App\Slider');
      }
 
-
     public function obras_detalles(){
       return $this->hasMany('App\Obras_det');
     }

@@ -42,7 +42,12 @@ Route::post('listarObras','FrontController@listar');
 Route::post('little','FrontController@little_obras');
 Route::post('listarPrensa','FrontController@listarPrensa');
 
+Route::get('trayectoria','FrontController@trayectoria');
+Route::post('layersliderTrayectoria','FrontController@layersliderTrayectoria');
+
 Route::get('obras_det/{imagen}','FrontController@obras_det');
+/*layerslider_index*/
+Route::post('layersliderPrincipal','FrontController@layersliderPrincipal');
 // traer el detalle de la obra
 Route::post('singleObras/{id}','FrontController@detalle_obra');
 
