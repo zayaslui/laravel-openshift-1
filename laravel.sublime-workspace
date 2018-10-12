@@ -516,10 +516,10 @@
 	},
 	"expanded_folders":
 	[
-		"/var/www/html/laravel/laravel-openshift-1"
 	],
 	"file_history":
 	[
+		"/tmp/fz3temp-2/funciones.js",
 		"/var/www/html/laravel/laravel-openshift-1/resources/views/js/listarAllObrasAjax.blade.php",
 		"/var/www/html/laravel/laravel-openshift-1/resources/views/obras_det.blade.php",
 		"/var/www/html/laravel/laravel-openshift-1/resources/views/index2.blade.php",
@@ -646,8 +646,7 @@
 		"/var/www/html/laravel/laravel-openshift-1/resources/views/displaydata.blade.php",
 		"/var/www/html/laravel/laravel-openshift-1/config/app.php",
 		"/var/www/html/laravel/laravel-openshift-1/public/css/sb-admin-2.css",
-		"/var/www/html/laravel/laravel-openshift-1/database/factories/Users.php",
-		"/var/www/html/laravel/my_app/resources/views/alerts/success.blade.php"
+		"/var/www/html/laravel/laravel-openshift-1/database/factories/Users.php"
 	],
 	"find":
 	{

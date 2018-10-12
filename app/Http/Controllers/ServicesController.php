@@ -85,7 +85,7 @@ public function create_layerslider($id){
                   if($layer->tipo == 'imagen'){
                     $html .= '
 
-                            <img class="'.$layer->clase.'" src="'.$src_path.$layer->src.'">
+                            <img class="'.$layer->clase.'" src="'.$src_path.$layer->src.'" data-ls="'.$layer->data_ls.'">
 
                     '; 
                   }
