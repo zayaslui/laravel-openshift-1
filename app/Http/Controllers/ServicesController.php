@@ -82,12 +82,18 @@ public function create_layerslider($id){
                 //recorre layer
                 foreach ($slider->layers as $layer) {
 
-                  if($layer->tipo == 'imagen'){
+                  if($layer->tipo == 'img'){
                     $html .= '
 
                             <img class="'.$layer->clase.'" src="'.$src_path.$layer->src.'" data-ls="'.$layer->data_ls.'">
 
                     '; 
+                  }else{
+                    $html.= '
+
+                            <'.$layer->tipo.' class="'.$layer->clase.'" data-ls="'.$layer->data_ls.'" alt="" style="'.$layer->style.'" >'.$layer->descripcion.'</'.$layer->tipo.'>
+
+                          ';                    
                   }
                   if($layer->tipo=='parrafo'){
                     $html.= '

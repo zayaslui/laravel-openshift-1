@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"data",
+				"data-ls"
+			],
+			[
 				"crae",
 				"create_layerslider"
 			],
@@ -58,10 +62,6 @@
 			[
 				"desc",
 				"descripcion_edit"
-			],
-			[
-				"data",
-				"data_ls"
 			],
 			[
 				"con",
@@ -447,6 +447,24 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "resources/views/trayectoria.blade.php",
+			"settings":
+			{
+				"buffer_size": 1395,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/Http/Controllers/ServicesController.php",
+			"settings":
+			{
+				"buffer_size": 3863,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -516,9 +534,16 @@
 	},
 	"expanded_folders":
 	[
+		"/var/www/html/laravel/laravel-openshift-1",
+		"/var/www/html/laravel/laravel-openshift-1/app",
+		"/var/www/html/laravel/laravel-openshift-1/app/Http",
+		"/var/www/html/laravel/laravel-openshift-1/app/Http/Controllers",
+		"/var/www/html/laravel/laravel-openshift-1/resources",
+		"/var/www/html/laravel/laravel-openshift-1/resources/views"
 	],
 	"file_history":
 	[
+		"/var/www/html/laravel/laravel-openshift-1/resources/views/layouts/principal.blade.php",
 		"/tmp/fz3temp-2/funciones.js",
 		"/var/www/html/laravel/laravel-openshift-1/resources/views/js/listarAllObrasAjax.blade.php",
 		"/var/www/html/laravel/laravel-openshift-1/resources/views/obras_det.blade.php",
@@ -567,7 +592,6 @@
 		"/var/www/html/laravel/laravel-openshift-1/.env",
 		"/var/www/html/laravel/laravel-openshift-1/app/Mail/SendMailable.php",
 		"/var/www/html/laravel/laravel-openshift-1/resources/views/name.blade.php",
-		"/var/www/html/laravel/laravel-openshift-1/resources/views/layouts/principal.blade.php",
 		"/var/www/html/laravel/laravel-openshift-1/resources/views/emprende_con_nosotros.blade.php",
 		"/var/www/html/laravel/laravel-openshift-1/resources/views/contact.blade.php",
 		"/var/www/html/laravel/laravel-openshift-1/composer.json",
@@ -650,7 +674,7 @@
 	],
 	"find":
 	{
-		"height": 29.0
+		"height": 41.0
 	},
 	"find_in_files":
 	{
@@ -665,6 +689,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"src=\"",
 			"add-modal",
 			"src_path",
 			"principal",
@@ -791,8 +816,7 @@
 			"addModal",
 			"controles",
 			"layersliders",
-			"js-tilt",
-			"Layersliders"
+			"js-tilt"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -800,6 +824,7 @@
 		"regex": false,
 		"replace_history":
 		[
+			"src=\"https://www.franciscoimoveis.com.br/assets/plugins/layer-slider/examples/",
 			"'",
 			"\"",
 			"layerslider",
@@ -848,8 +873,68 @@
 	"groups":
 	[
 		{
+			"selected": 1,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "resources/views/trayectoria.blade.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1395,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								86,
+								86
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Laravel Blade Highlighter/blade.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 240.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "app/Http/Controllers/ServicesController.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3863,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2814,
+								2814
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1380.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -896,7 +981,7 @@
 	"project": "",
 	"replace":
 	{
-		"height": 54.0
+		"height": 74.0
 	},
 	"save_all_on_build": true,
 	"select_file":

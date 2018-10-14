@@ -60,24 +60,27 @@
                     <li>Agregar Layer</li>
                 </div>
               </div>
-              <table class="display nowrap" id="layers" >
-                 <thead>
-                    <tr>
-                       <th></th>
-                       <th>Id</th>
-                       <!-- <th>Slider_id</th> -->
-                       <th>Tipo</th>
-                       <th>clase</th>
-{{--                        <th>Data-ls</th>
-                       <th>Style</th> --}}
-                       <!-- <th>Src</th> -->
-                       <!-- <th>Otros</th> -->
-                       <th>Descripcion</th>                                              
-                       <th>Controles</th>         
-                    </tr>
-                 </thead>
+              <div style="min-width: 200px;">
+                <table class="display nowrap" id="layers">
+                   <thead>
+                      <tr>
+                         <th></th>
+                         <th>Id</th>
+                         <!-- <th>Slider_id</th> -->
+                         <th>Tipo</th>
+                         <th>clase</th>
+  {{--                        <th>Data-ls</th>
+                         <th>Style</th> --}}
+                         <!-- <th>Src</th> -->
+                         <!-- <th>Otros</th> -->
+                         <th>Descripcion</th>                                              
+                         <th>Controles</th>         
+                      </tr>
+                   </thead>
 
-              </table>
+                </table>
+                
+              </div>
               {{-- contenido --}}
         </div>
       </div
@@ -107,7 +110,16 @@
                       <div class="form-group">
                           <label class="control-label col-sm-2" for="tipo">Tipo:</label>
                           <div class="col-sm-10">
-                              <input type="text" class="form-control" id="tipo" name="tipo">
+                              {{-- <input type="text" class="form-control" id="tipo" name="tipo"> --}}
+                              <select name="tipo" id="tipo" class="form-control">
+                                <option value="p">Parrafo</option>
+                                <option value="img">Imagen</option>
+                                <option value="div">div</option>                                                                                                
+                                <option value="h2">H2</option>
+                                <option value="h3">H3</option>
+                                <option value="h4">H4</option>
+                                <option value="h5">H5</option>
+                              </select>
                               <small>Min: 2, Max: 128, only text</small>
                               <p class="errorContent text-center alert alert-danger hidden"></p>
                           </div>
@@ -140,9 +152,10 @@
                       </div>
 
                       <div class="form-group">
-                          <label class="control-label col-sm-2" for="descripcion">descripcion</label>
+                          <label class="control-label col-sm-2" for="descripcion">Descripcion</label>
                           <div class="col-sm-10">
-                              <input type="text" class="form-control" id="descripcion" name="descripcion">
+                              {{-- <input type="text" class="form-control" id="descripcion" name="descripcion"> --}}
+                              <textarea class="form-control" id="descripcion" name="descripcion" cols="40" rows="5"></textarea>                              
                               <small>Min: 2, Max: 32, only text</small>
                               <p class="errorTitle text-center alert alert-danger hidden"></p>
                           </div>
@@ -160,7 +173,7 @@
                       <div class="form-group">
                           <label class="control-label col-sm-2" for="style">Style</label>
                           <div class="col-sm-10">
-                              <textarea class="form-control" id="style" cols="40" rows="5"  ></textarea>
+                              <textarea class="form-control" id="style" name="style" cols="40" rows="5"  ></textarea>
                               <small>Min: 2, Max: 32, only text</small>
                               <p class="errorTitle text-center alert alert-danger hidden"></p>
                           </div>
@@ -239,7 +252,8 @@
                       <div class="form-group">
                           <label class="control-label col-sm-2" for="descripcion_edit">descripcion</label>
                           <div class="col-sm-10">
-                              <input type="text" class="form-control" id="descripcion_edit" neme="descripcion_edit">
+                              {{-- <input type="text" class="form-control" id="descripcion_edit" neme="descripcion_edit"> --}}
+                              <textarea class="form-control" id="descripcion_edit" name="descripcion_edit" cols="40" rows="5" ></textarea>                              
                               <small>Min: 2, Max: 32, only text</small>
                               <p class="errorTitle text-center alert alert-danger hidden"></p>
                           </div>
@@ -298,7 +312,7 @@
                       <div class="form-group">
                           <label class="control-label col-sm-2" for="tipo_show">Tipo:</label>
                           <div class="col-sm-10">
-                              <textarea class="form-control" id="tipo_show" cols="40" rows="5"  disabled></textarea>
+                              <input type="text" class="form-control" id="tipo_show" name="tipo_show" autofocus disabled> 
                               <small>Min: 2, Max: 128, only text</small>
                               <p class="errorContent text-center alert alert-danger hidden"></p>
                           </div>
@@ -333,7 +347,8 @@
                       <div class="form-group">
                           <label class="control-label col-sm-2" for="descripcion_show">descripcion</label>
                           <div class="col-sm-10">
-                              <input type="text" class="form-control" id="descripcion_show" disabled>
+                              {{-- <input type="text" class="form-control" id="descripcion_show" disabled> --}}
+                              <textarea class="form-control" id="descripcion_show" cols="40" rows="5"  disabled></textarea>
                               <small>Min: 2, Max: 32, only text</small>
                               <p class="errorTitle text-center alert alert-danger hidden"></p>
                           </div>
@@ -466,7 +481,7 @@
             // $('#src').val("");
             $('#otros').val("");
             $('#descripcion').val("");
-            $('#data_ls').empty();
+            $('#data_ls').val("");
             $('#style').val("");
             $('#addModal').modal('show');
         });
@@ -751,6 +766,7 @@
 
             <script>
                 var table = $('#layers').DataTable({
+                  fixedColumns: true,
                   'createdRow': function( row, data, dataIndex ) {
                       $(row).attr('id', 'item'+data.id);
                   },
@@ -774,7 +790,14 @@
                                     // { data: "style", name: "style",className:"all" },
                                     // { data: "src", name: "src",className:"all" },
                                     // { data: "otros", name: "otros",className:"all" },
-                                    { data: "descripcion", name: "descripcion",className:"all" },
+                                    { data: "descripcion", 
+                                      name: "descripcion",
+                                      className:"all",
+                                      render:function ( data, type, full, meta ){
+                                        var dato = (data)?data:'';
+                                        return '<textarea name="" id="" cols="40" rows="2" disabled>'+dato+'</textarea>';
+                                      }
+                                    },
                                     {
                                       "className":'all',
                                       "orderable":false,
@@ -792,9 +815,11 @@
                         'targets': 3,
                         'createdCell':  function (td, cellData, rowData, row, col) {
                             $(td).attr('id', 'cell-' + cellData); 
-                        }
-                    }
+                        },
+                        "width": "20%"
+                    },
                   ],
+               
                   responsive: {
                           details: {
                               display: $.fn.dataTable.Responsive.display.childRowImmediate,
