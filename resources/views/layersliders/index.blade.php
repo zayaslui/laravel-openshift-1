@@ -18,7 +18,7 @@
          <th></th>
          <th>Id</th>
          <th>target</th>
-         <th>descripcion</th>         
+         <th>Descripcion</th>         
          <th>clase</th>
          <th>style</th>
          <th>Controles</th>         
@@ -269,9 +269,9 @@
 			            },
                         {data :"id", name:"id", className:"desktop"},
                         { data: "tabla", name: "name",className:"min-tablet" },
-                        { data: "descripcion", name: "descripcion",className:"min-tablet" },                        
-                        { data: "clase", name: "clase",className:"all" },
-                        { data: "style", name: "style",className:"all" },
+                        { data: "descripcion", name: "descripcion",className:"all" },
+                        { data: "clase", name: "clase",className:"min-tablet" },
+                        { data: "style", name: "style",className:"min-tablet" },
                         {
                         	"className":'all',
                         	"orderable":false,
@@ -296,6 +296,7 @@
 
 		// Add event listener for opening and closing details
 		    $('#example tbody').on('click', 'td.details-control', function () {
+
 		        var tr = $(this).closest('tr');
 		        var row = table.row( tr );
 

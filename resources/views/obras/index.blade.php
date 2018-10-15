@@ -4,12 +4,12 @@
 @section('content')
 
 {{-- contenido --}}
-<table class="display nowrap" id="example" >
+<table class="display nowrap" id="example" style="width: 80%">
    <thead>
       <tr>
          <th></th>
          <th>Id</th>                    
-         <th>Descripcion</th>
+         {{-- <th>Descripcion</th> --}}
          {{-- <th>imagen</th> --}}
          <th>titulo obra</th>
          {{-- <th>Contenido Obra</th> --}}
@@ -105,10 +105,10 @@
 			    "data":           null,
 			    "defaultContent": ''
 			},
-			{data:"id",name:"id",className:""},
-			{data:"descripcion",name:"descripcion",className:""},
+			{data:"id",name:"id",className:"all"},
+			// {data:"descripcion",name:"descripcion",className:"all"},
 			// {data:"imagen",name:"imagen",className:""},
-			{data:"titulo_obra",name:"titulo_obra",className:""},
+			{data:"titulo_obra",name:"titulo_obra",className:"min-tablet"},
 			// {data:"contenido_obra",name:"contenido_obra",className:""},
 			// {data:"introduccion",name:"introduccion",className:""},			
 			{
