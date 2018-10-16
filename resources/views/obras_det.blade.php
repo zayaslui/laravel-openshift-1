@@ -58,10 +58,10 @@
 				                	console.log(JSON.parse(response));
 				                	
 				                	var layer = JSON.parse(response).response.layerslider.arr.html;
-				                	var info = JSON.parse(response).response.obras_det[0].contenido_obra;
-				                	var titulo = JSON.parse(response).response.obras_det[0].titulo_obra;
-				                	// var info = JSON.parse(response).response.obras_det.contenido_obra;
-				                	// var titulo = JSON.parse(response).response.obras_det.titulo_obra;				                	
+				                	// var info = JSON.parse(response).response.obras_det[0].contenido_obra;
+				                	// var titulo = JSON.parse(response).response.obras_det[0].titulo_obra;
+				                	var info = JSON.parse(response).response.obras.contenido_obra;
+				                	var titulo = JSON.parse(response).response.obras.titulo_obra;				                	
 				                	var script = JSON.parse(response).response.layerslider.arr.script;
 				                	
 				                	$("#slider-wrapper").append(layer);

@@ -20,4 +20,8 @@ class Layerslider extends Model
       return $this->hasMany('App\Obras_det');
     }
 
+    public function obras(){
+        return $this->hasMany('App\Obras');
+    }
+
 }

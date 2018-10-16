@@ -9,10 +9,14 @@ class Obras extends Model
     protected $table='obras';
 
     protected $fillable = [
-        'descripcion'
+        'descripcion','titulo_obra','contenido_obra','introduccion'
     ];
      
      public function detalles(){
      	return $this->hasMany('App\Obras_det');
      }
+
+    public function layerslider(){
+      return $this->belongsTo('App\Layerslider','layerslider_id');
+     }     
 }

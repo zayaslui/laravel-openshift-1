@@ -38,7 +38,7 @@
 												tabla+= "<a href='#'>"+obj.titulo_obra+"</a>";
 												tabla+= obj.introduccion;
 												tabla+= "<div class='special-grid-background'></div>";
-												tabla+= "<a href='/obras_det/"+obj.detalle+"' class='ver-obras'>Ver obra</a>";
+												tabla+= "<a href='/obras_det/"+obj.id+"' class='ver-obras'>Ver obra</a>";
 												tabla+= "</div>";
 					                     }
 								});

@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use Illuminate\Http\File;
 use App\Obras;
 use App\Obras_det;
 use Datatables;
@@ -45,7 +45,7 @@ class ObrasController extends Controller
      */
     public function create()
     {
-        //
+        return view('obras.create',['subtitulo'=>'Crear Obras','titulo'=>'Obras','disabled'=>false]);
     }
 
     /**
@@ -56,7 +56,8 @@ class ObrasController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $obras = Obras::create($request->all());
+        return redirect('obras_/'.$obras->id);
     }
 
     /**
@@ -66,8 +67,10 @@ class ObrasController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function show($id)
-    {
-        //
+    {   
+        $obras = Obras::findOrFail($id);
+        $params = ['subtitulo'=>'Ver Obras','titulo'=>'Obras','disabled'=>true];
+        return view('obras.show',compact('obras'),$params);
     }
 
     /**
