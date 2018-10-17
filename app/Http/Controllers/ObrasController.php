@@ -142,8 +142,9 @@ class ObrasController extends Controller
      */
     public function destroy($id)
     {
+        $path = '/images/obras/';
         $obras = Obras::findOrFail($id);
-        $file_path = public_path().'/images/obras/'.$obras->imagen;
+        $file_path = public_path().$path.$obras->imagen;
         \File::delete($file_path);
         $obras->delete();
         return redirect('obras_')->with('destroy', 'Obra eliminada!');
