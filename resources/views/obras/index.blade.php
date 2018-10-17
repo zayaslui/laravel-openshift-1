@@ -76,7 +76,8 @@
 				"defaultContent":'',
 				render : function ( data, type, full, meta ) {
 			        return '<a class="btn btn-sm btn-success" href="obras_/'+data.id+'"><i class="fa fa-eye"></i></a>'+
-			        '<a class="btn btn-sm btn-primary" href="orbas_/'+data.id+'/edit"><i class="fa fa-edit"></i></a>';
+			        '<a class="btn btn-sm btn-primary" href="obras_/'+data.id+'/edit"><i class="fa fa-edit"></i></a>';
+
 			     }
 			},		
 		],

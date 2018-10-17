@@ -9,6 +9,9 @@ use App\Obras_det;
 use Datatables;
 use Illuminate\Support\Facades\DB;
 
+use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\Session;
+
 class ObrasController extends Controller
 {
     public function __construct()
@@ -56,7 +59,23 @@ class ObrasController extends Controller
      */
     public function store(Request $request)
     {
-        $obras = Obras::create($request->all());
+        $path = '/images/obras';
+        $obras = new Obras();
+
+        if($request->hasFile('imagen')){
+            $file = $request->file('imagen');
+            $name = $file->getClientOriginalName();
+            $file->move(public_path().$path,$name);
+            $obras->imagen = $name;
+        }
+
+        // $obras = Obras::create($request->all());
+        $obras->titulo_obra = $request->titulo_obra;
+        $obras->contenido_obra = $request->contenido_obra;
+        $obras->introduccion = $request->introduccion;
+        $obras->layerslider_id=$request->layerslider_id;
+        $obras->save();
+
         return redirect('obras_/'.$obras->id);
     }
 
@@ -81,7 +100,9 @@ class ObrasController extends Controller
      */
     public function edit($id)
     {
-        //
+        $obras = Obras::findOrFail($id);
+        $params = ['subtitulo'=>'Editar Obras','titulo'=>'Obras','disabled'=>false];
+        return view('obras.edit',compact('obras'),$params);
     }
 
     /**
@@ -93,7 +114,24 @@ class ObrasController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $path= '/images/obras/';
+        $obras = Obras::findOrFail($id);
+        $obras->fill($request->except('imagen'));
+
+
+        if($request->hasFile('imagen')){
+            /*borrar la imagen vieja*/
+            $path_old_image = public_path().$path.$obras->imagen;
+            \File::delete($path_old_image);
+
+            $file = $request->file('imagen');
+            $name = time().$file->getClientOriginalName();
+            $obras ->imagen = $name;
+            $file->move(public_path().$path,$name);
+        }
+        $obras->save();
+        return redirect('obras_/'.$obras->id);
+
     }
 
     /**
@@ -104,9 +142,12 @@ class ObrasController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $obras = Obras::findOrFail($id);
+        $file_path = public_path().'/images/obras/'.$obras->imagen;
+        \File::delete($file_path);
+        $obras->delete();
+        return redirect('obras_')->with('destroy', 'Obra eliminada!');
     }
-
 
 }
 
