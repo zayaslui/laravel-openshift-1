@@ -14,6 +14,9 @@ use Illuminate\Http\Request;
 |
 */
 
+
+// obs : key binding no funciona con resources
+
 Route::get('/','FrontController@index');
 Route::get('obras','FrontController@obras');
 Route::get('services','FrontController@services');
@@ -74,6 +77,8 @@ Route::delete('usuario/{user}','UsuariosController@destroy');
 Route::resources([
 								'layersliders'=>'LayerSlidersController',
 								'obras_' => 'ObrasController',
+                                'prensa_'=> 'PrensaController'
+
 							]);
 Route::get('listar_obras','ObrasController@listar_obras');
 
