@@ -81,6 +81,7 @@ Route::resources([
 
 							]);
 Route::get('listar_obras','ObrasController@listar_obras');
+Route::get('listar_prensa','PrensaController@listar_prensa');
 
 Route::get('sliders','SliderController@index');
 Route::get('sliders/listar','SliderController@listar');

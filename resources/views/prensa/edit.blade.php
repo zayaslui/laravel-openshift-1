@@ -21,10 +21,10 @@
                         <div class="panel-body">
                             <div class="row">
                                 <div class="col-lg-12">
-                                    <form method="POST" action="/obras_/{{$obras->id}}" enctype="multipart/form-data">
+                                    <form method="POST" action="/prensa_/{{$prensa->id}}" enctype="multipart/form-data">
                                         @method('PUT')
                                         @csrf
-                                        @include('obras.forms.default')
+                                        @include('prensa.forms.default')
                                             
                                         <div class="form-group">
                                             <label for="imagen">Imagen</label>
@@ -32,13 +32,13 @@
                                         </div>
                                         <button type="submit" class="btn btn-primary btn-sm botonera"><i class="fa fa-save"></i></button>
                                     </form>
-                                    <form method="post" action="/obras_/{{$obras->id}}">
+                                    <form method="post" action="/prensa_/{{$prensa->id}}">
                                         @method('DELETE')
                                         @csrf
                                         <button type="submit" class="btn btn-sm btn-danger delete botonera"><i class="fa fa-trash"></i></button>
                                     </form>
                                     <form>
-                                        <a  class="btn btn-sm btn-success botonera" href="/obras_"><i class="fa fa-undo"></i></a>
+                                        <a  class="btn btn-sm btn-success botonera" href="/prensa_"><i class="fa fa-undo"></i></a>
                                     </form>                                    
                                 </div>
                             </div>

@@ -1,7 +1,7 @@
 @extends('layouts.admin')
 
 @section('content')
-@section('title','Ver Obras')
+@section('title','Ver Prensa')
 
 
                          <div class="row">
@@ -22,8 +22,8 @@
                                               <div class="col-lg-12">
                                                   <form class="col-lg-12 col-md-6 col-sm-12">
                                                       @csrf
-                                                        @include('obras.forms.default')
-                                                      <a class="btn btn-primary btn-sm" href="/obras_">Listar Obras</a>
+                                                        @include('prensa.forms.default')
+                                                      <a class="btn btn-primary btn-sm" href="/prensa_">Listar Prensa</a>
                                                   </form>
                                                   <div data-tilt class="col-lg-4 col-md-6 col-sm-12">
                                               </div>

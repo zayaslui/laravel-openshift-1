@@ -117,7 +117,17 @@
                                 </li>
                             </ul>
                         </li>
-
+                        <li>
+                            <a href="#"><i class="fa fa-child fa-fw"></i> Prensa<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="{!!URL::to('/prensa_/create')!!}"><i class='fa fa-plus fa-fw'></i> Agregar</a>
+                                </li>
+                                <li>
+                                    <a href="{!!URL::to('/prensa_')!!}"><i class='fa fa-list-ol fa-fw'></i> Prensa</a>
+                                </li>
+                            </ul>
+                        </li>
                     </ul>
                 </div>
             </div>

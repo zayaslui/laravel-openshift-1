@@ -1,5 +1,5 @@
 @extends('layouts.admin')
-@section('title','Crear Obras')
+@section('title','Crear Prensa')
 
 @section('content')
 
@@ -21,9 +21,9 @@
                         <div class="panel-body">
                             <div class="row">
                                 <div class="col-lg-12">
-                                    <form method="POST" action="/obras_" enctype="multipart/form-data">
+                                    <form method="POST" action="/prensa_" enctype="multipart/form-data">
                                         @csrf
-                                        @include('obras.forms.default')
+                                        @include('prensa.forms.default')
                                             
                                         <div class="form-group">
                                             <label for="avatar">Imagen</label>
@@ -31,7 +31,7 @@
                                         </div>
 
                                       <button type="submit" class="btn btn-primary btn-sm">Enviar</button>
-                                      <a  class="btn btn-sm btn-success " href="/obras_">Volver</a>
+                                      <a  class="btn btn-sm btn-success " href="/prensa_">Volver</a>
                                     </form>
                                 </div>
                             </div>

@@ -8,13 +8,8 @@
    <thead>
       <tr>
          <th></th>
-         <th>Id</th>                    
-         {{-- <th>Descripcion</th> --}}
-         {{-- <th>imagen</th> --}}
-         <th>titulo obra</th>
-         {{-- <th>Contenido Obra</th> --}}
-         {{-- <th>Introduccion</th> --}}
-		{{--  <th>Contenido Obra</th> --}}
+         <th>Id</th>
+         <th>Descripcion</th>
 		<th>Operaciones</th>
       </tr>
    </thead>
@@ -31,7 +26,7 @@
 		    if(d.avatar==''){
 			    imagen =  '<img src=\"../images/sistema/image-not-found.png\"  height=\"100px\"/>' ;	    	
 		    }else{
-		    	imagen= '<img src=\"../images/obras/'+d.imagen+'\" height=\"200\"/>' ;
+		    	imagen= '<img src=\"../images/prensas/'+d.imagen+'\" height=\"200\"/>' ;
 		    }
 
 			tabla += '<table class=" table-details table table-responsive" cellpadding="5" cellspacing="0" border="0" style="padding-left:50px;padding-right:50px;">'+
@@ -40,17 +35,9 @@
 		            '<td>'+imagen+'</td>'+
 		        '</tr>'+
 		        '<tr>'+
-		            '<td><strong>Titulo de Obra:</strong></td>'+
-		            '<td>'+d.titulo_obra+'</td>'+
-		        '</tr>'+		        
-                '</tr>'+
-                    '<td class="uno"><strong>Introduccion:</strong></td>'+
-                    '<td class="dos"><textarea class="form-control" id="style_edit" cols="10" rows="5" style="width: 100%; height: 100%;" disabled>'+d.introduccion+'</textarea></td>'+
-                '</tr>'+
-                '</tr>'+
-                    '<td class="uno"><strong>Contenido Obra:</strong></td>'+
-                    '<td class="dos"><textarea class="form-control" id="style_edit" cols="10" rows="5" style="width: 100%; height: 100%;" disabled>'+d.contenido_obra+'</textarea></td>'+
-                '</tr>'+        
+		            '<td><strong>Link:</strong></td>'+
+		            '<td>'+d.link+'</td>'+
+		        '</tr>'+      
 		    '</table>';
 
 		    return tabla;
@@ -64,9 +51,9 @@
 			    "defaultContent": ''
 			},
 			{data:"id",name:"id",className:"all"},
-			// {data:"descripcion",name:"descripcion",className:"all"},
-			// {data:"imagen",name:"imagen",className:""},
-			{data:"titulo_obra",name:"titulo_obra",className:"min-tablet"},
+			{data:"descripcion",name:"descripcion",className:"all"},
+			// {data:"link",name:"link",className:""},
+			// {data:"titulo_obra",name:"titulo_obra",className:"min-tablet"},
 			// {data:"contenido_obra",name:"contenido_obra",className:""},
 			// {data:"introduccion",name:"introduccion",className:""},			
 			{
@@ -75,14 +62,14 @@
 				"data": null,
 				"defaultContent":'',
 				render : function ( data, type, full, meta ) {
-			        return '<a class="btn btn-sm btn-success" href="obras_/'+data.id+'"><i class="fa fa-eye"></i></a>'+
-			        '<a class="btn btn-sm btn-primary" href="obras_/'+data.id+'/edit"><i class="fa fa-edit"></i></a>';
+			        return '<a class="btn btn-sm btn-success" href="prensa_/'+data.id+'"><i class="fa fa-eye"></i></a>'+
+			        '<a class="btn btn-sm btn-primary" href="prensa_/'+data.id+'/edit"><i class="fa fa-edit"></i></a>';
 
 			     }
 			},		
 		],
 		ajax: {
-			"url":"listar_obras",
+			"url":"listar_prensa",
 			"contentType": "application/json; charset=ISO-8859-1",
 		},
 	});
