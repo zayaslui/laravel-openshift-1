@@ -44,7 +44,7 @@
 											tabla +='		</div>';
 											tabla +='		<div class="buzz-img">';
 											tabla +='			<a href="'+obj.link+'" target="blank_">';
-											tabla +='				<img src="images/prensas/'+obj.imagen+'.jpg" class="img-responsive" alt="">';
+											tabla +='				<img src="images/prensas/'+obj.imagen+'" class="img-responsive" alt="">';
 											tabla +='			</a>';
 											tabla +='		</div>';
 											tabla +='	  <div class="clear"> </div>';

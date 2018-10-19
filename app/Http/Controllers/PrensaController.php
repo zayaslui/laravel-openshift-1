@@ -47,8 +47,8 @@ class PrensaController extends Controller
      */
     public function store(Request $request)
     {
-        $path = '/images/prensa';
-        $prensa = new Obras();
+        $path = '/images/prensas';
+        $prensa = new Prensa();
 
         if($request->hasFile('imagen')){
             $file = $request->file('imagen');
@@ -106,7 +106,7 @@ class PrensaController extends Controller
 
         if($request->hasFile('imagen')){
             /*borrar la imagen vieja*/
-            $path_old_image = public_path().$path.$obras->imagen;
+            $path_old_image = public_path().$path.$prensa->imagen;
             \File::delete($path_old_image);
 
             $file = $request->file('imagen');
