@@ -536,10 +536,7 @@
 	},
 	"expanded_folders":
 	[
-		"/var/www/html/laravel/laravel-openshift-1",
-		"/var/www/html/laravel/laravel-openshift-1/resources",
-		"/var/www/html/laravel/laravel-openshift-1/resources/views",
-		"/var/www/html/laravel/laravel-openshift-1/resources/views/js"
+		"/var/www/html/laravel/laravel-openshift-1"
 	],
 	"file_history":
 	[
@@ -674,7 +671,7 @@
 	],
 	"find":
 	{
-		"height": 41.0
+		"height": 29.0
 	},
 	"find_in_files":
 	{
