@@ -12,7 +12,27 @@
   </div>
 
     <div class="form-group">
-    <label for="introduccion">Introducción</label>
-    <textarea class="form-control" name="introduccion" id="introduccion" cols="30" rows="10" aria-describedby="emailHelp" placeholder="Introducción de la obra" @if($disabled) disabled @endif>@if(isset($obras)) {{ $obras->introduccion }} @endif</textarea>
-    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+      <label for="introduccion">Introducción</label>
+      <textarea class="form-control" name="introduccion" id="introduccion" cols="30" rows="10" aria-describedby="emailHelp" placeholder="Introducción de la obra" @if($disabled) disabled @endif>@if(isset($obras)) {{ $obras->introduccion }} @endif</textarea>
+      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+  </div>
+
+  <div class="form-group">
+    <label for="layerslider_id">LayerSlider</label>
+    <select class="form-control" id="layerslider_id" name="layerslider_id" @if($disabled) disabled @endif>
+      <option value="">Ninguno</option>
+        @if(isset($layersliders))
+            @foreach($layersliders  as $layerslider)
+                <option
+                @if(isset($obras->layerslider_id))
+                    @if($obras->layerslider_id == $layerslider->id) 
+                        selected 
+                    @endif
+                @endif
+                value="{{$layerslider->id}}">
+                    {{$layerslider->descripcion}}
+              </option>
+            @endforeach
+        @endif
+    </select>
   </div>

@@ -59,6 +59,7 @@ class PrensaController extends Controller
 
         $prensa->descripcion = $request->descripcion;
         $prensa->link = $request->link;
+        $prensa->titulo = $request->titulo;
         $prensa->save();
 
         return redirect('prensa_/'.$prensa->id);
@@ -74,7 +75,7 @@ class PrensaController extends Controller
     {
         $prensa = Prensa::findOrFail($id);
         $params = ['subtitulo'=>'Ver Prensa','titulo'=>'Prensa','disabled'=>true];
-        return view('prensa.show',compact('prensa'),$params);    
+        return view('prensa.show',compact('prensa'),$params);
     }
 
     /**

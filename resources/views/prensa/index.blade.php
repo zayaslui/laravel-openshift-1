@@ -35,9 +35,13 @@
 		            '<td>'+imagen+'</td>'+
 		        '</tr>'+
 		        '<tr>'+
+		            '<td><strong>Descripcion:</strong></td>'+
+		            '<td>'+d.descripcion+'</td>'+
+		        '</tr>'+      
+		        '<tr>'+
 		            '<td><strong>Link:</strong></td>'+
 		            '<td>'+d.link+'</td>'+
-		        '</tr>'+      
+		        '</tr>'+      		        
 		    '</table>';
 
 		    return tabla;
@@ -51,7 +55,7 @@
 			    "defaultContent": ''
 			},
 			{data:"id",name:"id",className:"all"},
-			{data:"descripcion",name:"descripcion",className:"all"},
+			{data:"titulo",name:"titulo",className:"all"},
 			// {data:"link",name:"link",className:""},
 			// {data:"titulo_obra",name:"titulo_obra",className:"min-tablet"},
 			// {data:"contenido_obra",name:"contenido_obra",className:""},

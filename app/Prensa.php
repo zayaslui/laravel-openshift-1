@@ -11,6 +11,7 @@ class Prensa extends Model
     protected $fillable = [
         'descripcion',
         'imagen',
-        'link'
+        'link',
+        'titulo'
     ];
 }

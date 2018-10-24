@@ -11,7 +11,7 @@
          <th>Id</th>                    
          {{-- <th>Descripcion</th> --}}
          {{-- <th>imagen</th> --}}
-         <th>titulo obra</th>
+         <th>Título obra</th>
          {{-- <th>Contenido Obra</th> --}}
          {{-- <th>Introduccion</th> --}}
 		{{--  <th>Contenido Obra</th> --}}
@@ -25,7 +25,7 @@
 	function format(d){
 			// var detalles = JSON.parse(d.detalles.replace(/&quot;/g,'"'));
 			var existe = (d === undefined || d == null || d.length <= 0)?true:false;
-            var layersliders_id = d.id;
+            var layersliders_id = d.layersliders_id;
             var tabla = '';
            	var imagen='';
 		    if(d.avatar==''){
@@ -34,24 +34,44 @@
 		    	imagen= '<img src=\"../images/obras/'+d.imagen+'\" height=\"200\"/>' ;
 		    }
 
-			tabla += '<table class=" table-details table table-responsive" cellpadding="5" cellspacing="0" border="0" style="padding-left:50px;padding-right:50px;">'+
-		        '<tr>'+
+			tabla += '<table class=" table-details table table-responsive" cellpadding="5" cellspacing="0" border="0" style="padding-left:50px;padding-right:50px;">';
+
+		     tabla +=   
+		     	'<tr>'+
 		            '<td><strong>Imagen:</strong></td>'+
 		            '<td>'+imagen+'</td>'+
-		        '</tr>'+
-		        '<tr>'+
-		            '<td><strong>Titulo de Obra:</strong></td>'+
-		            '<td>'+d.titulo_obra+'</td>'+
-		        '</tr>'+		        
-                '</tr>'+
-                    '<td class="uno"><strong>Introduccion:</strong></td>'+
-                    '<td class="dos"><textarea class="form-control" id="style_edit" cols="10" rows="5" style="width: 100%; height: 100%;" disabled>'+d.introduccion+'</textarea></td>'+
-                '</tr>'+
-                '</tr>'+
-                    '<td class="uno"><strong>Contenido Obra:</strong></td>'+
-                    '<td class="dos"><textarea class="form-control" id="style_edit" cols="10" rows="5" style="width: 100%; height: 100%;" disabled>'+d.contenido_obra+'</textarea></td>'+
-                '</tr>'+        
-		    '</table>';
+		        '</tr>';
+		   if(d.titulo_obra){
+				    tabla +=
+				        '<tr>'+
+				            '<td><strong>Titulo de Obra:</strong></td>'+
+				            '<td>'+d.titulo_obra+'</td>'+
+				        '</tr>';		        		        	
+		        }
+		    if(d.introduccion){
+		            tabla +=
+		                '</tr>'+
+		                    '<td class="uno"><strong>Introduccion:</strong></td>'+
+		                    '<td class="dos"><textarea class="form-control" id="style_edit" cols="10" rows="5" style="width: 100%; height: 100%;" disabled>'+d.introduccion+'</textarea></td>'+
+		                '</tr>';
+		    }
+		    if(d.contenido_obra){
+	            tabla +=
+	                '</tr>'+
+	                    '<td class="uno"><strong>Contenido Obra:</strong></td>'+
+	                    '<td class="dos"><textarea class="form-control" id="style_edit" cols="10" rows="5" style="width: 100%; height: 100%;" disabled>'+d.contenido_obra+'</textarea></td>'+
+	                '</tr>';
+		    }
+		    if(d.layerslider_id){
+		            tabla +=
+		                '</tr>'+
+		                    '<td class="uno"><strong>LayerSlider:</strong></td>'+
+		                    '<td class="dos">'+d.layerslider_id+'</td>'+
+		                '</tr>';
+		    	
+		    }
+		   tabla +=
+		   		 '</table>';
 
 		    return tabla;
 	}

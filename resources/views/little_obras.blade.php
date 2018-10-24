@@ -1,3 +1,4 @@
+
 <div class="specials">
 	<div class="wrap">
 	  <div class="specials-heading">
@@ -31,7 +32,7 @@
 							$.each(data, function(idx, obj){ 
 								if(obj.imagen!='90'){
 										tabla+= "<div class='special-grid'>";
-										tabla+= "<img src='images/obras/"+obj.imagen+"_1.jpg' title='image-name' />";
+										tabla+= "<img src='images/obras/"+obj.imagen+"' title='image-name' />";
 										tabla+= "<a href='#'>"+obj.titulo_obra+"</a>";
 										tabla+= obj.introduccion;
 										tabla+= "<div class='special-grid-background'></div>";

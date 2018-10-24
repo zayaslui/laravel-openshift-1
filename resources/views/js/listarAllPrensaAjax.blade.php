@@ -35,7 +35,7 @@
 											tabla +='				</div>';
 											tabla +='			   <div class="clear"> </div>';
 											tabla +='			</div>';
-											tabla +='			<h3><a href="'+obj.link+' target=blank_">Titulo</a></h3>';
+											tabla +='			<h3><a href="'+obj.link+' target=blank_">'+obj.titulo+'</a></h3>';
 											tabla +='			<br>';
 											tabla +='			<p>'+obj.descripcion+'</p>';
 											// tabla +='			<br>';

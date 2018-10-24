@@ -77,7 +77,7 @@
 				                	// var info = JSON.parse(response).response.obras_det.contenido_obra;
 				                	// var titulo = JSON.parse(response).response.obras_det.titulo_obra;
 				                	var script = JSON.parse(response).response.arr.script;
-				                	
+				                	$("#waiting").remove();
 				                	$("#slider-wrapper").append(layer);
 							        $("#script_start_layerslider").append(script);
 
@@ -86,6 +86,10 @@
 						        error: function(data) {
 						            var errors = data.responseJSON;
 						            console.log(errors);
+						        },
+						        beforeSend:function(){
+						        	$("#slider-wrapper").append('<div id="waiting" style="width: 100%; height: 500px; visibility: visible;"><div class="lds-facebook"><div></div><div></div><div></div></div></div>');
+						        	console.log('beforeSend');
 						        }
 				});
 			})

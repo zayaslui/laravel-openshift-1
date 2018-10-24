@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Http\File;
 use App\Obras;
 use App\Obras_det;
+use App\Layerslider;
 use Datatables;
 use Illuminate\Support\Facades\DB;
 
@@ -48,7 +49,8 @@ class ObrasController extends Controller
      */
     public function create()
     {
-        return view('obras.create',['subtitulo'=>'Crear Obras','titulo'=>'Obras','disabled'=>false]);
+        $layersliders = Layerslider::select(DB::raw('concat(id, " - ",descripcion) as descripcion'),'id')->get();
+        return view('obras.create',compact('layersliders'),['subtitulo'=>'Crear Obras','titulo'=>'Obras','disabled'=>false]);
     }
 
     /**
@@ -88,8 +90,9 @@ class ObrasController extends Controller
     public function show($id)
     {   
         $obras = Obras::findOrFail($id);
+        $layersliders = Layerslider::select(DB::raw('concat(id, " - ",descripcion) as descripcion'),'id')->get();
         $params = ['subtitulo'=>'Ver Obras','titulo'=>'Obras','disabled'=>true];
-        return view('obras.show',compact('obras'),$params);
+        return view('obras.show',compact('obras')+compact('layersliders'),$params);
     }
 
     /**
@@ -101,8 +104,13 @@ class ObrasController extends Controller
     public function edit($id)
     {
         $obras = Obras::findOrFail($id);
+        //listar 
+        $layersliders = Layerslider::select(DB::raw('concat(id, " - ",descripcion) as descripcion'),'id')->get();
+
+        // return compact('obras')+compact('layersliders');
+
         $params = ['subtitulo'=>'Editar Obras','titulo'=>'Obras','disabled'=>false];
-        return view('obras.edit',compact('obras'),$params);
+        return view('obras.edit',compact('obras')+compact('layersliders'),$params);
     }
 
     /**
@@ -117,7 +125,6 @@ class ObrasController extends Controller
         $path= '/images/obras/';
         $obras = Obras::findOrFail($id);
         $obras->fill($request->except('imagen'));
-
 
         if($request->hasFile('imagen')){
             /*borrar la imagen vieja*/
