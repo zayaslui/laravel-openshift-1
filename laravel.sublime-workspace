@@ -480,100 +480,49 @@
 	"buffers":
 	[
 		{
-			"file": "resources/views/obras/forms/default.blade.php",
+			"contents": "<?php\n\nnamespace App;\n\nuse Illuminate\\Database\\Eloquent\\Model;\n\nclass Role extends Model\n{\n    \t\t\n}\n",
+			"file": "app/Role.php",
+			"file_size": 281,
+			"file_write_time": 131857664177631915,
 			"settings":
 			{
-				"buffer_size": 2075,
+				"buffer_size": 100,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/User.php",
+			"settings":
+			{
+				"buffer_size": 1495,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "resources/views/index.blade.php",
+			"contents": "obras\n\nid \t\t\t\t\t  imagen   \t\t \n1\t\t\t\t\t\t\t1.jpg\n\nservicios\n\nid \t\t\timagen\n1\t\t\t\t\t2.jpg\n\nprensas\n\nid  \t\t\timagen\n1\t\t\t\t\t3.jpg\n\ntraducciones\n\nid\t\t\tobras_id \t\tprensa_id \t\tprensa_id \t\tidioma \t\tdescripcion\n1\t\t\t\t\t1\t\t\t\tnull\t\t\t\t\tnull\t\t\t\t\t1\t\t\t\t\tHola\n2\t\t\t\t\tnull\t\t\t1\t\t\t\t\t\tnull\t\t\t\t\t1\t\t\t\t\tloco\n3\t\t\t\t\tnull\t\t\tnull\t\t\t\t\t\t1\t\t\t\t\t1\t\t\t\t\tPrincipal\n4\t\t\t\t\t1\t\t\t\tnull\t\t\t\t\tnull\t\t\t\t\t2\t\t\t\t\tHello\n5\t\t\t\t\tnull\t\t\t1\t\t\t\t\t\tnull\t\t\t\t\t2\t\t\t\t\tHome\n\n\nidiomas\n\nid \t\tdescripcion\n1\t\t\tespañol\n2\t\t\tingles\n\n\n",
 			"settings":
 			{
-				"buffer_size": 3682,
+				"buffer_size": 452,
+				"line_ending": "Unix",
+				"name": "obras"
+			}
+		},
+		{
+			"file": "database/migrations/2018_10_31_014541_create_roles_table.php",
+			"settings":
+			{
+				"buffer_size": 675,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "resources/views/services.blade.php",
+			"file": "database/migrations/2018_10_31_015203_create_role_user_table.php",
 			"settings":
 			{
-				"buffer_size": 5558,
+				"buffer_size": 868,
 				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "resources/views/little_obras.blade.php",
-			"settings":
-			{
-				"buffer_size": 1748,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "routes/web.php",
-			"settings":
-			{
-				"buffer_size": 6510,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/Http/Controllers/FrontController.php",
-			"settings":
-			{
-				"buffer_size": 3475,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "public/css/style.css",
-			"settings":
-			{
-				"buffer_size": 57937,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "resources/views/obras/edit.blade.php",
-			"settings":
-			{
-				"buffer_size": 2579,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "resources/views/obras/index.blade.php",
-			"settings":
-			{
-				"buffer_size": 4274,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/Http/Controllers/ObrasController.php",
-			"settings":
-			{
-				"buffer_size": 4654,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/Http/Controllers/ServicesController.php",
-			"settings":
-			{
-				"buffer_size": 4145,
 				"line_ending": "Unix"
 			}
 		}
@@ -647,17 +596,32 @@
 	"expanded_folders":
 	[
 		"/var/www/html/laravel/laravel-openshift-1",
-		"/var/www/html/laravel/laravel-openshift-1/routes"
+		"/var/www/html/laravel/laravel-openshift-1/app",
+		"/var/www/html/laravel/laravel-openshift-1/database",
+		"/var/www/html/laravel/laravel-openshift-1/database/migrations"
 	],
 	"file_history":
 	[
+		"/home/luis/Documentos/workspace_demo/creating-your-first-grails-app/README.md",
+		"/var/www/html/laravel/laravel-openshift-1/database/migrations/2018_10_31_014541_create_roles_table.php",
+		"/var/www/html/laravel/laravel-openshift-1/database/migrations/2018_10_31_014608_create_role_table.php",
+		"/var/www/html/laravel/laravel-openshift-1/app/Http/Controllers/ServicesController.php",
+		"/var/www/html/laravel/laravel-openshift-1/app/Http/Controllers/ObrasController.php",
+		"/var/www/html/laravel/laravel-openshift-1/resources/views/obras/index.blade.php",
+		"/var/www/html/laravel/laravel-openshift-1/resources/views/obras/edit.blade.php",
+		"/var/www/html/laravel/laravel-openshift-1/public/css/style.css",
+		"/var/www/html/laravel/laravel-openshift-1/app/Http/Controllers/FrontController.php",
+		"/var/www/html/laravel/laravel-openshift-1/routes/web.php",
+		"/var/www/html/laravel/laravel-openshift-1/resources/views/little_obras.blade.php",
+		"/var/www/html/laravel/laravel-openshift-1/resources/views/obras/forms/default.blade.php",
+		"/var/www/html/laravel/laravel-openshift-1/resources/views/index.blade.php",
+		"/var/www/html/laravel/laravel-openshift-1/resources/views/services.blade.php",
+		"/media/luis/LUIS1/Tutoriales Mega/HAPWA/HTML5 Avanzado - Progressive Web Apps/2. Tecnologías Core de las PWA's I/CursosMegaUp - Cursos Gratis por Mega.url",
+		"/tmp/mozilla_luis0/grupisa_estructura.sql",
 		"/var/www/html/laravel/laravel-openshift-1/app/Http/Controllers/LayerSlidersController.php",
 		"/var/www/html/laravel/laravel-openshift-1/resources/views/prensa/forms/default.blade.php",
 		"/var/www/html/laravel/laravel-openshift-1/app/Obras.php",
 		"/var/www/html/laravel/laravel-openshift-1/resources/views/layouts/admin.blade.php",
-		"/var/www/html/laravel/laravel-openshift-1/resources/views/obras/index.blade.php",
-		"/var/www/html/laravel/laravel-openshift-1/resources/views/obras/edit.blade.php",
-		"/var/www/html/laravel/laravel-openshift-1/resources/views/obras/forms/default.blade.php",
 		"/var/www/html/laravel/laravel-openshift-1/database/seeds/DatabaseSeeder.php",
 		"/var/www/html/laravel/laravel-openshift-1/app/Prensa.php",
 		"/var/www/html/laravel/laravel-openshift-1/app/Http/Controllers/PrensaController.php",
@@ -669,24 +633,19 @@
 		"/var/www/html/laravel/laravel-openshift-1/resources/views/usuario/index.blade.php",
 		"/var/www/html/laravel/laravel-openshift-1/resources/views/usuario/edit.blade.php",
 		"/var/www/html/laravel/laravel-openshift-1/resources/views/prensa/show.blade.php",
-		"/var/www/html/laravel/laravel-openshift-1/routes/web.php",
 		"/var/www/html/laravel/laravel-openshift-1/resources/views/prensa/edit.blade.php",
 		"/var/www/html/laravel/laravel-openshift-1/app/Http/Controllers/UsuariosController.php",
 		"/var/www/html/laravel/laravel-openshift-1/resources/views/prensa/create.blade.php",
 		"/var/www/html/laravel/laravel-openshift-1/resources/views/obras/create.blade.php",
-		"/var/www/html/laravel/laravel-openshift-1/app/Http/Controllers/ObrasController.php",
 		"/var/www/html/laravel/laravel-openshift-1/public/.htaccess",
 		"/var/www/html/laravel/laravel-openshift-1/app/Http/Controllers/LayersController.php",
 		"/var/www/html/laravel/laravel-openshift-1/app/Http/Controllers/SliderController.php",
-		"/var/www/html/laravel/laravel-openshift-1/app/Http/Controllers/ServicesController.php",
 		"/var/www/html/laravel/laravel-openshift-1/app/Layerslider.php",
 		"/var/www/html/laravel/laravel-openshift-1/resources/views/trayectoria.blade.php",
 		"/var/www/html/laravel/laravel-openshift-1/resources/views/sliders/show.blade.php",
 		"/var/www/html/laravel/laravel-openshift-1/resources/views/layersliders/forms/default.blade.php",
 		"/var/www/html/laravel/laravel-openshift-1/resources/views/obras/show.blade.php",
-		"/var/www/html/laravel/laravel-openshift-1/app/Http/Controllers/FrontController.php",
 		"/var/www/html/laravel/laravel-openshift-1/resources/views/obras_det.blade.php",
-		"/var/www/html/laravel/laravel-openshift-1/resources/views/index.blade.php",
 		"/var/www/html/laravel/laravel-openshift-1/resources/views/js/listarAllObrasAjax.blade.php",
 		"/var/www/html/laravel/laravel-openshift-1/database/migrations/2018_06_26_105354_create_obras_table.php",
 		"/var/www/html/laravel/laravel-openshift-1/database/migrations/2018_10_16_025041_change_type_imagen.php",
@@ -715,8 +674,6 @@
 		"/var/www/html/laravel/laravel-openshift-1/app/Obras_det.php",
 		"/var/www/html/laravel/laravel-openshift-1/app/Http/Controllers/HomeController.php",
 		"/var/www/html/laravel/laravel-openshift-1/resources/views/sliders/edit.blade.php",
-		"/var/www/html/laravel/laravel-openshift-1/public/css/style.css",
-		"/var/www/html/laravel/laravel-openshift-1/resources/views/little_obras.blade.php",
 		"/var/www/html/laravel/laravel-openshift-1/resources/views/sliders/forms/default.blade.php",
 		"/var/www/html/laravel/laravel-openshift-1/resources/views/usuario/forms/usr.blade.php",
 		"/var/www/html/laravel/laravel-openshift-1/resources/views/demo.blade.php",
@@ -772,17 +729,11 @@
 		"/var/www/html/laravel/laravel-openshift-1/database/migrations/2018_08_14_022128_add_column_layersliders.php",
 		"/var/www/html/laravel/laravel-openshift-1/database/migrations/2018_08_14_022848_add_column_sliders.php",
 		"/var/www/html/laravel/laravel-openshift-1/database/migrations/2018_07_12_032853_create_prensas_table.php",
-		"/var/www/html/laravel/laravel-openshift-1/vendor/laravel/framework/src/Illuminate/Foundation/Auth/AuthenticatesUsers.php",
-		"/home/luis/Documentos/workspace/xre/apuntes/patrimonio/vida_util.sql",
-		"/var/www/html/laravel/laravel-openshift-1/resources/lang/en/auth.php",
-		"/var/www/html/laravel/laravel-openshift-1/vendor/laravel/framework/src/Illuminate/Auth/SessionGuard.php",
-		"/var/www/html/laravel/laravel-openshift-1/public/css/login.css",
-		"/var/www/html/laravel/laravel-openshift-1/vendor/laravel/framework/src/Illuminate/Auth/Events/Attempting.php",
-		"/var/www/html/laravel/laravel-openshift-1/vendor/laravel/framework/src/Illuminate/Auth/AuthManager.php"
+		"/var/www/html/laravel/laravel-openshift-1/vendor/laravel/framework/src/Illuminate/Foundation/Auth/AuthenticatesUsers.php"
 	],
 	"find":
 	{
-		"height": 41.0
+		"height": 29.0
 	},
 	"find_in_files":
 	{
@@ -797,6 +748,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"v_lotes",
 			"slider-wrapper",
 			"layersliders_id",
 			"prensa",
@@ -923,8 +875,7 @@
 			"disabled",
 			"delete-modal",
 			"_show",
-			"show",
-			"showModal"
+			"show"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -984,141 +935,52 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 1,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "resources/views/obras/forms/default.blade.php",
+					"file": "app/Role.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2075,
+						"buffer_size": 100,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1537,
-								1537
+								97,
+								97
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Laravel Blade Highlighter/blade.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
 						},
 						"translation.x": 0.0,
-						"translation.y": 280.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "resources/views/index.blade.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3682,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3580,
-								3580
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Laravel Blade Highlighter/blade.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 1380.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "resources/views/services.blade.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 5558,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Laravel Blade Highlighter/blade.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 1620.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "resources/views/little_obras.blade.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1748,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1049,
-								1049
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Laravel Blade Highlighter/blade.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 420.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 2,
 					"type": "text"
 				},
 				{
-					"buffer": 4,
-					"file": "routes/web.php",
+					"buffer": 1,
+					"file": "app/User.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 6510,
+						"buffer_size": 1495,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1652,
-								1652
+								1186,
+								1186
 							]
 						],
 						"settings":
@@ -1128,145 +990,56 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 600.0,
+						"translation.y": 800.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
-					"buffer": 5,
-					"file": "app/Http/Controllers/FrontController.php",
+					"buffer": 2,
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3475,
+						"buffer_size": 452,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2175,
-								2175
+								399,
+								399
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"auto_name": "obras",
+							"default_dir": "/var/www/html/laravel/laravel-openshift-1/app",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 1700.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "public/css/style.css",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 57937,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								57937,
-								57937
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 57955.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
 					"type": "text"
 				},
 				{
-					"buffer": 7,
-					"file": "resources/views/obras/edit.blade.php",
+					"buffer": 3,
+					"file": "database/migrations/2018_10_31_014541_create_roles_table.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2579,
+						"buffer_size": 675,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Laravel Blade Highlighter/blade.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 420.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 8,
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"file": "resources/views/obras/index.blade.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 4274,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1953,
-								1953
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Laravel Blade Highlighter/blade.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 740.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 9,
-					"type": "text"
-				},
-				{
-					"buffer": 9,
-					"file": "app/Http/Controllers/ObrasController.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 4654,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2747,
-								2747
+								467,
+								467
 							]
 						],
 						"settings":
@@ -1276,40 +1049,40 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1640.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 7,
+					"stack_index": 4,
 					"type": "text"
 				},
 				{
-					"buffer": 10,
-					"file": "app/Http/Controllers/ServicesController.php",
+					"buffer": 4,
+					"file": "database/migrations/2018_10_31_015203_create_role_user_table.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4145,
+						"buffer_size": 868,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								675,
+								675
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"tab_size": 2,
+							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 360.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 10,
+					"stack_index": 3,
 					"type": "text"
 				}
 			]
@@ -1404,7 +1177,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 331.0,
+	"side_bar_width": 480.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

@@ -19,4 +19,10 @@ class Obras extends Model
     public function layerslider(){
       return $this->belongsTo('App\Layerslider','layerslider_id');
      }     
+
+   public function idiomas(){
+        return $this
+            ->belongsToMany('App\Idiomas','traducciones','obra_id','idioma_id')
+            ->withTimestamps();
+    }
 }

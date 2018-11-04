@@ -14,4 +14,10 @@ class Prensa extends Model
         'link',
         'titulo'
     ];
+
+    public function idiomas(){
+    	return $this
+    					->belongsToMany('App\Idiomas','traducciones','prensa_id','idioma_id')
+    					->withTimestamps();
+    }
 }
