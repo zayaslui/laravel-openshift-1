@@ -480,48 +480,19 @@
 	"buffers":
 	[
 		{
-			"contents": "<?php\n\nnamespace App;\n\nuse Illuminate\\Database\\Eloquent\\Model;\n\nclass Role extends Model\n{\n    \t\t\n}\n",
-			"file": "app/Role.php",
-			"file_size": 281,
-			"file_write_time": 131857664177631915,
+			"contents": "obras\n\nid \t\t\timagen\t\t\t\t   \t\t \n1\t\t\t\t\t14324.jpg\n2\t\t\t\t\t2234234.jpg\n\n\nservicios\n\nid \t\t\timagen \n1\t\t\t\t\t2234.jpg\t\t\t\t\n2\t\t\t\t\t9754.jpg\t\t\t\t\n\nprensas\n\nid  \t\t\timagen \n1\t\t\t\t\t3.jpg\t\t\t\t\n2\t\t\t\t\t4.jpg\t\t\n\ntraducciones\n\nid \t\ttraduccion \t\t\ttabla\t\tidiomas\t\ttabla_id\n1\t\t\t\tHola\t\t\t\tobras \t\t\t1\t\t\t\t\t1\n2\t\t\t\tHello\t\t\t\tobras \t\t\t2\t\t\t\t\t1\n3\t\t\t\taguije\t\t\t\tobras \t\t\t3\t\t\t\t\t1\n4\t\t\t\tque tal \t\t\tprensas \t\t1\t\t\t\t\t1\n5\t\t\t\twho are you    prensas\t\t2\t\t\t\t\t1\n6\t\t\t\tmbaeteko\t\tprensas\t\t3\t\t\t\t\t1\n7\t\t\t\tsilla\t\t\t\t\tprensas\t\t1\t\t\t\t\t2\n8\t\t\t\tchair\t\t\t\tprensas\t\t2\t\t\t\t\t2\n9\t\t\t\tapyka\t\t\t\tprensas\t\t3\t\t\t\t\t2\n\nselect *from obras a\ninner join traducciones b on 'obras'=b.tabla\nwhere idioma=tmp_idioma and b.tabla_id=id\n\ntraducciones\n\nid\t\t\tobras_id \t\tprensa_id \t\tprensa_id \t\tidioma \t\tdescripcion\n1\t\t\t\t\t1\t\t\t\tnull\t\t\t\t\tnull\t\t\t\t\t1\t\t\t\t\tHola\n2\t\t\t\t\tnull\t\t\t1\t\t\t\t\t\tnull\t\t\t\t\t1\t\t\t\t\tloco\n3\t\t\t\t\tnull\t\t\tnull\t\t\t\t\t\t1\t\t\t\t\t1\t\t\t\t\tPrincipal\n4\t\t\t\t\t1\t\t\t\tnull\t\t\t\t\tnull\t\t\t\t\t2\t\t\t\t\tHello\n5\t\t\t\t\tnull\t\t\t1\t\t\t\t\t\tnull\t\t\t\t\t2\t\t\t\t\tHome\n\n\nidiomas\n\nid \t\tdescripcion\n1\t\t\tespañol\n2\t\t\tingles\n\n\n",
 			"settings":
 			{
-				"buffer_size": 100,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/User.php",
-			"settings":
-			{
-				"buffer_size": 1495,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"contents": "obras\n\nid \t\t\t\t\t  imagen   \t\t \n1\t\t\t\t\t\t\t1.jpg\n\nservicios\n\nid \t\t\timagen\n1\t\t\t\t\t2.jpg\n\nprensas\n\nid  \t\t\timagen\n1\t\t\t\t\t3.jpg\n\ntraducciones\n\nid\t\t\tobras_id \t\tprensa_id \t\tprensa_id \t\tidioma \t\tdescripcion\n1\t\t\t\t\t1\t\t\t\tnull\t\t\t\t\tnull\t\t\t\t\t1\t\t\t\t\tHola\n2\t\t\t\t\tnull\t\t\t1\t\t\t\t\t\tnull\t\t\t\t\t1\t\t\t\t\tloco\n3\t\t\t\t\tnull\t\t\tnull\t\t\t\t\t\t1\t\t\t\t\t1\t\t\t\t\tPrincipal\n4\t\t\t\t\t1\t\t\t\tnull\t\t\t\t\tnull\t\t\t\t\t2\t\t\t\t\tHello\n5\t\t\t\t\tnull\t\t\t1\t\t\t\t\t\tnull\t\t\t\t\t2\t\t\t\t\tHome\n\n\nidiomas\n\nid \t\tdescripcion\n1\t\t\tespañol\n2\t\t\tingles\n\n\n",
-			"settings":
-			{
-				"buffer_size": 452,
+				"buffer_size": 977,
 				"line_ending": "Unix",
 				"name": "obras"
 			}
 		},
 		{
-			"file": "database/migrations/2018_10_31_014541_create_roles_table.php",
+			"file": "resources/views/layersliders/index.blade.php",
 			"settings":
 			{
-				"buffer_size": 675,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "database/migrations/2018_10_31_015203_create_role_user_table.php",
-			"settings":
-			{
-				"buffer_size": 868,
+				"buffer_size": 15975,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -596,18 +567,22 @@
 	"expanded_folders":
 	[
 		"/var/www/html/laravel/laravel-openshift-1",
-		"/var/www/html/laravel/laravel-openshift-1/app",
-		"/var/www/html/laravel/laravel-openshift-1/database",
-		"/var/www/html/laravel/laravel-openshift-1/database/migrations"
+		"/var/www/html/laravel/laravel-openshift-1/openshift",
+		"/var/www/html/laravel/laravel-openshift-1/resources",
+		"/var/www/html/laravel/laravel-openshift-1/resources/views",
+		"/var/www/html/laravel/laravel-openshift-1/resources/views/layersliders"
 	],
 	"file_history":
 	[
-		"/home/luis/Documentos/workspace_demo/creating-your-first-grails-app/README.md",
+		"/var/www/html/laravel/laravel-openshift-1/resources/views/obras/index.blade.php",
+		"/var/www/html/laravel/laravel-openshift-1/app/User.php",
+		"/var/www/html/laravel/laravel-openshift-1/app/Role.php",
+		"/var/www/html/laravel/laravel-openshift-1/database/migrations/2018_10_31_015203_create_role_user_table.php",
 		"/var/www/html/laravel/laravel-openshift-1/database/migrations/2018_10_31_014541_create_roles_table.php",
+		"/home/luis/Documentos/workspace_demo/creating-your-first-grails-app/README.md",
 		"/var/www/html/laravel/laravel-openshift-1/database/migrations/2018_10_31_014608_create_role_table.php",
 		"/var/www/html/laravel/laravel-openshift-1/app/Http/Controllers/ServicesController.php",
 		"/var/www/html/laravel/laravel-openshift-1/app/Http/Controllers/ObrasController.php",
-		"/var/www/html/laravel/laravel-openshift-1/resources/views/obras/index.blade.php",
 		"/var/www/html/laravel/laravel-openshift-1/resources/views/obras/edit.blade.php",
 		"/var/www/html/laravel/laravel-openshift-1/public/css/style.css",
 		"/var/www/html/laravel/laravel-openshift-1/app/Http/Controllers/FrontController.php",
@@ -707,7 +682,6 @@
 		"/tmp/fz3temp-2/contactos.html",
 		"/var/www/html/edb/test.php",
 		"/var/www/html/laravel/laravel-openshift-1/public/css/app.css",
-		"/var/www/html/laravel/laravel-openshift-1/app/User.php",
 		"/var/www/html/laravel/laravel-openshift-1/resources/views/layersliders/show.blade.php",
 		"/var/www/html/laravel/laravel-openshift-1/resources/views/usuario/show.blade.php",
 		"/home/luis/Descargas/descarga (2)",
@@ -727,13 +701,11 @@
 		"/var/www/html/laravel/laravel-openshift-1/database/migrations/2018_08_14_024937_create_sliders.php",
 		"/var/www/html/laravel/laravel-openshift-1/database/migrations/2018_08_14_024536_add_column_layersliders.php",
 		"/var/www/html/laravel/laravel-openshift-1/database/migrations/2018_08_14_022128_add_column_layersliders.php",
-		"/var/www/html/laravel/laravel-openshift-1/database/migrations/2018_08_14_022848_add_column_sliders.php",
-		"/var/www/html/laravel/laravel-openshift-1/database/migrations/2018_07_12_032853_create_prensas_table.php",
-		"/var/www/html/laravel/laravel-openshift-1/vendor/laravel/framework/src/Illuminate/Foundation/Auth/AuthenticatesUsers.php"
+		"/var/www/html/laravel/laravel-openshift-1/database/migrations/2018_08_14_022848_add_column_sliders.php"
 	],
 	"find":
 	{
-		"height": 29.0
+		"height": 41.0
 	},
 	"find_in_files":
 	{
@@ -940,76 +912,18 @@
 			[
 				{
 					"buffer": 0,
-					"file": "app/Role.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 100,
+						"buffer_size": 977,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								97,
-								97
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "app/User.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1495,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1186,
-								1186
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 800.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 452,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								399,
-								399
+								271,
+								271
 							]
 						],
 						"settings":
@@ -1019,70 +933,38 @@
 							"syntax": "Packages/Text/Plain text.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 180.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
 					"type": "text"
 				},
 				{
-					"buffer": 3,
-					"file": "database/migrations/2018_10_31_014541_create_roles_table.php",
+					"buffer": 1,
+					"file": "resources/views/layersliders/index.blade.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 675,
+						"buffer_size": 15975,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								467,
-								467
+								15095,
+								15095
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/Laravel Blade Highlighter/blade.sublime-syntax"
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 6718.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "database/migrations/2018_10_31_015203_create_role_user_table.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 868,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								675,
-								675
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
+					"stack_index": 0,
 					"type": "text"
 				}
 			]
@@ -1155,7 +1037,7 @@
 		[
 			[
 				"",
-				"~/Documentos/workspace/xre/xre.sublime-project"
+				"~/Documentos/workspace2.4.4/annp/annp.sublime-workspace"
 			]
 		],
 		"width": 380.0

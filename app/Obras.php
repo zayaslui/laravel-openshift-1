@@ -23,6 +23,7 @@ class Obras extends Model
    public function idiomas(){
         return $this
             ->belongsToMany('App\Idiomas','traducciones','obra_id','idioma_id')
+            ->withPivot('idioma_id', 'prensa_id')
             ->withTimestamps();
     }
 }

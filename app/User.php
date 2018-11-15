@@ -68,4 +68,8 @@ class User extends Authenticatable
         return false;
     }
 
+    public function getTableName(){
+        return with(new static)->getTable();
+    }
+
 }
