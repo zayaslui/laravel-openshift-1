@@ -78,8 +78,8 @@ Route::resources([
 								'layersliders'=>'LayerSlidersController',
 								'obras_' => 'ObrasController',
                                 'prensa_'=> 'PrensaController'
-
 							]);
+
 Route::get('listar_obras','ObrasController@listar_obras');
 Route::get('listar_prensa','PrensaController@listar_prensa');
 
