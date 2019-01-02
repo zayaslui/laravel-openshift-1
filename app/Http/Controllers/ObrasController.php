@@ -7,6 +7,7 @@ use Illuminate\Http\File;
 use App\Obras;
 use App\Obras_det;
 use App\Layerslider;
+use App\Idiomas;
 use Datatables;
 use Illuminate\Support\Facades\DB;
 
@@ -89,11 +90,41 @@ class ObrasController extends Controller
      */
     public function show($id)
     {   
-        $obras = Obras::findOrFail($id);
+        // $obras = Obras::findOrFail($id);
+         $obras = Obras::with(
+            [
+                'titulo_multilenguajes' => function($query){
+                    $query->with('idioma');
+                },
+                'contenido_obra_2s'=> function($query){
+                    $query->with('idioma');
+                },         
+            ]
+    )->find($id);
+
         $layersliders = Layerslider::select(DB::raw('concat(id, " - ",descripcion) as descripcion'),'id')->get();
         $params = ['subtitulo'=>'Ver Obras','titulo'=>'Obras','disabled'=>true];
         return view('obras.show',compact('obras')+compact('layersliders'),$params);
     }
+
+    public function mostrar($id){
+
+             $obras= Obras::with([
+                'titulo_multilenguajes' => function($query){
+                    $query->with('idioma');
+                },
+                'contenido_obra_2s'=> function($query){
+                    $query->with('idioma');
+                },
+            ]
+        )->find($id);
+
+        $layersliders = Layerslider::select(DB::raw('concat(id, " - ",descripcion) as descripcion'),'id')->get();
+        $params = ['subtitulo'=>'Ver Obras','titulo'=>'Obras','disabled'=>true];
+        return compact('obras')+compact('layersliders');
+
+    }
+
 
     /**
      * Show the form for editing the specified resource.

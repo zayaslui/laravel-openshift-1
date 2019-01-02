@@ -80,6 +80,7 @@ Route::resources([
                                 'prensa_'=> 'PrensaController'
 							]);
 
+Route::get('prueba/mostrar/{obra}','ObrasController@mostrar');
 Route::get('listar_obras','ObrasController@listar_obras');
 Route::get('listar_prensa','PrensaController@listar_prensa');
 

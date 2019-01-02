@@ -15,13 +15,15 @@ class CreateTraduccionesTable extends Migration
     {
         Schema::create('traducciones', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('idioma_id')->unsigned()->default(null);
-            $table->string('tabla');
-            $table->integer('tabla_id');
-            
+            $table->integer('traduccion');
             $table->string('descripcion');
-            $table->timestamps();
+            // $table->string('tabla');
+            // $table->string('campo');
+            
+            // $table->integer('tabla_id');
 
+            $table->timestamps();
+            $table->integer('idioma_id')->unsigned()->default(null);
             $table->foreign('idioma_id')->references('id')->on('idiomas');
                        
         });

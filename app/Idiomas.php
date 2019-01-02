@@ -12,15 +12,8 @@ class Idiomas extends Model
         'descripcion'
     ];
 
-    public function obras(){
-        return $this
-            ->belongsToMany('App\Obras','traducciones','idioma_id','obra_id')
-            ->withTimestamps();
+        public function idioma(){
+        return $this->hasMany('App\Traducciones');
     }
 
-    public function prensas(){
-    	return $this
-    				->belongsToMany('App\Prensas','idioma_id','prensa_id')
-    				->withTimestamps();
-    }
 }
