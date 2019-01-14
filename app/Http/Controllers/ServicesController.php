@@ -10,13 +10,23 @@ use App\Prensa;
 use App\Obras_det;
 use App\Layerslider;
 use Faker\Generator as Faker;
+use App\Idiomas;
+use Illuminate\Support\Facades\DB;
 
 class ServicesController extends Controller
 {
 
-  	public function saludar(){
-  		  return "hola mundo";
-  	}
+
+    public function getIdiomas(Request $request){
+      //$idiomas = Idiomas::whereIn('id', $request->idiomas)->get();
+      $idiomas = DB::table('idiomas')
+                    ->whereNotIn('id', $request->idiomas)
+                    ->limit(1)
+                    ->get();
+
+      return $idiomas;
+    }
+
   
 //For Generating Unique Slug Our Custom function
     public function createSlug($title, $class, $id = 0){

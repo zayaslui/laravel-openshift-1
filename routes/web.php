@@ -45,6 +45,9 @@ Route::post('listarObras','FrontController@listar');
 Route::post('little','FrontController@little_obras');
 Route::post('listarPrensa','FrontController@listarPrensa');
 
+Route::POST('getIdiomas','ServicesController@getIdiomas');
+
+
 Route::get('trayectoria','FrontController@trayectoria');
 Route::post('layersliderTrayectoria','FrontController@layersliderTrayectoria');
 

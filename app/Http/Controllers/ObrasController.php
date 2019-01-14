@@ -14,10 +14,16 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Session;
 
+use App\Http\Controllers\ServicesController;
+
 class ObrasController extends Controller
 {
+
+    protected $services;
+
     public function __construct()
     {
+        $this->services = new ServicesController();
         $this->middleware('auth');
     }
     /**
@@ -28,19 +34,19 @@ class ObrasController extends Controller
     public function index()
     {
         //respuesta del dataTable()
-        // $obras = Obras::all();
+        //$obras = Obras::all();
         return view('obras.index');
     }
 
     public function listar_obras(){
         $obras = Obras::query();
         return Datatables::of($obras)
-        ->addColumn('obras_det_count', function($obras) {
-            return $obras->detalles->count();
-        })
-       ->addColumn('detalles',function($obras){
-            return $obras->detalles;
-        })
+       //  ->addColumn('obras_det_count', function($obras) {
+       //      return $obras->detalles->count();
+       //  })
+       // ->addColumn('detalles',function($obras){
+       //      return $obras->detalles;
+       //  })
         ->make(true);
     }
     /**
@@ -54,6 +60,10 @@ class ObrasController extends Controller
         return view('obras.create',compact('layersliders'),['subtitulo'=>'Crear Obras','titulo'=>'Obras','disabled'=>false]);
     }
 
+
+    public function saludar(Request $request){
+          return "hola mundo";
+    }
     /**
      * Store a newly created resource in storage.
      *
@@ -101,9 +111,9 @@ class ObrasController extends Controller
                 },         
             ]
     )->find($id);
-
         $layersliders = Layerslider::select(DB::raw('concat(id, " - ",descripcion) as descripcion'),'id')->get();
-        $params = ['subtitulo'=>'Ver Obras','titulo'=>'Obras','disabled'=>true];
+        $cantidad_idiomas =  DB::table('Idiomas')->count();
+        $params = ['subtitulo'=>'Ver Obras','titulo'=>'Obras','disabled'=>true,'cantidad'=>$cantidad_idiomas];
         return view('obras.show',compact('obras')+compact('layersliders'),$params);
     }
 
@@ -116,12 +126,16 @@ class ObrasController extends Controller
                 'contenido_obra_2s'=> function($query){
                     $query->with('idioma');
                 },
+                'introduccion_2s'=> function($query){
+                    $query->with('idioma');
+                },                
             ]
         )->find($id);
 
         $layersliders = Layerslider::select(DB::raw('concat(id, " - ",descripcion) as descripcion'),'id')->get();
         $params = ['subtitulo'=>'Ver Obras','titulo'=>'Obras','disabled'=>true];
-        return compact('obras')+compact('layersliders');
+        $cantidad_idiomas =  DB::table('idiomas')->count();
+        return compact('obras')+compact('layersliders')+compact('idiomas')+compact('cantidad_idiomas');
 
     }
 
@@ -134,14 +148,26 @@ class ObrasController extends Controller
      */
     public function edit($id)
     {
-        $obras = Obras::findOrFail($id);
-        //listar 
+
+        $obras = Obras::with(
+            [
+                'titulo_multilenguajes' => function($query){
+                    $query->with('idioma');
+                },
+                'contenido_obra_2s'=> function($query){
+                    $query->with('idioma');
+                },
+                'introduccion_2s'=> function($query){
+                    $query->with('idioma');
+                },
+
+            ]
+        ) -> find($id);
         $layersliders = Layerslider::select(DB::raw('concat(id, " - ",descripcion) as descripcion'),'id')->get();
+        $cantidad = DB::table('idiomas')->count();
+        $params = ['subtitulo'=>'Editar Obras','titulo'=>'Obras','disabled'=>false,'cantidad'=>$cantidad];
+        return view('obras.edit',compact('obras')+compact('layersliders')+compact('cantidad'),$params);
 
-        // return compact('obras')+compact('layersliders');
-
-        $params = ['subtitulo'=>'Editar Obras','titulo'=>'Obras','disabled'=>false];
-        return view('obras.edit',compact('obras')+compact('layersliders'),$params);
     }
 
     /**

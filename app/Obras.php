@@ -26,5 +26,10 @@ class Obras extends Model
         return $this->hasMany('App\Traducciones','traduccion','contenido_obra_2');
     }
 
+    public function introduccion_2s(){
+        return $this->hasMany('App\Traducciones','traduccion','introduccion_2');
+    }
+
+    
 }
 

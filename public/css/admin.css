@@ -4,6 +4,11 @@ hr.style12 {
     border: 0;
 }
 
+.icon-delete{
+    margin-top: -9px;
+    position: absolute;
+    font-size: 13px;
+}
 
 .nav-tabs{
     padding-top: 2%;

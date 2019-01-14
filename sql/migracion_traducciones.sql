@@ -27,8 +27,26 @@ null as update_at,
 from obras;
 
 update obras set contenido_obra_2=null;
--- set @serial=(select id from traducciones a where id not in (select * from (select titulo_multilenguaje as id_ from obras union select contenido_obra_2 as id_ from obras) as a where id_ is not null) order by id limit 1);
-set @serial=13;
+set @serial=(select id-1 from traducciones a where id not in (select * from (select titulo_multilenguaje as id_ from obras union select contenido_obra_2 as id_ from obras) as a where id_ is not null) order by id limit 1);
+-- set @serial=13;
 update obras set contenido_obra_2=(@serial:=@serial+1) where contenido_obra_2 is null;
 
-select contenido_obra_2 from obras;
+/*introduccion*/
+
+
+set @serial = (select coalesce(max(id),0) from traducciones);
+insert into traducciones 
+/*contenido obra*/
+select 
+@serial:=@serial+1 as id,
+@serial as traduccion,
+introduccion as descripcion,
+null as create_at,
+null as update_at,
+1 as idioma_id
+from obras;
+
+update obras set introduccion_2=null;
+set @serial=(select id-1 from traducciones a where id not in (select * from (select titulo_multilenguaje as id_ from obras union select contenido_obra_2 as id_ from obras) as a where id_ is not null) order by id limit 1);
+-- set @serial=22;
+update obras set introduccion_2=(@serial:=@serial+1) where introduccion_2 is null;
