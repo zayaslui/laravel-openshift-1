@@ -10,7 +10,10 @@
                     @else
                   <li class="">
                    @endif
-                    <a href="#contenido_{{$idioma->id}}" class="idioma_{{$idioma->idioma->id}}" data-toggle="tab" aria-expanded="false">{{$idioma->idioma->descripcion}}<i class=""></i></a>
+                    <a href="#contenido_{{$idioma->id}}" 
+                      class="idioma_{{$idioma->idioma->id}}" 
+                      data-toggle="tab" 
+                      aria-expanded="false">{{$idioma->idioma->descripcion}}<i class="@if($indexKey == 0) @else fa fa-times icon-delete @endif "></i></a>
                   </li>
             @endforeach
         @endif    
@@ -24,7 +27,6 @@
                     <input 
                     type="text" 
                     class="form-control" 
-                    id="titulo_obra" 
                     name="titulo_obra" 
                     aria-describedby="emailHelp" 
                     placeholder="Titulo de la obra"  @if(isset($obras)) value="{{$objeto->descripcion}}" @endif @if($disabled) disabled @endif>
@@ -59,7 +61,6 @@
                     <textarea 
                     class="form-control" 
                     name="contenido_obra_2" 
-                    id="contenido_obra_2"
                     cols="30" 
                     rows="10" 
                     aria-describedby="emailHelp" 
@@ -95,8 +96,7 @@
 
               <textarea 
               class="form-control" 
-              name="introduccion" 
-              id="introduccion" 
+              name="introduccion"
               cols="30" 
               rows="10" 
               aria-describedby="emailHelp" 
@@ -160,6 +160,50 @@
             that.c++;
             e.setAttribute('id','tab_'+that.c);
           });
+        //add event remove
+        servicios.removeTab(1);
+      },
+      goTopTab: (id) => {
+        $("#"+id+" li:first").addClass("active");
+        var id_contenido = $("#"+id+" li:first a").attr('href');
+        $(id_contenido).addClass("active in");
+        // console.log($("#"+id+" li:first a").attr('href'));
+      },
+      // id => id del tab
+      // option => segun desde donde se crea
+      // 1=> agregar el evento a los tab que se genera
+      // 0=> agregar el evento desde boton con clase .add
+      removeTab : (option,id=null) =>{
+        switch(option) {
+           case 1:
+                $(" li a").on('click','.icon-delete',function(e){
+                        //remove contenido
+                        var tag_id = $(this).parent('a').attr('href');
+                        //refrescar el tab
+                        var primer_elemento = $(this).parent().parent('li').parent('ul').attr('id');
+                        servicios.goTopTab(primer_elemento);
+                        $(tag_id).remove();
+                        // console.log(tag_id);
+                        //remover el tab
+                        $(this).parent().parent('li').remove();
+                  });           
+            break;
+           case 0:
+                  $("#"+id+" li a").off('click','.icon-delete');
+                  $("#"+id+" li a").on('click','.icon-delete',function(e){
+                      //remove contenido
+                      var tag_id = $(this).parent('a').attr('href');
+                      //refrescar el tab
+                      var primer_elemento = $(this).parent().parent('li').parent('ul').attr('id');
+                      servicios.goTopTab(primer_elemento);
+                      $(tag_id).remove();
+                      // console.log(tag_id);
+                      //remover el tab
+                      $(this).parent().parent('li').remove(); 
+                   });
+            break;
+        }
+
       },
       create:(data,id) => {
             // siempre traera un dato por default
@@ -172,27 +216,23 @@
             var newHtml = $(li);
             $(newHtml).insertBefore(tag);
             //event remove
-            $("#"+id+" li a").off('click','.icon-delete');
-            $("#"+id+" li a").on('click','.icon-delete',function(e){
-              //remover el tab
-              $(this).parent().parent('li').remove();
-              //remove contenido
-              var tag = $(this).parent().parent('li').parent('a');
-              console.log(tag);
-            });
+            // id => id del tab
+            servicios.removeTab(0,id);
             //crear el contenido
            var contenido = $("#"+id).next();
+           //editar
+           var img = $("#"+id).next().find('input[type=text], textarea').first().clone();
+           //setear sus valores
+          $(img).val('id');
+           //var img  ='<input class="form-control" id="titulo_obra" name="titulo_obra" aria-describedby="emailHelp" placeholder="Titulo de la obra" value="" type="text">';
 
-           var html = '<div class="tab-pane fade " id="'+href+'">'+
-                            '<h3>Titulo de la Obra</h3>'+
-                                '<input class="form-control" id="titulo_obra" name="titulo_obra" aria-describedby="emailHelp" ' +'placeholder="Titulo de la obra" value="" type="text">'+
-                          '</div>';
-            ($("#tab_1").next(".tab-content")).prepend(html);
+           var html = '<div class="tab-pane fade" id="'+href+'"><h3>Titulo de la Obra</h3></div>';
+           var html2 = $(html).append(img);
+            ($("#"+id).next(".tab-content")).prepend(html2);
       },
       idiomas: (id) =>{ 
         if(!id)
           return false;
-
         var array = [];
         $("#"+id+" a").each(function(i,e){
             if(e.className.split("_")[0]=='idioma'){
@@ -222,7 +262,6 @@
     }
 
     $(document).ready(function(){
-
         servicios.seteo();
         $(".add").click(function(e){
           e.preventDefault();

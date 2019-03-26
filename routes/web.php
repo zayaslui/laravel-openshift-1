@@ -15,7 +15,7 @@ use Illuminate\Http\Request;
 */
 
 
-// obs : key binding no funciona con resources
+// obs : key binding no funciona con resources en esta version
 
 Route::get('/','FrontController@index');
 Route::get('obras','FrontController@obras');
